@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@main
+    - uses: Klemensas/action-autotag@stable
     - name: Set tag name
       run: echo "tag=${GITHUB_HEAD_REF##*/}" >> $GITHUB_ENV
     - name: Package Observability Dashboards
