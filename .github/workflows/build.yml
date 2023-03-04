@@ -17,6 +17,7 @@ jobs:
       uses: Klemensas/action-autotag@stable
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        changelog_structure: "{{author}}\n"
     - name: Package Observability Dashboards
       run: |
         cd ./ && zip -r ./observability-dashboards.zip . -x ./docs/\* .git/\* .git\*
