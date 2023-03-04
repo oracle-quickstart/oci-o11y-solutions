@@ -17,6 +17,7 @@ jobs:
       uses: Klemensas/action-autotag@stable
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        tag_message: "build testing"
         changelog_structure: "{{author}}\n"
     - name: Package Observability Dashboards
       run: |

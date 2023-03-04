@@ -1,7 +1,7 @@
 {
   "name": "Oracle Observability Dashboards",
   "description": "Dashboards Samples",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "repository": "https://github.com/oracle-quickstart/oci-o11y-solutions/",
   "license": "Apache-2.0"
 }
