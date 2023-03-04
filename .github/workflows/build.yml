@@ -1,0 +1,34 @@
+name: ManagementAgent QuickStart builds 
+on:
+  pull_request_target:
+    types:
+      - closed
+    branches:
+      - dashboards-app
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - name: Set tag name
+      run: echo "tag=${GITHUB_HEAD_REF##*/}" >> $GITHUB_ENV
+    - name: Package Observability Dashboards
+      run: |
+        cd ./ && zip -r ./observability-dashboards.zip .
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ env.tag }}
+        release_name: Observability Dashboards Apps release ${{ env.tag }}
+    - name: Upload Observability Dashboards Terraform Package
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./observability-dashboards.zip
+        asset_name: observability-dashboards.zip
+        asset_content_type: application/zip
