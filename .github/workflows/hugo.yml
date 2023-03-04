@@ -48,7 +48,7 @@ jobs:
       - name: Install Node.js dependencies
         run: |
           pwd
-          cd ./docs/themes/redwood
+          cd ./oci-o11y-solutions/docs/themes/redwood
           npm install 
           cd ../../..
           #"[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
@@ -58,14 +58,14 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-         cd ./docs
+         cd ./oci-o11y-solutions/docs
          hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./docs/public
+          path: ./oci-o11y-solutions/docs/public
 
   # Deployment job
   deploy:
