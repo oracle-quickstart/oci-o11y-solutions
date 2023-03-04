@@ -4,7 +4,7 @@ on:
     types:
       - closed
     branches:
-      - dashboards-app
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,7 +14,7 @@ jobs:
       run: echo "tag=${GITHUB_HEAD_REF##*/}" >> $GITHUB_ENV
     - name: Package Observability Dashboards
       run: |
-        cd ./ && zip -r ./observability-dashboards.zip .
+        cd ./ && zip -r ./observability-dashboards.zip -x docs . 
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
