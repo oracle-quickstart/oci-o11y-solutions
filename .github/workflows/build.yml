@@ -1,4 +1,4 @@
-name: ManagementAgent QuickStart builds 
+name: Observability Dashboards
 on:
   pull_request_target:
     types:
