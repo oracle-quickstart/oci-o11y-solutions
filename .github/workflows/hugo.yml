@@ -53,9 +53,9 @@ jobs:
           ls -al
       - name: Install Node.js dependencies
         run: |
-          cd ./oci-o11y-solutions/docs/themes/redwood
+          cd /home/runner/work/oci-o11y-solutions/oci-o11y-solutions/docs/themes/redwood
           npm install 
-          cd ../../..
+          cd /home/runner/work/oci-o11y-solutions/oci-o11y-solutions
           #"[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build with Hugo
         env:
