@@ -48,11 +48,10 @@ jobs:
       - name: Install Node.js dependencies
         run: |
           pwd
-          ls
-          cd docs/themes/redwood
+          cd ./docs/themes/redwood
           npm install 
           cd ../../..
-        ##"[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+          #"[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
