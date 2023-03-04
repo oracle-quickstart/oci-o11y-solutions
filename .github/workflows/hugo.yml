@@ -45,9 +45,14 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
-      - name: Install Node.js dependencies
+      - name: Find CWD
         run: |
           pwd
+      - name: Find CWD contents
+        run: |
+          ls -al
+      - name: Install Node.js dependencies
+        run: |
           cd ./oci-o11y-solutions/docs/themes/redwood
           npm install 
           cd ../../..
