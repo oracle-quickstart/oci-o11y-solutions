@@ -47,9 +47,11 @@ jobs:
      #   uses: actions/configure-pages@v3
       - name: Install Node.js dependencies
         run: |
-          cd ./docs/themes
+          pwd
+          ls
+          cd docs/themes/redwood
           npm install 
-          cd ../../
+          cd ../../..
         ##"[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build with Hugo
         env:
