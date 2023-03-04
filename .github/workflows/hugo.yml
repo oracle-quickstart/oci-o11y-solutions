@@ -41,6 +41,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
+          ref: dashboards-app
           submodules: recursive
       - name: Setup Pages
         id: pages
