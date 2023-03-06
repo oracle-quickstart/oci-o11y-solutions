@@ -1,0 +1,70 @@
+#
+# Copyright (c) 2020, 2021 Oracle and/or its affiliates. All rights reserved.
+# The Universal Permissive License (UPL), Version 1.0
+#
+baseURL = ""
+languageCode = "en-us"
+title = "Observability & Management"
+theme = "redwood"
+relativeURLs = true
+
+[params]
+editURL = "https://github.com/oracle-quickstart/oci-observability-and-management/tree/master/src/docs/content/"
+showVisitedLinks = false
+author = "Oracle Developers"
+organization = "Oracle"
+description = "Oracle Observability and Management"
+keywords = ["Kubernetes", "OCI", "OKE", "Microservices"]
+ghrepo = "https://github.com/oracle-quickstart/oci-observability-and-management"
+branch = "master"
+logo = "images/Oracle-logo.jpeg"
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 4
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    noClasses = false
+    style = "native"
+    tabWidth = 2
+
+  [markup.goldmark.renderer]
+    unsafe= true
+
+[menu]
+
+[[menu.shortcuts]]
+name = "More Information"
+pre = "<span uk-icon='icon: info; ratio: 1.25'></span>"
+url = "/resources"
+weight = 10
+
+[[menu.shortcuts]]
+name = "Acknowledgements"
+pre = "<span uk-icon='icon: users; ratio: 1.25'></span>"
+url = "/acknowledgements"
+weight = 20
+
+[[menu.shortcuts]]
+name = "Tags"
+pre = "<span uk-icon='icon: tag; ratio: 1.25'></span>"
+url = "/tags"
+weight = 30
+
+[[menu.shortcuts]]
+name = "GitHub Source"
+pre = "<span uk-icon='icon: github; ratio: 1.25'></span>"
+url = "https://github.com/oracle-quickstart/oci-observability-and-management"
+weight = 40
+
+[[menu.shortcuts]]
+name = "Report Issue"
+pre = "<span uk-icon='icon: warning; ratio: 1.25'></span>"
+url = "https://github.com/oracle-quickstart/oci-observability-and-management/issues"
+weight = 50
+
+[outputs]
+home = [ "HTML", "JSON"]
+page = [ "HTML" ]
