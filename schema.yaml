@@ -1,0 +1,47 @@
+# Copyright (c) 2023, Oracle and/or its affiliates.
+# Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
+
+title: "Oracle Logging Analytics Examples"
+
+description: "Deploy Logging Analytics dashboards"
+
+stackDescription: "
+Provides an example to deploy Logging Analytics dashboards using dashboard json files.
+"
+
+version: "20190304"
+schemaVersion: 1.1.0
+locale: "en"
+
+source:
+  type: quickstart
+
+variableGroups:
+  - title: General OCI Configurations
+    visible: false
+    variables:
+      - tenancy_ocid
+      - compartment_ocid
+      - region
+      
+variables:
+
+  auth_type:
+    type: string
+    title: "Authentication Type"
+    visible: false
+    required: true
+    default: instance
+
+  config_file_profile:
+    type: string
+    title: "Authentication Config Profile"
+    visible: false
+    required: true
+    default: DEFAULT
+
+outputGroups:
+
+outputs:
+
+primaryOutputButton: ${dashboard}

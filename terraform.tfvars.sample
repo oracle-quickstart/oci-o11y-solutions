@@ -1,0 +1,8 @@
+# Required for the OCI Provider
+tenancy_ocid="<TENANCY_OCID>"
+region="<REGION>"
+compartment_ocid="<COMPARTMENT_OCID>"
+
+# auth config file should be ~/.oci/config
+auth_type="user"
+config_file_profile="<PROFILE_NAME>"
