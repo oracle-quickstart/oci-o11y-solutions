@@ -3,7 +3,7 @@ Oracle Observability and Management Solution Templates
 
 This is an example on how to export, add & deploy  dashboards in Logging Analytics.
 
-## Sharing new Logging Analytics Dashboards
+## Sharing new Logging Analytics Dashboards some chars
 
 ### Export Dashboard json
     export DASHBOARD_ID=”<OCID….>”
