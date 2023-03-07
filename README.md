@@ -2,10 +2,12 @@
 Oracle Observability and Management Solution Templates
 
 This is an example on how to export, add & deploy  dashboards in Logging Analytics.
+
 ## Sharing new Logging Analytics Dashboards
+
 ### Export Dashboard json
-export DASHBOARD_ID=”<OCID….>”
-oci raw-request --http-method GET --target-uri https://managementdashboard.us-phoenix-1.oci.oraclecloud.com/20200901/managementDashboards/${DASHBOARD_ID} | jq .data  | jq '.compartmentId = "${compartment_ocid}"' | jq -n -s '{dashboards: inputs}'
+    export DASHBOARD_ID=”<OCID….>”
+    oci raw-request --http-method GET --target-uri https://managementdashboard.us-phoenix-1.oci.oraclecloud.com/20200901/managementDashboards/${DASHBOARD_ID} | jq .data  | jq '.compartmentId = "${compartment_ocid}"' | jq -n -s '{dashboards: inputs}'
  
 ### Clone the Module
 Now, you'll want a local copy of this repo. You can make that with the commands:
