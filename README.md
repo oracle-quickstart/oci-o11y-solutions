@@ -5,7 +5,9 @@ This is an example on how to export, add & deploy  dashboards in Logging Analyti
 
 ## Sharing new Logging Analytics Dashboards
 
-## Create your dashboard in Logging Analytics and note the dashboard OCID and take a screenshot
+## Create your dashboard in Logging Analytics 
+
+Note the dashboard OCID and take a screenshot
 
      
 ## Fork this repo https://github.com/oracle-quickstart/oci-o11y-solutions/fork
@@ -22,8 +24,10 @@ This is an example on how to export, add & deploy  dashboards in Logging Analyti
 ### Export Dashboard json
     export DASHBOARD_ID=”<OCID….>”
     oci raw-request --http-method GET --target-uri https://managementdashboard.us-phoenix-1.oci.oraclecloud.com/20200901/managementDashboards/${DASHBOARD_ID} | jq .data  | jq '.compartmentId = "${compartment_ocid}"' | jq -n -s '{dashboards: inputs}' >> my-dashboard.json
-cp my-dashboard.json contents/dashboards 
-    cp my-dashboard.png  contents/documentation
+    
+Copy the dashboard screenshot to contents/documentation directory.
+    
+    cp /path/to/my-dashboard.png  contents/documentation
 
 ### Commit and push changes
     git add contents/dashboards/my-dashboard.json
