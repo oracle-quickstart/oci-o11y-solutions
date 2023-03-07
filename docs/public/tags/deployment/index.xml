@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Deployment on Observability &amp; Management</title>
+    <title>Deployment on Oracle Observability Dashboards</title>
     <link>/tags/deployment/</link>
-    <description>Recent content in Deployment on Observability &amp; Management</description>
+    <description>Recent content in Deployment on Oracle Observability Dashboards</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Mar 2020 13:33:46 -0600</lastBuildDate><atom:link href="/tags/deployment/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <pubDate>Mon, 09 Mar 2020 13:33:46 -0600</pubDate>
       
       <guid>/k8s/</guid>
-      <description> Outline </description>
+      <description></description>
     </item>
     
   </channel>

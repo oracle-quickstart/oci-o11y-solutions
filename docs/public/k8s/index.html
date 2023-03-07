@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
-  <title>Kubernetes :: Observability &amp; Management</title>
+  <title>Kubernetes :: Oracle Observability Dashboards</title>
   
-  <meta name="application-name" content="Observability &amp; Management"/>
-<meta name="description" content="Oracle Observability and Management">
+  <meta name="application-name" content="Oracle Observability Dashboards"/>
+<meta name="description" content="Oracle Observability Dashboards">
 <meta name="keywords" content="Kubernetes,OCI,OKE,Microservices">
 
-<meta property="og:title" content="Observability &amp; Management - Kubernetes" />
+<meta property="og:title" content="Oracle Observability Dashboards - Kubernetes" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/k8s/" />
     <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
@@ -32,7 +32,7 @@
       <div class="uk-navbar-left">
         <a href="../index.html" class="uk-navbar-item uk-logo">
           <img
-            alt="Observability &amp; Management"
+            alt="Oracle Observability Dashboards"
             class="uk-width-small"
             src="../images/Oracle-logo.jpeg">
         </a>
@@ -58,7 +58,7 @@
       <section>
         <div class="uk-margin-bottom uk-visible@s">
           <a href="../index.html" class="uk-logo">
-            <img src="../images/Oracle-logo.jpeg" alt="Observability &amp; Management">
+            <img src="../images/Oracle-logo.jpeg" alt="Oracle Observability Dashboards">
           </a>
         </div>
         <div class="uk-margin-bottom">
@@ -77,10 +77,10 @@
   
   
   
-  <li data-nav-id="/introduction/" title="Oracle Observability and Management" class="">
-    <a href="../introduction/">
+  <li data-nav-id="/k8s/" title="Kubernetes" class=" uk-active">
+    <a href="../k8s/">
       <div class="uk-flex uk-flex-between uk-flex-middle">
-        <div class="uk-text-truncate">Oracle Observability and Management</div>
+        <div class="uk-text-truncate">Kubernetes</div>
       </div>
     </a>
     
@@ -97,10 +97,30 @@
   
   
   
-  <li data-nav-id="/k8s/" title="Kubernetes" class=" uk-active">
-    <a href="../k8s/">
+  <li data-nav-id="/cloud-guard/" title="OCI Cloud Guard" class="">
+    <a href="../cloud-guard/">
       <div class="uk-flex uk-flex-between uk-flex-middle">
-        <div class="uk-text-truncate">Kubernetes</div>
+        <div class="uk-text-truncate">OCI Cloud Guard</div>
+      </div>
+    </a>
+    
+    
+  </li>
+  
+
+ 
+
+          
+            
+
+
+  
+  
+  
+  <li data-nav-id="/idcs/" title="Oracle IDCS" class="">
+    <a href="../idcs/">
+      <div class="uk-flex uk-flex-between uk-flex-middle">
+        <div class="uk-text-truncate">Oracle IDCS</div>
       </div>
     </a>
     
@@ -161,21 +181,21 @@
             </a>
           </li>
           <li>
-            <a title="GitHub Source" href="https://github.com/oracle-quickstart/oci-observability-and-management" class="uk-text-truncate">
+            <a title="GitHub Source" href="https://github.com/oracle-quickstart/oci-o11y-solutions" class="uk-text-truncate">
               <span uk-icon='icon: github; ratio: 1.25'></span>
               <span class="uk-text-middle">GitHub Source</span>
               
             </a>
           </li>
           <li>
-            <a title="Report Issue" href="https://github.com/oracle-quickstart/oci-observability-and-management/issues" class="uk-text-truncate">
+            <a title="Report Issue" href="https://github.com/oracle-quickstart/oci-o11y-solutions/issues" class="uk-text-truncate">
               <span uk-icon='icon: warning; ratio: 1.25'></span>
               <span class="uk-text-middle">Report Issue</span>
               
             </a>
           </li>
             <li>
-              <a title='Edit this page' href="https://github.com/oracle-quickstart/oci-observability-and-management/tree/master/src/docs/content/k8s/_index.md" target="blank">
+              <a title='Edit this page' href="https://github.com/oracle-quickstart/oci-o11y-solutions/tree/master/docs/content/k8s/_index.md" target="blank">
                 <span uk-icon="pencil"></span>
                 <span class="uk-text-middle">Edit this page</span>
               </a>
@@ -232,15 +252,7 @@
 
 <div class="uk-flex-last uk-width-1-4 uk-visible@l">
   <aside id="toc-nav" uk-sticky="offset: 40">
-    <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#outline">Outline</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+    <nav id="TableOfContents"></nav>
     <hr/>
     
   <div>
@@ -280,10 +292,7 @@
             <h1 class="rw-accent">Kubernetes</h1>
               
   
-    <div class="rw-aspect rw-aspect-16-9 ">
-<iframe sandbox="allow-scripts allow-same-origin" src="https://mushop.ateam.cloud/services.html"></iframe>
-</div>
-<h2 id="outline">Outline</h2>
+    <p><img src="k8s-oke-monitoring.png" alt="OKE Monitoring"></p>
 
   
 
@@ -329,25 +338,6 @@
 
   
     
-      
-      
-    
-  
-
-  
-  
-  
-
-  
-  
-
-
-  
-    
-
-
-  
-    
     
   
 
@@ -367,6 +357,38 @@
     
       
       
+    
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+    
+
+
+  
+    
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+    
+
+
+  
     
   
 
@@ -382,8 +404,8 @@
 
 
         <div class="uk-flex uk-flex-between uk-margin-top"><span></span>
-          <a href="../e-business-suite/" title="E Business Suite" class="rw-page-next uk-flex-last uk-flex uk-flex-right uk-flex-middle uk-flex-last uk-text-truncate">
-            <label class="uk-visible@m">E Business Suite</label>
+          <a href="../cloud-guard/" title="OCI Cloud Guard" class="rw-page-next uk-flex-last uk-flex uk-flex-right uk-flex-middle uk-flex-last uk-text-truncate">
+            <label class="uk-visible@m">OCI Cloud Guard</label>
             <span uk-icon="icon: chevron-right; ratio: 2.5" class="uk-margin-small-left uk-flex-none"></span>
           </a></div>
       </div>

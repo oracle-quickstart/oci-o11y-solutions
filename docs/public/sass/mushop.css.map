@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "mushop.css",
-	"sourceRoot": "/Users/kvarun/work/oci-o11y-solutions/docs",
+	"sourceRoot": "/Users/kvarun/work/o11y/oci-o11y-solutions/docs",
 	"sources": [
 		"assets/sass/mushop.scss",
 		"assets/sass/_config.scss",

@@ -1,19 +1,27 @@
 [
 {
-	"uri": "/introduction/",
-  "title": "Oracle Observability and Management",
-  "section": "introduction",
-	"tags": [],
-	"description": "",
-	"content": " O\u0026amp;M\n"
-},
-{
 	"uri": "/k8s/",
   "title": "Kubernetes",
   "section": "k8s",
 	"tags": ["OCI", "Cloud Services", "Deployment"],
 	"description": "",
-	"content": " Outline "
+	"content": "\n"
+},
+{
+	"uri": "/cloud-guard/",
+  "title": "OCI Cloud Guard",
+  "section": "cloud-guard",
+	"tags": [],
+	"description": "",
+	"content": "Coming soon "
+},
+{
+	"uri": "/idcs/",
+  "title": "Oracle IDCS",
+  "section": "idcs",
+	"tags": [],
+	"description": "",
+	"content": "Coming soon "
 },
 {
 	"uri": "/e-business-suite/",
