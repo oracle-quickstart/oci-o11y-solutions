@@ -1,9 +1,13 @@
 # oci-o11y-solutions
+
 Oracle Observability and Management Solution Templates
 
 This is an example on how to export, add & deploy  dashboards in Logging Analytics.
 
-## Sharing new Logging Analytics Dashboards
+[![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/oracle-quickstart/oci-o11y-solutions/releases/download/0.1.1/o11_solutions.zip)
+
+
+## Steps for Sharing your Logging Analytics Dashboards
 
 ## Create your dashboard in Logging Analytics 
 
