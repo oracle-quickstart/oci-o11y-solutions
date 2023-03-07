@@ -6,7 +6,7 @@ title: "Oracle Logging Analytics Examples"
 description: "Deploy Logging Analytics dashboards"
 
 stackDescription: "
-Provides an example to deploy Logging Analytics dashboards using dashboard json files.
+Provides an example to deploy Logging Analytics dashboards.
 "
 
 version: "20190304"

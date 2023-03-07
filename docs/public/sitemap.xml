@@ -2,10 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/introduction/</loc>
-  </url><url>
     <loc>/k8s/</loc>
     <lastmod>2020-03-09T13:33:46-06:00</lastmod>
+  </url><url>
+    <loc>/cloud-guard/</loc>
+    <lastmod>2023-03-07T08:52:39-08:00</lastmod>
+  </url><url>
+    <loc>/idcs/</loc>
+    <lastmod>2023-03-07T08:51:55-08:00</lastmod>
   </url><url>
     <loc>/e-business-suite/</loc>
     <lastmod>2023-01-09T13:45:21-08:00</lastmod>

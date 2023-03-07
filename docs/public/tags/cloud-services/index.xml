@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cloud Services on Observability &amp; Management</title>
+    <title>Cloud Services on Oracle Observability Dashboards</title>
     <link>/tags/cloud-services/</link>
-    <description>Recent content in Cloud Services on Observability &amp; Management</description>
+    <description>Recent content in Cloud Services on Oracle Observability Dashboards</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Mar 2020 13:33:46 -0600</lastBuildDate><atom:link href="/tags/cloud-services/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <pubDate>Mon, 09 Mar 2020 13:33:46 -0600</pubDate>
       
       <guid>/k8s/</guid>
-      <description> Outline </description>
+      <description></description>
     </item>
     
   </channel>

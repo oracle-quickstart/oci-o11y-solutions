@@ -11,8 +11,4 @@ tags:
   - Deployment
 ---
 
-{{% aspect ratio="16-9" %}}
-<iframe sandbox="allow-scripts allow-same-origin" src="https://mushop.ateam.cloud/services.html"></iframe>
-{{% /aspect %}}
-
-## Outline
+![OKE Monitoring](k8s-oke-monitoring.png)

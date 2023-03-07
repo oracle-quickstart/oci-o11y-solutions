@@ -3,18 +3,18 @@
 
 baseURL = ""
 languageCode = "en-us"
-title = "Observability & Management"
+title = "Oracle Observability Dashboards"
 theme = "redwood"
 relativeURLs = true
 
 [params]
-editURL = "https://github.com/oracle-quickstart/oci-observability-and-management/tree/master/src/docs/content/"
+editURL = "https://github.com/oracle-quickstart/oci-o11y-solutions/tree/master/docs/content/"
 showVisitedLinks = false
 author = "Oracle Developers"
 organization = "Oracle"
-description = "Oracle Observability and Management"
+description = "Oracle Observability Dashboards"
 keywords = ["Kubernetes", "OCI", "OKE", "Microservices"]
-ghrepo = "https://github.com/oracle-quickstart/oci-observability-and-management"
+ghrepo = "https://github.com/oracle-quickstart/oci-o11y-solutions"
 branch = "master"
 logo = "images/Oracle-logo.jpeg"
 
@@ -55,13 +55,13 @@ weight = 30
 [[menu.shortcuts]]
 name = "GitHub Source"
 pre = "<span uk-icon='icon: github; ratio: 1.25'></span>"
-url = "https://github.com/oracle-quickstart/oci-observability-and-management"
+url = "https://github.com/oracle-quickstart/oci-o11y-solutions"
 weight = 40
 
 [[menu.shortcuts]]
 name = "Report Issue"
 pre = "<span uk-icon='icon: warning; ratio: 1.25'></span>"
-url = "https://github.com/oracle-quickstart/oci-observability-and-management/issues"
+url = "https://github.com/oracle-quickstart/oci-o11y-solutions/issues"
 weight = 50
 
 [outputs]
