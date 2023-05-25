@@ -1,0 +1,32 @@
+
+- name: Run an Oracle Cloud Infrastructure (OCI) CLI command
+  uses: oracle-actions/run-oci-cli-command@v1.1.1
+
+  jobs:
+  my-instances:
+    runs-on: ubuntu-latest
+    name: List the display name and shape of the instances in my compartment
+    env:
+      OCI_CLI_USER: ${{ secrets.OCI_CLI_USER }}
+      OCI_CLI_TENANCY: ${{ secrets.OCI_CLI_TENANCY }}
+      OCI_CLI_FINGERPRINT: ${{ secrets.OCI_CLI_FINGERPRINT }}
+      OCI_CLI_KEY_CONTENT: ${{ secrets.OCI_CLI_KEY_CONTENT }}
+      OCI_CLI_REGION: ${{ secrets.OCI_CLI_REGION }}
+    steps:
+      - name: Retrieve the OCID of a named compartment in tenancy
+        uses: oracle-actions/run-oci-cli-command@v1.1.1
+        id: find-compartment-id
+        with:
+          command: 'iam compartment list --compartment-id-in-subtree=true'
+          query: "data[?name=='testing'].id"
+
+      - name: Retrieve the display name and shape of the instances in my compartment
+        uses: oracle-actions/run-oci-cli-command@v1.1.1
+        id: find-instances
+        with:
+          command: 'compute instance list --compartment-id ${{ steps.find-compartment-id.outputs.raw_output }}'
+          query: 'data[*].{name: \"display-name\", shape: shape}'
+
+      - name: List the display name and shape of the instances in my compartment
+        run: |
+          echo ${{ steps.find-instances.outputs.output }} | jq .
