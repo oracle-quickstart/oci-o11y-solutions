@@ -1,4 +1,4 @@
-name: Observability Dashboards
+name: Export Dashboards
 on:
   pull_request_target:
     types:
@@ -6,9 +6,9 @@ on:
     branches:
       - development
 
-#workflow_dispatch:
+  workflow_dispatch:
 
-jobs:
+  jobs:
   my-instances:
     runs-on: ubuntu-latest
     name: List the display name and shape of the instances in my compartment
@@ -24,7 +24,6 @@ jobs:
         id: find-compartment-id
         with:
           command: 'iam compartment list --compartment-id-in-subtree=true'
-          query: "data[?name=='LogAnalytics'].id"
       - name: Retrieve the display name and shape of the instances in my compartment
         uses: oracle-actions/run-oci-cli-command@v1.1.1
         id: find-instances
