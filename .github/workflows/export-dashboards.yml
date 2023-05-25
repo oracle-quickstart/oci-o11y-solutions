@@ -7,8 +7,7 @@ on:
       - development
 
   workflow_dispatch:
-
-  jobs:
+jobs:
   my-instances:
     runs-on: ubuntu-latest
     name: List the display name and shape of the instances in my compartment
