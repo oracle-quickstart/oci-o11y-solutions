@@ -1,8 +1,14 @@
+name: Observability Dashboards
+on:
+  pull_request_target:
+    types:
+      - closed
+    branches:
+      - development
 
-- name: Run an Oracle Cloud Infrastructure (OCI) CLI command
-  uses: oracle-actions/run-oci-cli-command@v1.1.1
+#workflow_dispatch:
 
-  jobs:
+jobs:
   my-instances:
     runs-on: ubuntu-latest
     name: List the display name and shape of the instances in my compartment
@@ -18,8 +24,7 @@
         id: find-compartment-id
         with:
           command: 'iam compartment list --compartment-id-in-subtree=true'
-          query: "data[?name=='testing'].id"
-
+          query: "data[?name=='LogAnalytics'].id"
       - name: Retrieve the display name and shape of the instances in my compartment
         uses: oracle-actions/run-oci-cli-command@v1.1.1
         id: find-instances
