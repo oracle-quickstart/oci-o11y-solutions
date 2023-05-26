@@ -23,7 +23,7 @@ jobs:
         uses: oracle-actions/run-oci-cli-command@v1.1.1
         id: find-compartment-id
         with:
-          command: 'iam compartment list --compartment-id-in-subtree=true --compartment-id=${{ secrets.OCI_CLI_TENANCY }}'
+          command: 'iam compartment list --compartment-id-in-subtree=true --compartment-id ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq'
           query: "data[?name=='LogAnalytics'].id"
           silent: false
       - name: Retrieve the display name and shape of the instances in my compartment
