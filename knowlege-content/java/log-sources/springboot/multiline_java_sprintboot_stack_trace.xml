@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<LoganContent xmlns="http://www.oracle.com/DataCenter/LogAnalyticsStd" content_version="2.66.1.0.0" name="content_ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda_1684950508892" oms_version="2.66.1.0.0">
+   <Parser oms_version="2.66.1.0.0" tokenize_orig_text="1" type="0">
+      <Name>multiline_java_springboot_parser</Name>
+      <DisplayName>multiline_springboot_parser</DisplayName>
+      <ParserContent>{TIMEDATE}\[([^\]]+)\]\[\]\(([^\)]+)\):\s+(.*)</ParserContent>
+      <IsSingleLineContent>0</IsSingleLineContent>
+      <HeaderContent>{TIMEDATE}</HeaderContent>
+      <ExampleContent></ExampleContent>
+      <IsSystem>0</IsSystem>
+      <Encoding>UTF-8</Encoding>
+      <Language>en_US</Language>
+      <ParserFields>
+         <ParserField>
+            <FieldSeq>1</FieldSeq>
+            <FieldName>status</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>2</FieldSeq>
+            <FieldName>j2eeapp</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>3</FieldSeq>
+            <FieldName>msg</FieldName>
+         </ParserField>
+      </ParserFields>
+      <WrittenOnce>0</WrittenOnce>
+      <IsDefaultParser>1</IsDefaultParser>
+   </Parser>
+   <Source configWarningSettings="0" name="multiline_java_springboot_error_log_source" oms_version="2.66.1.0.0">
+      <SourceType>os_file</SourceType>
+      <TargetTypes>
+         <TargetType>omc_java_virtual_machine</TargetType>
+      </TargetTypes>
+      <DisplayName>multiline_java_springboot_error_log_source</DisplayName>
+      <IsSystem>0</IsSystem>
+      <IsSecureContent>1</IsSecureContent>
+      <Parsers>
+         <Parser>
+            <ParserSeq>1</ParserSeq>
+            <ParserName>multiline_java_springboot_parser</ParserName>
+         </Parser>
+      </Parsers>
+      <IsHidden>0</IsHidden>
+      <IsSMAEnabled>0</IsSMAEnabled>
+   </Source>
+</LoganContent>
