@@ -1,20 +1,20 @@
 # Copyright (c) 2023, Oracle and/or its affiliates.
 # Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
 
-baseURL = ""
+baseURL = "https://roycefu.com/oracle-test-case/"
 languageCode = "en-us"
 title = "Oracle Observability Dashboards"
 theme = "redwood"
 relativeURLs = true
 
 [params]
-editURL = "https://github.com/oracle-quickstart/oci-o11y-solutions/tree/master/docs/content/"
+editURL = "https://github.com/furoyce/oracle-test-cases/tree/master/docs/content/"
 showVisitedLinks = false
 author = "Oracle Developers"
 organization = "Oracle"
 description = "Oracle Observability Dashboards"
 keywords = ["Kubernetes", "OCI", "OKE", "Microservices"]
-ghrepo = "https://github.com/oracle-quickstart/oci-o11y-solutions"
+ghrepo = "https://github.com/furoyce/oracle-test-cases"
 branch = "master"
 logo = "images/Oracle-logo.jpeg"
 
@@ -55,13 +55,13 @@ weight = 30
 [[menu.shortcuts]]
 name = "GitHub Source"
 pre = "<span uk-icon='icon: github; ratio: 1.25'></span>"
-url = "https://github.com/oracle-quickstart/oci-o11y-solutions"
+url = "https://github.com/furoyce/oracle-test-cases"
 weight = 40
 
 [[menu.shortcuts]]
 name = "Report Issue"
 pre = "<span uk-icon='icon: warning; ratio: 1.25'></span>"
-url = "https://github.com/oracle-quickstart/oci-o11y-solutions/issues"
+url = "https://github.com/furoyce/oracle-test-cases/issues"
 weight = 50
 
 [outputs]
