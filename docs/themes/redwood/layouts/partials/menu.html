@@ -7,7 +7,7 @@
           <img
             alt="{{ .Site.Title }}"
             class="uk-width-small"
-            src="{{ .Site.Params.logo | default "images/oracle.svg" | relURL }}">
+            src="{{ .Site.BaseURL }}/{{ .Site.Params.logo }}">
         </a>
       </div>
       <div class="uk-navbar-right">
@@ -31,7 +31,7 @@
       <section>
         <div class="uk-margin-bottom uk-visible@s">
           <a href="{{ .Site.BaseURL }}/index.html" class="uk-logo">
-            <img src="{{ .Site.Params.logo | default "images/oracle.svg" | relURL }}" alt="{{ .Site.Title }}">
+            <img src="{{ .Site.BaseURL }}/{{ .Site.Params.logo }}" alt="{{ .Site.Title }}">
           </a>
         </div>
         <div class="uk-margin-bottom">
