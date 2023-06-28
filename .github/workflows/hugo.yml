@@ -58,7 +58,7 @@ jobs:
           make theme
           hugo \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}"
+            --baseURL "https://jujufugh.github.io"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
