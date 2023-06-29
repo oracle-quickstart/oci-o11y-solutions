@@ -2,6 +2,7 @@
 title: "E Business Suite"
 date: 2023-01-09T13:45:21-08:00
 draft: false
+url: /E-Business-Suite
 #type: E-Business-Suite
 ---
 

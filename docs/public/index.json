@@ -1,6 +1,6 @@
 [
 {
-	"uri": "/k8s/",
+	"uri": "https://jujufugh.github.io/k8s/",
   "title": "Kubernetes",
   "section": "k8s",
 	"tags": ["OCI", "Cloud Services", "Deployment"],
@@ -8,23 +8,7 @@
 	"content": "\n"
 },
 {
-	"uri": "/cloud-guard/",
-  "title": "OCI Cloud Guard",
-  "section": "cloud-guard",
-	"tags": [],
-	"description": "",
-	"content": "Coming soon "
-},
-{
-	"uri": "/idcs/",
-  "title": "Oracle IDCS",
-  "section": "idcs",
-	"tags": [],
-	"description": "",
-	"content": "Coming soon "
-},
-{
-	"uri": "/e-business-suite/",
+	"uri": "https://jujufugh.github.io/e-business-suite/",
   "title": "E Business Suite",
   "section": "E-Business-Suite",
 	"tags": [],
@@ -32,7 +16,7 @@
 	"content": " \" "
 },
 {
-	"uri": "/tags/cloud-services/",
+	"uri": "https://jujufugh.github.io/tags/cloud-services/",
   "title": "Cloud Services",
   "section": "tags",
 	"tags": [],
@@ -40,7 +24,7 @@
 	"content": ""
 },
 {
-	"uri": "/tags/deployment/",
+	"uri": "https://jujufugh.github.io/tags/deployment/",
   "title": "Deployment",
   "section": "tags",
 	"tags": [],
@@ -48,7 +32,7 @@
 	"content": ""
 },
 {
-	"uri": "/tags/oci/",
+	"uri": "https://jujufugh.github.io/tags/oci/",
   "title": "OCI",
   "section": "tags",
 	"tags": [],
@@ -56,7 +40,7 @@
 	"content": ""
 },
 {
-	"uri": "/tags/",
+	"uri": "https://jujufugh.github.io/tags/",
   "title": "Tags",
   "section": "tags",
 	"tags": [],
@@ -64,15 +48,7 @@
 	"content": ""
 },
 {
-	"uri": "/resources/",
-  "title": "More Resources",
-  "section": "",
-	"tags": [],
-	"description": "",
-	"content": "Oracle Cloud Infrastructure Sign Up Console REST APIs SDKs CLI Developer Tools Terraform Provider Blogs Stack Overflow OCI Service Broker GitHub Repo Installation Services Object Storage Service Autonomous Transaction Processing Autonomous Data Warehouse Streaming service Tab one content\nconst foo: string = \u0026#39;blah blah\u0026#39;; Tab two content\nTab three content\n"
-},
-{
-	"uri": "/",
+	"uri": "https://jujufugh.github.io/",
   "title": "Oracle Observability &amp; Management",
   "section": "",
 	"tags": [],
@@ -80,15 +56,15 @@
 	"content": "Logging Analytics Oracle Cloud Infrastructure Logging Analytics is a machine learning-based cloud service that monitors, aggregates, indexes, and analyzes all log data from on-premises and multicloud environments. Enabling users to search, explore, and correlate this data to troubleshoot and resolve problems faster and derive insights to make better operational decisions.\n"
 },
 {
-	"uri": "/acknowledgements/",
+	"uri": "https://jujufugh.github.io/acknowledgements/",
   "title": "Acknowledgements",
   "section": "",
 	"tags": [],
 	"description": "",
-	"content": "Community This project, and its associative materials utilizes many excellent projects from the open source community. While there are numerous, the following projects deserve some special recognition:\nOracle Observability: Oracle Observability and Management Hugo: Documentation tool used to create this documentation Reveal.js: HTML presentation tool used to develop workshop materials Contributors Thanks to all our contributors for their commitment to open source!\n@naikvenu 36 contributions @mishracp 28 contributions @kumar-ola 19 contributions @goutv 5 contributions @benofben 3 contributions @Sandeep-ax-kumar 1 contributions @santhoshkvuda 9 contributions @kumar-ola 2 contributions @paliwalparitosh 2 contributions "
+	"content": "Community This project, and its associative materials utilizes many excellent projects from the open source community. While there are numerous, the following projects deserve some special recognition:\nOracle Observability: Oracle Observability and Management Hugo: Documentation tool used to create this documentation Reveal.js: HTML presentation tool used to develop workshop materials Contributors Thanks to all our contributors for their commitment to open source!\n@naikvenu 36 contributions @mishracp 31 contributions @kgvarun 21 contributions @goutv 5 contributions @benofben 3 contributions @Sandeep-ax-kumar 1 contributions @santhoshkvuda 13 contributions @kgvarun 2 contributions @paliwalparitosh 2 contributions "
 },
 {
-	"uri": "/categories/",
+	"uri": "https://jujufugh.github.io/categories/",
   "title": "Categories",
   "section": "categories",
 	"tags": [],

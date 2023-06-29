@@ -1,0 +1,97 @@
+[
+{
+	"uri": "/k8s/",
+  "title": "Kubernetes",
+  "section": "k8s",
+	"tags": ["OCI", "Cloud Services", "Deployment"],
+	"description": "",
+	"content": "\n"
+},
+{
+	"uri": "/cloud-guard/",
+  "title": "OCI Cloud Guard",
+  "section": "cloud-guard",
+	"tags": [],
+	"description": "",
+	"content": "Coming soon "
+},
+{
+	"uri": "/idcs/",
+  "title": "Oracle IDCS",
+  "section": "idcs",
+	"tags": [],
+	"description": "",
+	"content": "Coming soon "
+},
+{
+	"uri": "/e-business-suite/",
+  "title": "E Business Suite",
+  "section": "E-Business-Suite",
+	"tags": [],
+	"description": "",
+	"content": " \" "
+},
+{
+	"uri": "/tags/cloud-services/",
+  "title": "Cloud Services",
+  "section": "tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/deployment/",
+  "title": "Deployment",
+  "section": "tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/oci/",
+  "title": "OCI",
+  "section": "tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/",
+  "title": "Tags",
+  "section": "tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/resources/",
+  "title": "More Resources",
+  "section": "",
+	"tags": [],
+	"description": "",
+	"content": "Oracle Cloud Infrastructure Sign Up Console REST APIs SDKs CLI Developer Tools Terraform Provider Blogs Stack Overflow OCI Service Broker GitHub Repo Installation Services Object Storage Service Autonomous Transaction Processing Autonomous Data Warehouse Streaming service Tab one content\nconst foo: string = \u0026#39;blah blah\u0026#39;; Tab two content\nTab three content\n"
+},
+{
+	"uri": "/",
+  "title": "Oracle Observability &amp; Management",
+  "section": "",
+	"tags": [],
+	"description": "",
+	"content": "Logging Analytics Oracle Cloud Infrastructure Logging Analytics is a machine learning-based cloud service that monitors, aggregates, indexes, and analyzes all log data from on-premises and multicloud environments. Enabling users to search, explore, and correlate this data to troubleshoot and resolve problems faster and derive insights to make better operational decisions.\n"
+},
+{
+	"uri": "/acknowledgements/",
+  "title": "Acknowledgements",
+  "section": "",
+	"tags": [],
+	"description": "",
+	"content": "Community This project, and its associative materials utilizes many excellent projects from the open source community. While there are numerous, the following projects deserve some special recognition:\nOracle Observability: Oracle Observability and Management Hugo: Documentation tool used to create this documentation Reveal.js: HTML presentation tool used to develop workshop materials Contributors Thanks to all our contributors for their commitment to open source!\n@naikvenu 36 contributions @mishracp 28 contributions @kumar-ola 19 contributions @goutv 5 contributions @benofben 3 contributions @Sandeep-ax-kumar 1 contributions @santhoshkvuda 9 contributions @kumar-ola 2 contributions @paliwalparitosh 2 contributions "
+},
+{
+	"uri": "/categories/",
+  "title": "Categories",
+  "section": "categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
