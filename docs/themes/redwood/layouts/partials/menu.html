@@ -93,12 +93,12 @@
   {{ if and .IsSection (or (not .Params.hidden) $.showhidden) }}
   {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
   {{ $isParent := gt $numberOfPages 0 }}
-  <li data-nav-id="{{ .RelPermalink }}" title="{{ .Title }}" class="
+  <li data-nav-id="{{ .Site.BaseURL }}/../{{ .RelPermalink }}" title="{{ .Title }}" class="
     {{- if $isParent }} uk-parent{{ end -}}
     {{- if .IsAncestor $currentNode }} uk-open{{ end -}}
     {{- if eq .File.UniqueID $currentNode.File.UniqueID}} uk-active{{ end -}}
     {{- if .Params.alwaysopen }} uk-parent{{ end -}}">
-    <a href="{{ .RelPermalink }}">
+    <a href="{{ .Site.BaseURL }}/../{{ .RelPermalink }}">
       <div class="uk-flex uk-flex-between uk-flex-middle">
         <div class="uk-text-truncate">{{ safeHTML .Params.Pre }}{{ or .Params.menuTitle .LinkTitle .Title }}{{ safeHTML .Params.Post }}</div>
         {{- if $isParent -}}
@@ -126,8 +126,8 @@
   </li>
   {{ else }}
     {{ if not .Params.hidden }}
-    <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="{{if eq .File.UniqueID $currentNode.File.UniqueID}}uk-active{{end}}">
-      <a href="{{ .RelPermalink}}" class="uk-text-truncate">
+    <li data-nav-id="{{ .Site.BaseURL }}/../{{.RelPermalink}}" title="{{.Title}}" class="{{if eq .File.UniqueID $currentNode.File.UniqueID}}uk-active{{end}}">
+      <a href="{{ .Site.BaseURL }}/../{{ .RelPermalink}}" class="uk-text-truncate">
         {{ safeHTML .Params.Pre }}{{or .Params.menuTitle .LinkTitle .Title}}{{ safeHTML .Params.Post }}
       </a>
     </li>

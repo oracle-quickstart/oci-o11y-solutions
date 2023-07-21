@@ -67,9 +67,3 @@ weight = 50
 [outputs]
 home = [ "HTML", "JSON"]
 page = [ "HTML" ]
-
-
-[permalinks]
-  [permalinks.section]
-    E-Business-Suite = '/ebs/'
-    k8s = '/k8s/'
