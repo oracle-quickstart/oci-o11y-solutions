@@ -8,13 +8,13 @@ theme = "redwood"
 relativeURLs = true
 
 [params]
-editURL = "https://github.com/oracle-quickstart/oci-o11y-solutions/tree/master/docs/content/"
+editURL = "https://github.com/jujufugh/oci-o11y-solutions/tree/master/docs/content/"
 showVisitedLinks = false
 author = "Oracle Developers"
 organization = "Oracle"
 description = "Oracle Observability Dashboards"
 keywords = ["Kubernetes", "OCI", "OKE", "Microservices"]
-ghrepo = "https://github.com/oracle-quickstart/oci-o11y-solutions"
+ghrepo = "https://github.com/jujufugh/oci-o11y-solutions"
 branch = "master"
 logo = "images/Oracle-logo.jpeg"
 
