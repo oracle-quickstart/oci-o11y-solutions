@@ -72,4 +72,4 @@ page = [ "HTML" ]
 [permalinks]
   [permalinks.section]
     E-Business-Suite = '/ebs/'
-    k8s = '/k8s'
+    k8s = '/k8s/'
