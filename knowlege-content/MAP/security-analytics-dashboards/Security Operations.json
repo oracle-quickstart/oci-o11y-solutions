@@ -1,0 +1,384 @@
+{
+    "dashboards": [
+        {
+            "dashboardId": "ocid1.managementdashboard.oc1..aaaaaaaa3w5xzslxgtiuivnv3ukuwjhx4qfrdyw6duyboxfbiboar2oey2zq",
+            "providerId": "log-analytics",
+            "providerName": "Logging Analytics",
+            "providerVersion": "3.0.0",
+            "tiles": [
+                {
+                    "displayName": "Data Freshness",
+                    "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaa6vhwt5oswmz2eaznq5v4tu6hszvdjhn7f65tv5p4qj2r3xupqoba",
+                    "row": 0,
+                    "column": 0,
+                    "height": 3,
+                    "width": 6,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                        "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                        "time": "$(dashboard.params.time)"
+                    }
+                },
+                {
+                    "displayName": "Service Connector Errors",
+                    "savedSearchId": "OOBSS-management-dashboard-123",
+                    "row": 0,
+                    "column": 6,
+                    "height": 3,
+                    "width": 6,
+                    "nls": {},
+                    "uiConfig": {
+                        "internalKey": "OOBSS-management-dashboard-123",
+                        "defaultDataSource": "autoUnion",
+                        "chartInfo": {
+                            "colorBy": "name",
+                            "series": "name",
+                            "value": "aggregatedDatapoints.value",
+                            "group": "aggregatedDatapoints.timestamp",
+                            "jetConfig": {
+                                "type": "bar",
+                                "timeAxisType": "enabled",
+                                "xAxis": {
+                                    "viewportMin": "$(params.time.start)",
+                                    "viewportMax": "$(params.time.end)"
+                                },
+                                "legend": {
+                                    "rendered": true,
+                                    "position": "bottom"
+                                }
+                            }
+                        }
+                    },
+                    "dataConfig": [
+                        {
+                            "name": "oci_service_connector_hub/ErrorsAtSource",
+                            "type": "monitoringDataSource",
+                            "parameters": {
+                                "namespace": "oci_service_connector_hub",
+                                "mql": "ErrorsAtSource[5m].grouping().sum()",
+                                "compartmentId": "$(params.compartmentId)",
+                                "startTime": "$(params.time.start)",
+                                "endTime": "$(params.time.end)",
+                                "regionName": "$(params.regionName)",
+                                "maxDataPoints": "useInterval"
+                            }
+                        },
+                        {
+                            "name": "oci_service_connector_hub/ErrorsAtTarget",
+                            "type": "monitoringDataSource",
+                            "parameters": {
+                                "namespace": "oci_service_connector_hub",
+                                "mql": "ErrorsAtTarget[5m].grouping().sum()",
+                                "compartmentId": "$(params.compartmentId)",
+                                "startTime": "$(params.time.start)",
+                                "endTime": "$(params.time.end)",
+                                "regionName": "$(params.regionName)",
+                                "maxDataPoints": "useInterval"
+                            }
+                        },
+                        {
+                            "name": "oci_service_connector_hub/ServiceConnectorHubErrors",
+                            "type": "monitoringDataSource",
+                            "parameters": {
+                                "namespace": "oci_service_connector_hub",
+                                "mql": "ServiceConnectorHubErrors[5m].grouping().sum()",
+                                "compartmentId": "$(params.compartmentId)",
+                                "startTime": "$(params.time.start)",
+                                "endTime": "$(params.time.end)",
+                                "regionName": "$(params.regionName)",
+                                "maxDataPoints": "useInterval"
+                            }
+                        },
+                        {
+                            "name": "autoUnion",
+                            "type": "transformUnion",
+                            "parameters": {
+                                "dependents": [
+                                    "oci_service_connector_hub/ErrorsAtSource",
+                                    "oci_service_connector_hub/ErrorsAtTarget",
+                                    "oci_service_connector_hub/ServiceConnectorHubErrors"
+                                ],
+                                "orderByClause": [
+                                    {
+                                        "field": "aggregatedDatapoints.timestamp"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "time": "$(dashboard.params.time)",
+                        "regionName": "$(context.regionName)",
+                        "compartmentId": "$(dashboard.params.compartmentId)"
+                    }
+                }
+            ],
+            "displayName": "Security Operations",
+            "description": "Security Operations Dasboard",
+            "compartmentId": "ocid1.compartment.oc1..aaaaaaaarjcecjxsmc2bjmlai4x2nfdem4jssdi6lzfikahzwcayi3ozd36a",
+            "isOobDashboard": false,
+            "isShowInHome": false,
+            "metadataVersion": "2.0",
+            "isShowDescription": true,
+            "screenImage": "todo: provide value[mandatory]",
+            "nls": {},
+            "uiConfig": {
+                "isFilteringEnabled": false,
+                "isTimeRangeEnabled": true,
+                "isRefreshEnabled": true
+            },
+            "dataConfig": [],
+            "type": "normal",
+            "isFavorite": false,
+            "savedSearches": [
+                {
+                    "id": "ocid1.managementsavedsearch.oc1..aaaaaaaa6vhwt5oswmz2eaznq5v4tu6hszvdjhn7f65tv5p4qj2r3xupqoba",
+                    "displayName": "Data Freshness",
+                    "providerId": "log-analytics",
+                    "providerVersion": "3.0.0",
+                    "providerName": "Logging Analytics",
+                    "compartmentId": "ocid1.compartment.oc1..aaaaaaaarjcecjxsmc2bjmlai4x2nfdem4jssdi6lzfikahzwcayi3ozd36a",
+                    "isOobSavedSearch": false,
+                    "description": "Data Freshness",
+                    "nls": {},
+                    "type": "WIDGET_SHOW_IN_DASHBOARD",
+                    "uiConfig": {
+                        "timeSelection": {
+                            "timePeriod": "l60min"
+                        },
+                        "showTitle": true,
+                        "visualizationType": "hbar",
+                        "visualizationOptions": {},
+                        "queryString": "'Log Source' in ('OCI VCN Flow Unified Schema Logs', 'OCI VCN Flow Logs', 'OCI Audit Logs') | eval duration_minutes = round((now() - Time) / 60000) | stats min(duration_minutes) as 'Minutes since Last Collection' by 'Log Source'",
+                        "scopeFilters": {
+                            "filters": [
+                                {
+                                    "type": "LogGroup",
+                                    "flags": {
+                                        "IncludeSubCompartments": true
+                                    },
+                                    "values": [
+                                        {
+                                            "value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
+                                            "label": "orasenatdpltsecitom02 (root)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Entity",
+                                    "flags": {
+                                        "IncludeDependents": true,
+                                        "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaabjdpdcbzscrays4w2763r26alqpc26kguxi6cgjqfgagzc7ywbka"
+                                    },
+                                    "values": []
+                                },
+                                {
+                                    "type": "LogSet",
+                                    "flags": {},
+                                    "values": []
+                                },
+                                {
+                                    "type": "Region",
+                                    "flags": {},
+                                    "values": [
+                                        {
+                                            "value": "us-ashburn-1",
+                                            "label": "US East (Ashburn)"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "isGlobal": false,
+                            "LogGroup": {
+                                "type": "LogGroup",
+                                "flags": {
+                                    "IncludeSubCompartments": true
+                                },
+                                "values": [
+                                    {
+                                        "value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
+                                        "label": "orasenatdpltsecitom02 (root)"
+                                    }
+                                ]
+                            },
+                            "Entity": {
+                                "type": "Entity",
+                                "flags": {
+                                    "IncludeDependents": true,
+                                    "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaabjdpdcbzscrays4w2763r26alqpc26kguxi6cgjqfgagzc7ywbka"
+                                },
+                                "values": []
+                            },
+                            "LogSet": {
+                                "type": "LogSet",
+                                "flags": {},
+                                "values": []
+                            },
+                            "Region": {
+                                "type": "Region",
+                                "flags": {},
+                                "values": [
+                                    {
+                                        "value": "us-ashburn-1",
+                                        "label": "US East (Ashburn)"
+                                    }
+                                ]
+                            }
+                        },
+                        "vizType": "lxSavedSearchWidgetType",
+                        "enableWidgetInApp": true
+                    },
+                    "dataConfig": [],
+                    "screenImage": " ",
+                    "metadataVersion": "2.0",
+                    "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+                    "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+                    "freeformTags": {},
+                    "definedTags": {},
+                    "parametersConfig": [
+                        {
+                            "name": "log-analytics-log-group-compartment",
+                            "displayName": "Log Group Compartment",
+                            "required": true,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-filter-4a"
+                            ],
+                            "editUi": {
+                                "inputType": "none"
+                            },
+                            "valueFormat": {
+                                "type": "object"
+                            }
+                        },
+                        {
+                            "name": "log-analytics-entity",
+                            "displayName": "Entity",
+                            "required": true,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-filter-2a"
+                            ],
+                            "editUi": {
+                                "inputType": "none"
+                            },
+                            "valueFormat": {
+                                "type": "object"
+                            }
+                        },
+                        {
+                            "name": "log-analytics-log-set",
+                            "displayName": "Log Set",
+                            "required": true,
+                            "hidden": "$(window.logSetNotEnabled)",
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-filter-3a"
+                            ],
+                            "editUi": {
+                                "inputType": "none"
+                            },
+                            "valueFormat": {
+                                "type": "object"
+                            }
+                        },
+                        {
+                            "name": "log-analytics-region",
+                            "displayName": "Region",
+                            "required": false,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-region-filter"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-region-filter"
+                                }
+                            }
+                        },
+                        {
+                            "name": "time",
+                            "displayName": "$(bundle.globalSavedSearch.TIME)",
+                            "required": true,
+                            "hidden": true
+                        },
+                        {
+                            "name": "flex"
+                        }
+                    ],
+                    "featuresConfig": {
+                        "crossService": {
+                            "shared": true
+                        }
+                    },
+                    "drilldownConfig": []
+                }
+            ],
+            "parametersConfig": [
+                {
+                    "savedSearchId": "OOBSS-management-dashboard-compartment-filter",
+                    "displayName": "Compartment",
+                    "state": "DEFAULT",
+                    "parametersMap": {
+                        "isStoreInLocalStorage": false,
+                        "isActiveCompartment": "true"
+                    },
+                    "name": "compartmentId",
+                    "localStorageKey": "compartmentId"
+                },
+                {
+                    "savedSearchId": "OOBSS-management-dashboard-filter-4a",
+                    "displayName": "Log Group Compartment",
+                    "state": "DEFAULT",
+                    "uiConfig": {
+                        "internalKey": "OOBSS-management-dashboard-filter-4a",
+                        "filterName": "log-analytics-loggroup-filter",
+                        "vizFilterType": "lxLogGroupDashFilterType",
+                        "defaultWidth": 3,
+                        "minWidth": 3
+                    },
+                    "parametersMap": {
+                        "isStoreInLocalStorage": true
+                    },
+                    "name": "log-analytics-loggroup-filter",
+                    "localStorageKey": "log-analytics-loggroup-filter"
+                },
+                {
+                    "savedSearchId": "OOBSS-management-dashboard-filter-2a",
+                    "displayName": "Entity",
+                    "width": 6,
+                    "state": "DEFAULT",
+                    "uiConfig": {
+                        "internalKey": "OOBSS-management-dashboard-filter-2a",
+                        "filterName": "log-analytics-entity-filter",
+                        "vizFilterType": "lxEntityDashFilterType",
+                        "defaultWidth": 6,
+                        "minWidth": 6
+                    },
+                    "parametersMap": {
+                        "isStoreInLocalStorage": true
+                    },
+                    "name": "log-analytics-entity-filter",
+                    "localStorageKey": "log-analytics-entity-filter"
+                },
+                {
+                    "name": "time",
+                    "displayName": "$(bundle.globalSavedSearch.TIME)",
+                    "src": "$(context.time)"
+                }
+            ],
+            "featuresConfig": {
+                "crossService": {
+                    "shared": false
+                }
+            },
+            "drilldownConfig": [],
+            "freeformTags": {},
+            "definedTags": {}
+        }
+    ]
+}
