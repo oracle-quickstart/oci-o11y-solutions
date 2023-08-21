@@ -2246,7 +2246,7 @@
                                 }
                             }
                         },
-                        "queryString": "Type = com.oraclecloud.IdentitySignOn.InteractiveLogin and Status = '200' | stats latest(Time) as 'Last Login' by 'User Name' | where 'Last Login' < dateRelative(7day)",
+                        "queryString": "Type = com.oraclecloud.IdentitySignOn.InteractiveLogin and Status = '200' | stats latest(Time) as 'Last Login' by 'User Name' | where 'Last Login' < dateRelative(30day)",
                         "scopeFilters": {
                             "filters": [
                                 {
