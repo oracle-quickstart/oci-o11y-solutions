@@ -57,5 +57,6 @@ It may take some time for the data to start flowing into the dashboard. You will
 ### Security Analytics Dashboards Visulization
 You can now use Security Analytics Dashboards to detect security threats and issues in OCI tenany. For example, Threat IPs detected in VCN Flow Logs accessing OCI cloud resources or spikes detected in Network Ingress Traffic from Public IPs need further investigation from the security teams to mitigate security risks across your tenancy. 
 
-
-![Security Analytics Dashboards Threat IPs widget](images/sad-threat-ips.png)
+<p align="center">
+    <img src="images/sad-threat-ips.png" width="400"/>
+</p>
