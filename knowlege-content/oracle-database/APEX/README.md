@@ -128,7 +128,7 @@ Import the Sources definition
 
 From OCI Console -> Observability and Management -> Logging analytics -> Administration Overview -> Import Configuration Content 
 
-![img](images/LA_Import_source.png)
+![img](images/LA_Import_Source.png)
 
 Select one by one all the zip files 
 
