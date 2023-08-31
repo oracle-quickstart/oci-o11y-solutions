@@ -70,24 +70,24 @@ allow dynamic-group Mng_Agent to {LOG_ANALYTICS_LOG_GROUP_UPLOAD_LOGS} IN compar
 
 Create an OCI Compute in the same compartment you created in the former step. Once the Compute has been created go to Cloud Agent tab and enable the Management Agent. 
 
-![img](images\Enable_Agent.png)
+![img](images/Enable_Agent.png)
 
 Go on Observability and Management and check in the Agent section the new agent (specify the right compartment, for example, APEX)
 
 Enable the Logging Analytics Plugin in the agent
 
-![img](images\LA_Enable_plugin.png)
+![img](images/LA_Enable_plugin.png)
 
 
 3. Create the connection between Logging Analytics and the APEX DB
 
 Create the Entity DBNAME in Logging Analytics from the OCI Console 
 
-![img](images\LA_AddEntity.png)
+![img](images/LA_AddEntity.png)
 
 Download the ATP Wallet on the Compute VM
 
-![img](images\DatabaseWallet.png)
+![img](images/DatabaseWallet.png)
 
 From the Compute VM create a json file APEXcred.json
 
@@ -128,7 +128,7 @@ Import the Sources definition
 
 From OCI Console -> Observability and Management -> Logging analytics -> Administration Overview -> Import Configuration Content 
 
-![img](images\LA_Import_source.png)
+![img](images/LA_Import_source.png)
 
 Select one by one all the zip files 
 
@@ -136,13 +136,13 @@ For each Source APEX_ created, associate the Source with the ATP Entity
 
 From OCI Console -> Observability and Management -> Logging analytics -> Administration Overview -> Source and for each source click "Unassociated Entity" and select the DBName  
 
-![img](images\LA_Associate_Entity.png)
+![img](images/LA_Associate_Entity.png)
 
 Import the Dashboard 
 
 From OCI Console -> Observability and Management -> Logging analytics -> Dashboard -> Import and select the dashboard JSON 
 
-![img](images\LA_Import_Dashboard.png)
+![img](images/LA_Import_Dashboard.png)
 
 ## Useful Links (Optional)
  
