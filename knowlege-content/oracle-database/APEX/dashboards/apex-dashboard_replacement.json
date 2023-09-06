@@ -1,0 +1,4528 @@
+{
+  "dashboards": [
+    {
+      "compartmentId": " f04abd314235150222f707ff28079da6e5f3143c5ebbab22ee69cee8616e7872",
+      "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+      "dashboardId": "1332716165ea64517d2ebac7682831f4b3130c3dc98decefbffb5603d665b005",
+      "dataConfig": [],
+      "definedTags": {
+      },
+      "description": "",
+      "displayName": "APEX_USER_ACTIVITY",
+      "drilldownConfig": [],
+      "featuresConfig": {
+        "crossService": {
+          "shared": false
+        }
+      },
+      "freeformTags": {},
+      "id": "1332716165ea64517d2ebac7682831f4b3130c3dc98decefbffb5603d665b005",
+      "isFavorite": false,
+      "isOobDashboard": false,
+      "isShowDescription": true,
+      "isShowInHome": false,
+      "lifecycleState": "ACTIVE",
+      "metadataVersion": "2.0",
+      "nls": {},
+      "parametersConfig": [
+        {
+          "displayName": "Log Group Compartment",
+          "localStorageKey": "log-analytics-loggroup-filter",
+          "name": "log-analytics-loggroup-filter",
+          "parametersMap": {
+            "isStoreInLocalStorage": true
+          },
+          "savedSearchId": "OOBSS-management-dashboard-filter-4a",
+          "state": "DEFAULT",
+          "uiConfig": {
+            "defaultWidth": 3,
+            "filterName": "log-analytics-loggroup-filter",
+            "internalKey": "OOBSS-management-dashboard-filter-4a",
+            "minWidth": 3,
+            "vizFilterType": "lxLogGroupDashFilterType"
+          }
+        },
+        {
+          "displayName": "Entity",
+          "localStorageKey": "log-analytics-entity-filter",
+          "name": "log-analytics-entity-filter",
+          "parametersMap": {
+            "isStoreInLocalStorage": true
+          },
+          "savedSearchId": "OOBSS-management-dashboard-filter-2a",
+          "state": "DEFAULT",
+          "uiConfig": {
+            "defaultWidth": 6,
+            "filterName": "log-analytics-entity-filter",
+            "internalKey": "OOBSS-management-dashboard-filter-2a",
+            "minWidth": 6,
+            "vizFilterType": "lxEntityDashFilterType"
+          },
+          "width": 6
+        },
+        {
+          "displayName": "Compartment",
+          "localStorageKey": "compartmentId",
+          "name": "compartmentId",
+          "parametersMap": {
+            "isActiveCompartment": "true",
+            "isStoreInLocalStorage": false
+          },
+          "savedSearchId": "OOBSS-management-dashboard-compartment-filter",
+          "state": "DEFAULT"
+        },
+        {
+          "displayName": "$(bundle.globalSavedSearch.TIME)",
+          "name": "time",
+          "src": "$(context.time)"
+        },
+        {
+          "displayName": "Log Set",
+          "localStorageKey": "log-analytics-logset-filter",
+          "name": "log-analytics-logset-filter",
+          "parametersMap": {
+            "isStoreInLocalStorage": true
+          },
+          "savedSearchId": "OOBSS-management-dashboard-filter-3a",
+          "state": "DEFAULT",
+          "uiConfig": {
+            "defaultWidth": 6,
+            "filterName": "log-analytics-logset-filter",
+            "hidden": "$(window.logSetNotEnabled)",
+            "internalKey": "OOBSS-management-dashboard-filter-3a",
+            "minWidth": 6,
+            "vizFilterType": "lxLogSetDashFilterType"
+          }
+        }
+      ],
+      "providerId": "log-analytics",
+      "providerName": "Logging Analytics",
+      "providerVersion": "3.0.0",
+      "savedSearches": [
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_ERROR",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "897ee2766bb3a14864a2daab7803ac5c40dd45ce2f476369cb6ad36b94bd46b8",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "internalKey": "897ee2766bb3a14864a2daab7803ac5c40dd45ce2f476369cb6ad36b94bd46b8",
+            "queryString": "'Log Source' = APEX_ACCESS_LOG_ACTIVITY | stats count, trend(count) by ERROR_MESSAGE | compare timeshift = auto",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "APEX",
+                    "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "APEX",
+                      "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                    }
+                  ]
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l14day"
+            },
+            "visualizationOptions": {
+              "changeLabel": "",
+              "formatNumber": false,
+              "hideLabel": true,
+              "showCompare": true,
+              "showCompareBack": "",
+              "showCompareDecr": true,
+              "showTrend": true
+            },
+            "visualizationType": "tile",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_ACTIVITY",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "e2217b341ab4fde4b3b47f0a8dc939d6fd416caddd6867789b80504c22e228aa",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "internalKey": "e2217b341ab4fde4b3b47f0a8dc939d6fd416caddd6867789b80504c22e228aa",
+            "queryString": "'Log Source' = APEX_ACCESS_LOG_ACTIVITY and APPLICATION_NAME != null | stats count, trend(count)",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "b10b24e87beb8368557da35f52a0d07186e28e5594f4a04fafa6e6c887b5c813 (root)",
+                    "value": "af488d16aaa4dcb49ec037ca13e029788958a35f002fce18c92c1578e06e2890"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "b10b24e87beb8368557da35f52a0d07186e28e5594f4a04fafa6e6c887b5c813 (root)",
+                      "value": "af488d16aaa4dcb49ec037ca13e029788958a35f002fce18c92c1578e06e2890"
+                    }
+                  ]
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l14day"
+            },
+            "visualizationOptions": {
+              "changeLabel": "",
+              "formatNumber": false,
+              "hideLabel": true,
+              "showTrend": true
+            },
+            "visualizationType": "tile",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_APPLICATION_ERROR_TREND",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "ea1dec2aef1cd412507002455533277a2389d4bc0cd4da26076cc7aa84064aa6",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "queryString": "'Log Source' = APEX_ACCESS_LOG_ACTIVITY | timestats count, count by APPLICATION_NAME",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "b10b24e87beb8368557da35f52a0d07186e28e5594f4a04fafa6e6c887b5c813 (root)",
+                    "value": "af488d16aaa4dcb49ec037ca13e029788958a35f002fce18c92c1578e06e2890"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "b10b24e87beb8368557da35f52a0d07186e28e5594f4a04fafa6e6c887b5c813 (root)",
+                      "value": "af488d16aaa4dcb49ec037ca13e029788958a35f002fce18c92c1578e06e2890"
+                    }
+                  ]
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l14day"
+            },
+            "visualizationOptions": {},
+            "visualizationType": "line",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [],
+          "description": "",
+          "displayName": "APEX_ACCESS_USER_BY_APPLICATION",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "12e4f902c2f645c5e60f1128a6d98bae9e6fda34cbd721ea7813299ad424a91d",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "internalKey": "12e4f902c2f645c5e60f1128a6d98bae9e6fda34cbd721ea7813299ad424a91d",
+            "queryString": "'Log Source' = APEX_WORKSPACE_ACCESS_LOG and APPLICATION_NAME != null | stats count as logrecords by APPLICATION_NAME, USER_NAME | sort -logrecords",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "APEX",
+                    "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "APEX",
+                      "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                    }
+                  ]
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l7day"
+            },
+            "visualizationOptions": {},
+            "visualizationType": "hbar",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_ACCESS_USER_AUTH_FAILURES_TOT",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "1888a911a8a2d1cc2f73ca76b806a66dbee41d942772e184d2e5a697571b7b15",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "queryString": "'Log Source' = APEX_WORKSPACE_ACCESS_LOG and AUTHENTICATION_RESULT != auth_success | stats count as logrecords | sort -logrecords",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogFields": {
+                "flags": {},
+                "type": "LogFields",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": false
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "APEX",
+                    "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "MetricCompartment": {
+                "flags": {},
+                "type": "MetricCompartment",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "ResourceCompartment": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "ResourceCompartment",
+                "values": [
+                  {
+                    "label": "b10b24e87beb8368557da35f52a0d07186e28e5594f4a04fafa6e6c887b5c813 (root)",
+                    "value": "af488d16aaa4dcb49ec037ca13e029788958a35f002fce18c92c1578e06e2890"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": false
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "APEX",
+                      "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                    }
+                  ]
+                },
+                {
+                  "flags": {},
+                  "type": "MetricCompartment",
+                  "values": []
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "ResourceCompartment",
+                  "values": [
+                    {
+                      "label": "b10b24e87beb8368557da35f52a0d07186e28e5594f4a04fafa6e6c887b5c813 (root)",
+                      "value": "af488d16aaa4dcb49ec037ca13e029788958a35f002fce18c92c1578e06e2890"
+                    }
+                  ]
+                },
+                {
+                  "flags": {},
+                  "type": "LogFields",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l14day"
+            },
+            "visualizationOptions": {
+              "changeLabel": "",
+              "formatNumber": false,
+              "hideLabel": true
+            },
+            "visualizationType": "tile",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_ACCESS_USER_AUTH_SUCCESS_TOT",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "76769c5d991a65370aaa5f6d8181acb5f36b47202fcb01b0dddaeb44377384bf",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "queryString": "'Log Source' = APEX_WORKSPACE_ACCESS_LOG and AUTHENTICATION_RESULT = auth_success | stats count as logrecords | sort -logrecords",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogFields": {
+                "flags": {},
+                "type": "LogFields",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": false
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "APEX",
+                    "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "MetricCompartment": {
+                "flags": {},
+                "type": "MetricCompartment",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "ResourceCompartment": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "ResourceCompartment",
+                "values": [
+                  {
+                    "label": "b10b24e87beb8368557da35f52a0d07186e28e5594f4a04fafa6e6c887b5c813 (root)",
+                    "value": "af488d16aaa4dcb49ec037ca13e029788958a35f002fce18c92c1578e06e2890"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": false
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "APEX",
+                      "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                    }
+                  ]
+                },
+                {
+                  "flags": {},
+                  "type": "MetricCompartment",
+                  "values": []
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "ResourceCompartment",
+                  "values": [
+                    {
+                      "label": "b10b24e87beb8368557da35f52a0d07186e28e5594f4a04fafa6e6c887b5c813 (root)",
+                      "value": "af488d16aaa4dcb49ec037ca13e029788958a35f002fce18c92c1578e06e2890"
+                    }
+                  ]
+                },
+                {
+                  "flags": {},
+                  "type": "LogFields",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l14day"
+            },
+            "visualizationOptions": {
+              "changeLabel": "",
+              "formatNumber": false,
+              "hideLabel": true
+            },
+            "visualizationType": "tile",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_USER",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "0c08d77d6fcc0ee4d0d74dfd066819a6f0d67cfb3b34c813f876b553bf13a777",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "internalKey": "0c08d77d6fcc0ee4d0d74dfd066819a6f0d67cfb3b34c813f876b553bf13a777",
+            "queryString": "'Log Source' = APEX_ACCESS_LOG_ACTIVITY and APEX_USER != nobody | stats count by APEX_USER",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "APEX",
+                    "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "APEX",
+                      "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                    }
+                  ]
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l14day"
+            },
+            "visualizationOptions": {
+              "changeLabel": "",
+              "formatNumber": false,
+              "hideLabel": true
+            },
+            "visualizationType": "tile",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_ACTIVITY_BY_APPLICATION_BY_TIME",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "3ed54c0e3c057b428500aaa47c6ecc34ceb4273528091a3832be0b97dcf4eaf3",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-24T14:33:39.358Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "internalKey": "3ed54c0e3c057b428500aaa47c6ecc34ceb4273528091a3832be0b97dcf4eaf3",
+            "queryString": "'Log Source' = APEX_ACCESS_LOG_ACTIVITY | timestats count by APPLICATION_NAME",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "b10b24e87beb8368557da35f52a0d07186e28e5594f4a04fafa6e6c887b5c813 (root)",
+                    "value": "af488d16aaa4dcb49ec037ca13e029788958a35f002fce18c92c1578e06e2890"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "b10b24e87beb8368557da35f52a0d07186e28e5594f4a04fafa6e6c887b5c813 (root)",
+                      "value": "af488d16aaa4dcb49ec037ca13e029788958a35f002fce18c92c1578e06e2890"
+                    }
+                  ]
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "numUnits": 60,
+              "timePeriod": "relative",
+              "units": "MINUTES"
+            },
+            "visualizationOptions": {},
+            "visualizationType": "line",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_PATTERNS",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "3b503d46e2bdf0b48b7c1d7f6b096fb535a22713ce7fdf4f4e01e003ae00ad1e",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "queryString": "* | cluster",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "APEX",
+                    "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "APEX",
+                      "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                    }
+                  ]
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l14day"
+            },
+            "visualizationOptions": {},
+            "visualizationType": "cluster",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_ERROR_TYPE",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "dabd05c88ef9d572a516fd80753bc8192a294c22d6ba29ae2ffdbde0261b6d9c",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "internalKey": "dabd05c88ef9d572a516fd80753bc8192a294c22d6ba29ae2ffdbde0261b6d9c",
+            "queryString": "'Log Source' = APEX_ACCESS_LOG_ACTIVITY and ERROR_MESSAGE != null | stats count by APPLICATION_NAME, ERROR_MESSAGE",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "APEX",
+                    "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "APEX",
+                      "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                    }
+                  ]
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l7day"
+            },
+            "visualizationOptions": {},
+            "visualizationType": "hbar",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_ACTIVITY_BY_APEX_USER",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "b5b1e736b5369df816442e1a8df12b8b3a8266aa567d67119791cad1707228de",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "internalKey": "b5b1e736b5369df816442e1a8df12b8b3a8266aa567d67119791cad1707228de",
+            "queryString": "'Log Source' = APEX_ACCESS_LOG_ACTIVITY and APPLICATION_NAME != null and APEX_USER != nobody | stats count by APPLICATION_NAME, APEX_USER",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "APEX",
+                    "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "APEX",
+                      "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                    }
+                  ]
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l7day"
+            },
+            "visualizationOptions": {},
+            "visualizationType": "hbar",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_USER_ERROR",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "1523c64e8aa9dcb6e0b4f387f075902f782aa6ecca3a7a3048faada814490d26",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "queryString": "'Log Source' = APEX_ACCESS_LOG_ACTIVITY and ERROR_MESSAGE != null | stats count by APEX_USER",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "APEX",
+                    "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "APEX",
+                      "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                    }
+                  ]
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l14day"
+            },
+            "visualizationOptions": {
+              "changeLabel": "",
+              "formatNumber": false,
+              "hideLabel": true
+            },
+            "visualizationType": "tile",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_DB_ACTIVITY",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "da1fede1d47379bc4328157a5c22bbf7e0faf7de4d4cad64cff9fc15e18a763f",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "queryString": "'Log Source' = 'APEX Oracle Unified DB Audit Log Source' and Action = logon | stats count as logrecords",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": false
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "APEX",
+                    "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": false
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "APEX",
+                      "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                    }
+                  ]
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l14day"
+            },
+            "visualizationOptions": {
+              "changeLabel": "",
+              "formatNumber": false,
+              "hideLabel": true
+            },
+            "visualizationType": "tile",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_IP",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "a5293604824f4551befec459ad276a20310eebab21b27ba0277c18e2f0231796",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "queryString": "'Log Source' = APEX_ACCESS_LOG_ACTIVITY and APPLICATION_NAME != null | stats count by IP_ADDRESS",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "APEX",
+                    "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "APEX",
+                      "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                    }
+                  ]
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l14day"
+            },
+            "visualizationOptions": {
+              "changeLabel": "",
+              "formatNumber": false,
+              "hideLabel": true
+            },
+            "visualizationType": "tile",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_ACCESS_USER_AUTH_SUCCESS",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "c72599359d21177519a89f42bd049e3f814e25e6bdd5771b96cb7c5dfeafced1",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "internalKey": "c72599359d21177519a89f42bd049e3f814e25e6bdd5771b96cb7c5dfeafced1",
+            "queryString": "'Log Source' = APEX_WORKSPACE_ACCESS_LOG and AUTHENTICATION_RESULT = auth_success and APPLICATION_NAME != null | timestats count as logrecords by APPLICATION_NAME | sort -logrecords",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "APEX",
+                    "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "APEX",
+                      "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                    }
+                  ]
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l14day"
+            },
+            "visualizationOptions": {},
+            "visualizationType": "line",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_MOST_ACCESSPAGE_BY_APPLICATION",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "95f9df32cc0cdd8793d47f40df89f3fa4af604db1beb7e3722f2764cbebb63ae",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "internalKey": "95f9df32cc0cdd8793d47f40df89f3fa4af604db1beb7e3722f2764cbebb63ae",
+            "queryString": "'Log Source' = APEX_ACCESS_LOG_ACTIVITY and APPLICATION_NAME != null | stats count by APPLICATION_NAME, PAGE_NAME",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "APEX",
+                    "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "APEX",
+                      "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                    }
+                  ]
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l7day"
+            },
+            "visualizationOptions": {},
+            "visualizationType": "hbar",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_WORKSPACE",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "37bb96a92472d3891d927ce4c4b198ca45669752c851e4c1d0a0fadef44b5b9f",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "internalKey": "37bb96a92472d3891d927ce4c4b198ca45669752c851e4c1d0a0fadef44b5b9f",
+            "queryString": "'Log Source' = APEX_ACCESS_LOG_ACTIVITY and APPLICATION_NAME != null | stats count by WORKSPACE_DISPLAY_NAME | compare timeshift = auto",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "APEX",
+                    "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "APEX",
+                      "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                    }
+                  ]
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l14day"
+            },
+            "visualizationOptions": {
+              "changeLabel": "",
+              "formatNumber": false,
+              "hideLabel": true,
+              "showCompare": true,
+              "showCompareBack": "",
+              "showCompareDecr": ""
+            },
+            "visualizationType": "tile",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_ACCESS_USER_AUTH_FAILURES",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "f7877a9ffb8a0d0002d21319e98adf804589a5fed01613631285a7e3492d4812",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "queryString": "'Log Source' = APEX_WORKSPACE_ACCESS_LOG and AUTHENTICATION_RESULT != auth_success | timestats count as logrecords by AUTHENTICATION_RESULT | sort -logrecords",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogFields": {
+                "flags": {},
+                "type": "LogFields",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "APEX",
+                    "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "MetricCompartment": {
+                "flags": {},
+                "type": "MetricCompartment",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "ResourceCompartment": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "ResourceCompartment",
+                "values": [
+                  {
+                    "label": "APEX",
+                    "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "APEX",
+                      "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                    }
+                  ]
+                },
+                {
+                  "flags": {},
+                  "type": "MetricCompartment",
+                  "values": []
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "ResourceCompartment",
+                  "values": [
+                    {
+                      "label": "APEX",
+                      "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                    }
+                  ]
+                },
+                {
+                  "flags": {},
+                  "type": "LogFields",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l7day"
+            },
+            "visualizationOptions": {},
+            "visualizationType": "line",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_APPLICATION",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "ab1baabbac09e2ff090c6604181336e08b31badda943f282130c9de1e2362fa4",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "internalKey": "ab1baabbac09e2ff090c6604181336e08b31badda943f282130c9de1e2362fa4",
+            "queryString": "'Log Source' = APEX_ACCESS_LOG_ACTIVITY | stats count by APPLICATION_NAME | compare timeshift = auto",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "APEX",
+                    "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "APEX",
+                      "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                    }
+                  ]
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l14day"
+            },
+            "visualizationOptions": {
+              "changeLabel": "",
+              "formatNumber": false,
+              "hideLabel": true,
+              "showCompare": true,
+              "showCompareBack": "",
+              "showCompareDecr": ""
+            },
+            "visualizationType": "tile",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        },
+        {
+          "compartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4",
+          "createdBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "dataConfig": [], 
+          "description": "",
+          "displayName": "APEX_PAGES",
+          "drilldownConfig": [],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "freeformTags": {},
+          "id": "e71855d31e9c6701603eadba1fbe8d4bbadb767a26b7700e4c09ba61c74677d6",
+          "isOobSavedSearch": false,
+          "lifecycleState": "ACTIVE",
+          "metadataVersion": "2.0",
+          "nls": {},
+          "parametersConfig": [
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "displayName": "Log Group Compartment",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-log-group-compartment",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "displayName": "Entity",
+              "editUi": {
+                "inputType": "none"
+              },
+              "name": "log-analytics-entity",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "displayName": "Log Set",
+              "editUi": {
+                "inputType": "none"
+              },
+              "hidden": "$(window.logSetNotEnabled)",
+              "name": "log-analytics-log-set",
+              "required": true,
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "displayName": "Region",
+              "editUi": {
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                },
+                "inputType": "savedSearch"
+              },
+              "name": "log-analytics-region",
+              "required": false
+            },
+            {
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "hidden": true,
+              "name": "time",
+              "required": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "providerId": "log-analytics",
+          "providerName": "Logging Analytics",
+          "providerVersion": "3.0.0",
+          "screenImage": " ",
+          "timeCreated": "2023-07-21T09:46:59.238Z",
+          "timeUpdated": "2023-07-21T09:46:59.238Z",
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "enableWidgetInApp": true,
+            "queryString": "'Log Source' = APEX_ACCESS_LOG_ACTIVITY and APPLICATION_NAME != null | stats count by PAGE_NAME",
+            "scopeFilters": {
+              "Entity": {
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                },
+                "type": "Entity",
+                "values": []
+              },
+              "LogFields": {
+                "flags": {},
+                "type": "LogFields",
+                "values": []
+              },
+              "LogGroup": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "LogGroup",
+                "values": [
+                  {
+                    "label": "APEX",
+                    "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  }
+                ]
+              },
+              "LogSet": {
+                "flags": {},
+                "type": "LogSet",
+                "values": []
+              },
+              "MetricCompartment": {
+                "flags": {},
+                "type": "MetricCompartment",
+                "values": []
+              },
+              "Region": {
+                "flags": {},
+                "type": "Region",
+                "values": [
+                  {
+                    "label": "Germany Central (Frankfurt)",
+                    "value": "eu-frankfurt-1"
+                  }
+                ]
+              },
+              "ResourceCompartment": {
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "type": "ResourceCompartment",
+                "values": [
+                  {
+                    "label": "b10b24e87beb8368557da35f52a0d07186e28e5594f4a04fafa6e6c887b5c813 (root)",
+                    "value": "af488d16aaa4dcb49ec037ca13e029788958a35f002fce18c92c1578e06e2890"
+                  }
+                ]
+              },
+              "filters": [
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "LogGroup",
+                  "values": [
+                    {
+                      "label": "APEX",
+                      "value": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                    }
+                  ]
+                },
+                {
+                  "flags": {},
+                  "type": "MetricCompartment",
+                  "values": []
+                },
+                {
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "623f7649cad4a67edd8ca0407466fa929ff471451acebff5eef48a1cea9710f4"
+                  },
+                  "type": "Entity",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "LogSet",
+                  "values": []
+                },
+                {
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "type": "ResourceCompartment",
+                  "values": [
+                    {
+                      "label": "b10b24e87beb8368557da35f52a0d07186e28e5594f4a04fafa6e6c887b5c813 (root)",
+                      "value": "af488d16aaa4dcb49ec037ca13e029788958a35f002fce18c92c1578e06e2890"
+                    }
+                  ]
+                },
+                {
+                  "flags": {},
+                  "type": "LogFields",
+                  "values": []
+                },
+                {
+                  "flags": {},
+                  "type": "Region",
+                  "values": [
+                    {
+                      "label": "Germany Central (Frankfurt)",
+                      "value": "eu-frankfurt-1"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false
+            },
+            "showTitle": true,
+            "timeSelection": {
+              "timePeriod": "l14day"
+            },
+            "visualizationOptions": {
+              "changeLabel": "",
+              "formatNumber": false,
+              "hideLabel": true
+            },
+            "visualizationType": "tile",
+            "vizType": "lxSavedSearchWidgetType"
+          },
+          "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget"
+        }
+      ],
+      "screenImage": "todo: provide value[mandatory]",
+      "tiles": [
+        {
+          "column": 0,
+          "dataConfig": [],
+          "displayName": "ERRORS",
+          "drilldownConfig": [],
+          "height": 7,
+          "nls": {},
+          "parametersMap": {},
+          "row": 0,
+          "savedSearchId": "OOBSS-management-dashboard-container",
+          "state": "DEFAULT",
+          "uiConfig": {
+            "containerInfo": {
+              "subTiles": [
+                {
+                  "column": 0,
+                  "dataConfig": [],
+                  "displayName": "APEX_ERROR",
+                  "drilldownConfig": [],
+                  "height": 2,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 0,
+                  "savedSearchId": "897ee2766bb3a14864a2daab7803ac5c40dd45ce2f476369cb6ad36b94bd46b8",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 2
+                },
+                {
+                  "column": 0,
+                  "dataConfig": [],
+                  "displayName": "APEX_ERROR_TYPE",
+                  "drilldownConfig": [],
+                  "height": 3,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 4,
+                  "savedSearchId": "dabd05c88ef9d572a516fd80753bc8192a294c22d6ba29ae2ffdbde0261b6d9c",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 6
+                },
+                {
+                  "column": 0,
+                  "dataConfig": [],
+                  "displayName": "APEX_USER_ERROR",
+                  "drilldownConfig": [],
+                  "height": 2,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 2,
+                  "savedSearchId": "1523c64e8aa9dcb6e0b4f387f075902f782aa6ecca3a7a3048faada814490d26",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 2
+                },
+                {
+                  "column": 6,
+                  "dataConfig": [],
+                  "displayName": "APEX_PATTERNS",
+                  "drilldownConfig": [],
+                  "height": 3,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 4,
+                  "savedSearchId": "3b503d46e2bdf0b48b7c1d7f6b096fb535a22713ce7fdf4f4e01e003ae00ad1e",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 6
+                },
+                {
+                  "column": 2,
+                  "dataConfig": [],
+                  "displayName": "APEX_APPLICATION_ERROR_TREND",
+                  "drilldownConfig": [],
+                  "height": 4,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 0,
+                  "savedSearchId": "ea1dec2aef1cd412507002455533277a2389d4bc0cd4da26076cc7aa84064aa6",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 10
+                }
+              ]
+            },
+            "internalKey": "OOBSS-management-dashboard-container",
+            "vizType": "tileContainer"
+          },
+          "width": 12
+        },
+        {
+          "column": 0,
+          "dataConfig": [],
+          "displayName": "USER AUTHENTICATION",
+          "drilldownConfig": [],
+          "height": 5,
+          "nls": {},
+          "parametersMap": {},
+          "row": 7,
+          "savedSearchId": "OOBSS-management-dashboard-container",
+          "state": "DEFAULT",
+          "uiConfig": {
+            "containerInfo": {
+              "subTiles": [
+                {
+                  "column": 6,
+                  "dataConfig": [],
+                  "displayName": "APEX_ACCESS_USER_BY_APPLICATION",
+                  "drilldownConfig": [],
+                  "height": 2,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "log-analytics-log-set": "$(dashboard.params.log-analytics-logset-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 0,
+                  "savedSearchId": "12e4f902c2f645c5e60f1128a6d98bae9e6fda34cbd721ea7813299ad424a91d",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 6
+                },
+                {
+                  "column": 0,
+                  "dataConfig": [],
+                  "displayName": "APEX_ACCESS_USER_AUTH_FAILURES",
+                  "drilldownConfig": [],
+                  "height": 3,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "log-analytics-log-set": "$(dashboard.params.log-analytics-logset-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 2,
+                  "savedSearchId": "f7877a9ffb8a0d0002d21319e98adf804589a5fed01613631285a7e3492d4812",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 6
+                },
+                {
+                  "column": 6,
+                  "dataConfig": [],
+                  "displayName": "APEX_ACCESS_USER_AUTH_SUCCESS",
+                  "drilldownConfig": [],
+                  "height": 3,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "log-analytics-log-set": "$(dashboard.params.log-analytics-logset-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 2,
+                  "savedSearchId": "c72599359d21177519a89f42bd049e3f814e25e6bdd5771b96cb7c5dfeafced1",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 6
+                },
+                {
+                  "column": 4,
+                  "dataConfig": [],
+                  "displayName": "DB_LOGON",
+                  "drilldownConfig": [],
+                  "height": 2,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 0,
+                  "savedSearchId": "da1fede1d47379bc4328157a5c22bbf7e0faf7de4d4cad64cff9fc15e18a763f",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 2
+                },
+                {
+                  "column": 0,
+                  "dataConfig": [],
+                  "displayName": "APEX_FAILED_LOGIN",
+                  "drilldownConfig": [],
+                  "height": 2,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 0,
+                  "savedSearchId": "1888a911a8a2d1cc2f73ca76b806a66dbee41d942772e184d2e5a697571b7b15",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 2
+                },
+                {
+                  "column": 2,
+                  "dataConfig": [],
+                  "displayName": "APEX_SUCCESS_LOGIN",
+                  "drilldownConfig": [],
+                  "height": 2,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 0,
+                  "savedSearchId": "76769c5d991a65370aaa5f6d8181acb5f36b47202fcb01b0dddaeb44377384bf",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 2
+                }
+              ]
+            },
+            "internalKey": "OOBSS-management-dashboard-container",
+            "vizType": "tileContainer"
+          },
+          "width": 12
+        },
+        {
+          "column": 0,
+          "dataConfig": [],
+          "displayName": "APPLICATION USAGE",
+          "drilldownConfig": [],
+          "height": 11,
+          "nls": {},
+          "parametersMap": {},
+          "row": 12,
+          "savedSearchId": "OOBSS-management-dashboard-container",
+          "state": "DEFAULT",
+          "uiConfig": {
+            "containerInfo": {
+              "subTiles": [
+                {
+                  "column": 6,
+                  "dataConfig": [],
+                  "displayName": "APEX_PAGES",
+                  "drilldownConfig": [],
+                  "height": 2,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 0,
+                  "savedSearchId": "e71855d31e9c6701603eadba1fbe8d4bbadb767a26b7700e4c09ba61c74677d6",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 2
+                },
+                {
+                  "column": 0,
+                  "dataConfig": [],
+                  "displayName": "APEX_MOST_ACCESSPAGE_BY_APPLICATION",
+                  "drilldownConfig": [],
+                  "height": 3,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "log-analytics-log-set": "$(dashboard.params.log-analytics-logset-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 2,
+                  "savedSearchId": "95f9df32cc0cdd8793d47f40df89f3fa4af604db1beb7e3722f2764cbebb63ae",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 6
+                },
+                {
+                  "column": 4,
+                  "dataConfig": [],
+                  "displayName": "APEX_USER",
+                  "drilldownConfig": [],
+                  "height": 2,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 0,
+                  "savedSearchId": "0c08d77d6fcc0ee4d0d74dfd066819a6f0d67cfb3b34c813f876b553bf13a777",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 2
+                },
+                {
+                  "column": 2,
+                  "dataConfig": [],
+                  "displayName": "APEX_APPLICATION",
+                  "drilldownConfig": [],
+                  "height": 2,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 0,
+                  "savedSearchId": "ab1baabbac09e2ff090c6604181336e08b31badda943f282130c9de1e2362fa4",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 2
+                },
+                {
+                  "column": 6,
+                  "dataConfig": [],
+                  "displayName": "APEX_ACTIVITY_BY_APEX_USER",
+                  "drilldownConfig": [],
+                  "height": 3,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "log-analytics-log-set": "$(dashboard.params.log-analytics-logset-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 2,
+                  "savedSearchId": "b5b1e736b5369df816442e1a8df12b8b3a8266aa567d67119791cad1707228de",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 6
+                },
+                {
+                  "column": 0,
+                  "dataConfig": [],
+                  "displayName": "APEX_ACTIVITY_BY_APPLICATION_BY_TIME",
+                  "drilldownConfig": [],
+                  "height": 3,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 5,
+                  "savedSearchId": "3ed54c0e3c057b428500aaa47c6ecc34ceb4273528091a3832be0b97dcf4eaf3",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 12
+                },
+                {
+                  "column": 0,
+                  "dataConfig": [],
+                  "displayName": "APEX_WORKSPACE",
+                  "drilldownConfig": [],
+                  "height": 2,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 0,
+                  "savedSearchId": "37bb96a92472d3891d927ce4c4b198ca45669752c851e4c1d0a0fadef44b5b9f",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 2
+                },
+                {
+                  "column": 0,
+                  "dataConfig": [
+                    {
+                      "name": "oci_autonomous_database/StorageUtilization",
+                      "parameters": {
+                        "compartmentId": "$(params.compartmentId)",
+                        "endTime": "$(params.time.end)",
+                        "mql": "StorageUtilization[auto].grouping().mean()",
+                        "namespace": "oci_autonomous_database",
+                        "regionName": "$(params.regionName)",
+                        "startTime": "$(params.time.start)"
+                      },
+                      "type": "monitoringDataSource"
+                    },
+                    {
+                      "name": "autoUnion",
+                      "parameters": {
+                        "dependents": [
+                          "oci_autonomous_database/CpuUtilization",
+                          "oci_autonomous_database/StorageUtilization"
+                        ],
+                        "orderByClause": [
+                          {
+                            "field": "aggregatedDatapoints.timestamp"
+                          }
+                        ]
+                      },
+                      "type": "transformUnion"
+                    },
+                    {
+                      "name": "oci_autonomous_database/CpuUtilization",
+                      "parameters": {
+                        "compartmentId": "$(params.compartmentId)",
+                        "endTime": "$(params.time.end)",
+                        "mql": "CpuUtilization[auto]{displayName=\"CpuUtilization\"}.grouping().mean()",
+                        "namespace": "oci_autonomous_database",
+                        "regionName": "$(params.regionName)",
+                        "startTime": "$(params.time.start)"
+                      },
+                      "type": "monitoringDataSource"
+                    }
+                  ],
+                  "displayName": "DATABASE CPU AND STORAGE UTILIZATION",
+                  "drilldownConfig": [],
+                  "height": 3,
+                  "nls": {},
+                  "parametersMap": {
+                    "compartmentId": "$(dashboard.params.compartmentId)",
+                    "regionName": "$(context.regionName)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 8,
+                  "savedSearchId": "OOBSS-management-dashboard-123",
+                  "state": "DEFAULT",
+                  "uiConfig": {
+                    "chartInfo": {
+                      "colorBy": "name",
+                      "group": "aggregatedDatapoints.timestamp",
+                      "jetConfig": {
+                        "legend": {
+                          "position": "end",
+                          "rendered": true
+                        },
+                        "timeAxisType": "enabled",
+                        "type": "lineWithArea",
+                        "xAxis": {
+                          "viewportMax": "$(params.time.end)",
+                          "viewportMin": "$(params.time.start)"
+                        }
+                      },
+                      "series": "name",
+                      "value": "aggregatedDatapoints.value"
+                    },
+                    "defaultDataSource": "autoUnion",
+                    "internalKey": "OOBSS-management-dashboard-123"
+                  },
+                  "width": 12
+                },
+                {
+                  "column": 8,
+                  "dataConfig": [],
+                  "displayName": "APEX_IP",
+                  "drilldownConfig": [],
+                  "height": 2,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 0,
+                  "savedSearchId": "a5293604824f4551befec459ad276a20310eebab21b27ba0277c18e2f0231796",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 2
+                },
+                {
+                  "column": 10,
+                  "dataConfig": [],
+                  "displayName": "APEX_ACTIVITY",
+                  "drilldownConfig": [],
+                  "height": 2,
+                  "nls": {},
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "row": 0,
+                  "savedSearchId": "e2217b341ab4fde4b3b47f0a8dc939d6fd416caddd6867789b80504c22e228aa",
+                  "state": "DEFAULT",
+                  "uiConfig": {},
+                  "width": 2
+                }
+              ]
+            },
+            "internalKey": "OOBSS-management-dashboard-container",
+            "vizType": "tileContainer"
+          },
+          "width": 12
+        }
+      ],
+      "timeCreated": "2023-07-03T08:18:05.368Z",
+      "timeUpdated": "2023-07-07T09:33:59.633Z",
+      "type": "normal",
+      "uiConfig": {
+        "isFilteringEnabled": false,
+        "isRefreshEnabled": true,
+        "isTimeRangeEnabled": true
+      },
+      "updatedBy": "bb8619ee0b2ff74be17f1c23e7cc0e145c44c254415c856652115928208bc70d"
+    }
+  ]
+}
