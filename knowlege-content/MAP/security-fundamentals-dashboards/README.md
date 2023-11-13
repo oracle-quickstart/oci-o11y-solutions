@@ -13,7 +13,7 @@
 
 ### Enable Security Fundamentals Dashboards
 
-![Enable Security Fundamentals Dashboards in 4 days](images/sad_full_workflow_diagram_square.png)
+![Enable Security Fundamentals Dashboards in 4 days](images/SFD_full_workflow_diagram_square.png)
 
 ### Security Fundamentals Dashboards Onboarding
 * Logging Analytics should be set up in your tenancy 
