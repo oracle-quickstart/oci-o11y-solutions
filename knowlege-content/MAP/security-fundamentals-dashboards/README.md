@@ -2,6 +2,7 @@
 
 ### Dashboards screenshots
 * Identity Dashboard
+*NOTE: SFD Identity Dashboard is based on OCI Audit data for **monitoring local user activities**. The dashboard is not applicable for **IDCS** or **Identity Domain** user activity monitoring*
 ![Out-of-Box Dashboard for Identity Dashboard](images/identity_analytics_dashboard_screenshot.png)
 
 * Network Dashboard
