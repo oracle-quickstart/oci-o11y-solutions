@@ -18,7 +18,7 @@ Logging Analytics knowledge content consists of one or more of the following:
 | ---| ---| :---:| :---:| :---:| :---:
 | :arrow_double_down: Oracle E-Business Suite  | Packaed App       | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: | :soon:
 | :arrow_double_down: Oracle Integration Cloud | OCI Cloud Service | :heavy_check_mark:  | :gift:              | :raising_hand: |:raising_hand:|  :no_entry_sign:  
-| :arrow_double_down: Security Analytics Dashboards | OCI Cloud Service | :heavy_check_mark:  | :gift:              | :raising_hand: |:raising_hand:|  :no_entry_sign: 
+| :arrow_double_down: Security Fundamentals Dashboards | OCI Cloud Service | :heavy_check_mark:  | :gift:              | :raising_hand: |:raising_hand:|  :no_entry_sign: 
 
 Legend
 
