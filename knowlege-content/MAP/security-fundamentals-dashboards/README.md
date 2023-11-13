@@ -2,7 +2,7 @@
 
 ### Dashboards screenshots
 * Identity Dashboard
-*NOTE: SFD Identity Dashboard is **ONLY** applicable for **monitoring local user activities**. If you use **Identity Domain** or **IDCS**, please stay tuned for our Identity Domain Dashboard.*
+*NOTE: SFD Identity Dashboard is **ONLY** applicable for **monitoring local user activities**. If you use **Identity Domain** or **IDCS**, please stay tuned for the new Identity Domain Dashboard.*
 ![Out-of-Box Dashboard for Identity Dashboard](images/identity_analytics_dashboard_screenshot.png)
 
 * Network Dashboard
