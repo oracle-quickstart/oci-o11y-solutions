@@ -1,14 +1,14 @@
 {
     "dashboards": [
         {
-            "dashboardId": "ocid1.managementdashboard.oc1..aaaaaaaa3w5xzslxgtiuivnv3ukuwjhx4qfrdyw6duyboxfbiboar2oey2zq",
+            "dashboardId": "ocid1.managementdashboard.oc1..aaaaaaaaltiyez2g3ewmttycxwvnqzqckfgsusrr6jybzhy47s6hzkdq2g3a",
             "providerId": "log-analytics",
             "providerName": "Logging Analytics",
             "providerVersion": "3.0.0",
             "tiles": [
                 {
                     "displayName": "Data Freshness",
-                    "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaa6vhwt5oswmz2eaznq5v4tu6hszvdjhn7f65tv5p4qj2r3xupqoba",
+                    "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaafltn7ydr5zkxfk3zkpnswv2kkrj23dmudbfxocive4oyc5latnea",
                     "row": 0,
                     "column": 0,
                     "height": 3,
@@ -69,19 +69,6 @@
                             }
                         },
                         {
-                            "name": "oci_service_connector_hub/ErrorsAtTarget",
-                            "type": "monitoringDataSource",
-                            "parameters": {
-                                "namespace": "oci_service_connector_hub",
-                                "mql": "ErrorsAtTarget[5m].grouping().sum()",
-                                "compartmentId": "$(params.compartmentId)",
-                                "startTime": "$(params.time.start)",
-                                "endTime": "$(params.time.end)",
-                                "regionName": "$(params.regionName)",
-                                "maxDataPoints": "useInterval"
-                            }
-                        },
-                        {
                             "name": "oci_service_connector_hub/ServiceConnectorHubErrors",
                             "type": "monitoringDataSource",
                             "parameters": {
@@ -109,6 +96,19 @@
                                     }
                                 ]
                             }
+                        },
+                        {
+                            "name": "oci_service_connector_hub/ErrorsAtTarget",
+                            "type": "monitoringDataSource",
+                            "parameters": {
+                                "namespace": "oci_service_connector_hub",
+                                "mql": "ErrorsAtTarget[5m]{targetName=\"LOGGINGANALYTICS\"}.grouping().sum()",
+                                "compartmentId": "$(params.compartmentId)",
+                                "startTime": "$(params.time.start)",
+                                "endTime": "$(params.time.end)",
+                                "regionName": "$(params.regionName)",
+                                "maxDataPoints": "useInterval"
+                            }
                         }
                     ],
                     "state": "DEFAULT",
@@ -118,11 +118,116 @@
                         "regionName": "$(context.regionName)",
                         "compartmentId": "$(dashboard.params.compartmentId)"
                     }
+                },
+                {
+                    "displayName": "Logging Analytics Log Upload Size",
+                    "savedSearchId": "OOBSS-management-dashboard-123",
+                    "row": 3,
+                    "column": 0,
+                    "height": 3,
+                    "width": 6,
+                    "nls": {},
+                    "uiConfig": {
+                        "internalKey": "OOBSS-management-dashboard-123",
+                        "defaultDataSource": "oci_logging_analytics/logCollectionUploadDataSize",
+                        "chartInfo": {
+                            "colorBy": "name",
+                            "series": "name",
+                            "value": "aggregatedDatapoints.value",
+                            "group": "aggregatedDatapoints.timestamp",
+                            "jetConfig": {
+                                "type": "lineWithArea",
+                                "timeAxisType": "enabled",
+                                "xAxis": {
+                                    "viewportMin": "$(params.time.start)",
+                                    "viewportMax": "$(params.time.end)"
+                                },
+                                "legend": {
+                                    "rendered": true,
+                                    "position": "bottom"
+                                }
+                            }
+                        }
+                    },
+                    "dataConfig": [
+                        {
+                            "name": "oci_logging_analytics/logCollectionUploadDataSize",
+                            "type": "monitoringDataSource",
+                            "parameters": {
+                                "namespace": "oci_logging_analytics",
+                                "mql": "logCollectionUploadDataSize[10h].grouping().sum()",
+                                "compartmentId": "$(params.compartmentId)",
+                                "startTime": "$(params.time.start)",
+                                "endTime": "$(params.time.end)",
+                                "regionName": "$(params.regionName)",
+                                "maxDataPoints": "useInterval"
+                            }
+                        }
+                    ],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "time": "$(dashboard.params.time)",
+                        "regionName": "$(context.regionName)",
+                        "compartmentId": "$(dashboard.params.compartmentId)"
+                    }
+                },
+                {
+                    "displayName": "Logging Analytics Active Storage Used (GB)",
+                    "savedSearchId": "OOBSS-management-dashboard-123",
+                    "row": 3,
+                    "column": 6,
+                    "height": 3,
+                    "width": 6,
+                    "nls": {},
+                    "uiConfig": {
+                        "internalKey": "OOBSS-management-dashboard-123",
+                        "defaultDataSource": "oci_logging_analytics/ActiveStorageUsed",
+                        "chartInfo": {
+                            "colorBy": "name",
+                            "series": "name",
+                            "value": "aggregatedDatapoints.value",
+                            "group": "aggregatedDatapoints.timestamp",
+                            "jetConfig": {
+                                "type": "line",
+                                "timeAxisType": "enabled",
+                                "xAxis": {
+                                    "viewportMin": "$(params.time.start)",
+                                    "viewportMax": "$(params.time.end)"
+                                },
+                                "legend": {
+                                    "rendered": true,
+                                    "position": "bottom"
+                                }
+                            }
+                        }
+                    },
+                    "dataConfig": [
+                        {
+                            "name": "oci_logging_analytics/ActiveStorageUsed",
+                            "type": "monitoringDataSource",
+                            "parameters": {
+                                "namespace": "oci_logging_analytics",
+                                "mql": "ActiveStorageUsed[auto].grouping().max()",
+                                "compartmentId": "$(params.compartmentId)",
+                                "startTime": "$(params.time.start)",
+                                "endTime": "$(params.time.end)",
+                                "regionName": "$(params.regionName)"
+                            }
+                        }
+                    ],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "time": "$(dashboard.params.time)",
+                        "regionName": "$(context.regionName)",
+                        "compartmentId": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda"
+                    }
                 }
             ],
             "displayName": "Security Operations",
             "description": "Security Operations Dasboard",
-            "compartmentId": "ocid1.compartment.oc1..aaaaaaaarjcecjxsmc2bjmlai4x2nfdem4jssdi6lzfikahzwcayi3ozd36a",
+            "compartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
             "isOobDashboard": false,
             "isShowInHome": false,
             "metadataVersion": "2.0",
@@ -139,12 +244,12 @@
             "isFavorite": false,
             "savedSearches": [
                 {
-                    "id": "ocid1.managementsavedsearch.oc1..aaaaaaaa6vhwt5oswmz2eaznq5v4tu6hszvdjhn7f65tv5p4qj2r3xupqoba",
+                    "id": "ocid1.managementsavedsearch.oc1..aaaaaaaafltn7ydr5zkxfk3zkpnswv2kkrj23dmudbfxocive4oyc5latnea",
                     "displayName": "Data Freshness",
                     "providerId": "log-analytics",
                     "providerVersion": "3.0.0",
                     "providerName": "Logging Analytics",
-                    "compartmentId": "ocid1.compartment.oc1..aaaaaaaarjcecjxsmc2bjmlai4x2nfdem4jssdi6lzfikahzwcayi3ozd36a",
+                    "compartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
                     "isOobSavedSearch": false,
                     "description": "Data Freshness",
                     "nls": {},
@@ -322,6 +427,7 @@
                 {
                     "savedSearchId": "OOBSS-management-dashboard-compartment-filter",
                     "displayName": "Compartment",
+                    "width": 3,
                     "state": "DEFAULT",
                     "parametersMap": {
                         "isStoreInLocalStorage": false,
@@ -333,6 +439,7 @@
                 {
                     "savedSearchId": "OOBSS-management-dashboard-filter-4a",
                     "displayName": "Log Group Compartment",
+                    "width": 3,
                     "state": "DEFAULT",
                     "uiConfig": {
                         "internalKey": "OOBSS-management-dashboard-filter-4a",
