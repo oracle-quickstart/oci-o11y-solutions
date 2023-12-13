@@ -20,8 +20,8 @@
                     "drilldownConfig": [],
                     "parametersMap": {
                         "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
-                        "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
-                        "time": "$(dashboard.params.time)"
+                        "time": "$(dashboard.params.time)",
+                        "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)"
                     }
                 },
                 {
@@ -221,7 +221,7 @@
                     "parametersMap": {
                         "time": "$(dashboard.params.time)",
                         "regionName": "$(context.regionName)",
-                        "compartmentId": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda"
+                        "compartmentId": "$(context.tenantId)"
                     }
                 }
             ],
@@ -426,7 +426,7 @@
             "parametersConfig": [
                 {
                     "savedSearchId": "OOBSS-management-dashboard-compartment-filter",
-                    "displayName": "Compartment",
+                    "displayName": "Metrics Compartment",
                     "width": 3,
                     "state": "DEFAULT",
                     "parametersMap": {
@@ -459,13 +459,6 @@
                     "displayName": "Entity",
                     "width": 6,
                     "state": "DEFAULT",
-                    "uiConfig": {
-                        "internalKey": "OOBSS-management-dashboard-filter-2a",
-                        "filterName": "log-analytics-entity-filter",
-                        "vizFilterType": "lxEntityDashFilterType",
-                        "defaultWidth": 6,
-                        "minWidth": 6
-                    },
                     "parametersMap": {
                         "isStoreInLocalStorage": true
                     },
