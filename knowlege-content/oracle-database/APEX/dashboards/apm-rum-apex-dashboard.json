@@ -1,1 +1,481 @@
-{"dashboards" :[{"dashboardId":"ocid1.managementdashboard.oc1..aaaaaaaamdhe7df3qiy6v76ywx35x6whyl6trvrjydhjie3eihgswsadaxea","providerId":"APM","providerName":"APM","providerVersion":"3.0.0","tiles":[{"displayName":"Top users","savedSearchId":"OOBSS-APM-trace-table-1","row":2,"column":0,"height":3,"width":6,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","compartmentId":"$(dashboard.params.compartmentId)","apmDomain":"$(dashboard.params.apmDomain)","apmTraceExplorerQuery":"show traces userName as \"User name\", sum(pageViews) as Views, unique_values(APEXpageNAme) as \"Pages\", avg(traceDuration) as Duration, sum(AjaxErrors) + sum (ScriptErrors) as Errors where pageviews > 0 group by username"}},{"displayName":"Top pages","savedSearchId":"OOBSS-APM-trace-table-1","row":2,"column":6,"height":3,"width":6,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","compartmentId":"$(dashboard.params.compartmentId)","apmDomain":"$(dashboard.params.apmDomain)","apmTraceExplorerQuery":"show traces APEXPageName as Page, count(*) as Views, count_distinct(APEXSessionId) as Sessions, avg(traceDuration) as Duration, sum(AjaxErrors) + sum (ScriptErrors) as Errors  where APEXPageName is not omitted group by APEXPageName order by count(*) desc"}},{"displayName":"Views","savedSearchId":"OOBSS-APM-traces-count-1","row":0,"column":6,"height":2,"width":6,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","compartmentId":"$(dashboard.params.compartmentId)","apmDomain":"$(dashboard.params.apmDomain)"}},{"displayName":"Autonomous DB","savedSearchId":"OOBSS-management-dashboard-container","row":5,"column":0,"height":3,"width":12,"nls":{},"uiConfig":{"internalKey":"OOBSS-management-dashboard-container","vizType":"tileContainer","containerInfo":{"subTiles":[{"displayName":"Average Active Sessions - Autonomous Database","savedSearchId":"OOBSS-dbm-adb-dbtime","row":0,"column":0,"height":3,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"ocid1.compartment.oc1..aaaaaaaaigzmzyx7fcnlgyr2zzyv345ob4rgrvjlltwqtssf4mxuuqlpu2ra","resourceId":"$(dashboard.params.dbm_adb_resourceId)"}},{"displayName":"Storage usage - Autonomous Database (GB)","savedSearchId":"OOBSS-dbm-adb-storage-usage","row":0,"column":8,"height":3,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"ocid1.compartment.oc1..aaaaaaaaigzmzyx7fcnlgyr2zzyv345ob4rgrvjlltwqtssf4mxuuqlpu2ra","resourceId":"$(dashboard.params.dbm_adb_resourceId)"}},{"displayName":"CPU utilization - Autonomous Database (%)","savedSearchId":"OOBSS-dbm-adb-cpu-utilization","row":0,"column":4,"height":3,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"ocid1.compartment.oc1..aaaaaaaaigzmzyx7fcnlgyr2zzyv345ob4rgrvjlltwqtssf4mxuuqlpu2ra","resourceId":"$(dashboard.params.dbm_adb_resourceId)"}}]}},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{}},{"displayName":"Apdex","savedSearchId":"ocid1.managementsavedsearch.oc1..aaaaaaaaa3kjte55f4shfjs6l4flgcynthz6jcxepptgunkjabl3xndmy5wa","row":0,"column":0,"height":2,"width":3,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","apmDomain":"$(dashboard.params.apmDomain)"}},{"displayName":"Unique sessions","savedSearchId":"ocid1.managementsavedsearch.oc1..aaaaaaaabksaig3wb3gu52c23rm4hkvlt72ollrvo5ex47bevvs37eqlekua","row":0,"column":3,"height":2,"width":3,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","apmDomain":"$(dashboard.params.apmDomain)","apmQuery":"show traces count_distinct(sessionID) as value where sessionId is not omitted"}}],"displayName":"APEX","description":"","compartmentId":"ocid1.compartment.oc1..aaaaaaaa7ex5zwz5rry2qjr7dudx25jvfagwolujjiqak637or6qi2gwegia","isOobDashboard":false,"isShowInHome":false,"metadataVersion":"2.0","isShowDescription":true,"screenImage":"todo: provide value[mandatory]","nls":{},"uiConfig":{"isFilteringEnabled":false,"isTimeRangeEnabled":true,"isRefreshEnabled":true},"dataConfig":[],"type":"normal","isFavorite":false,"savedSearches":[{"id":"ocid1.managementsavedsearch.oc1..aaaaaaaaa3kjte55f4shfjs6l4flgcynthz6jcxepptgunkjabl3xndmy5wa","displayName":"CTDW Apdex","providerId":"APM","providerVersion":"3.0.0","providerName":"APM","compartmentId":"ocid1.compartment.oc1..aaaaaaaavwxlhrhr7lm4nr6dssxthlqty4f2k6nwpjj25ru75jgqir3epjca","isOobSavedSearch":false,"description":"Pie chart with Apdex colors","nls":{},"type":"WIDGET_SHOW_IN_DASHBOARD","uiConfig":{"chartInfo":{"colorBy":"queryResultRowData.series","group":"","series":"queryResultRowData.series","value":"queryResultRowData.value"},"color":{"paletteName":"standard","valueToIdxMap":{"frustrated":12,"satisfied":10,"tolerating":11}},"defaultDataSource":"queryData","jetConfig":{"type":"pie","timeAxisType":"auto","styleDefaults":{"pieInnerRadius":0.7,"dataLabelPosition":"auto","dataLabelCollision":"fitInBounds"},"stack":"off","dataCursor":"off","legend":{"rendered":true,"position":"end"},"pieCenter":{"label":"$(provider.queryDataCenter.queryResultRowData.value)","converterName":"numberConverter","converterOptions":{"maximumFractionDigits":"$(params.decimalDigits)"},"labelStyle":{"fontSize":"16px"}}}},"dataConfig":[{"name":"queryData","parameters":{"apmDomain":"$(params.apmDomain)","apmQuery":"$(params.apmQuery)","dimensionFilters":"$(params.flex)","startTime":"$(params.time.start)","endTime":"$(params.time.end)"},"type":"tracesDataSource"},{"name":"queryDataCenter","parameters":{"apmDomain":"$(params.apmDomain)","apmQuery":"$(params.apmQueryCenter)","dimensionFilters":"$(params.flex)","startTime":"$(params.time.start)","endTime":"$(params.time.end)"},"type":"tracesDataSource"}],"screenImage":"...","metadataVersion":"2.0","widgetTemplate":"visualizations/chartWidgetTemplate.html","widgetVM":"visualizations/chartWidget","freeformTags":{},"definedTags":{},"parametersConfig":[{"name":"apmDomain","required":true,"displayName":"APM domain","defaultFilterIds":["OOBSS-APM-domain-filter"]},{"name":"apmQuery","required":true,"displayName":"Trace query","defaultValue":"show traces count(apdexLevel) as value, apdexLevel as series where apdexLevel is not omitted group by apdexLevel order by min(apdexScore) asc","editUi":{"hideFilterOptions":true}},{"name":"apmQueryCenter","required":true,"displayName":"Trace query center","defaultValue":"show traces avg(apdexScore) as value where apdexScore is not omitted","editUi":{"hideFilterOptions":true}},{"name":"decimalDigits","required":true,"displayName":"Decimal digits","defaultValue":2,"editUi":{"inputType":"number","hideFilterOptions":true}},{"name":"time","displayName":"$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)","required":true,"hidden":true},{"name":"flex"},{"name":"drillDown","displayName":"Overrie default drilldown URL","required":false,"editUi":{"inputType":"inputText","hideFilterOptions":true}}],"featuresConfig":{"crossService":{"shared":false}},"drilldownConfig":[{"source":"title","urlFormat":"{{'$(params.drillDown)'?'$(params.drillDown)':'/apm/apm-traces?apmDomain=$(params.apmDomain)&apmFilter=$(params.apmQuery)'}}","includeLocalContext":false}]},{"id":"ocid1.managementsavedsearch.oc1..aaaaaaaabksaig3wb3gu52c23rm4hkvlt72ollrvo5ex47bevvs37eqlekua","displayName":"CTDW Single value","providerId":"APM","providerVersion":"3.0.0","providerName":"APM","compartmentId":"ocid1.compartment.oc1..aaaaaaaavwxlhrhr7lm4nr6dssxthlqty4f2k6nwpjj25ru75jgqir3epjca","isOobSavedSearch":false,"description":"Display the 'value' column of a single row","nls":{},"type":"WIDGET_SHOW_IN_DASHBOARD","uiConfig":{"defaultDataSource":"queryData","singleValueInfo":{"VALUE":"queryResultRowData.value","VALUEConverter":"numberConverter","VALUEConverterOptions":{"maximumFractionDigits":"$(params.decimalDigits)"},"bundleVal":"{VALUE}","xx__maxFontSize":60},"vizType":"singleValue"},"dataConfig":[{"name":"queryData","parameters":{"apmDomain":"$(params.apmDomain)","apmQuery":"$(params.apmQuery)","dimensionFilters":"$(params.flex)","startTime":"$(params.time.start)","endTime":"$(params.time.end)"},"type":"tracesDataSource"}],"screenImage":"...","metadataVersion":"2.0","widgetTemplate":"visualizations/chartWidgetTemplate.html","widgetVM":"visualizations/chartWidget","freeformTags":{},"definedTags":{},"parametersConfig":[{"name":"apmDomain","required":true,"displayName":"APM domain","defaultFilterIds":["OOBSS-APM-domain-filter"]},{"name":"apmQuery","required":true,"displayName":"Trace query","defaultValue":"show traces count_distinct(sessionId) as value","editUi":{"hideFilterOptions":true}},{"name":"decimalDigits","required":true,"displayName":"Decimal digits","defaultValue":2,"editUi":{"inputType":"number","hideFilterOptions":true}},{"name":"time","displayName":"$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)","required":true,"hidden":true},{"name":"flex"},{"name":"drillDown","displayName":"Overrie default drilldown URL","required":false,"editUi":{"inputType":"inputText","hideFilterOptions":true}}],"featuresConfig":{"crossService":{"shared":false}},"drilldownConfig":[{"source":"title","urlFormat":"{{'$(params.drillDown)'?'$(params.drillDown)':'/apm/apm-traces?apmDomain=$(params.apmDomain)&apmFilter=$(params.apmQuery)'}}","includeLocalContext":false}]}],"parametersConfig":[{"savedSearchId":"OOBSS-management-dashboard-compartment-filter","displayName":"Compartment","width":3,"state":"DEFAULT","parametersMap":{"isStoreInLocalStorage":false,"isActiveCompartment":"true"},"name":"compartmentId","localStorageKey":"compartmentId"},{"savedSearchId":"OOBSS-APM-domain-filter","displayName":"APM domain","width":3,"state":"DEFAULT","parametersMap":{"isStoreInLocalStorage":true,"compartmentId":"$(dashboard.params.compartmentId)"},"name":"apmDomain","localStorageKey":"apmDomain"},{"savedSearchId":"OOBSS-dbm-adb-single-resource-name-filter","displayName":"Autonomous Database","width":3,"state":"DEFAULT","parametersMap":{"isStoreInLocalStorage":true,"regionName":"$(context.regionName)","compartmentId":"ocid1.compartment.oc1..aaaaaaaaigzmzyx7fcnlgyr2zzyv345ob4rgrvjlltwqtssf4mxuuqlpu2ra"},"name":"dbm_adb_resourceId","localStorageKey":"dbm_adb_resourceId"},{"name":"time","displayName":"$(bundle.globalSavedSearch.TIME)","src":"$(context.time)"}],"featuresConfig":{"crossService":{"shared":false}},"drilldownConfig":[],"freeformTags":{},"definedTags":{}}]}
+{
+    "dashboards": [
+        {
+            "dashboardId": "ocid1.managementdashboard.oc1..xxxxxxxaxea",
+            "providerId": "APM",
+            "providerName": "APM",
+            "providerVersion": "3.0.0",
+            "tiles": [
+                {
+                    "displayName": "Top users",
+                    "savedSearchId": "OOBSS-APM-trace-table-1",
+                    "row": 2,
+                    "column": 0,
+                    "height": 3,
+                    "width": 6,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "time": "$(dashboard.params.time)",
+                        "compartmentId": "$(dashboard.params.compartmentId)",
+                        "apmDomain": "$(dashboard.params.apmDomain)",
+                        "apmTraceExplorerQuery": "show traces userName as \"User name\", sum(pageViews) as Views, unique_values(APEXpageNAme) as \"Pages\", avg(traceDuration) as Duration, sum(AjaxErrors) + sum (ScriptErrors) as Errors where pageviews > 0 group by username"
+                    }
+                },
+                {
+                    "displayName": "Top pages",
+                    "savedSearchId": "OOBSS-APM-trace-table-1",
+                    "row": 2,
+                    "column": 6,
+                    "height": 3,
+                    "width": 6,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "time": "$(dashboard.params.time)",
+                        "compartmentId": "$(dashboard.params.compartmentId)",
+                        "apmDomain": "$(dashboard.params.apmDomain)",
+                        "apmTraceExplorerQuery": "show traces APEXPageName as Page, count(*) as Views, count_distinct(APEXSessionId) as Sessions, avg(traceDuration) as Duration, sum(AjaxErrors) + sum (ScriptErrors) as Errors  where APEXPageName is not omitted group by APEXPageName order by count(*) desc"
+                    }
+                },
+                {
+                    "displayName": "Views",
+                    "savedSearchId": "OOBSS-APM-traces-count-1",
+                    "row": 0,
+                    "column": 6,
+                    "height": 2,
+                    "width": 6,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "time": "$(dashboard.params.time)",
+                        "compartmentId": "$(dashboard.params.compartmentId)",
+                        "apmDomain": "$(dashboard.params.apmDomain)"
+                    }
+                },
+                {
+                    "displayName": "Autonomous DB",
+                    "savedSearchId": "OOBSS-management-dashboard-container",
+                    "row": 5,
+                    "column": 0,
+                    "height": 3,
+                    "width": 12,
+                    "nls": {},
+                    "uiConfig": {
+                        "internalKey": "OOBSS-management-dashboard-container",
+                        "vizType": "tileContainer",
+                        "containerInfo": {
+                            "subTiles": [
+                                {
+                                    "displayName": "Average Active Sessions - Autonomous Database",
+                                    "savedSearchId": "OOBSS-dbm-adb-dbtime",
+                                    "row": 0,
+                                    "column": 0,
+                                    "height": 3,
+                                    "width": 4,
+                                    "nls": {},
+                                    "uiConfig": {},
+                                    "dataConfig": [],
+                                    "state": "DEFAULT",
+                                    "drilldownConfig": [],
+                                    "parametersMap": {
+                                        "time": "$(dashboard.params.time)",
+                                        "regionName": "$(context.regionName)",
+                                        "compartmentId": "ocid1.compartment.oc1..xxxxxxx",
+                                        "resourceId": "$(dashboard.params.dbm_adb_resourceId)"
+                                    }
+                                },
+                                {
+                                    "displayName": "Storage usage - Autonomous Database (GB)",
+                                    "savedSearchId": "OOBSS-dbm-adb-storage-usage",
+                                    "row": 0,
+                                    "column": 8,
+                                    "height": 3,
+                                    "width": 4,
+                                    "nls": {},
+                                    "uiConfig": {},
+                                    "dataConfig": [],
+                                    "state": "DEFAULT",
+                                    "drilldownConfig": [],
+                                    "parametersMap": {
+                                        "time": "$(dashboard.params.time)",
+                                        "regionName": "$(context.regionName)",
+                                        "compartmentId": "ocid1.compartment.oc1..xxxxxxx",
+                                        "resourceId": "$(dashboard.params.dbm_adb_resourceId)"
+                                    }
+                                },
+                                {
+                                    "displayName": "CPU utilization - Autonomous Database (%)",
+                                    "savedSearchId": "OOBSS-dbm-adb-cpu-utilization",
+                                    "row": 0,
+                                    "column": 4,
+                                    "height": 3,
+                                    "width": 4,
+                                    "nls": {},
+                                    "uiConfig": {},
+                                    "dataConfig": [],
+                                    "state": "DEFAULT",
+                                    "drilldownConfig": [],
+                                    "parametersMap": {
+                                        "time": "$(dashboard.params.time)",
+                                        "regionName": "$(context.regionName)",
+                                        "compartmentId": "ocid1.compartment.oc1..xxxxxxx",
+                                        "resourceId": "$(dashboard.params.dbm_adb_resourceId)"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {}
+                },
+                {
+                    "displayName": "Apdex",
+                    "savedSearchId": "ocid1.managementsavedsearch.oc1..xxxxxxmy5wa",
+                    "row": 0,
+                    "column": 0,
+                    "height": 2,
+                    "width": 3,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "time": "$(dashboard.params.time)",
+                        "apmDomain": "$(dashboard.params.apmDomain)"
+                    }
+                },
+                {
+                    "displayName": "Unique sessions",
+                    "savedSearchId": "ocid1.managementsavedsearch.oc1..xxxxxxxeqlekua",
+                    "row": 0,
+                    "column": 3,
+                    "height": 2,
+                    "width": 3,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "time": "$(dashboard.params.time)",
+                        "apmDomain": "$(dashboard.params.apmDomain)",
+                        "apmQuery": "show traces count_distinct(sessionID) as value where sessionId is not omitted"
+                    }
+                }
+            ],
+            "displayName": "APEX",
+            "description": "",
+            "compartmentId": "ocid1.compartment.oc1..xxxxxxxwegia",
+            "isOobDashboard": false,
+            "isShowInHome": false,
+            "metadataVersion": "2.0",
+            "isShowDescription": true,
+            "screenImage": "todo: provide value[mandatory]",
+            "nls": {},
+            "uiConfig": {
+                "isFilteringEnabled": false,
+                "isTimeRangeEnabled": true,
+                "isRefreshEnabled": true
+            },
+            "dataConfig": [],
+            "type": "normal",
+            "isFavorite": false,
+            "savedSearches": [
+                {
+                    "id": "ocid1.managementsavedsearch.oc1..xxxxxxmy5wa",
+                    "displayName": "CTDW Apdex",
+                    "providerId": "APM",
+                    "providerVersion": "3.0.0",
+                    "providerName": "APM",
+                    "compartmentId": "ocid1.compartment.oc1..xxxxxxx",
+                    "isOobSavedSearch": false,
+                    "description": "Pie chart with Apdex colors",
+                    "nls": {},
+                    "type": "WIDGET_SHOW_IN_DASHBOARD",
+                    "uiConfig": {
+                        "chartInfo": {
+                            "colorBy": "queryResultRowData.series",
+                            "group": "",
+                            "series": "queryResultRowData.series",
+                            "value": "queryResultRowData.value"
+                        },
+                        "color": {
+                            "paletteName": "standard",
+                            "valueToIdxMap": {
+                                "frustrated": 12,
+                                "satisfied": 10,
+                                "tolerating": 11
+                            }
+                        },
+                        "defaultDataSource": "queryData",
+                        "jetConfig": {
+                            "type": "pie",
+                            "timeAxisType": "auto",
+                            "styleDefaults": {
+                                "pieInnerRadius": 0.7,
+                                "dataLabelPosition": "auto",
+                                "dataLabelCollision": "fitInBounds"
+                            },
+                            "stack": "off",
+                            "dataCursor": "off",
+                            "legend": {
+                                "rendered": true,
+                                "position": "end"
+                            },
+                            "pieCenter": {
+                                "label": "$(provider.queryDataCenter.queryResultRowData.value)",
+                                "converterName": "numberConverter",
+                                "converterOptions": {"maximumFractionDigits": "$(params.decimalDigits)"},
+                                "labelStyle": {"fontSize": "16px"}
+                            }
+                        }
+                    },
+                    "dataConfig": [
+                        {
+                            "name": "queryData",
+                            "parameters": {
+                                "apmDomain": "$(params.apmDomain)",
+                                "apmQuery": "$(params.apmQuery)",
+                                "dimensionFilters": "$(params.flex)",
+                                "startTime": "$(params.time.start)",
+                                "endTime": "$(params.time.end)"
+                            },
+                            "type": "tracesDataSource"
+                        },
+                        {
+                            "name": "queryDataCenter",
+                            "parameters": {
+                                "apmDomain": "$(params.apmDomain)",
+                                "apmQuery": "$(params.apmQueryCenter)",
+                                "dimensionFilters": "$(params.flex)",
+                                "startTime": "$(params.time.start)",
+                                "endTime": "$(params.time.end)"
+                            },
+                            "type": "tracesDataSource"
+                        }
+                    ],
+                    "screenImage": "...",
+                    "metadataVersion": "2.0",
+                    "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+                    "widgetVM": "visualizations/chartWidget",
+                    "freeformTags": {},
+                    "definedTags": {},
+                    "parametersConfig": [
+                        {
+                            "name": "apmDomain",
+                            "required": true,
+                            "displayName": "APM domain",
+                            "defaultFilterIds": ["OOBSS-APM-domain-filter"]
+                        },
+                        {
+                            "name": "apmQuery",
+                            "required": true,
+                            "displayName": "Trace query",
+                            "defaultValue": "show traces count(apdexLevel) as value, apdexLevel as series where apdexLevel is not omitted group by apdexLevel order by min(apdexScore) asc",
+                            "editUi": {"hideFilterOptions": true}
+                        },
+                        {
+                            "name": "apmQueryCenter",
+                            "required": true,
+                            "displayName": "Trace query center",
+                            "defaultValue": "show traces avg(apdexScore) as value where apdexScore is not omitted",
+                            "editUi": {"hideFilterOptions": true}
+                        },
+                        {
+                            "name": "decimalDigits",
+                            "required": true,
+                            "displayName": "Decimal digits",
+                            "defaultValue": 2,
+                            "editUi": {
+                                "inputType": "number",
+                                "hideFilterOptions": true
+                            }
+                        },
+                        {
+                            "name": "time",
+                            "displayName": "$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)",
+                            "required": true,
+                            "hidden": true
+                        },
+                        {"name": "flex"},
+                        {
+                            "name": "drillDown",
+                            "displayName": "Overrie default drilldown URL",
+                            "required": false,
+                            "editUi": {
+                                "inputType": "inputText",
+                                "hideFilterOptions": true
+                            }
+                        }
+                    ],
+                    "featuresConfig": {
+                        "crossService": {"shared": false}
+                    },
+                    "drilldownConfig": [
+                        {
+                            "source": "title",
+                            "urlFormat": "{{'$(params.drillDown)'?'$(params.drillDown)':'/apm/apm-traces?apmDomain=$(params.apmDomain)&apmFilter=$(params.apmQuery)'}}",
+                            "includeLocalContext": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ocid1.managementsavedsearch.oc1..xxxxxxxeqlekua",
+                    "displayName": "CTDW Single value",
+                    "providerId": "APM",
+                    "providerVersion": "3.0.0",
+                    "providerName": "APM",
+                    "compartmentId": "ocid1.compartment.oc1..xxxxxxx",
+                    "isOobSavedSearch": false,
+                    "description": "Display the 'value' column of a single row",
+                    "nls": {},
+                    "type": "WIDGET_SHOW_IN_DASHBOARD",
+                    "uiConfig": {
+                        "defaultDataSource": "queryData",
+                        "singleValueInfo": {
+                            "VALUE": "queryResultRowData.value",
+                            "VALUEConverter": "numberConverter",
+                            "VALUEConverterOptions": {"maximumFractionDigits": "$(params.decimalDigits)"},
+                            "bundleVal": "{VALUE}",
+                            "xx__maxFontSize": 60
+                        },
+                        "vizType": "singleValue"
+                    },
+                    "dataConfig": [
+                        {
+                            "name": "queryData",
+                            "parameters": {
+                                "apmDomain": "$(params.apmDomain)",
+                                "apmQuery": "$(params.apmQuery)",
+                                "dimensionFilters": "$(params.flex)",
+                                "startTime": "$(params.time.start)",
+                                "endTime": "$(params.time.end)"
+                            },
+                            "type": "tracesDataSource"
+                        }
+                    ],
+                    "screenImage": "...",
+                    "metadataVersion": "2.0",
+                    "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+                    "widgetVM": "visualizations/chartWidget",
+                    "freeformTags": {},
+                    "definedTags": {},
+                    "parametersConfig": [
+                        {
+                            "name": "apmDomain",
+                            "required": true,
+                            "displayName": "APM domain",
+                            "defaultFilterIds": ["OOBSS-APM-domain-filter"]
+                        },
+                        {
+                            "name": "apmQuery",
+                            "required": true,
+                            "displayName": "Trace query",
+                            "defaultValue": "show traces count_distinct(sessionId) as value",
+                            "editUi": {"hideFilterOptions": true}
+                        },
+                        {
+                            "name": "decimalDigits",
+                            "required": true,
+                            "displayName": "Decimal digits",
+                            "defaultValue": 2,
+                            "editUi": {
+                                "inputType": "number",
+                                "hideFilterOptions": true
+                            }
+                        },
+                        {
+                            "name": "time",
+                            "displayName": "$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)",
+                            "required": true,
+                            "hidden": true
+                        },
+                        {"name": "flex"},
+                        {
+                            "name": "drillDown",
+                            "displayName": "Overrie default drilldown URL",
+                            "required": false,
+                            "editUi": {
+                                "inputType": "inputText",
+                                "hideFilterOptions": true
+                            }
+                        }
+                    ],
+                    "featuresConfig": {
+                        "crossService": {"shared": false}
+                    },
+                    "drilldownConfig": [
+                        {
+                            "source": "title",
+                            "urlFormat": "{{'$(params.drillDown)'?'$(params.drillDown)':'/apm/apm-traces?apmDomain=$(params.apmDomain)&apmFilter=$(params.apmQuery)'}}",
+                            "includeLocalContext": false
+                        }
+                    ]
+                }
+            ],
+            "parametersConfig": [
+                {
+                    "savedSearchId": "OOBSS-management-dashboard-compartment-filter",
+                    "displayName": "Compartment",
+                    "width": 3,
+                    "state": "DEFAULT",
+                    "parametersMap": {
+                        "isStoreInLocalStorage": false,
+                        "isActiveCompartment": "true"
+                    },
+                    "name": "compartmentId",
+                    "localStorageKey": "compartmentId"
+                },
+                {
+                    "savedSearchId": "OOBSS-APM-domain-filter",
+                    "displayName": "APM domain",
+                    "width": 3,
+                    "state": "DEFAULT",
+                    "parametersMap": {
+                        "isStoreInLocalStorage": true,
+                        "compartmentId": "$(dashboard.params.compartmentId)"
+                    },
+                    "name": "apmDomain",
+                    "localStorageKey": "apmDomain"
+                },
+                {
+                    "savedSearchId": "OOBSS-dbm-adb-single-resource-name-filter",
+                    "displayName": "Autonomous Database",
+                    "width": 3,
+                    "state": "DEFAULT",
+                    "parametersMap": {
+                        "isStoreInLocalStorage": true,
+                        "regionName": "$(context.regionName)",
+                        "compartmentId": "ocid1.compartment.oc1..xxxxxxx"
+                    },
+                    "name": "dbm_adb_resourceId",
+                    "localStorageKey": "dbm_adb_resourceId"
+                },
+                {
+                    "name": "time",
+                    "displayName": "$(bundle.globalSavedSearch.TIME)",
+                    "src": "$(context.time)"
+                }
+            ],
+            "featuresConfig": {
+                "crossService": {"shared": false}
+            },
+            "drilldownConfig": [],
+            "freeformTags": {},
+            "definedTags": {}
+        }
+    ]
+}
