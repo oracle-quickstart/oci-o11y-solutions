@@ -11,7 +11,7 @@ In this video, you will learn how to setup a Application Performance Real User M
 <a href="https://www.youtube.com/embed/DrNP99t1Pfg?si=tiPiBDJzlWxYolVq"><img width="1035" alt="image" src="https://github.com/kimberlyand/test/assets/106996346/3b062831-3f1f-4177-abdb-373dceb3902d"></a>
 
 ## Install the Browser Agent
-Add this JavaScript code to your APEX application's global page to collect real user data from your website developed on APEX. Using this code your dashboards you will display the APEX version, session ID, the page id, and the user name of each end user of your APEX application.
+Add this JavaScript code snippet to your APEX application's global page to collect real user data from your website developed on APEX. Using this code your dashboards you will display the APEX version, session ID, the page id, and the user name of each end user of your APEX application.
 ```
 <script>
     window.apmrum = (window.apmrum || {}); 
