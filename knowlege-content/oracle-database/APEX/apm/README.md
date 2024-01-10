@@ -6,7 +6,7 @@ Real User Monitoring tracks user sessions, page views, page load times and ident
 
 [Oracle APEX application](https://apex.oracle.com/en/learn/videos/) is a low-code platform that enables developers to build enterprise scalable, secure websites and mobile applications that can run on-premises and in Oracle Cloud.
 
-In this video, you will learn how to setup an Application Performance Real User Monitor for an APEX website. 
+In this video, you will learn how to set up an Application Performance Real User Monitor for an APEX application. 
 
 <a href="https://www.youtube.com/watch?v=VUYjIYqDAVc"><img width="1035" alt="YouTube thumbnail" src="https://github.com/oracle-quickstart/oci-o11y-solutions/assets/106996346/42b4ab0c-a826-4b7e-aec4-f56dbec10861"></a>
 
@@ -32,13 +32,13 @@ Add this JavaScript code snippet to your APEX application's global page to colle
 
 ```
 ## Create a Custom APEX Dashboard 
-Download this [.json file](https://github.com/oracle-quickstart/oci-o11y-solutions/blob/0de0d63f61782f04a204e57ea929a313fb1770d2/knowlege-content/oracle-database/APEX/dashboards/apm-rum-apex-dashboard.json) to import this custom dashboard to your Oracle Cloud instance to monitor your APEX application. The video posted above demonstrates how to import your dashboard.
+Download this [JSON file](https://github.com/oracle-quickstart/oci-o11y-solutions/blob/0de0d63f61782f04a204e57ea929a313fb1770d2/knowlege-content/oracle-database/APEX/dashboards/apm-rum-apex-dashboard.json) to import this custom dashboard to your Oracle Cloud instance to monitor your APEX application. The video posted above demonstrates how to import your dashboard.
 
 ![dashboard-apex](https://github.com/oracle-quickstart/oci-o11y-solutions/assets/106996346/b952ce8c-f920-435b-a14f-c8a8258c5fc3)
 
 ## Integrate with the Database Management Service on Oracle Cloud
 
-If you have the Database Management service installed, then you can use this code to set up your Database Management Performance Hub in Application Performance Monitoring. The steps are demonstrated in the video. 
+If you have the Database Management service installed, then you can use this code to set up your Database Management Performance Hub in Application Performance Monitoring. The steps are demonstrated in the video above. 
 
 ```
 /dbmgmt-ui/perfhub?ocid=<DB OCID>&perfhubContext={"dateTime":{"startDate":<APMStartTimeMs>,"endDate":<APMEndTimeMs>},"selectedTab":{"name":"activityTab","filters": [{"key":"filter_list","value":"{\"client_id\":{\"value\":\"<UserName>:<APEXSessionId>\"}}"}]}}
