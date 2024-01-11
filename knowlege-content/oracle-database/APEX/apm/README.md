@@ -8,7 +8,8 @@ Real User Monitoring tracks user sessions, page views, page load times and ident
 
 In this video, you will learn how to set up an Application Performance Real User Monitor for an APEX application. 
 
-<a href="https://www.youtube.com/watch?v=VUYjIYqDAVc"><img width="1035" alt="YouTube thumbnail" src="https://github.com/oracle-quickstart/oci-o11y-solutions/assets/106996346/42b4ab0c-a826-4b7e-aec4-f56dbec10861"></a>
+<a href="https://www.youtube.com/watch?v=VUYjIYqDAVc"><img width="1035" alt="YouTube thumbnail" src="https://github.com/kimberlyand/oci-o11y-solutions/assets/106996346/a298c23e-ed95-42e9-bbc5-2606f6121dd2")
+"></a>
 
 ## Install the Browser Agent
 Add this JavaScript code snippet to your APEX application's global page to collect real user data from your website developed on APEX. Now, your dashboards can display the APEX version, the session ID, the page id, and the user name of each end user of your APEX application.
