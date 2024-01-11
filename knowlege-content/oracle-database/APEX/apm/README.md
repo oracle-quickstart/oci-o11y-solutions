@@ -1,4 +1,4 @@
-# Set up a Real User Monitor for an APEX application with Oracle Cloud Infrastructure Application Performance Monitoring
+# Set up a Real User Monitor for an APEX application with OCI Application Performance Monitoring
 
 OCI [Application Performance Monitoring (APM)](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/home.htm) provides [Real User Monitoring (RUM)](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/configure-browser-agent-real-user-monitoring.html) for browser based applications. You can use this monitor to create alerts for performance and availability problems, to diagnose performance issues, and to analyze the end user's behavior. It works for internal or external facing apps deployed on Oracle Cloud or other cloud providers.
 
