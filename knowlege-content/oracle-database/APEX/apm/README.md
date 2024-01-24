@@ -8,7 +8,7 @@ Real User Monitoring tracks user sessions, page views, page load times and ident
 
 In this video, you will learn how to set up an Application Performance Real User Monitor for an APEX application. 
 
-<a href="https://www.youtube.com/watch?v=VUYjIYqDAVc"><img width="999" alt="YouTube thumbnail" src="https://github.com/kimberlyand/oci-o11y-solutions/assets/106996346/5e7092a9-8817-422e-aa8a-cf20276040be"></a>
+<a href="https://www.youtube.com/watch?v=VUYjIYqDAVc"><img width="999" alt="YouTube thumbnail" src="https://github.com/oracle-quickstart/oci-o11y-solutions/assets/106996346/e3e4c387-ee4e-48f0-a1e1-5450b404a894"></a>
 
 ## Install the Browser Agent
 Add this JavaScript code snippet to your APEX application's global page to collect real user data from your website developed on APEX. Now, your dashboards can display the APEX version, the session ID, the page id, and the user name of each end user of your APEX application.
@@ -57,4 +57,12 @@ For more information you can view the Application Performance Monitoring related
 
 * [Database Management Documentation](https://docs.oracle.com/en-us/iaas/database-management/home.htm)
 
-* [Application Performance Monitoring Documentation](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/home.htm)
+* [Use On-Premise Vantage Points](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-onpremise-vantage-points.html)
+
+* [Record a script and create a monitor](https://www.youtube.com/watch?v=rImVleiCsYo)
+
+* [Application Performance Monitoring Documentation](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/)
+ 
+* [Application Performance Monitoring Video Playlist](https://www.youtube.com/playlist?list=PLiuPvpy8QsiV0dnG-YYaJ83FJOG_Q4eIl)
+  
+Sign up for a [free Oracle Cloud account](https://www.oracle.com/cloud/free/) to try this feature. 
