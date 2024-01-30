@@ -3,13 +3,16 @@
 ### Dashboards screenshots
 
 * Oracle Integration Cloud Health Overview
-![Oracle Integration Cloud Health Overview](images/oci_la_oic_ootb_health_overview.png)
+
+  ![Oracle Integration Cloud Health Overview](images/oci_la_oic_ootb_health_overview.png)
 
 * Oracle Integration Cloud Key Metrics
-![Oracle Integration Cloud Key Metrics](images/oci_la_oic_ootb_key_metrics.png)
+
+  ![Oracle Integration Cloud Key Metrics](images/oci_la_oic_ootb_key_metrics.png)
 
 * Oracle Integration Cloud Performance Analysis
-![Oracle Integration Cloud Performance Analysis](images/oci_la_oic_ootb_performance_analysis.png)
+
+  ![Oracle Integration Cloud Performance Analysis](images/oci_la_oic_ootb_performance_analysis.png)
 
 ### Import Oracle Integration Cloud Audit Log Source
 
@@ -25,8 +28,10 @@
 
 ### Visualize the parsed OIC Audit Records
 
-Oracle Integration Cloud Audit Records Parsed
-![Oracle Integration Cloud Audit Records Parsed](images/oic_auditlog_la_parsed.png)
+* Oracle Integration Cloud Audit Records Parsed
 
-Oracle Integration Cloud Audit Records Analysis
-![Oracle Integration Cloud Audit Records Analysis](images/oic_auditlog_la_dashboard.png)
+  ![Oracle Integration Cloud Audit Records Parsed](images/oic_auditlog_la_parsed.png)
+
+* Oracle Integration Cloud Audit Records Analysis
+
+  ![Oracle Integration Cloud Audit Records Analysis](images/oic_auditlog_la_dashboard.png)
