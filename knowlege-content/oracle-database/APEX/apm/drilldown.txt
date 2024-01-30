@@ -1,0 +1,1 @@
+/dbmgmt-ui/perfhub?ocid=<DB OCID>&perfhubContext={"dateTime":{"startDate":<APMStartTimeMs>,"endDate":<APMEndTimeMs>},"selectedTab":{"name":"activityTab","filters": [{"key":"filter_list","value":"{\"client_id\":{\"value\":\"<UserName>:<APEXSessionId>\"}}"}]}}

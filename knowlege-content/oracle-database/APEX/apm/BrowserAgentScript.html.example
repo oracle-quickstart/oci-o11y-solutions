@@ -1,0 +1,16 @@
+<script>
+    window.apmrum = (window.apmrum || {}); 
+    window.apmrum.serviceName='<APM Browser>';
+    window.apmrum.webApplication='<Web App Name>';
+    window.apmrum.ociDataUploadEndpoint='<ociDataUploadEndpoint>';
+    window.apmrum.OracleAPMPublicDataKey='<APM_Public_Datakey>';
+    window.apmrum.udfAttributes = [
+        { name: 'UserName', value: () => apex.env.APP_USER },
+        { name: 'APEXSessionId', value: () => apex.env.APP_SESSION },
+        { name: 'APEXPageId', value: () => apex.env.APP_PAGE_ID },
+        { name: 'APEXVersion', value: () => apex.env.APEX_VERSION },
+        { name: 'APEXPageName', value: () => document.location.pathname.split('/').pop()},
+        { name: 'APEXDBClientId', value: () => (apex.env.APP_USER + ':' + apex.env.APP_SESSION) }
+    ];   
+</script>
+<script async crossorigin="anonymous" src="<ociDataUploadEndpoint>/static/jslib/apmrum.min.js"></script>
