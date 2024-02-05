@@ -36,13 +36,11 @@ Download this [JSON file](https://github.com/oracle-quickstart/oci-o11y-solution
 
 To view the database related data on your dashboard, [enable the Database Management service](https://docs.oracle.com/en-us/iaas/database-management/doc/enable-database-management.html) for that database.
 
-For an on-premises database, use the database management service to first [discover the external database](https://docs.oracle.com/en-us/iaas/database-management/doc/discover-external-database-systems.html) and then find it’s OCID. Next, when you import this APEX dashboard, you can overwrite the OCID in the JSON file with your external database OCID. If you are using an Oracle Autonomous Database, the OCID is automatically overwritten when you import the APEX dashboard. 
-
 ![dashboard-apex](https://github.com/oracle-quickstart/oci-o11y-solutions/assets/106996346/b952ce8c-f920-435b-a14f-c8a8258c5fc3)
 
 ## Integrate with the Database Management Service on Oracle Cloud
 
-If you have the Database Management service installed, then you can use this code to set up your Database Management Performance Hub in Application Performance Monitoring. The steps are demonstrated in the video above. 
+If you have the Database Management service installed, then you can use this code to set up your Database Management Performance Hub in Application Performance Monitoring. You must replace the `<DB OCID>` with the OCID of the database. The steps are demonstrated in the video above. 
 
 ```
 /dbmgmt-ui/perfhub?ocid=<DB OCID>&perfhubContext={"dateTime":{"startDate":<APMStartTimeMs>,"endDate":<APMEndTimeMs>},"selectedTab":{"name":"activityTab","filters": [{"key":"filter_list","value":"{\"client_id\":{\"value\":\"<UserName>:<APEXSessionId>\"}}"}]}}
