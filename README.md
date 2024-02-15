@@ -43,7 +43,7 @@ Knowledge content files in [knowldge-content](./knowlege-content/) folder are or
 
 ## :arrow_double_down: I want to use this knowledge content
 
-* Instructions for importing content from this repo to your OCI tenancy
+* Instructions for importing content from this repo to your OCI tenancy here
 
 ## :raising_hand: I am a subject matter expert
 
