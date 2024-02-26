@@ -345,7 +345,7 @@
                     "metadataVersion": "2.0",
                     "widgetTemplate": "visualizations/chartWidgetTemplate.html",
                     "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
-                    "freeformTags": {},
+                    "freeformTags": {"oracle-sfd":"Operation-1.1"},
                     "definedTags": {},
                     "parametersConfig": [
                         {
@@ -477,7 +477,7 @@
                 }
             },
             "drilldownConfig": [],
-            "freeformTags": {},
+            "freeformTags": {"oracle-sfd":"Operation-1.1"},
             "definedTags": {}
         }
     ]
