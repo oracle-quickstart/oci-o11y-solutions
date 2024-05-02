@@ -9,7 +9,7 @@
 ![Out-of-Box Dashboard for Network Security](images/network_analytics_dashboard_screenshot.png)
 
 * Security Operations
-![Out-of-Box Dashboard for Security Operations](images/sfd-security-operations-screenshot.png)
+![Out-of-Box Dashboard for Security Operations](images/security_operations_dashboard.png)
 
 ### Enable Security Fundamentals Dashboards
 
