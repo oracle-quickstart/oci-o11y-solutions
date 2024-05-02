@@ -2,10 +2,11 @@
 
 ### Dashboards screenshots
 * Identity Dashboard
-![Out-of-Box Dashboard for Identity Dashboard](images/identity_security_dashboard_identity_domain_screenshot.png)
+![Out-of-Box Dashboard for Identity Security](images/identity_security_dashboard_identity_domain.png)
+![Out-of-Box Dashboard for Identity Security](images/identity_security_dashboard_identity_domain2.png)
 
 * Network Dashboard
-![Out-of-Box Dashboard for Network Dashboard](images/network_analytics_dashboard_screenshot.png)
+![Out-of-Box Dashboard for Network Security](images/network_analytics_dashboard_screenshot.png)
 
 * Security Operations
 ![Out-of-Box Dashboard for Security Operations](images/sfd-security-operations-screenshot.png)
