@@ -65,4 +65,4 @@ You can now use Security Fundamentals Dashboards to detect security threats and 
 </p>
 
 ### Security Fundamentals Dashboard Region Filter
-You can now use Security Fundamentals Dashboards Region filter to query log data from other Logging Analytics regions and dynamicly adjust the dashboards widgets based on Region you selected. 
+You can now use Security Fundamentals Dashboards Region filter to query log data from other Logging Analytics regions and dynamically adjust the dashboards widgets based on Region you selected. 
