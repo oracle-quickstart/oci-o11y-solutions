@@ -2,13 +2,14 @@
 
 ### Dashboards screenshots
 * Identity Dashboard
-![Out-of-Box Dashboard for Identity Dashboard](images/identity_security_dashboard_identity_domain_screenshot.png)
+![Out-of-Box Dashboard for Identity Security](images/identity_security_dashboard_identity_domain.png)
+![Out-of-Box Dashboard for Identity Security](images/identity_security_dashboard_identity_domain2.png)
 
 * Network Dashboard
-![Out-of-Box Dashboard for Network Dashboard](images/network_analytics_dashboard_screenshot.png)
+![Out-of-Box Dashboard for Network Security](images/network_analytics_dashboard_screenshot.png)
 
 * Security Operations
-![Out-of-Box Dashboard for Security Operations](images/sfd-security-operations-screenshot.png)
+![Out-of-Box Dashboard for Security Operations](images/security_operations_dashboard.png)
 
 ### Enable Security Fundamentals Dashboards
 
@@ -62,3 +63,6 @@ You can now use Security Fundamentals Dashboards to detect security threats and 
 <p align="center">
     <img src="images/sad-threat-ips.png" width="400"/>
 </p>
+
+### Security Fundamentals Dashboard Region Filter
+You can now use Security Fundamentals Dashboards Region filter to query log data from other Logging Analytics regions and dynamically adjust the dashboards widgets based on Region you selected. 
