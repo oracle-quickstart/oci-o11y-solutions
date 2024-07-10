@@ -1,7 +1,9 @@
 # Oracle Integration Cloud
 
 ### Dashboards screenshots
-
+* Oracle Integration Insight - NEW!
+  ![Oracle Integration Insight](images/oic3-insight3-dash.png)
+  
 * Oracle Integration Cloud Health Overview
 
   ![Oracle Integration Cloud Health Overview](images/oci_la_oic_ootb_health_overview.png)
