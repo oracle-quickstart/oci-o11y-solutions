@@ -1,0 +1,84 @@
+# Copyright (c) 2021 Oracle and/or its affiliates.
+# Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
+
+title: "OCI Security Fundamentals Dashboards Deployment"
+stackDescription: "A stack to deploy Logging Analytics Dashboards for OCI."
+schemaVersion: 1.1.0
+version: "0.0.1"
+locale: "en"
+
+variableGroups:
+  - title: "Dashboards Region and Compartment Information"
+    variables:
+      - "region"
+      - "sfd_compartment_ocid"
+
+  - title: "Service Connector for Logging Analytics"
+    variables:
+      - "create_service_connector_audit"
+      - "logging_analytics_log_group_name"
+      - "service_connector_audit_state"
+
+  - title: "Hidden Variables"
+    visible: false
+    variables:
+      - "tenancy_ocid"
+      - "user_ocid"
+      - "fingerprint"
+      - "private_key_path"
+      - "private_key_password"
+      - "iam_dashboard_import_custom_content_file"
+
+variables:
+  region:
+    type: oci:identity:region:name
+    title: "Dashboards Region"
+    description: "Base Region of Dashboards.  Note: Logging Analytics will be onboarded on this region"
+    required: true
+
+  sfd_compartment_ocid:
+    type: oci:identity:compartment:id
+    title: "Dashboard Compartment Name"
+    description: "Compartment where the dashboards and saved queries will be deployed"
+    required: true
+
+  create_service_connector_audit:
+    type: boolean
+    title: "Create Service Connector for IAM Identity Domain Audit?"
+    description: "Creates a Service Connector for IAM Identity Domain Audit logs with Logging Analytics as the Target.  It's created in the same compartment as the Dashboard"
+    required: true
+    default: false
+
+  service_connector_audit_state:
+    type: enum
+    required: false
+    title: "Service Connector Hub State"
+    description: "Initial state in which to create the Service Connector Hub for Audit logs."
+    default: INACTIVE
+    visible: create_service_connector_audit
+    enum:
+      - INACTIVE
+      - ACTIVE
+
+  logging_analytics_log_group_name:
+    type: string
+    required: true
+    default: "sfd_identity_domain_audit"
+    description: "Name of the Logging Analytics Log Group that will have the Audit Logs"
+    title: "Logging Analytic Log Group Name"
+    visible: create_service_connector_audit
+
+# Variables not required to display to user
+  user_ocid:
+    type: string
+
+  fingerprint:
+    type: string
+
+  private_key_path:
+    type: string
+
+  private_key_password:
+    type: password
+
+  
