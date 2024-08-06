@@ -19,6 +19,16 @@ variableGroups:
       - "logging_analytics_log_group_name"
       - "service_connector_audit_state"
 
+  - title: "Flow Logs Configuration"
+    variables:
+      - "configure_flow_logs"
+      - "flow_logs_log_group"
+      - "first_subnet_flow_logs_compartment_id"
+      - "add_second_subnet_flow_logs_compartment"
+      - "second_subnet_flow_logs_compartment_id"
+      - "add_third_subnet_flow_logs_compartment"
+      - "third_subnet_flow_logs_compartment_id"
+
   - title: "Hidden Variables"
     visible: false
     variables:
@@ -28,6 +38,8 @@ variableGroups:
       - "private_key_path"
       - "private_key_password"
       - "iam_dashboard_import_custom_content_file"
+      - "subnet_flow_logs_compartment_ids"
+      
 
 variables:
   region:
@@ -63,10 +75,64 @@ variables:
   logging_analytics_log_group_name:
     type: string
     required: true
-    default: "sfd_identity_domain_audit"
-    description: "Name of the Logging Analytics Log Group that will have the Audit Logs"
+    default: "sfd_la_log_group"
+    description: "Name of the Logging Analytics Log Group that will have the Logs.  The log group is create in the same compartment as the dasboard."
     title: "Logging Analytic Log Group Name"
     visible: create_service_connector_audit
+
+  configure_flow_logs:
+    type: boolean
+    title: "Enable Subnet Flow Logs?"
+    description: "Enables Subnet Flow Logs and push them to Logging Analytics.  Flow logs are enabled for all the subnets in the specified compartments.  Up to three compartments can be entered."
+    required: true
+    default: false
+    visible: create_service_connector_audit
+
+  flow_logs_log_group:
+    type: string
+    required: true
+    default: "sfd-flow-logs-log-group"
+    description: "Name of the OCI Log Group that will contain the flow logs"
+    title: "OCI Log Group Name"
+    visible: configure_flow_logs
+
+  first_subnet_flow_logs_compartment_id:
+    type: oci:identity:compartment:id
+    title: "Compartment OCID where subnets reside"
+    description: "Compartment for the subnets for which to enable flow logs"
+    visible: configure_flow_logs
+    required: true
+
+  add_second_subnet_flow_logs_compartment:
+    type: boolean
+    title: "Add another compartment for subnet flow logs"
+    description: "Enables Sbunet Flow Logs in a specific compartment and push them to Logging Analytics"
+    required: true
+    default: false
+    visible: configure_flow_logs
+
+  second_subnet_flow_logs_compartment_id:
+    type: oci:identity:compartment:id
+    title: "Compartment OCID where subnets reside"
+    description: "Compartment for the subnets for which to enable flow logs"
+    visible: add_second_subnet_flow_logs_compartment
+    required: true
+
+  add_third_subnet_flow_logs_compartment:
+    type: boolean
+    title: "Add another compartment for subnet flow logs"
+    description: "Enables Subnet Flow Logs in a specific compartment and push them to Logging Analytics"
+    required: true
+    default: false
+    visible: add_second_subnet_flow_logs_compartment
+
+  third_subnet_flow_logs_compartment_id:   
+    type: oci:identity:compartment:id
+    title: "Compartment OCID where subnets reside"
+    description: "Compartment for the subnets for which to enable flow logs"
+    visible: add_third_subnet_flow_logs_compartment
+    required: true
+
 
 # Variables not required to display to user
   user_ocid:

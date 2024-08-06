@@ -2,15 +2,19 @@
 # Tenancy Connectivity Variables
 #---------------------------------------
 
-tenancy_ocid         = "ocid1.tenancy.oc1..aaaaaaaaa3qmjxr43tjexx75r6gwk6vjw22ermohbw2vbxyhczksgjir7xdq"             # Get this from OCI Console (after logging in, go to top-right-most menu item and click option "Tenancy: <your tenancy name>").
-user_ocid            = "ocid1.user.oc1..aaaaaaaaag3xbwgruyx5q6xlbpvdkgfhpe5l76lzy4wgaoji5wwrx6e7ha6a"                # Get this from OCI Console (after logging in, go to top-right-most menu item and click option "My profile").
-fingerprint          = "93:13:4d:f4:74:86:91:5e:50:c5:6d:34:2c:af:7b:b0"      # The fingerprint can be gathered from your user account. In the "My profile page, click "API keys" on the menu in left hand side).
-private_key_path     = "/Users/gsaurez/.oci/gs_oci_api_key.pem"  # This is the full path on your local system to the API signing private key.
+tenancy_ocid         = "<REPLACE WITH TENANCY OCID>"             # Get this from OCI Console (after logging in, go to top-right-most menu item and click option "Tenancy: <your tenancy name>").
+user_ocid            = "<REPLACE WITH USER OCID>"                # Get this from OCI Console (after logging in, go to top-right-most menu item and click option "My profile").
+fingerprint          = "<REPLACE WITH API KEY FINGERPRINT>"      # The fingerprint can be gathered from your user account. In the "My profile page, click "API keys" on the menu in left hand side).
+private_key_path     = "<REPLACE WITH PRIVATE API KEY PATH>"  # This is the full path on your local system to the API signing private key.
 private_key_password = ""                           # This is the password that protects the private key, if any.
-region               = "mx-queretaro-1"  #"us-ashburn-1" 
+region               = "us-ashburn-1" 
 
 #---------------------------------------
 # input Variables
 #---------------------------------------
 
-sfd_compartment_ocid = "ocid1.compartment.oc1..aaaaaaaaib4damcmimkx7c4u75wz4n6kknbc6rjaxex5rb2zxdxn47rdsh2q"
+sfd_compartment_ocid = "<REPLACE WITH SFD COMPARTMENT OCID>"
+logging_analytics_log_group_name = "sfd_log_group"
+subnet_flow_logs_compartment_ids = ["<COMPARTMENT1 OCID>","<COMPARTMENT2 OCID>"]
+configure_flow_logs = true
+create_service_connector_audit = true

@@ -42,12 +42,52 @@ variable create_service_connector_audit {
 
 variable logging_analytics_log_group_name {
   type = string
-  default = "sfd_identity_domain_audit"
+  default = null
 }
 
 variable service_connector_audit_state {
   type = string
   default = "INACTIVE"
+}
+
+variable configure_flow_logs {  #RM use
+  type = bool
+  default = false
+}
+
+variable flow_logs_log_group {
+  type = string
+  default = "sfd-flow-logs-log-group"
+}
+
+variable subnet_flow_logs_compartment_ids {
+  type = list(string)
+  default = null
+}
+
+variable first_subnet_flow_logs_compartment_id {  #RM use
+  type = string
+  default = null
+}
+
+variable second_subnet_flow_logs_compartment_id {  #RM use
+  type = string
+  default = null
+}
+
+variable third_subnet_flow_logs_compartment_id {  #RM use
+  type = string
+  default = null
+}
+
+variable add_second_subnet_flow_logs_compartment {  #RM use
+  type = bool
+  default = false
+}
+
+variable add_third_subnet_flow_logs_compartment {  #RM use
+  type = bool
+  default = false
 }
 
 

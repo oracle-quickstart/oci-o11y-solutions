@@ -7,6 +7,7 @@ locals {
     regions_map              = { for r in data.oci_identity_regions.these.regions : r.key => r.name } # All regions indexed by region key.
     sfd_repo                 = "https://raw.githubusercontent.com/oracle-quickstart/oci-o11y-solutions/main/knowlege-content/MAP/security-fundamentals-dashboards/"
     dashboard_names          = toset(["Identity%20Security.json","Network%20Security.json","Security%20Operations.json"])
+    sch_source_logs          = compact(["_Audit", var.configure_flow_logs ? module.flow_logging[0].log_groups["SFD-FLOW-LOG-GROUP"].id : "" ])
     
 }
 
@@ -90,18 +91,28 @@ resource "oci_sch_service_connector" "iam_dashboard_service_connector" {
   count = (var.create_service_connector_audit  == true ) ? 1 : 0
   compartment_id = var.sfd_compartment_ocid
   #defined_tags  = {"${oci_identity_tag_namespace.tag-namespace1.name}.${oci_identity_tag.tag1.name}" = "updatedValue"}
-  description    = "Used to populate Logging Analytics with OCI Audit Logs"
-  display_name   = "IAM Identity Domain Audit to Logging Analytics"
+  description    = "Used to populate Logging Analytics with OCI Audit Logs and Flow Logs used by SFD"
+  display_name   = "SFD Service Connector for Logging Analytics"
 
 
   source {
     kind = "logging"
     #Audit
-    log_sources {
+    # log_sources {
+    #   compartment_id = var.sfd_compartment_ocid
+    #   log_group_id   = "_Audit"
+    #   log_id = ""
+    # }
+  dynamic "log_sources" {
+    for_each = local.sch_source_logs 
+
+    content {
       compartment_id = var.sfd_compartment_ocid
-      log_group_id   = "_Audit"
-      log_id = ""
+      log_group_id   = log_sources.value
+      log_id = ""      
     }
+
+  }
   }
   target {
     kind            = "loggingAnalytics"
