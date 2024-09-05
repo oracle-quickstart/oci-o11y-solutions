@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<LoganContent xmlns="http://www.oracle.com/DataCenter/LogAnalyticsStd" content_version="2.94.1.0.0" name="content_ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq_1725558941076" oms_version="2.94.1.0.0">
+   <Parser oms_version="2.94.1.0.0" tokenize_orig_text="1" type="4">
+      <Name>SLURM Stats</Name>
+      <DisplayName>SLURM Stats</DisplayName>
+      <IsSingleLineContent>1</IsSingleLineContent>
+      <HeaderContent>JobID|MaxVMSize|MaxVMSizeNode|MaxVMSizeTask|AveVMSize|MaxRSS|MaxRSSNode|MaxRSSTask|AveRSS|MaxPages|MaxPagesNode|MaxPagesTask|AvePages|MinCPU|MinCPUNode|MinCPUTask|AveCPU|NTasks|AveCPUFreq|ReqCPUFreqMin|ReqCPUFreqMax|ReqCPUFreqGov|ConsumedEnergy|MaxDiskRead|MaxDiskReadNode|MaxDiskReadTask|AveDiskRead|MaxDiskWrite|MaxDiskWriteNode|MaxDiskWriteTask|AveDiskWrite|TRESUsageInAve|TRESUsageInMax|TRESUsageInMaxNode|TRESUsageInMaxTask|TRESUsageInMin|TRESUsageInMinNode|TRESUsageInMinTask|TRESUsageInTot|TRESUsageOutAve|TRESUsageOutMax|TRESUsageOutMaxNode|TRESUsageOutMaxTask|TRESUsageOutMin|TRESUsageOutMinNode|TRESUsageOutMinTask|TRESUsageOutTot|</HeaderContent>
+      <ExampleContent>47993.0|168234606592|octane-ord-non-restricted-bm-gpu-h100-8-ad1-013|0|51823906816|152584052736|octane-ord-non-restricted-bm-gpu-h100-8-ad1-013|0|2793472|58265|octane-ord-non-restricted-bm-gpu-h100-8-ad1-013|0|58265|16:46:34|octane-ord-non-restricted-bm-gpu-h100-8-ad1-013|0|16:46:34|1|8K|48025.0|2877988864|octane-ord-non-restricted-bm-gpu-h100-8-ad1-025|0|2782707712|2797563904|octane-ord-non-restricted-bm-gpu-h100-8-ad1-025|0|2695446528|184|octane-ord-non-restricted-bm-gpu-h100-8-ad1-025|0|184|19:11:25|octane-ord-non-restricted-bm-gpu-h100-8-ad1-025|0|19:11:25|1|10K|Unkno48024.0|4241756160|octane-ord-non-restricted-bm-gpu-h100-8-ad1-014|0|4241756160|3906256896|octane-ord-non-restricted-bm-gpu-h100-8-ad1-014|0|3906256896|42|octane-ord-non-restricted-bm-gpu-h100-8-ad1-014|0|42|18:59:00|octane-ord-non-restricted-bm-gpu-h100-8-ad1-014|0|18:59:00|1|51K|Unknown46937.0|13193605120|octane-ord-non-restricted-bm-gpu-h100-8-ad1-014|0|7214153728|227442688|octane-ord-non-restricted-bm-gpu-h100-8-ad1-014|0|3817472|355|octane-ord-non-restricted-bm-gpu-h100-8-ad1-014|0|355|00:01:53|octane-ord-non-restricted-bm-gpu-h100-8-ad1-014|0|00:01:53|1|2000K|Unknow48003.0|29009502208|octane-ord-non-restricted-bm-gpu-h100-8-ad1-020|0|27019407360|5282758656|octane-ord-non-restricted-bm-gpu-h100-8-ad1-020|0|3896860672|4133|octane-ord-non-restricted-bm-gpu-h100-8-ad1-020|0|4133|1-04:07:19|octane-ord-non-restricted-bm-gpu-h100-8-ad1-020|0|1-04:07:19|1|648002.0|4479668224|octane-ord-non-restricted-bm-gpu-h100-8-ad1-009|0|2559172608|4420435968|octane-ord-non-restricted-bm-gpu-h100-8-ad1-009|0|2491207680|8|octane-ord-non-restricted-bm-gpu-h100-8-ad1-009|0|8|1-01:01:38|octane-ord-non-restricted-bm-gpu-h100-8-ad1-009|0|1-01:01:38|1|45K|Unkno47997.0|7766003712|octane-ord-non-restricted-bm-gpu-h100-8-ad1-002|0|6956785664|7593521152|octane-ord-non-restricted-bm-gpu-h100-8-ad1-002|0|6758375424|497|octane-ord-non-restricted-bm-gpu-h100-8-ad1-002|0|497|1-08:37:17|octane-ord-non-restricted-bm-gpu-h100-8-ad1-002|0|1-08:37:17|1|15K|U
+47890.0|5294333952|octane-ord-non-restricted-bm-gpu-h100-8-ad1-016|0|196485120|5264855040|octane-ord-non-restricted-bm-gpu-h100-8-ad1-016|0|2928640|28|octane-ord-non-restricted-bm-gpu-h100-8-ad1-016|0|28|1-13:13:21|octane-ord-non-restricted-bm-gpu-h100-8-ad1-016|0|1-13:13:21|1|12K|Unknown47762.0|24909963264|octane-ord-non-restricted-bm-gpu-h100-8-ad1-007|0|22581698560|5549940736|octane-ord-non-restricted-bm-gpu-h100-8-ad1-007|0|2985123840|10122|octane-ord-non-restricted-bm-gpu-h100-8-ad1-007|0|10122|4-00:35:08|octane-ord-non-restricted-bm-gpu-h100-8-ad1-007|0|4-00:35:08|147759.0|61023440896|octane-ord-non-restricted-bm-gpu-h100-8-ad1-000|0|37306040320|5767286784|octane-ord-non-restricted-bm-gpu-h100-8-ad1-000|0|2395201536|12514|octane-ord-non-restricted-bm-gpu-h100-8-ad1-000|0|12514|4-14:54:52|octane-ord-non-restricted-bm-gpu-h100-8-ad1-000|0|4-14:54:52|146935.0|2190921728|octane-ord-non-restricted-bm-gpu-h100-8-ad1-001|0|2178912256|2045685760|octane-ord-non-restricted-bm-gpu-h100-8-ad1-001|0|2045566976|219|octane-ord-non-restricted-bm-gpu-h100-8-ad1-001|0|219|00:04:49|octane-ord-non-restricted-bm-gpu-h100-8-ad1-001|0|00:04:49|1|2000K|Unk40332.0|152385232896|octane-ord-non-restricted-bm-gpu-h100-8-ad1-012|0|58250321920|27479838720|octane-ord-non-restricted-bm-gpu-h100-8-ad1-012|0|25888444416|1215|octane-ord-non-restricted-bm-gpu-h100-8-ad1-012|0|1215|07:36:12|octane-ord-non-restricted-bm-gpu-h100-8-ad1-012|0|07:36:12|1|9048015.0|92670308352|octane-ord-non-restricted-bm-gpu-h100-8-ad1-014|0|58201227264|37162496000|octane-ord-non-restricted-bm-gpu-h100-8-ad1-014|0|2690310144|10013|octane-ord-non-restricted-bm-gpu-h100-8-ad1-014|0|10013|18:42:07|octane-ord-non-restricted-bm-gpu-h100-8-ad1-014|0|18:42:07|1|2247888.0|320817885184|octane-ord-non-restricted-bm-gpu-h100-8-ad1-018|0|259761803264|231120248832|octane-ord-non-restricted-bm-gpu-h100-8-ad1-018|0|2797568|327382|octane-ord-non-restricted-bm-gpu-h100-8-ad1-018|0|327382|13-02:15:27|octane-ord-non-restricted-bm-gpu-h100-8-ad1-018|0|13-02:15
+45506.2|8733667328|octane-ord-non-restricted-bm-gpu-h100-8-ad1-012|0|6194675712|6140915712|octane-ord-non-restricted-bm-gpu-h100-8-ad1-012|0|5564411904|25|octane-ord-non-restricted-bm-gpu-h100-8-ad1-012|0|25|02:35:55|octane-ord-non-restricted-bm-gpu-h100-8-ad1-012|0|02:35:55|1|163K|Unknow45505.2|8694935552|octane-ord-non-restricted-bm-gpu-h100-8-ad1-012|0|5840191488|6090641408|octane-ord-non-restricted-bm-gpu-h100-8-ad1-012|0|5605179392|267|octane-ord-non-restricted-bm-gpu-h100-8-ad1-012|0|267|02:40:23|octane-ord-non-restricted-bm-gpu-h100-8-ad1-012|0|02:40:23|1|214K|Unkn47820.0|570737934336|octane-ord-non-restricted-bm-gpu-h100-8-ad1-010|0|496265666560|6048911360|octane-ord-non-restricted-bm-gpu-h100-8-ad1-010|0|2740224|644194|octane-ord-non-restricted-bm-gpu-h100-8-ad1-010|0|644194|02:32:08|octane-ord-non-restricted-bm-gpu-h100-8-ad1-010|0|02:32:08|1|1148023.0|20609003520|octane-ord-non-restricted-bm-gpu-h100-8-ad1-016|0|20609003520|1143951360|octane-ord-non-restricted-bm-gpu-h100-8-ad1-016|0|1143951360|3798|octane-ord-non-restricted-bm-gpu-h100-8-ad1-016|0|3798|00:01:30|octane-ord-non-restricted-bm-gpu-h100-8-ad1-016|0|00:01:30|1|2948K</ExampleContent>
+      <IsSystem>0</IsSystem>
+      <Encoding>UTF-8</Encoding>
+      <Language>en_US</Language>
+      <ParserFields>
+         <ParserField>
+            <FieldSeq>1</FieldSeq>
+            <FieldName>jobid</FieldName>
+         </ParserField>
+      </ParserFields>
+      <WrittenOnce>0</WrittenOnce>
+      <IsDefaultParser>1</IsDefaultParser>
+      <FieldDelimiter>|</FieldDelimiter>
+   </Parser>
+   <Source configWarningSettings="0" name="SLURM Job Stats" oms_version="2.94.1.0.0">
+      <SourceType>os_file</SourceType>
+      <TargetTypes>
+         <TargetType>omc_host_linux</TargetType>
+      </TargetTypes>
+      <DisplayName>SLURM Job Stats</DisplayName>
+      <IsSystem>0</IsSystem>
+      <IsSecureContent>1</IsSecureContent>
+      <Patterns>
+         <Pattern>
+            <Value>/opt/oracle/mgmt_agent/slurm_stats/slurm_sstats_*.log</Value>
+            <IsInclude>1</IsInclude>
+            <InUse>1</InUse>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </Pattern>
+      </Patterns>
+      <Parsers>
+         <Parser>
+            <ParserSeq>1</ParserSeq>
+            <ParserName>SLURM Stats</ParserName>
+         </Parser>
+      </Parsers>
+      <IsHidden>0</IsHidden>
+      <IsSMAEnabled>0</IsSMAEnabled>
+   </Source>
+</LoganContent>

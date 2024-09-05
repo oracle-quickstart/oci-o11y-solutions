@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<LoganContent xmlns="http://www.oracle.com/DataCenter/LogAnalyticsStd" content_version="2.94.1.0.0" name="content_ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq_1725558406828" oms_version="2.94.1.0.0">
+   <Parser oms_version="2.94.1.0.0" tokenize_orig_text="1" type="0">
+      <Name>SSSD Logs</Name>
+      <DisplayName>SSSD Logs</DisplayName>
+      <Description>Linux SSSD Logs (6 components, SSSD, LDAP, KCM, NSS, PAM, SSH) https://sssd.io/docs/architecture.html</Description>
+      <ParserContent>\({TIMEDATE}\)\:\s+([^\s]+)\s+\[([^\]]+)\](.*)</ParserContent>
+      <IsSingleLineContent>1</IsSingleLineContent>
+      <ExampleContent>(2024-05-12  3:27:07): [be[LDAP]] [sdap_get_generic_ext_step] (0x1000): [RID#807634] Requesting attrs: [objectClass]
+(2024-05-12  3:27:07): [be[LDAP]] [sdap_get_generic_ext_step] (0x1000): [RID#807634] Requesting attrs: [uid]
+(2024-05-12  3:27:07): [be[LDAP]] [sdap_get_generic_ext_step] (0x1000): [RID#807634] Requesting attrs: [userPassword]
+(2024-05-12  3:27:07): [be[LDAP]] [sdap_get_generic_ext_step] (0x1000): [RID#807634] Requesting attrs: [uidNumber]
+(2024-05-12  3:27:07): [be[LDAP]] [sdap_get_generic_ext_step] (0x1000): [RID#807634] Requesting attrs: [gidNumber]
+(2024-05-12  3:27:06): [sssd] [monitor_hup] (0x3f7c0): Monitor received SIGHUP
+(2024-05-12  3:27:06): [sssd] [te_server_hup] (0x3f7c0): Received SIGHUP. Rotating logfiles.
+(2024-05-14  4:25:46): [pam] [pam_print_data] (0x0100): [CID#112] authtok type: 0 (No authentication token available)
+(2024-05-14  4:25:46): [pam] [pam_print_data] (0x0100): [CID#112] newauthtok type: 0 (No authentication token available)
+(2024-05-14  4:25:46): [pam] [pam_print_data] (0x0100): [CID#112] priv: 1
+(2024-05-14  4:25:46): [pam] [pam_print_data] (0x0100): [CID#112] cli_pid: 3567666
+(2024-05-14  4:25:46): [pam] [pam_print_data] (0x0100): [CID#112] child_pid: 0
+(2024-05-14  4:25:46): [pam] [pam_print_data] (0x0100): [CID#112] logon name: vrupadhy
+(2024-05-14  4:25:46): [pam] [pam_print_data] (0x0100): [CID#112] flags: 0
+(2024-05-14  4:25:46): [pam] [cache_req_set_plugin] (0x2000): [CID#112] CR #234: Setting "Initgroups by name" plugin
+(2024-05-14  4:25:46): [pam] [cache_req_send] (0x0400): [CID#112] CR #234: REQ_TRACE: New request [CID #112] 'Initgroups by name'
+(2024-05-14  4:25:46): [pam] [cache_req_process_input] (0x0400): [CID#112] CR #234: Parsing input name [vrupadhy]
+(2024-05-14  4:25:46): [pam] [sss_parse_name_for_domains] (0x0200): [CID#112] name 'vrupadhy' matched without domain, user is vrupadhy
+(2024-02-17 14:37:45): [ssh] [server_setup] (0x3f7c0): Starting with debug level = 0x0070
+(2024-02-17 14:59:39): [ssh] [cache_req_common_process_dp_reply] (0x3f7c0): [CID#2] CR #0: Could not get account info [1432158212]: SSSD is offline
+(2024-02-17 15:08:44): [ssh] [orderly_shutdown] (0x3f7c0): SIGTERM: killing children
+(2024-02-17 15:08:44): [ssh] [orderly_shutdown] (0x3f7c0): Shutting down (status = 0)
+(2024-02-17 15:08:44): [ssh] [server_setup] (0x3f7c0): Starting with debug level = 0x0070
+(2024-04-04 17:38:20): [kcm] [orderly_shutdown] (0x3f7c0): Shutting down (status = 0)
+(2024-04-04 19:19:59): [kcm] [server_setup] (0x3f7c0): Starting with debug level = 0x0070
+(2024-04-04 19:24:59): [kcm] [orderly_shutdown] (0x3f7c0): SIGTERM: killing children
+(2024-04-04 19:24:59): [kcm] [orderly_shutdown] (0x3f7c0): Shutting down (status = 0)</ExampleContent>
+      <IsSystem>0</IsSystem>
+      <Encoding>UTF-8</Encoding>
+      <Language>en_US</Language>
+      <ParserFields>
+         <ParserField>
+            <FieldSeq>1</FieldSeq>
+            <FieldName>comp</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>3</FieldSeq>
+            <FieldName>msg</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>2</FieldSeq>
+            <FieldName>oper</FieldName>
+         </ParserField>
+      </ParserFields>
+      <WrittenOnce>0</WrittenOnce>
+      <IsDefaultParser>1</IsDefaultParser>
+      <InUse>1</InUse>
+   </Parser>
+   <Source configWarningSettings="0" name="sssd linux" oms_version="2.94.1.0.0">
+      <SourceType>os_file</SourceType>
+      <TargetTypes>
+         <TargetType>omc_host_linux</TargetType>
+      </TargetTypes>
+      <DisplayName>sssd linux</DisplayName>
+      <IsSystem>0</IsSystem>
+      <IsSecureContent>1</IsSecureContent>
+      <Patterns>
+         <Pattern>
+            <Value>/var/log/sssd/sssd*.log*</Value>
+            <IsInclude>1</IsInclude>
+            <InUse>1</InUse>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </Pattern>
+      </Patterns>
+      <Parsers>
+         <Parser>
+            <ParserSeq>1</ParserSeq>
+            <ParserName>SSSD Logs</ParserName>
+         </Parser>
+      </Parsers>
+      <ExtFieldDefinitions>
+         <ExtFieldDefinition>
+            <BaseFieldName>mtgt</BaseFieldName>
+            <BaseFieldLogText>octane-ord-non-restricted-bm-gpu-h100-8-ad1-015.compute.nrphxvcnc.oraclevcn.com</BaseFieldLogText>
+            <RegexExpression>octane-ord-non-restricted-bm-gpu-h100-8-{nodedisplayname:\S+}.compute.nrphxvcnc.oraclevcn.com</RegexExpression>
+            <ExtFieldName>nodedisplayname</ExtFieldName>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </ExtFieldDefinition>
+      </ExtFieldDefinitions>
+      <IsHidden>0</IsHidden>
+      <IsSMAEnabled>0</IsSMAEnabled>
+   </Source>
+</LoganContent>
