@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<LoganContent xmlns="http://www.oracle.com/DataCenter/LogAnalyticsStd" content_version="2.94.1.0.0" name="content_ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq_1725558403895" oms_version="2.94.1.0.0">
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Planned Wall Clock Time</DisplayName>
+      <Description>How much wall clock time was used as planned time for this job.  This is derived from how long a job was waiting from eligible time to when it started or was cancelled.  Format is the same as Elapsed</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Allocated Nodes</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Planned CPU (SLURM format)</DisplayName>
+      <Description>How many CPU seconds were used as planned time for this job.  Format is the same as Elapsed.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>CPU Time Raw</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>NNodes</DisplayName>
+      <Description>Number of nodes in a job or step.  If the job is running, or ran, this count will be the number allocated, else the number will be the number requested.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Planned CPU RAW (Seconds)</DisplayName>
+      <Description>How many CPU seconds were used as planned time for this job.  Format is in processor seconds.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>CPU IDs</DisplayName>
+      <Description>SLURM Multi Category Security label. see https://slurm.schedmd.com/</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Failed Node</DisplayName>
+      <Description>The name of the node whose failure caused the job to be killed.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Layout</DisplayName>
+      <Description>What the layout of a step was when it was running.  This can be used to give you an idea of which node ran which rank in your job.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Execution Eligible Time</DisplayName>
+      <Description>When the job became eligible to run. YYYY-MM-DDTHH:MM:SS</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>TIMESTAMP</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Quality of Service</DisplayName>
+      <Description>Quality of service associated with the job.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>SLURM Job Elapsed Time</DisplayName>
+      <Description>The job's elapsed time. [DD-[HH:]]MM:SS</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Job Submit Time</DisplayName>
+      <Description>SLURM Multi Category Security label. see https://slurm.schedmd.com/</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>TIMESTAMP</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Memory Requested (TRES)</DisplayName>
+      <Description>SLURM Multi Category Security label. see https://slurm.schedmd.com/</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Nodes Requsted (TRES)</DisplayName>
+      <Description>SLURM Multi Category Security label. see https://slurm.schedmd.com/</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Generic Resources GPU Requested (TRES)</DisplayName>
+      <Description>SLURM Multi Category Security label. see https://slurm.schedmd.com/</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Reservation</DisplayName>
+      <Description>If a node is in an advanced reservation print the name of that reservation.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Allocated TRES</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Job Name</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>CPU Time (SLURM)</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Slurm Job Priority</DisplayName>
+      <Description>Priority of the job (generally a very large unsigned integer).  Also see %p.  (Valid for jobs only)</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Task count</DisplayName>
+      <Description>SLURM Multi Category Security label. see https://slurm.schedmd.com/</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>CPU Requested (TRES)</DisplayName>
+      <Description>SLURM Multi Category Security label. see https://slurm.schedmd.com/</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Time Limit</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>SLURM Nodes List</DisplayName>
+      <Description>E.g. octane-ord-non-restricted-bm-gpu-h100-8-ad1-[020-024,026-029]</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Allocated CPUs</DisplayName>
+      <Description>Allocated CPUs</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>INTEGER</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Parser oms_version="2.94.1.0.0" tokenize_orig_text="1" type="4">
+      <Name>SLURM Accounting Logs (CSV)</Name>
+      <DisplayName>SLURM Accounting Logs (CSV)</DisplayName>
+      <Description>sacct -a -p --delimiter='|' -o "Account,AdminComment,AllocCPUS,AllocNodes,AllocTRES,AssocID,AveCPU,AveCPUFreq,AveDiskRead,AveDiskWrite,AvePages,AveRSS,AveVMSize,BlockID,Cluster,Comment,Constraints,ConsumedEnergy,ConsumedEnergyRaw,Container,CPUTime,CPUTimeRAW,DBIndex,DerivedExitCode,Elapsed,ElapsedRaw,Eligible,End,ExitCode,FailedNode,Flags,GID,Group,JobID,JobIDRaw,JobName,Layout,MaxDiskRead,MaxDiskReadNode,MaxDiskReadTask,MaxDiskWrite,MaxDiskWriteNode,MaxDiskWriteTask,MaxPages,MaxPagesNode,MaxPagesTask,MaxRSS,MaxRSSNode,MaxRSSTask,MaxVMSize,MaxVMSizeNode,MaxVMSizeTask,McsLabel,MinCPU,MinCPUNode,MinCPUTask,NCPUS,NNodes,NodeList,NTasks,Partition,Planned,PlannedCPU,PlannedCPURAW,Priority,QOS,QOSRAW,Reason,ReqCPUFreq,ReqCPUFreqGov,ReqCPUFreqMax,ReqCPUFreqMin,ReqCPUS,ReqMem,ReqNodes,ReqTRES,Reservation,ReservationId,Start,State,Submit,SubmitLine,Suspended,SystemComment,SystemCPU,Timelimit,TimelimitRaw,TotalCPU,TRESUsageInAve,TRESUsageInMax,TRESUsageInMaxNode,TRESUsageInMaxTask,TRESUsageInMin,TRESUsageInMinNode,TRESUsageInMinTask,TRESUsageInTot,TRESUsageOutAve,TRESUsageOutMax,TRESUsageOutMaxNode,TRESUsageOutMaxTask,TRESUsageOutMin,TRESUsageOutMinNode,TRESUsageOutMinTask,TRESUsageOutTot,UID,User,UserCPU,WCKey,WCKeyID,WorkDir"</Description>
+      <IsSingleLineContent>1</IsSingleLineContent>
+      <HeaderContent>AllocCPUS|AllocNodes|AllocTRES|Cluster|Comment|Constraints|CPUTime|CPUTimeRAW|Elapsed|ElapsedRaw|Eligible|End|ExitCode|FailedNode|Flags|GID|Group|JobID|JobName|Layout|NCPUS|NNodes|NodeList|NTasks|Partition|Planned|PlannedCPU|PlannedCPURAW|Priority|QOS|Reason|ReqCPUS|ReqMem|ReqNodes|ReqTRES|Reservation|ReservationId|Start|State|Submit|SubmitLine|Suspended|SystemComment|SystemCPU|Timelimit|TimelimitRaw|TotalCPU|UID|User|UserCPU|WorkDir|</HeaderContent>
+      <ExampleContent>80|1|billing=80,cpu=80,gres/gpu=8,mem=2000G,node=1|octane-ord-non-restricted|||6779-17:21:20|585768080|84-17:55:01|7322101|2024-05-23T01:23:18|Unknown|0:0||SchedSubmit,StartRecieved|5506|verticalization|11531|mixtral-8x22||80|1|octane-ord-non-restricted-bm-gpu-h100-8-ad1-029||verticalization|00:00:00|00:00:00|0|11170|normal|None|80|2000G|1|billing=80,cpu=80,gres/gpu=8,mem=2000G,node=1|||2024-05-23T01:23:18|RUNNING|2024-05-23T01:23:18|srun --job-name=mixtral-8x22 --gres=gpu:8 --cpus-per-task=80 --mem=2000G --partition verticalization --pty bash -i|00:00:00||00:00:00|UNLIMITED|UNLIMITED|00:00:00|5045|inassar|00:00:00|/home/inassar|
+80|1|billing=80,cpu=80,gres/gpu=8,mem=2000G,node=1|octane-ord-non-restricted|||6779-17:21:20|585768080|84-17:55:01|7322101|2024-05-23T01:23:18|Unknown|0:0|||||11531.extern|extern|Unknown|80|1|octane-ord-non-restricted-bm-gpu-h100-8-ad1-029|1||||||||80||1||||2024-05-23T01:23:18|RUNNING|2024-05-23T01:23:18||00:00:00||00:00:00|||00:00:00|||00:00:00||
+80|1|cpu=80,gres/gpu=8,mem=2000G,node=1|octane-ord-non-restricted|||6779-17:20:00|585768000|84-17:55:00|7322100|2024-05-23T01:23:19|Unknown|0:0|||||11531.0|mixtral-8x22|Cyclic|80|1|octane-ord-non-restricted-bm-gpu-h100-8-ad1-029|1||||||||80||1||||2024-05-23T01:23:19|RUNNING|2024-05-23T01:23:19|srun --job-name=mixtral-8x22 --gres=gpu:8 --cpus-per-task=80 --mem=2000G --partition verticalization --pty bash -i|00:00:00||00:00:00|||00:00:00|||00:00:00||
+80|1|billing=80,cpu=80,gres/gpu=8,mem=2000G,node=1|octane-ord-non-restricted|||6678-10:46:40|577018000|83-11:32:05|7212725|2024-05-24T07:46:14|Unknown|0:0||SchedSubmit,StartRecieved|5506|verticalization|12048|llama3-70b-128k||80|1|octane-ord-non-restricted-bm-gpu-h100-8-ad1-027||verticalization|00:00:00|00:00:00|0|11170|normal|None|80|2000G|1|billing=80,cpu=80,gres/gpu=8,mem=2000G,node=1|||2024-05-24T07:46:14|RUNNING|2024-05-24T07:46:14|srun --job-name=llama3-70b-128k --gres=gpu:8 --cpus-per-task=80 --mem=2000G --partition verticalization --pty bash -i|00:00:00||00:00:00|UNLIMITED|UNLIMITED|00:00:00|5045|inassar|00:00:00|/home/inassar|
+80|1|billing=80,cpu=80,gres/gpu=8,mem=2000G,node=1|octane-ord-non-restricted|||6678-10:46:40|577018000|83-11:32:05|7212725|2024-05-24T07:46:14|Unknown|0:0|||||12048.extern|extern|Unknown|80|1|octane-ord-non-restricted-bm-gpu-h100-8-ad1-027|1||||||||80||1||||2024-05-24T07:46:14|RUNNING|2024-05-24T07:46:14||00:00:00||00:00:00|||00:00:00|||00:00:00||
+80|1|cpu=80,gres/gpu=8,mem=2000G,node=1|octane-ord-non-restricted|||6678-10:45:20|577017920|83-11:32:04|7212724|2024-05-24T07:46:15|Unknown|0:0|||||12048.0|llama3-70b-128k|Cyclic|80|1|octane-ord-non-restricted-bm-gpu-h100-8-ad1-027|1||||||||80||1||||2024-05-24T07:46:15|RUNNING|2024-05-24T07:46:15|srun --job-name=llama3-70b-128k --gres=gpu:8 --cpus-per-task=80 --mem=2000G --partition verticalization --pty bash -i|00:00:00||00:00:00|||00:00:00|||00:00:00||
+80|1|billing=80,cpu=80,gres/gpu=4,mem=1000G,node=1|octane-ord-non-restricted|||5167-13:45:20|446478320|64-14:16:19|5580979|2024-06-12T05:01:33|Unknown|0:0||SchedBackfill,StartRecieved|5506|verticalization|20090|qwen2-70b||80|1|octane-ord-non-restricted-bm-gpu-h100-8-ad1-028||verticalization|00:00:27|00:36:00|2160|10623|normal|None|80|1000G|1|billing=80,cpu=80,gres/gpu=4,mem=1000G,node=1|||2024-06-12T05:02:00|RUNNING|2024-06-12T05:01:33|srun --job-name=qwen2-70b --gres=gpu:4 --cpus-per-task=80 --mem=1000G --partition verticalization --pty bash -i|00:00:00||00:00:00|365-00:00:00|525600|00:00:00|5045|inassar|00:00:00|/home/inassar|
+80|1|billing=80,cpu=80,gres/gpu=4,mem=1000G,node=1|octane-ord-non-restricted|||5167-13:45:20|446478320|64-14:16:19|5580979|2024-06-12T05:02:00|Unknown|0:0|||||20090.extern|extern|Unknown|80|1|octane-ord-non-restricted-bm-gpu-h100-8-ad1-028|1||||||||80||1||||2024-06-12T05:02:00|RUNNING|2024-06-12T05:02:00||00:00:00||00:00:00|||00:00:00|||00:00:00||
+80|1|cpu=80,gres/gpu=4,mem=1000G,node=1|octane-ord-non-restricted|||5167-13:44:00|446478240|64-14:16:18|5580978|2024-06-12T05:02:01|Unknown|0:0|||||20090.0|qwen2-70b|Cyclic|80|1|octane-ord-non-restricted-bm-gpu-h100-8-ad1-028|1||||||||80||1||||2024-06-12T05:02:01|RUNNING|2024-06-12T05:02:01|srun --job-name=qwen2-70b --gres=gpu:4 --cpus-per-task=80 --mem=1000G --partition verticalization --pty bash -i|00:00:00||00:00:00|||00:00:00|||00:00:00||
+10|1|billing=10,cpu=10,mem=50G,node=1|octane-ord-non-restricted|||426-01:36:30|36812190|42-14:33:39|3681219|2024-07-04T04:44:39|Unknown|0:0||SchedMain,StartRecieved|5506|verticalization|30437|jup_notebook||10|1|octane-ord-non-restricted-bm-gpu-h100-8-ad1-028||verticalization|00:00:01|00:00:10|10|10031|normal|None|10|50G|1|billing=10,cpu=10,mem=50G,node=1|||2024-07-04T04:44:40|RUNNING|2024-07-04T04:44:39|sbatch start_notebook.sh|00:00:00||00:00:00|UNLIMITED|UNLIMITED|00:00:00|5038|gtangari|00:00:00|/mnt/shared-physical-ad1/gtangari/code_assist|
+10|1|cpu=10,mem=50G,node=1|octane-ord-non-restricted|||426-01:36:30|36812190|42-14:33:39|3681219|2024-07-04T04:44:40|Unknown|0:0|||||30437.batch|batch|Unknown|10|1|octane-ord-non-restricted-bm-gpu-h100-8-ad1-028|1||||||||10||1||||2024-07-04T04:44:40|RUNNING|2024-07-04T04:44:40||00:00:00||00:00:00|||00:00:00|||00:00:00||</ExampleContent>
+      <IsSystem>0</IsSystem>
+      <Encoding>UTF-8</Encoding>
+      <Language>en_US</Language>
+      <ParserFields>
+         <ParserField>
+            <FieldSeq>4</FieldSeq>
+            <FieldName>clusterid</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>41</FieldSeq>
+            <FieldName>cmd</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>5</FieldSeq>
+            <FieldName>comment</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>12</FieldSeq>
+            <FieldName>completetime</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>46</FieldSeq>
+            <FieldName>configuredlimit</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>6</FieldSeq>
+            <FieldName>constrainttype</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>21</FieldSeq>
+            <FieldName>cpucnt</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>50</FieldSeq>
+            <FieldName>cpuusrpercent</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>51</FieldSeq>
+            <FieldName>dir</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>10</FieldSeq>
+            <FieldName>elaptimereal</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>13</FieldSeq>
+            <FieldName>exitcode</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>15</FieldSeq>
+            <FieldName>flags</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>17</FieldSeq>
+            <FieldName>group</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>18</FieldSeq>
+            <FieldName>jobid</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>43</FieldSeq>
+            <FieldName>msginfo</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>25</FieldSeq>
+            <FieldName>partition</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>31</FieldSeq>
+            <FieldName>reas</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>38</FieldSeq>
+            <FieldName>starttime</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>39</FieldSeq>
+            <FieldName>statecurr</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>44</FieldSeq>
+            <FieldName>subsys</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>42</FieldSeq>
+            <FieldName>suspend</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>37</FieldSeq>
+            <FieldName>tcpresflag</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>40</FieldSeq>
+            <FieldName>udfd1</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>11</FieldSeq>
+            <FieldName>udfd6</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>1</FieldSeq>
+            <FieldName>udfi5</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>29</FieldSeq>
+            <FieldName>udfl10</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>24</FieldSeq>
+            <FieldName>udfl12</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>32</FieldSeq>
+            <FieldName>udfl13</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>33</FieldSeq>
+            <FieldName>udfl14</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>34</FieldSeq>
+            <FieldName>udfl15</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>35</FieldSeq>
+            <FieldName>udfl16</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>2</FieldSeq>
+            <FieldName>udfl26</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>8</FieldSeq>
+            <FieldName>udfl27</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>22</FieldSeq>
+            <FieldName>udfl28</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>28</FieldSeq>
+            <FieldName>udfl29</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>45</FieldSeq>
+            <FieldName>udfs26</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>23</FieldSeq>
+            <FieldName>udfs29</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>36</FieldSeq>
+            <FieldName>udfs34</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>19</FieldSeq>
+            <FieldName>udfs35</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>30</FieldSeq>
+            <FieldName>udfs37</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>47</FieldSeq>
+            <FieldName>udfs47</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>3</FieldSeq>
+            <FieldName>udfs57</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>7</FieldSeq>
+            <FieldName>udfs58</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>9</FieldSeq>
+            <FieldName>udfs59</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>14</FieldSeq>
+            <FieldName>udfs60</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>20</FieldSeq>
+            <FieldName>udfs61</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>26</FieldSeq>
+            <FieldName>udfs62</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>27</FieldSeq>
+            <FieldName>udfs63</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>16</FieldSeq>
+            <FieldName>usrgrpid</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>48</FieldSeq>
+            <FieldName>usrid</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>49</FieldSeq>
+            <FieldName>usrname</FieldName>
+         </ParserField>
+      </ParserFields>
+      <WrittenOnce>0</WrittenOnce>
+      <IsDefaultParser>1</IsDefaultParser>
+      <FieldDelimiter>|</FieldDelimiter>
+   </Parser>
+   <Source configWarningSettings="0" name="SLURM Accounting" oms_version="2.94.1.0.0">
+      <SourceType>os_file</SourceType>
+      <TargetTypes>
+         <TargetType>omc_host_linux</TargetType>
+      </TargetTypes>
+      <DisplayName>SLURM Accounting</DisplayName>
+      <IsSystem>0</IsSystem>
+      <IsSecureContent>1</IsSecureContent>
+      <Patterns>
+         <Pattern>
+            <Value>/opt/oracle/mgmt_agent/slurm_logs/slurm_saccounting*.log</Value>
+            <IsInclude>1</IsInclude>
+            <InUse>1</InUse>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </Pattern>
+      </Patterns>
+      <Parsers>
+         <Parser>
+            <ParserSeq>1</ParserSeq>
+            <ParserName>SLURM Accounting Logs (CSV)</ParserName>
+         </Parser>
+      </Parsers>
+      <ExtFieldDefinitions>
+         <ExtFieldDefinition>
+            <BaseFieldName>udfs29</BaseFieldName>
+            <BaseFieldLogText>octane-ord-non-restricted-bm-gpu-h100-8-ad1-028</BaseFieldLogText>
+            <RegexExpression>octane-ord-non-restricted-bm-gpu-h100-8-{nodedisplayname:\S+}</RegexExpression>
+            <ExtFieldName>nodedisplayname</ExtFieldName>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </ExtFieldDefinition>
+      </ExtFieldDefinitions>
+      <IsHidden>0</IsHidden>
+      <IsSMAEnabled>0</IsSMAEnabled>
+   </Source>
+   <FieldNameMaps>
+      <FieldNameMap>
+         <Name>udfs62</Name>
+         <DisplayName>Planned Wall Clock Time</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl26</Name>
+         <DisplayName>Allocated Nodes</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs63</Name>
+         <DisplayName>Planned CPU (SLURM format)</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl27</Name>
+         <DisplayName>CPU Time Raw</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl28</Name>
+         <DisplayName>NNodes</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl29</Name>
+         <DisplayName>Planned CPU RAW (Seconds)</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs47</Name>
+         <DisplayName>CPU IDs</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs60</Name>
+         <DisplayName>Failed Node</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs61</Name>
+         <DisplayName>Layout</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfd6</Name>
+         <DisplayName>Execution Eligible Time</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs37</Name>
+         <DisplayName>Quality of Service</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs59</Name>
+         <DisplayName>SLURM Job Elapsed Time</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfd1</Name>
+         <DisplayName>Job Submit Time</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl14</Name>
+         <DisplayName>Memory Requested (TRES)</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl15</Name>
+         <DisplayName>Nodes Requsted (TRES)</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl16</Name>
+         <DisplayName>Generic Resources GPU Requested (TRES)</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs34</Name>
+         <DisplayName>Reservation</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs57</Name>
+         <DisplayName>Allocated TRES</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs35</Name>
+         <DisplayName>Job Name</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs58</Name>
+         <DisplayName>CPU Time (SLURM)</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl10</Name>
+         <DisplayName>Slurm Job Priority</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl12</Name>
+         <DisplayName>Task count</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl13</Name>
+         <DisplayName>CPU Requested (TRES)</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs26</Name>
+         <DisplayName>Time Limit</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs29</Name>
+         <DisplayName>SLURM Nodes List</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfi5</Name>
+         <DisplayName>Allocated CPUs</DisplayName>
+      </FieldNameMap>
+   </FieldNameMaps>
+</LoganContent>

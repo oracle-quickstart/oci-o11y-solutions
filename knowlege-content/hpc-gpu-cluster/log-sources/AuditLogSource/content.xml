@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<LoganContent xmlns="http://www.oracle.com/DataCenter/LogAnalyticsStd" content_version="2.94.1.0.0" name="content_ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq_1725559504179" oms_version="2.94.1.0.0">
+   <Source name="AuditLogSource" oms_version="2.94.1.0.0">
+      <SourceType>os_file</SourceType>
+      <DisplayName nlsid="logan_nlsid">Linux Audit Logs</DisplayName>
+      <Description nlsid="logan_nlsid">Files that store os-level audit records</Description>
+      <IsSystem>1</IsSystem>
+      <IsSecureContent>0</IsSecureContent>
+      <Parsers>
+         <Parser>
+            <ParserSeq>1</ParserSeq>
+            <ParserName>host_auditlog_logtype</ParserName>
+         </Parser>
+      </Parsers>
+      <AutoAssociation>
+         <IsEnabled>1</IsEnabled>
+         <LogGroupName>octane</LogGroupName>
+      </AutoAssociation>
+      <IsHidden>0</IsHidden>
+      <IsSMAEnabled>0</IsSMAEnabled>
+   </Source>
+</LoganContent>
