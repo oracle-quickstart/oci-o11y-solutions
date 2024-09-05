@@ -1,15 +1,18 @@
 # Security Fundamentals Dashboards for MAP
 
+[![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/oracle-quickstart/oci-o11y-solutions/releases/download/sfd-updates/sfd-la-2.0.zip)
+
+
 ### Dashboards screenshots
 * Identity Dashboard
-*NOTE: SFD Identity Dashboard is **ONLY** applicable for **monitoring local user activities**. If you use **Identity Domain** or **IDCS**, please stay tuned for the new Identity Domain Dashboard.*
-![Out-of-Box Dashboard for Identity Dashboard](images/identity_analytics_dashboard_screenshot.png)
+![Out-of-Box Dashboard for Identity Security](images/identity_security_dashboard_identity_domain.png)
+![Out-of-Box Dashboard for Identity Security](images/identity_security_dashboard_identity_domain2.png)
 
 * Network Dashboard
-![Out-of-Box Dashboard for Network Dashboard](images/network_analytics_dashboard_screenshot.png)
+![Out-of-Box Dashboard for Network Security](images/network_analytics_dashboard_screenshot.png)
 
 * Security Operations
-![Out-of-Box Dashboard for Security Operations](images/sfd-security-operations-screenshot.png)
+![Out-of-Box Dashboard for Security Operations](images/security_operations_dashboard.png)
 
 ### Enable Security Fundamentals Dashboards
 
@@ -63,3 +66,6 @@ You can now use Security Fundamentals Dashboards to detect security threats and 
 <p align="center">
     <img src="images/sad-threat-ips.png" width="400"/>
 </p>
+
+### Security Fundamentals Dashboard Region Filter
+You can now use Security Fundamentals Dashboards Region filter to query log data from other Logging Analytics regions and dynamically adjust the dashboards widgets based on Region you selected. 

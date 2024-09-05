@@ -1,0 +1,1988 @@
+{
+  "dashboards": [
+    {
+      "dashboardId": "83c6eb7bd5536be52d06f06131302da0",
+      "providerId": "log-analytics",
+      "providerName": "Logging Analytics",
+      "providerVersion": "3.0.0",
+      "tiles": [
+        {
+          "displayName": "Milestones",
+          "savedSearchId": "OOBSS-management-dashboard-container",
+          "row": 2,
+          "column": 0,
+          "height": 4,
+          "width": 12,
+          "nls": {},
+          "uiConfig": {
+            "internalKey": "OOBSS-management-dashboard-container",
+            "vizType": "tileContainer",
+            "containerInfo": {
+              "subTiles": [
+                {
+                  "displayName": "Milestones Action Types",
+                  "savedSearchId": "49a5a41279d3bea17718609f1d769215",
+                  "row": 0,
+                  "column": 4,
+                  "height": 4,
+                  "width": 3,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-log-field-filter5)",
+                    "time": "$(dashboard.params.time)",
+                    "flex": {
+                      "Transaction ID": "$(dashboard.params.log-analytics-log-field-filter3)",
+                      "Integration": "$(dashboard.params.log-analytics-log-field-filter4)",
+                      "Action Type": "$(dashboard.params.log-analytics-log-field-filter7)",
+                      "Project ID": "$(dashboard.params.log-analytics-log-field-filter2)"
+                    },
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "Milestones Summary",
+                  "savedSearchId": "6e2858b4064c13b0b1126048289619d8",
+                  "row": 0,
+                  "column": 0,
+                  "height": 4,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "log-analytics-log-set": "$(dashboard.params.log-analytics-logset-filter)",
+                    "time": "$(dashboard.params.time)",
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-log-field-filter5)",
+                    "flex": {
+                      "Integration": "$(dashboard.params.log-analytics-log-field-filter4)",
+                      "Transaction ID": "$(dashboard.params.log-analytics-log-field-filter3)",
+                      "Action Type": "$(dashboard.params.log-analytics-log-field-filter7)",
+                      "Entity": "",
+                      "Project ID": "$(dashboard.params.log-analytics-log-field-filter2)"
+                    }
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "Milestones Trend",
+                  "savedSearchId": "80d0b41cf75f261cad7e30c23cec6c78",
+                  "row": 0,
+                  "column": 7,
+                  "height": 4,
+                  "width": 5,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "log-analytics-log-set": "$(dashboard.params.log-analytics-logset-filter)",
+                    "time": "$(dashboard.params.time)",
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-log-field-filter5)",
+                    "flex": {
+                      "Entity": "",
+                      "Transaction ID": "$(dashboard.params.log-analytics-log-field-filter3)",
+                      "Integration": "$(dashboard.params.log-analytics-log-field-filter4)",
+                      "Action Type": "$(dashboard.params.log-analytics-log-field-filter7)",
+                      "Project ID": "$(dashboard.params.log-analytics-log-field-filter2)"
+                    }
+                  },
+                  "description": null
+                }
+              ]
+            }
+          },
+          "dataConfig": [],
+          "state": "DEFAULT",
+          "drilldownConfig": [],
+          "parametersMap": {},
+          "description": null
+        },
+        {
+          "displayName": "Summary",
+          "savedSearchId": "OOBSS-management-dashboard-container",
+          "row": 0,
+          "column": 0,
+          "height": 2,
+          "width": 12,
+          "nls": {},
+          "uiConfig": {
+            "internalKey": "OOBSS-management-dashboard-container",
+            "vizType": "tileContainer",
+            "containerInfo": {
+              "subTiles": [
+                {
+                  "displayName": "Analytics Scope",
+                  "savedSearchId": "17232bb1969a9643bab4d7ee513cd570",
+                  "row": 0,
+                  "column": 0,
+                  "height": 2,
+                  "width": 12,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "time": "$(dashboard.params.time)",
+                    "flex": {
+                      "Project ID": "$(dashboard.params.log-analytics-log-field-filter2)",
+                      "Integration": "$(dashboard.params.log-analytics-log-field-filter4)",
+                      "Transaction ID": "$(dashboard.params.log-analytics-log-field-filter3)"
+                    },
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-log-field-filter5)"
+                  },
+                  "description": null
+                }
+              ]
+            }
+          },
+          "dataConfig": [],
+          "state": "DEFAULT",
+          "drilldownConfig": [],
+          "parametersMap": {},
+          "description": null
+        },
+        {
+          "displayName": "Transaction Performance",
+          "savedSearchId": "OOBSS-management-dashboard-container",
+          "row": 6,
+          "column": 0,
+          "height": 9,
+          "width": 12,
+          "nls": {},
+          "uiConfig": {
+            "internalKey": "OOBSS-management-dashboard-container",
+            "vizType": "tileContainer",
+            "containerInfo": {
+              "subTiles": [
+                {
+                  "displayName": "Transaction Execution Times and Milestones Chronology ",
+                  "savedSearchId": "0d65e81cf0e0db3ffdffce1616488fba",
+                  "row": 0,
+                  "column": 0,
+                  "height": 9,
+                  "width": 12,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "log-analytics-log-set": "$(dashboard.params.log-analytics-logset-filter)",
+                    "time": "$(dashboard.params.time)",
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-log-field-filter5)",
+                    "flex": {
+                      "Integration": "$(dashboard.params.log-analytics-log-field-filter4)",
+                      "Transaction ID": "$(dashboard.params.log-analytics-log-field-filter3)",
+                      "Action Type": "$(dashboard.params.log-analytics-log-field-filter7)",
+                      "Project ID": "$(dashboard.params.log-analytics-log-field-filter2)"
+                    }
+                  },
+                  "description": null
+                }
+              ]
+            }
+          },
+          "dataConfig": [],
+          "state": "DEFAULT",
+          "drilldownConfig": [],
+          "parametersMap": {},
+          "description": null
+        },
+        {
+          "displayName": "Transaction Tracking Fields",
+          "savedSearchId": "OOBSS-management-dashboard-container",
+          "row": 15,
+          "column": 0,
+          "height": 4,
+          "width": 12,
+          "nls": {},
+          "uiConfig": {
+            "internalKey": "OOBSS-management-dashboard-container",
+            "vizType": "tileContainer",
+            "containerInfo": {
+              "subTiles": [
+                {
+                  "displayName": "Tracking Fields and Values Grouped by Transactions",
+                  "savedSearchId": "700e79c3c2be56f469cbfbe3fe4b6454",
+                  "row": 0,
+                  "column": 0,
+                  "height": 4,
+                  "width": 12,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                    "log-analytics-log-set": "$(dashboard.params.log-analytics-logset-filter)",
+                    "time": "$(dashboard.params.time)",
+                    "flex": {
+                      "Key": "$(dashboard.params.log-analytics-log-field-filter)",
+                      "Value": "$(dashboard.params.log-analytics-log-field-filter1)",
+                      "Transaction ID": "$(dashboard.params.log-analytics-log-field-filter3)",
+                      "Integration": "$(dashboard.params.log-analytics-log-field-filter4)",
+                      "Project ID": "$(dashboard.params.log-analytics-log-field-filter2)"
+                    },
+                    "log-analytics-entity": "$(dashboard.params.log-analytics-log-field-filter5)"
+                  },
+                  "description": null
+                }
+              ]
+            }
+          },
+          "dataConfig": [],
+          "state": "DEFAULT",
+          "drilldownConfig": [],
+          "parametersMap": {},
+          "description": null
+        }
+      ],
+      "displayName": "Oracle Integration Insight",
+      "description": "Provides business process tracking and monitoring based on tracking fields created in your Integrations.",
+      "compartmentId": "${compartment_ocid}",
+      "isOobDashboard": false,
+      "isShowInHome": false,
+      "metadataVersion": "2.0",
+      "isShowDescription": true,
+      "screenImage": "todo: provide value[mandatory]",
+      "nls": {},
+      "uiConfig": {
+        "isFilteringEnabled": false,
+        "isTimeRangeEnabled": true,
+        "isRefreshEnabled": true
+      },
+      "dataConfig": [],
+      "type": "normal",
+      "isFavorite": false,
+      "savedSearches": [
+        {
+          "id": "80d0b41cf75f261cad7e30c23cec6c78",
+          "displayName": "Milestones Trend",
+          "providerId": "log-analytics",
+          "providerVersion": "3.0.0",
+          "providerName": "Logging Analytics",
+          "compartmentId": "f528f0315dd4086a04dc1c104a3b5b9d",
+          "isOobSavedSearch": false,
+          "description": "",
+          "nls": {},
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "timeSelection": {
+              "timePeriod": "l8hr"
+            },
+            "showTitle": true,
+            "visualizationType": "records_histogram",
+            "visualizationOptions": {
+              "customVizOpt": {
+                "primaryFieldIname": "mbody",
+                "primaryFieldDname": "Original Log Content"
+              }
+            },
+            "queryString": "'Log Source' = 'OCI Integration Activity Stream Logs' and 'Record Type' = 'insights record' | timestats count(Action) as Milestones by Action",
+            "scopeFilters": {
+              "filters": [
+                {
+                  "type": "LogGroup",
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "values": [
+                    {
+                      "value": "ee4c9c5318d0ef27f0f4b1b74ffbd9a1",
+                      "label": "oicpm (root)"
+                    }
+                  ]
+                },
+                {
+                  "type": "Entity",
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "8728f17b32d39add53bde7dd282b20c9"
+                  },
+                  "values": []
+                },
+                {
+                  "type": "LogSet",
+                  "flags": {},
+                  "values": []
+                },
+                {
+                  "type": "Region",
+                  "flags": {},
+                  "values": [
+                    {
+                      "value": "us-phoenix-1",
+                      "label": "US West (Phoenix)"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false,
+              "LogGroup": {
+                "type": "LogGroup",
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "values": [
+                  {
+                    "value": "ee4c9c5318d0ef27f0f4b1b74ffbd9a1",
+                    "label": "oicpm (root)"
+                  }
+                ]
+              },
+              "Entity": {
+                "type": "Entity",
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "8728f17b32d39add53bde7dd282b20c9"
+                },
+                "values": []
+              },
+              "LogSet": {
+                "type": "LogSet",
+                "flags": {},
+                "values": []
+              },
+              "Region": {
+                "type": "Region",
+                "flags": {},
+                "values": [
+                  {
+                    "value": "us-phoenix-1",
+                    "label": "US West (Phoenix)"
+                  }
+                ]
+              }
+            },
+            "internalKey": "4d757f2207cf4cc5bca79bbcca65c316",
+            "vizType": "lxSavedSearchWidgetType",
+            "enableWidgetInApp": true
+          },
+          "dataConfig": [],
+          "screenImage": " ",
+          "metadataVersion": "2.0",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+          "freeformTags": {},
+          "definedTags": {},
+          "parametersConfig": [
+            {
+              "name": "log-analytics-log-group-compartment",
+              "displayName": "Log Group Compartment",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "editUi": {
+                "inputType": "none"
+              },
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "name": "log-analytics-entity",
+              "displayName": "Entity",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "editUi": {
+                "inputType": "none"
+              },
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "name": "log-analytics-log-set",
+              "displayName": "Log Set",
+              "required": true,
+              "hidden": "$(window.logSetNotEnabled)",
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "editUi": {
+                "inputType": "none"
+              },
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "name": "log-analytics-region",
+              "displayName": "Region",
+              "required": false,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                }
+              },
+              "valueFormat": {
+                "type": "array"
+              }
+            },
+            {
+              "name": "time",
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "required": true,
+              "hidden": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "drilldownConfig": []
+        },
+        {
+          "id": "0d65e81cf0e0db3ffdffce1616488fba",
+          "displayName": "Completion Time",
+          "providerId": "log-analytics",
+          "providerVersion": "3.0.0",
+          "providerName": "Logging Analytics",
+          "compartmentId": "f528f0315dd4086a04dc1c104a3b5b9d",
+          "isOobSavedSearch": false,
+          "description": "",
+          "nls": {},
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "timeSelection": {
+              "timePeriod": "l14day"
+            },
+            "showTitle": true,
+            "visualizationType": "link",
+            "visualizationOptions": {
+              "customVizOpt": {
+                "primaryFieldIname": "mbody",
+                "primaryFieldDname": "Original Log Content",
+                "LINK_CLASSIFY_SETTINGS": {
+                  "Transaction Execution Time": {
+                    "drilldown": "on",
+                    "chartType": "trend",
+                    "showDimensions": [
+                      "on"
+                    ],
+                    "chartHeight": 345,
+                    "swapXY": [
+                      "off"
+                    ],
+                    "showAnomaly": [
+                      "off"
+                    ],
+                    "showBaseline": [
+                      "off"
+                    ],
+                    "groupAlias": "Groups",
+                    "groupAliasS": "Group",
+                    "sizeColumn": 9,
+                    "colorColumn": 8,
+                    "descendingXAxis": [
+                      null
+                    ],
+                    "descendingYAxis": [
+                      null
+                    ],
+                    "zeroXAxis": [
+                      "on"
+                    ],
+                    "zeroYAxis": [
+                      "on"
+                    ],
+                    "classifyDrilldown": [
+                      "off"
+                    ],
+                    "classifyColorPalette": {
+                      "1": "default",
+                      "7": "crud",
+                      "8": "color2",
+                      "9": "default"
+                    },
+                    "classifyColorPaletteCustom": {
+                      "7": {}
+                    },
+                    "classifyFilters": {
+                      "selectAllFilters": [],
+                      "showClassifyFilters": [],
+                      "selectedClassifyFilters": [],
+                      "classifyNarrowResults": [
+                        "on"
+                      ]
+                    }
+                  }
+                },
+                "LINK_SEARCH_SETTINGS": {
+                  "groupAliasS": "Group",
+                  "groupAliasP": "Groups",
+                  "logAliasP": "Log Records",
+                  "showUnitRawData": [],
+                  "showNonUnitRawData": [
+                    "off"
+                  ],
+                  "ms": [
+                    "on"
+                  ],
+                  "selectedTableField": null,
+                  "mergeHighlightColumns": [
+                    "off"
+                  ],
+                  "groupAdditionalTables": [
+                    "on"
+                  ],
+                  "columnAliases": {},
+                  "hiddenCharts": {
+                    "groupColumn": true
+                  },
+                  "hiddenLinkWidgets": {
+                    "linkwidgetOption_HeaderId": true,
+                    "linkwidgetOption_SummaryId": false,
+                    "linkwidgetOption_AnalyzeId": false,
+                    "linkwidgetOption_TSChartId": false,
+                    "linkwidgetOption_HistogramId": true,
+                    "linkwidgetOption_TableId": false,
+                    "linkwidgetOption_ExtraTableId": false
+                  },
+                  "hiddenColumns": {
+                    "g_duration": true,
+                    "query_start_time": true,
+                    "query_end_time": true,
+                    "trend_interval": true,
+                    "trend_interval_unit": true,
+                    "eventstats3_func2_latest_g_endepoch": true,
+                    "g_count": true,
+                    "g_startepoch": true,
+                    "g_endepoch": true,
+                    "opcreqid": true
+                  },
+                  "highlightColumnStatus": {},
+                  "hiddenClassifyCharts": {},
+                  "hiddenTableFields": {},
+                  "showCombinedCharts": [
+                    "off"
+                  ],
+                  "showStack": [
+                    "off"
+                  ],
+                  "smartGroup": [
+                    "off"
+                  ],
+                  "hideYAxis": [
+                    "off"
+                  ],
+                  "styleDefaults": {
+                    "lineType": "curved",
+                    "markerDisplayed": "on"
+                  },
+                  "chartOptions": "bar",
+                  "chartType": "bar",
+                  "chartHeightVal": 200,
+                  "chartWidthVal": 60,
+                  "showToolTips": [
+                    "on"
+                  ],
+                  "dashboardWidgetOptions": {
+                    "showTabs": [],
+                    "showSummary": [],
+                    "showAnalyzeTab": [
+                      "on"
+                    ],
+                    "showTSCharts": [],
+                    "showChartsTab": [],
+                    "showTable": [
+                      "on"
+                    ],
+                    "showExtraTable": []
+                  },
+                  "linkSummaryInput": "",
+                  "timeseries": {},
+                  "tableColumns": [
+                    "Transaction ID",
+                    "Project Name",
+                    "Started at (UTC-07:00)",
+                    "Transaction Time",
+                    "Integrations",
+                    "Milestones",
+                    "Latest Action",
+                    "Integration",
+                    "Started at",
+                    "OPC Request ID",
+                    "Count",
+                    "Start Time",
+                    "End Time",
+                    "Instance",
+                    "Instance ID",
+                    "Entity",
+                    "Step Count"
+                  ]
+                }
+              }
+            },
+            "queryString": "'Log Source' = 'OCI Integration Activity Stream Logs' and 'Record Type' = 'insights record' | link 'OPC Request ID', 'Transaction ID' | rename 'Group Duration' as 'Transaction Time' | sequence name = Milestones [ Action != null and 'Action Type' != null and 'Event ID' != null ]{1,} select Action, 'Action Type', 'Event ID', Integration | stats latest(Integration) as Integration, latest(Action) as 'Latest Action', unique('Project ID') as 'Project Name', distinctcount(Identifier) as Integrations, unique(Entity) as Entity, unique(Instance) as Instance | rename Count as 'Step Count' | classify correlate = -*, Integration, 'Latest Action', 'Project Name', Integrations 'Start Time', 'Transaction ID', 'Step Count', 'Transaction Time' as 'Transaction Execution Time' | fields target = ui -'OPC Request ID', -Entity, -Instance, -'Start Time', -'End Time', -Entity",
+            "scopeFilters": {
+              "filters": [
+                {
+                  "type": "LogGroup",
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "values": [
+                    {
+                      "value": "ee4c9c5318d0ef27f0f4b1b74ffbd9a1",
+                      "label": "oicpm (root)"
+                    }
+                  ]
+                },
+                {
+                  "type": "Entity",
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "8728f17b32d39add53bde7dd282b20c9"
+                  },
+                  "values": [
+                    {
+                      "value": "b8d7db7e20370fae24ed4b9e9d046be1",
+                      "label": "4e61834673958fad564778bb68ce8b1b"
+                    }
+                  ]
+                },
+                {
+                  "type": "LogSet",
+                  "flags": {},
+                  "values": []
+                },
+                {
+                  "type": "Region",
+                  "flags": {},
+                  "values": [
+                    {
+                      "value": "us-phoenix-1",
+                      "label": "US West (Phoenix)"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false,
+              "LogGroup": {
+                "type": "LogGroup",
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "values": [
+                  {
+                    "value": "ee4c9c5318d0ef27f0f4b1b74ffbd9a1",
+                    "label": "oicpm (root)"
+                  }
+                ]
+              },
+              "Entity": {
+                "type": "Entity",
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "8728f17b32d39add53bde7dd282b20c9"
+                },
+                "values": [
+                  {
+                    "value": "b8d7db7e20370fae24ed4b9e9d046be1",
+                    "label": "4e61834673958fad564778bb68ce8b1b"
+                  }
+                ]
+              },
+              "LogSet": {
+                "type": "LogSet",
+                "flags": {},
+                "values": []
+              },
+              "Region": {
+                "type": "Region",
+                "flags": {},
+                "values": [
+                  {
+                    "value": "us-phoenix-1",
+                    "label": "US West (Phoenix)"
+                  }
+                ]
+              }
+            },
+            "internalKey": "80aff2cf0a7a78b4a6ffd93bc73e06e0",
+            "vizType": "lxSavedSearchWidgetType",
+            "enableWidgetInApp": true
+          },
+          "dataConfig": [],
+          "screenImage": " ",
+          "metadataVersion": "2.0",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+          "freeformTags": {},
+          "definedTags": {},
+          "parametersConfig": [
+            {
+              "name": "log-analytics-log-group-compartment",
+              "displayName": "Log Group Compartment",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "editUi": {
+                "inputType": "none"
+              },
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "name": "log-analytics-entity",
+              "displayName": "Entity",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "editUi": {
+                "inputType": "none"
+              },
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "name": "log-analytics-log-set",
+              "displayName": "Log Set",
+              "required": true,
+              "hidden": "$(window.logSetNotEnabled)",
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "editUi": {
+                "inputType": "none"
+              },
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "name": "log-analytics-region",
+              "displayName": "Region",
+              "required": false,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                }
+              },
+              "valueFormat": {
+                "type": "array"
+              }
+            },
+            {
+              "name": "time",
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "required": true,
+              "hidden": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "drilldownConfig": []
+        },
+        {
+          "id": "700e79c3c2be56f469cbfbe3fe4b6454",
+          "displayName": "Transaction Details",
+          "providerId": "log-analytics",
+          "providerVersion": "3.0.0",
+          "providerName": "Logging Analytics",
+          "compartmentId": "f528f0315dd4086a04dc1c104a3b5b9d",
+          "isOobSavedSearch": false,
+          "description": "",
+          "nls": {},
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "timeSelection": {
+              "timePeriod": "l14day"
+            },
+            "showTitle": true,
+            "visualizationType": "link",
+            "visualizationOptions": {
+              "customVizOpt": {
+                "primaryFieldIname": "mbody",
+                "primaryFieldDname": "Original Log Content",
+                "LINK_CLASSIFY_SETTINGS": {},
+                "LINK_SEARCH_SETTINGS": {
+                  "groupAliasS": "Tracking Field",
+                  "groupAliasP": "Tracking Fields",
+                  "logAliasP": "Log Records",
+                  "showUnitRawData": [],
+                  "showNonUnitRawData": [
+                    "off"
+                  ],
+                  "ms": [
+                    "on"
+                  ],
+                  "selectedTableField": "createTable1",
+                  "mergeHighlightColumns": [
+                    "off"
+                  ],
+                  "groupAdditionalTables": [
+                    "on"
+                  ],
+                  "columnAliases": {},
+                  "hiddenCharts": {
+                    "groupColumn": true
+                  },
+                  "hiddenLinkWidgets": {
+                    "linkwidgetOption_HeaderId": false,
+                    "linkwidgetOption_SummaryId": false,
+                    "linkwidgetOption_AnalyzeId": false,
+                    "linkwidgetOption_TSChartId": true,
+                    "linkwidgetOption_HistogramId": true,
+                    "linkwidgetOption_TableId": false,
+                    "linkwidgetOption_ExtraTableId": false
+                  },
+                  "hiddenColumns": {
+                    "g_duration": true,
+                    "query_start_time": true,
+                    "query_end_time": true,
+                    "trend_interval": true,
+                    "trend_interval_unit": true
+                  },
+                  "highlightColumnStatus": {},
+                  "hiddenClassifyCharts": {},
+                  "hiddenTableFields": {},
+                  "showCombinedCharts": [
+                    "off"
+                  ],
+                  "showStack": [
+                    "off"
+                  ],
+                  "smartGroup": [
+                    "off"
+                  ],
+                  "hideYAxis": [
+                    "off"
+                  ],
+                  "styleDefaults": {
+                    "lineType": "curved",
+                    "markerDisplayed": "on"
+                  },
+                  "chartOptions": "bar",
+                  "chartType": "bar",
+                  "chartHeightVal": 200,
+                  "chartWidthVal": 60,
+                  "showToolTips": [
+                    "on"
+                  ],
+                  "dashboardWidgetOptions": {
+                    "showTabs": [
+                      "on"
+                    ],
+                    "showSummary": [],
+                    "showAnalyzeTab": [],
+                    "showTSCharts": [],
+                    "showChartsTab": [],
+                    "showTable": [],
+                    "showExtraTable": [
+                      "on"
+                    ]
+                  },
+                  "linkSummaryInput": "",
+                  "timeseries": {},
+                  "additionalTables": {
+                    "Request Summary": {
+                      "hiddenTableColumns": [
+                        "Started at",
+                        "Selected Action"
+                      ],
+                      "selectedGroupByColumn": 0,
+                      "filters": [],
+                      "value": "",
+                      "showGroupByField": [
+                        "on"
+                      ],
+                      "showSearchField": [
+                        "on"
+                      ],
+                      "showTableFilters": [
+                        "on"
+                      ],
+                      "showExpandAll": [
+                        "on"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "queryString": "'Log Source' = 'OCI Integration Activity Stream Logs' and [ Key like '*' and Value like '*' | distinct 'Transaction ID' ] | link 'Transaction ID', Key, Value | eventstats latest('Project ID') as 'Project Name', earliest('Start Time') as 'Started at', latest('End Time') as 'Last Action Time', latest(Integration) as Integration | createtable name = 'Request Summary' select 'Transaction ID', 'Project Name', 'Started at', literal(exception) as 'Selected Action', Integration as 'Integration Name', Key as 'Tracking Field', Value as 'Tracking Field Value'",
+            "scopeFilters": {
+              "filters": [
+                {
+                  "type": "LogGroup",
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "values": [
+                    {
+                      "value": "ee4c9c5318d0ef27f0f4b1b74ffbd9a1",
+                      "label": "oicpm (root)"
+                    }
+                  ]
+                },
+                {
+                  "type": "Entity",
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "8728f17b32d39add53bde7dd282b20c9"
+                  },
+                  "values": []
+                },
+                {
+                  "type": "LogSet",
+                  "flags": {},
+                  "values": []
+                },
+                {
+                  "type": "Region",
+                  "flags": {},
+                  "values": [
+                    {
+                      "value": "us-phoenix-1",
+                      "label": "US West (Phoenix)"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false,
+              "LogGroup": {
+                "type": "LogGroup",
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "values": [
+                  {
+                    "value": "ee4c9c5318d0ef27f0f4b1b74ffbd9a1",
+                    "label": "oicpm (root)"
+                  }
+                ]
+              },
+              "Entity": {
+                "type": "Entity",
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "8728f17b32d39add53bde7dd282b20c9"
+                },
+                "values": []
+              },
+              "LogSet": {
+                "type": "LogSet",
+                "flags": {},
+                "values": []
+              },
+              "Region": {
+                "type": "Region",
+                "flags": {},
+                "values": [
+                  {
+                    "value": "us-phoenix-1",
+                    "label": "US West (Phoenix)"
+                  }
+                ]
+              }
+            },
+            "internalKey": "615dc48d2d6b9f4d3ac4cb6f641a0ce4",
+            "vizType": "lxSavedSearchWidgetType",
+            "enableWidgetInApp": true
+          },
+          "dataConfig": [],
+          "screenImage": " ",
+          "metadataVersion": "2.0",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+          "freeformTags": {},
+          "definedTags": {},
+          "parametersConfig": [
+            {
+              "name": "log-analytics-log-group-compartment",
+              "displayName": "Log Group Compartment",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "editUi": {
+                "inputType": "none"
+              },
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "name": "log-analytics-entity",
+              "displayName": "Entity",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "editUi": {
+                "inputType": "none"
+              },
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "name": "log-analytics-log-set",
+              "displayName": "Log Set",
+              "required": true,
+              "hidden": "$(window.logSetNotEnabled)",
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "editUi": {
+                "inputType": "none"
+              },
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "name": "log-analytics-region",
+              "displayName": "Region",
+              "required": false,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                }
+              },
+              "valueFormat": {
+                "type": "array"
+              }
+            },
+            {
+              "name": "time",
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "required": true,
+              "hidden": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "drilldownConfig": []
+        },
+        {
+          "id": "17232bb1969a9643bab4d7ee513cd570",
+          "displayName": "Insights Dashboard View Summary",
+          "providerId": "log-analytics",
+          "providerVersion": "3.0.0",
+          "providerName": "Logging Analytics",
+          "compartmentId": "f528f0315dd4086a04dc1c104a3b5b9d",
+          "isOobSavedSearch": false,
+          "description": "",
+          "nls": {},
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "timeSelection": {
+              "timePeriod": "l60min"
+            },
+            "showTitle": true,
+            "visualizationType": "link",
+            "visualizationOptions": {
+              "customVizOpt": {
+                "primaryFieldIname": "mbody",
+                "primaryFieldDname": "Original Log Content",
+                "LINK_CLASSIFY_SETTINGS": {},
+                "LINK_SEARCH_SETTINGS": {
+                  "linkSummaryInput": "<summary>\n  <container display=\"none\">\n    <table>\n      <row>\n        <column>\n          <tiles>\n            <tile field=\"OIC Service Instances\">\n              <title>\n                <title-text>OIC Service Instances</title-text>\n              </title>\n            </tile>\n            <tile type=\"separator\" display=\"vertical\"/>\n            <tile type=\"inline\">\n              <title>   \n                <title-text>Projects</title-text> \n              </title>\n              <tile field=\"Unique Projects\"/> \n              <tile value=\" (\"/> \n              <tile field=\"Standalone Integrations\"/>\n              <tile value=\" Standalone Integrations)\"/>\n            </tile>\n            <tile type=\"separator\" display=\"vertical\"/>\n              <tile field=\"Unique Integrations\">\n                <title>\n                <title-text>Total Integrations</title-text>\n                </title>\n            </tile>\n                        <tile type=\"separator\" display=\"vertical\"/>\n            <tile field=\"Unique Transactions\">\n              <title>\n                <title-text>Transactions</title-text>\n              </title>\n            </tile>\n            <tile type=\"separator\" display=\"vertical\"/>\n            <tile field=\"Instance Execs\">\n              <title>\n                <title-text>Integration Instances</title-text>\n              </title>\n            </tile>\n            <tile field=\"Total Actions\">\n              <title>\n                <title-text>Milestones</title-text>\n              </title>\n            </tile>\n          </tiles>\n        </column>\n      </row>\n    </table>\n  </container>\n</summary>",
+                  "groupAliasS": "Group",
+                  "groupAliasP": "Groups",
+                  "logAliasP": "Log Records",
+                  "showUnitRawData": [],
+                  "showNonUnitRawData": [
+                    "off"
+                  ],
+                  "ms": [
+                    "on"
+                  ],
+                  "selectedTableField": null,
+                  "mergeHighlightColumns": [
+                    "off"
+                  ],
+                  "groupAdditionalTables": [
+                    "on"
+                  ],
+                  "columnAliases": {},
+                  "hiddenCharts": {
+                    "groupColumn": true
+                  },
+                  "hiddenLinkWidgets": {
+                    "linkwidgetOption_HeaderId": true,
+                    "linkwidgetOption_SummaryId": false,
+                    "linkwidgetOption_AnalyzeId": false,
+                    "linkwidgetOption_TSChartId": false,
+                    "linkwidgetOption_HistogramId": true,
+                    "linkwidgetOption_TableId": false,
+                    "linkwidgetOption_ExtraTableId": false
+                  },
+                  "hiddenColumns": {
+                    "g_duration": true,
+                    "query_start_time": true,
+                    "query_end_time": true,
+                    "trend_interval": true,
+                    "trend_interval_unit": true,
+                    "g_count": true,
+                    "addfields2q1_func1_distinct_count_ident": true,
+                    "g_startepoch": true,
+                    "g_endepoch": true
+                  },
+                  "highlightColumnStatus": {},
+                  "hiddenClassifyCharts": {},
+                  "hiddenTableFields": {},
+                  "showCombinedCharts": [
+                    "off"
+                  ],
+                  "showStack": [
+                    "off"
+                  ],
+                  "smartGroup": [
+                    "off"
+                  ],
+                  "hideYAxis": [
+                    "off"
+                  ],
+                  "styleDefaults": {
+                    "lineType": "curved",
+                    "markerDisplayed": "on"
+                  },
+                  "chartOptions": "bar",
+                  "chartType": "bar",
+                  "chartHeightVal": 200,
+                  "chartWidthVal": 60,
+                  "showToolTips": [
+                    "on"
+                  ],
+                  "dashboardWidgetOptions": {
+                    "showTabs": [],
+                    "showSummary": [
+                      "on"
+                    ],
+                    "showAnalyzeTab": [],
+                    "showTSCharts": [],
+                    "showChartsTab": [],
+                    "showTable": [],
+                    "showExtraTable": []
+                  },
+                  "timeseries": {}
+                }
+              }
+            },
+            "queryString": "'Log Source' = 'OCI Integration Activity Stream Logs' and 'Record Type' = 'insights record' | link Entity | addfields [ 'Project ID' = null and Identifier != null | stats distinctcount(Identifier) as 'standalone-integs' ] | stats count(Action) as 'Total Actions' | eventstats distinctcount(Entity) as 'OIC Service Instances', distinctcount('Project ID') as 'Unique Projects', distinctcount('OPC Request ID') as 'Unique Transactions', distinctcount(Identifier) as 'Unique Integrations', distinctcount(Instance) as 'Instance Execs', sum('standalone-integs') as 'Standalone Integrations' | fields -Count, -'standalone-integs', -'Start Time', -'End Time'",
+            "scopeFilters": {
+              "filters": [
+                {
+                  "type": "LogGroup",
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "values": [
+                    {
+                      "value": "ee4c9c5318d0ef27f0f4b1b74ffbd9a1",
+                      "label": "oicpm (root)"
+                    }
+                  ]
+                },
+                {
+                  "type": "Entity",
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "8728f17b32d39add53bde7dd282b20c9"
+                  },
+                  "values": []
+                },
+                {
+                  "type": "LogSet",
+                  "flags": {},
+                  "values": []
+                },
+                {
+                  "type": "Region",
+                  "flags": {},
+                  "values": [
+                    {
+                      "value": "us-phoenix-1",
+                      "label": "US West (Phoenix)"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false,
+              "LogGroup": {
+                "type": "LogGroup",
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "values": [
+                  {
+                    "value": "ee4c9c5318d0ef27f0f4b1b74ffbd9a1",
+                    "label": "oicpm (root)"
+                  }
+                ]
+              },
+              "Entity": {
+                "type": "Entity",
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "8728f17b32d39add53bde7dd282b20c9"
+                },
+                "values": []
+              },
+              "LogSet": {
+                "type": "LogSet",
+                "flags": {},
+                "values": []
+              },
+              "Region": {
+                "type": "Region",
+                "flags": {},
+                "values": [
+                  {
+                    "value": "us-phoenix-1",
+                    "label": "US West (Phoenix)"
+                  }
+                ]
+              }
+            },
+            "internalKey": "3ab68731bf3a8480238b8ec5622df137",
+            "vizType": "lxSavedSearchWidgetType",
+            "enableWidgetInApp": true
+          },
+          "dataConfig": [],
+          "screenImage": " ",
+          "metadataVersion": "2.0",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+          "freeformTags": {},
+          "definedTags": {},
+          "parametersConfig": [
+            {
+              "name": "log-analytics-log-group-compartment",
+              "displayName": "Log Group Compartment",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "editUi": {
+                "inputType": "none"
+              },
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "name": "log-analytics-entity",
+              "displayName": "Entity",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "editUi": {
+                "inputType": "none"
+              },
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "name": "log-analytics-log-set",
+              "displayName": "Log Set",
+              "required": true,
+              "hidden": "$(window.logSetNotEnabled)",
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "editUi": {
+                "inputType": "none"
+              },
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "name": "log-analytics-region",
+              "displayName": "Region",
+              "required": false,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                }
+              },
+              "valueFormat": {
+                "type": "array"
+              }
+            },
+            {
+              "name": "time",
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "required": true,
+              "hidden": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "drilldownConfig": []
+        },
+        {
+          "id": "6e2858b4064c13b0b1126048289619d8",
+          "displayName": "Milestones Summary",
+          "providerId": "log-analytics",
+          "providerVersion": "3.0.0",
+          "providerName": "Logging Analytics",
+          "compartmentId": "f528f0315dd4086a04dc1c104a3b5b9d",
+          "isOobSavedSearch": false,
+          "description": "",
+          "nls": {},
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "timeSelection": {
+              "timePeriod": "l24hr"
+            },
+            "showTitle": true,
+            "visualizationType": "pie",
+            "visualizationOptions": {
+              "showDonutChart": true,
+              "customVizOpt": {
+                "primaryFieldIname": "mbody",
+                "primaryFieldDname": "Original Log Content"
+              }
+            },
+            "queryString": "'Log Source' = 'OCI Integration Activity Stream Logs' and 'Record Type' = 'insights record' | stats count(Action) as Milestones by Action",
+            "scopeFilters": {
+              "filters": [
+                {
+                  "type": "LogGroup",
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "values": [
+                    {
+                      "value": "ee4c9c5318d0ef27f0f4b1b74ffbd9a1",
+                      "label": "oicpm (root)"
+                    }
+                  ]
+                },
+                {
+                  "type": "Entity",
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "8728f17b32d39add53bde7dd282b20c9"
+                  },
+                  "values": [
+                    {
+                      "value": "b8d7db7e20370fae24ed4b9e9d046be1",
+                      "label": "4e61834673958fad564778bb68ce8b1b"
+                    }
+                  ]
+                },
+                {
+                  "type": "LogSet",
+                  "flags": {},
+                  "values": []
+                },
+                {
+                  "type": "Region",
+                  "flags": {},
+                  "values": [
+                    {
+                      "value": "us-phoenix-1",
+                      "label": "US West (Phoenix)"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false,
+              "LogGroup": {
+                "type": "LogGroup",
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "values": [
+                  {
+                    "value": "ee4c9c5318d0ef27f0f4b1b74ffbd9a1",
+                    "label": "oicpm (root)"
+                  }
+                ]
+              },
+              "Entity": {
+                "type": "Entity",
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "8728f17b32d39add53bde7dd282b20c9"
+                },
+                "values": [
+                  {
+                    "value": "b8d7db7e20370fae24ed4b9e9d046be1",
+                    "label": "4e61834673958fad564778bb68ce8b1b"
+                  }
+                ]
+              },
+              "LogSet": {
+                "type": "LogSet",
+                "flags": {},
+                "values": []
+              },
+              "Region": {
+                "type": "Region",
+                "flags": {},
+                "values": [
+                  {
+                    "value": "us-phoenix-1",
+                    "label": "US West (Phoenix)"
+                  }
+                ]
+              }
+            },
+            "internalKey": "a49ea66e12db62f2cf30ad30116384d0",
+            "vizType": "lxSavedSearchWidgetType",
+            "enableWidgetInApp": true
+          },
+          "dataConfig": [],
+          "screenImage": " ",
+          "metadataVersion": "2.0",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+          "freeformTags": {},
+          "definedTags": {},
+          "parametersConfig": [
+            {
+              "name": "log-analytics-log-group-compartment",
+              "displayName": "Log Group Compartment",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "editUi": {
+                "inputType": "none"
+              },
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "name": "log-analytics-entity",
+              "displayName": "Entity",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "editUi": {
+                "inputType": "none"
+              },
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "name": "log-analytics-log-set",
+              "displayName": "Log Set",
+              "required": true,
+              "hidden": "$(window.logSetNotEnabled)",
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "editUi": {
+                "inputType": "none"
+              },
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "name": "log-analytics-region",
+              "displayName": "Region",
+              "required": false,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                }
+              },
+              "valueFormat": {
+                "type": "array"
+              }
+            },
+            {
+              "name": "time",
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "required": true,
+              "hidden": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "drilldownConfig": []
+        },
+        {
+          "id": "49a5a41279d3bea17718609f1d769215",
+          "displayName": "Oracle Integration 3: Action Types",
+          "providerId": "log-analytics",
+          "providerVersion": "3.0.0",
+          "providerName": "Logging Analytics",
+          "compartmentId": "f528f0315dd4086a04dc1c104a3b5b9d",
+          "isOobSavedSearch": false,
+          "description": "Oracle Integration 3: Action Types",
+          "nls": {},
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "timeSelection": {
+              "timePeriod": "l24hr"
+            },
+            "showTitle": true,
+            "visualizationType": "pie",
+            "visualizationOptions": {
+              "customVizOpt": {
+                "primaryFieldIname": "mbody",
+                "primaryFieldDname": "Original Log Content"
+              }
+            },
+            "queryString": "'Log Source' = 'OCI Integration Activity Stream Logs' and 'Record Type' = 'insights record' | stats count(Action) by 'Action Type'",
+            "scopeFilters": {
+              "filters": [
+                {
+                  "type": "LogGroup",
+                  "flags": {
+                    "IncludeSubCompartments": true
+                  },
+                  "values": [
+                    {
+                      "value": "ee4c9c5318d0ef27f0f4b1b74ffbd9a1",
+                      "label": "oicpm (root)"
+                    }
+                  ]
+                },
+                {
+                  "type": "Entity",
+                  "flags": {
+                    "IncludeDependents": true,
+                    "ScopeCompartmentId": "8728f17b32d39add53bde7dd282b20c9"
+                  },
+                  "values": [
+                    {
+                      "value": "b8d7db7e20370fae24ed4b9e9d046be1",
+                      "label": "4e61834673958fad564778bb68ce8b1b"
+                    }
+                  ]
+                },
+                {
+                  "type": "LogSet",
+                  "flags": {},
+                  "values": []
+                },
+                {
+                  "type": "Region",
+                  "flags": {},
+                  "values": [
+                    {
+                      "value": "us-phoenix-1",
+                      "label": "US West (Phoenix)"
+                    }
+                  ]
+                }
+              ],
+              "isGlobal": false,
+              "LogGroup": {
+                "type": "LogGroup",
+                "flags": {
+                  "IncludeSubCompartments": true
+                },
+                "values": [
+                  {
+                    "value": "ee4c9c5318d0ef27f0f4b1b74ffbd9a1",
+                    "label": "oicpm (root)"
+                  }
+                ]
+              },
+              "Entity": {
+                "type": "Entity",
+                "flags": {
+                  "IncludeDependents": true,
+                  "ScopeCompartmentId": "8728f17b32d39add53bde7dd282b20c9"
+                },
+                "values": [
+                  {
+                    "value": "b8d7db7e20370fae24ed4b9e9d046be1",
+                    "label": "4e61834673958fad564778bb68ce8b1b"
+                  }
+                ]
+              },
+              "LogSet": {
+                "type": "LogSet",
+                "flags": {},
+                "values": []
+              },
+              "Region": {
+                "type": "Region",
+                "flags": {},
+                "values": [
+                  {
+                    "value": "us-phoenix-1",
+                    "label": "US West (Phoenix)"
+                  }
+                ]
+              }
+            },
+            "internalKey": "82834815ab640a67c88bf01d7e2b73f5",
+            "vizType": "lxSavedSearchWidgetType",
+            "enableWidgetInApp": true
+          },
+          "dataConfig": [],
+          "screenImage": " ",
+          "metadataVersion": "2.0",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+          "freeformTags": {},
+          "definedTags": {},
+          "parametersConfig": [
+            {
+              "name": "log-analytics-log-group-compartment",
+              "displayName": "Log Group Compartment",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-4a"
+              ],
+              "editUi": {
+                "inputType": "none"
+              },
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "name": "log-analytics-entity",
+              "displayName": "Entity",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-2a"
+              ],
+              "editUi": {
+                "inputType": "none"
+              },
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "name": "log-analytics-log-set",
+              "displayName": "Log Set",
+              "required": true,
+              "hidden": "$(window.logSetNotEnabled)",
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-filter-3a"
+              ],
+              "editUi": {
+                "inputType": "none"
+              },
+              "valueFormat": {
+                "type": "object"
+              }
+            },
+            {
+              "name": "log-analytics-region",
+              "displayName": "Region",
+              "required": false,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter"
+                }
+              },
+              "valueFormat": {
+                "type": "array"
+              }
+            },
+            {
+              "name": "time",
+              "displayName": "$(bundle.globalSavedSearch.TIME)",
+              "required": true,
+              "hidden": true
+            },
+            {
+              "name": "flex"
+            }
+          ],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            }
+          },
+          "drilldownConfig": []
+        }
+      ],
+      "parametersConfig": [
+        {
+          "savedSearchId": "OOBSS-management-dashboard-filter-4a",
+          "displayName": "Log Group Compartment",
+          "width": 6,
+          "state": "DEFAULT",
+          "uiConfig": {
+            "internalKey": "OOBSS-management-dashboard-filter-4a",
+            "filterName": "log-analytics-loggroup-filter",
+            "vizFilterType": "lxLogGroupDashFilterType",
+            "defaultWidth": 4,
+            "minWidth": 4
+          },
+          "parametersMap": {
+            "isStoreInLocalStorage": true
+          },
+          "name": "log-analytics-loggroup-filter",
+          "localStorageKey": "log-analytics-loggroup-filter"
+        },
+        {
+          "savedSearchId": "OOBSS-management-dashboard-filter-2a",
+          "displayName": "Entity",
+          "width": 6,
+          "state": "DEFAULT",
+          "parametersMap": {
+            "isStoreInLocalStorage": true
+          },
+          "name": "log-analytics-entity-filter",
+          "localStorageKey": "log-analytics-entity-filter"
+        },
+        {
+          "savedSearchId": "OOBSS-management-dashboard-filter-xlog",
+          "displayName": "OIC Service Instance",
+          "width": 3,
+          "state": "DEFAULT",
+          "parametersMap": {
+            "isStoreInLocalStorage": true,
+            "time": "$(dashboard.params.time)",
+            "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+            "logFieldName": "Entity",
+            "flex": {
+              "Entity Type": "OIC Integration",
+              "Project ID": "$(dashboard.params.log-analytics-log-field-filter2)"
+            }
+          },
+          "name": "log-analytics-log-field-filter5",
+          "localStorageKey": "logField_Entity"
+        },
+        {
+          "savedSearchId": "OOBSS-management-dashboard-filter-xlog",
+          "displayName": "Project Name",
+          "width": 3,
+          "state": "DEFAULT",
+          "parametersMap": {
+            "isStoreInLocalStorage": true,
+            "time": "$(dashboard.params.time)",
+            "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+            "logFieldName": "Project ID",
+            "flex": {
+              "Entity": "$(dashboard.params.log-analytics-log-field-filter5)",
+              "Key": "$(dashboard.params.log-analytics-log-field-filter)"
+            }
+          },
+          "name": "log-analytics-log-field-filter2",
+          "localStorageKey": "logField_Project ID"
+        },
+        {
+          "savedSearchId": "OOBSS-management-dashboard-filter-xlog",
+          "displayName": "Tracking Field (For selected PRJ and TxID)",
+          "width": 3,
+          "state": "DEFAULT",
+          "parametersMap": {
+            "isStoreInLocalStorage": true,
+            "time": "$(dashboard.params.time)",
+            "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+            "logFieldName": "Key",
+            "flex": {
+              "Project ID": "$(dashboard.params.log-analytics-log-field-filter2)"
+            }
+          },
+          "name": "log-analytics-log-field-filter",
+          "localStorageKey": "logField_Key"
+        },
+        {
+          "savedSearchId": "OOBSS-management-dashboard-filter-xlog",
+          "displayName": "Tracking Field Values (For selected Fields)",
+          "width": 3,
+          "state": "DEFAULT",
+          "parametersMap": {
+            "isStoreInLocalStorage": true,
+            "time": "$(dashboard.params.time)",
+            "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+            "logFieldName": "Value",
+            "flex": {
+              "Key": "$(dashboard.params.log-analytics-log-field-filter)",
+              "Project ID": "$(dashboard.params.log-analytics-log-field-filter2)"
+            }
+          },
+          "name": "log-analytics-log-field-filter1",
+          "localStorageKey": "logField_Value"
+        },
+        {
+          "savedSearchId": "OOBSS-management-dashboard-filter-xlog",
+          "displayName": "Transaction ID (for selected Projects)",
+          "width": 3,
+          "state": "DEFAULT",
+          "parametersMap": {
+            "isStoreInLocalStorage": true,
+            "time": "$(dashboard.params.time)",
+            "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+            "logFieldName": "Transaction ID",
+            "flex": {
+              "Project ID": "$(dashboard.params.log-analytics-log-field-filter2)",
+              "Integration": "$(dashboard.params.log-analytics-log-field-filter4)",
+              "Key": "$(dashboard.params.log-analytics-log-field-filter)"
+            }
+          },
+          "name": "log-analytics-log-field-filter3",
+          "localStorageKey": "logField_Transaction ID"
+        },
+        {
+          "savedSearchId": "OOBSS-management-dashboard-filter-xlog",
+          "displayName": "Integration (For selected Projects)",
+          "width": 3,
+          "state": "DEFAULT",
+          "parametersMap": {
+            "isStoreInLocalStorage": true,
+            "time": "$(dashboard.params.time)",
+            "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+            "logFieldName": "Integration",
+            "flex": {
+              "Key": "$(dashboard.params.log-analytics-log-field-filter)",
+              "Project ID": "$(dashboard.params.log-analytics-log-field-filter2)"
+            }
+          },
+          "name": "log-analytics-log-field-filter4",
+          "localStorageKey": "logField_Integration"
+        },
+        {
+          "savedSearchId": "OOBSS-management-dashboard-filter-xlog",
+          "displayName": "Milestone Type",
+          "width": 3,
+          "state": "DEFAULT",
+          "parametersMap": {
+            "isStoreInLocalStorage": true,
+            "time": "$(dashboard.params.time)",
+            "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+            "logFieldName": "Action Type",
+            "flex": {
+              "Integration": "$(dashboard.params.log-analytics-log-field-filter4)",
+              "Record Type": "insights record"
+            }
+          },
+          "name": "log-analytics-log-field-filter7",
+          "localStorageKey": "logField_Action Type"
+        },
+        {
+          "savedSearchId": "OOBSS-management-dashboard-filter-xlog",
+          "displayName": "Milestones",
+          "width": 3,
+          "state": "DEFAULT",
+          "parametersMap": {
+            "isStoreInLocalStorage": true,
+            "time": "$(dashboard.params.time)",
+            "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+            "logFieldName": "Action",
+            "flex": {
+              "Action Type": "$(dashboard.params.log-analytics-log-field-filter7)",
+              "Project ID": "$(dashboard.params.log-analytics-log-field-filter2)",
+              "Record Type": "insights record"
+            }
+          },
+          "name": "log-analytics-log-field-filter6",
+          "localStorageKey": "logField_Action"
+        },
+        {
+          "name": "time",
+          "displayName": "$(bundle.globalSavedSearch.TIME)",
+          "src": "$(context.time)"
+        },
+        {
+          "savedSearchId": "OOBSS-management-dashboard-filter-3a",
+          "displayName": "Log Set",
+          "state": "DEFAULT",
+          "uiConfig": {
+            "internalKey": "OOBSS-management-dashboard-filter-3a",
+            "filterName": "log-analytics-logset-filter",
+            "vizFilterType": "lxLogSetDashFilterType",
+            "defaultWidth": 6,
+            "minWidth": 6,
+            "hidden": "$(window.logSetNotEnabled)"
+          },
+          "parametersMap": {
+            "isStoreInLocalStorage": true
+          },
+          "name": "log-analytics-logset-filter",
+          "localStorageKey": "log-analytics-logset-filter",
+          "uniqueId": "7c99e8d7-12ba-d2a8-f5f2-82c072f99abc"
+        }
+      ],
+      "featuresConfig": {
+        "crossService": {
+          "shared": false
+        }
+      },
+      "drilldownConfig": [],
+      "freeformTags": {},
+      "definedTags": {}
+    }
+  ]
+}

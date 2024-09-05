@@ -16,9 +16,10 @@ Logging Analytics knowledge content consists of one or more of the following:
 
 | Monitoring Target | Type | Dashboards | Log Sources | Lookups | Detection Rules 
 | ---| ---| :---:| :---:| :---:| :---:
-| :arrow_double_down: Oracle E-Business Suite  | Packaed App       | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: | :soon:
+| :arrow_double_down: Oracle E-Business Suite  | Packaged App       | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: | :soon:
 | :arrow_double_down: Oracle Integration Cloud | OCI Cloud Service | :heavy_check_mark:  | :gift:              | :raising_hand: |:raising_hand:|  :no_entry_sign:  
 | :arrow_double_down: Security Fundamentals Dashboards | OCI Cloud Service | :heavy_check_mark:  | :gift:              | :raising_hand: |:raising_hand:|  :no_entry_sign: 
+| :arrow_double_down: APEX Monitoring | OCI Cloud Service | :heavy_check_mark:  | :gift:              | :raising_hand: |:raising_hand:|  :no_entry_sign: 
 
 Legend
 
