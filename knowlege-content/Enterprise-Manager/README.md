@@ -1,1 +1,1 @@
-# Oracle Enterprise Manager monitored by OCI Observability & Management Services 
+# Oracle Enterprise Manager monitored by O&M Services
