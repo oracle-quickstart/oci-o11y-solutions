@@ -1,1 +1,1 @@
-# Using Observability & Managemnt Services to monitor Oracle Enterprise Manager
+# Using Observability & Management Services to monitor Oracle Enterprise Manager
