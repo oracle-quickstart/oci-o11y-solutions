@@ -23,7 +23,7 @@ To setup Managent Agents ...
 
 
 ### Stack monitoring
-(I would go first with Stack Monitoring since it provides an additional value which OEM cannot deliver: Anomaly Detection in metrics and alarms based on it, where OEM needs given threshold values.)
+(I would go first with Stack Monitoring since it provides an additional value which OEM cannot deliver: Anomaly Detection in metrics and alarms based on it, where OEM needs given fixed threshold values.)
 
 
 ### Database Management
