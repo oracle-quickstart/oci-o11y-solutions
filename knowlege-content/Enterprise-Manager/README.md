@@ -22,12 +22,13 @@ To setup Managent Agents ...
 
 
 
-### Database Management
-
-
-
 ### Stack monitoring
+(I would go first with Stack Monitoring since it provides an additional value which OEM cannot deliver: Anomaly Detection in metrics and alarms based on it, where OEM needs given threshold values.)
 
+
+### Database Management
+(we may name these 'optional' services, since it will be hard to show something which OEM does not provide)
 
 
 ### Ops Insights
+(same here, the value for the EM Repo DB is not there yet, we might describe probably using a Cloud Bridge to forward target data into Ops Insights)
