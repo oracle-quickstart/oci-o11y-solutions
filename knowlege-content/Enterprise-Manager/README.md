@@ -11,6 +11,7 @@ To setup Managent Agents ...
 
 (some ideas for content to cover: pointer to official docs with installation details. If OEM or EM repo DB is running in an OCI VM, we have to mention that the Mgmt Agent can be enabled as a plugin of the Oracle Cloud Agent (OCA). How to enable plugins for O&M services from OCI Mgmt Agent page.)
 
+<img width="1427" alt="image" src="https://github.com/user-attachments/assets/4fd884ba-3003-478b-b46a-12eeddfe2b10">
 
 
 ### Application Performance Monitoring
