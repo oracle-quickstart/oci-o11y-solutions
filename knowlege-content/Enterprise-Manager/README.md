@@ -13,7 +13,7 @@ To setup Managent Agents ...
 
 <img width="1427" alt="image" src="https://github.com/user-attachments/assets/4fd884ba-3003-478b-b46a-12eeddfe2b10">
 
-<img width="1428" alt="image" src="https://github.com/user-attachments/assets/3473bc7b-f764-480c-b90a-373246cf7238">
+![image](https://github.com/user-attachments/assets/ece7975e-a522-481a-b0cd-ceee968dd99b)
 
 
 
