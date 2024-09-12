@@ -53,9 +53,9 @@ Gather the following information before deployment:
     ![General config](Images/RM-GenConfig.jpg)
 
    - Instance Configuration:
-     - Hostname
-     - Linux Image (Oracle-Linux-8.9-2024.05.29-0 recommended and tested)
-     - Linux Instance Shape (Choose from list, to suite your monitoring requirements). Minimum requirements; memory:512MB, CPU:1.
+     - Enter a Hostname of your choice (Only use [allowable](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/dns.htm) characters)
+     - Select a suitable Linux Image (Oracle-Linux-8.9-2024.05.29-0 is recommended and tested)
+     - Select a Linux Instance Shape (Choose from list, to suite your monitoring requirements). Minimum requirements; memory:512MB, CPU:1.
      - Number of OCPUs (for flexible shapes)
      - Memory in GBs (for flexible shapes)
      - Assign Public IP (default: true)
@@ -83,6 +83,7 @@ Gather the following information before deployment:
 ![Password Change](Images/GF-passwd.jpg)
 
 ### Configuring OCI Monitoring Data Source to add Instance Principle
+Next step is to add the OCI datasource and configure the Instance Principle.
 
 1. Navigate to the Menu on the left > Connections > Data Sources
 2. Click on Add data source
@@ -95,19 +96,23 @@ Gather the following information before deployment:
 6. Click on Save & test and verify Success
 ![Success](Images/GF-ConnectionSuccess.jpg)
 
+Once the Success box has appeared this confirms the oci-metrics-datasource and Instance Principle have been configured.
+
 ### Adding Custom Dashboards
 
-After deployment, you can import custom dashboards in Grafana to visualise your OCI metrics.
+Now you can import some example Observability and Management dashboards in Grafana to visualise your OCI metrics.
 All dashboards are located in the Dashboards directory (<https://github.com/Mesh44/Grafana-Install/tree/main/Dashboards>)
 
-1. Click on one of dashboard json files (for example Stack_Monitoring.json)
-2. Copy the content the content.
+1. Click on one of dashboard json files within the github to see the json code (for example Stack-Monitoring-Dashboard.json)
+2. Copy the content.
 ![copyjson](Images/GH-dashboardjson.jpg)
-3. On the Grafana install click on Dashboards and New > Import
+3. On the Grafana install click on the Menu and find Dashboards and then New > Import
 ![Import](Images/GF-Import.jpg)
 4. Past the copied content (from step 2) to the section under "Import via dashboard JSON model" and click Load
 ![LoadImport](Images/GF-LoadImport.jpg)
 Ensure to choose oci-metrics-datasource as the Default data source.
+
+At this point you have now imported an example Dashboard, follow the instructions in the Dashboard to view your metrics.
 
 ## Troubleshooting
 
