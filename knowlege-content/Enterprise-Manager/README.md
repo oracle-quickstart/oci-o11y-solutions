@@ -15,6 +15,9 @@ To setup Managent Agents ...
 
 ![image](https://github.com/user-attachments/assets/ece7975e-a522-481a-b0cd-ceee968dd99b)
 
+<img width="1424" alt="image" src="https://github.com/user-attachments/assets/d96bec9a-43f4-4b96-9e42-68ed8c01f2b0">
+
+
 
 
 ### Application Performance Monitoring
