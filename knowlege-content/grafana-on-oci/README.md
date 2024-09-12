@@ -83,6 +83,7 @@ Gather the following information before deployment:
 ![Password Change](Images/GF-passwd.jpg)
 
 ### Configuring OCI Monitoring Data Source to add Instance Principle
+
 Next step is to add the OCI datasource and configure the Instance Principle.
 
 1. Navigate to the Menu on the left > Connections > Data Sources
