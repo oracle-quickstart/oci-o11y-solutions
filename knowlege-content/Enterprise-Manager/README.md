@@ -26,6 +26,8 @@ To setup Managent Agents ...
 
 APM service allows to monitor the performance and availability of the OEM application.It instruments the application and collects the traces and spans which give more insights into OEM.
 To setup APM , we need to install APM Java agent.It can be downloaded from below,
+Observability & Management --> Application Performance Monitoring --> Administration --> Download APM Agents --> Select JAVA agent
+<img width="1314" alt="image" src="https://github.com/user-attachments/assets/77e2b7bc-876f-4c11-8096-8afbdc48c08a">
 
 
 
