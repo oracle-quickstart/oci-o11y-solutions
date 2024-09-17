@@ -2,6 +2,8 @@
 
 This solution helps in monitoring all the components of the Enterprise Manager using Observability and Management Services.
 To enable the monitoring we can follow the below steps,
+<img width="1314" alt="image" src="https://github.com/user-attachments/assets/c8285dfa-1c6c-498a-935e-14078616e392">
+
 
 ### Management Agent
 
