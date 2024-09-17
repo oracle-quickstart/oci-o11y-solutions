@@ -1,0 +1,134 @@
+﻿XID,Failure,Failure Type,HW Error,Driver Error,User App Error,System Memory Corruption,Bus Error,Thermal Issue,FB Corruption
+1,Invalid or corrupted push buffer stream,:DE::SMC:BE::FBC,,DE,,SMC,BE,,FBC
+2,Invalid or corrupted push buffer stream,:DE::SMC:BE::FBC,,DE,,SMC,BE,,FBC
+3,Invalid or corrupted push buffer stream,:DE::SMC:BE::FBC,,DE,,SMC,BE,,FBC
+4,Invalid or corrupted push buffer stream,:DE::SMC:BE::FBC,,DE,,SMC,BE,,FBC
+4,GPU semaphore timeout,:DE:UAE:SMC:BE::FBC,,DE,UAE,SMC,BE,,FBC
+5,Unused,::::::,,,,,,,
+6,Invalid or corrupted push buffer stream,:DE::SMC:BE::FBC,,DE,,SMC,BE,,FBC
+7,Invalid or corrupted push buffer address,:DE:::BE::FBC,,DE,,,BE,,FBC
+8,GPU stopped processing,:DE:UAE::BE:TI:,,DE,UAE,,BE,TI,
+9,Driver error programming GPU,:DE:::::,,DE,,,,,
+10,Unused,::::::,,,,,,,
+11,Invalid or corrupted push buffer stream,:DE::SMC:BE::FBC,,DE,,SMC,BE,,FBC
+12,Driver error handling GPU exception,:DE:::::,,DE,,,,,
+13,Graphics Engine Exception,HW:DE:UAE:SMC:BE:TI:FBC,HW,DE,UAE,SMC,BE,TI,FBC
+14,Unused,::::::,,,,,,,
+15,Unused,::::::,,,,,,,
+16,Display engine hung,:DE:::::,,DE,,,,,
+17,Unused,::::::,,,,,,,
+18,Bus mastering disabled in PCI Config Space,:DE:::::,,DE,,,,,
+19,Display Engine error,:DE:::::,,DE,,,,,
+20,Invalid or corrupted Mpeg push buffer,:DE::SMC:BE::FBC,,DE,,SMC,BE,,FBC
+21,Invalid or corrupted Motion Estimation push buffer,:DE::SMC:BE::FBC,,DE,,SMC,BE,,FBC
+22,Invalid or corrupted Video Processor push buffer,:DE::SMC:BE::FBC,,DE,,SMC,BE,,FBC
+23,Unused,::::::,,,,,,,
+24,GPU semaphore timeout,:DE:UAE:SMC:BE:TI:FBC,,DE,UAE,SMC,BE,TI,FBC
+25,Invalid or illegal push buffer stream,:DE:UAE:SMC:BE::FBC,,DE,UAE,SMC,BE,,FBC
+26,Framebuffer timeout,:DE:::::,,DE,,,,,
+27,Video processor exception,:DE:::::,,DE,,,,,
+28,Video processor exception,:DE:::::,,DE,,,,,
+29,Video processor exception,:DE:::::,,DE,,,,,
+30,GPU semaphore access error,:DE:::::,,DE,,,,,
+31,GPU memory page fault,HW:DE:UAE::::,HW,DE,UAE,,,,
+32,Invalid or corrupted push buffer stream,:DE::SMC:BE:TI:FBC,,DE,,SMC,BE,TI,FBC
+33,Internal micro-controller error,:DE:::::,,DE,,,,,
+34,Video processor exception,:DE:::::,,DE,,,,,
+35,Video processor exception,:DE:::::,,DE,,,,,
+36,Video processor exception,:DE:::::,,DE,,,,,
+37,Driver firmware error,:DE::SMC:BE::,,DE,,SMC,BE,,
+38,Driver firmware error,:DE:::::,,DE,,,,,
+39,Unused,::::::,,,,,,,
+40,Unused,::::::,,,,,,,
+41,Unused,::::::,,,,,,,
+42,Video processor exception,:DE:::::,,DE,,,,,
+43,GPU stopped processing,:DE:UAE::::,,DE,UAE,,,,
+44,Graphics Engine fault during context switch,:DE:::::,,DE,,,,,
+45,"Preemptive cleanup, due to previous errors -- Most likely to see when running multiple cuda applications and hitting a DBE",:DE:::::,,DE,,,,,
+46,GPU stopped processing,:DE:::::,,DE,,,,,
+47,Video processor exception,:DE:::::,,DE,,,,,
+48,Double Bit ECC Error,HW::::::,HW,,,,,,
+49,Unused,::::::,,,,,,,
+50,Unused,::::::,,,,,,,
+51,Unused,::::::,,,,,,,
+52,Unused,::::::,,,,,,,
+53,Unused,::::::,,,,,,,
+54,Auxiliary power is not connected to the GPU board,::::::,,,,,,,
+55,Unused,::::::,,,,,,,
+56,Display Engine error,HW:DE:::::,HW,DE,,,,,
+57,Error programming video memory interface,HW:DE:::::FBC,HW,DE,,,,,FBC
+58,Unstable video memory interface detected,HW:DE:::::,HW,DE,,,,,
+58,EDC error – clarified in printout,HW::::::,HW,,,,,,
+59,Internal micro-controller error (older drivers),:DE:::::,,DE,,,,,
+60,Video processor exception,:DE:::::,,DE,,,,,
+61,Internal micro-controller breakpoint/warning (newer drivers),::::::,,,,,,,
+62,Internal micro-controller halt (newer drivers),HW:DE::::TI:,HW,DE,,,,TI,
+63,ECC page retirement or row remapping recording event,HW:DE:::::FBC,HW,DE,,,,,FBC
+64,ECC page retirement or row remapper recording failure,HW:DE:::::,HW,DE,,,,,
+65,Video processor exception,HW:DE:::::,HW,DE,,,,,
+66,Illegal access by driver,:DE:UAE::::,,DE,UAE,,,,
+67,Illegal access by driver,:DE:UAE::::,,DE,UAE,,,,
+68,NVDEC0 Exception,HW:DE:::::,HW,DE,,,,,
+69,Graphics Engine class error,HW:DE:::::,HW,DE,,,,,
+70,CE3: Unknown Error,HW:DE:::::,HW,DE,,,,,
+71,CE4: Unknown Error,HW:DE:::::,HW,DE,,,,,
+72,CE5: Unknown Error,HW:DE:::::,HW,DE,,,,,
+73,NVENC2 Error,HW:DE:::::,HW,DE,,,,,
+74,NVLINK Error,HW:DE:::BE::,HW,DE,,,BE,,
+75,CE6: Unknown Error,HW:DE:::::,HW,DE,,,,,
+76,CE7: Unknown Error,HW:DE:::::,HW,DE,,,,,
+77,CE8: Unknown Error,HW:DE:::::,HW,DE,,,,,
+78,vGPU Start Error,:DE:::::,,DE,,,,,
+79,GPU has fallen off the bus,HW:DE::SMC:BE:TI:,HW,DE,,SMC,BE,TI,
+80,Corrupted data sent to GPU,HW:DE::SMC:BE::FBC,HW,DE,,SMC,BE,,FBC
+81,VGA Subsystem Error,HW::::::,HW,,,,,,
+82,NVJPG0 Error,HW:DE:::::,HW,DE,,,,,
+83,NVDEC1 Error,HW:DE:::::,HW,DE,,,,,
+84,NVDEC2 Error,HW:DE:::::,HW,DE,,,,,
+85,CE9: Unknown Error,HW:DE:::::,HW,DE,,,,,
+86,OFA Exception,HW:DE:::::,HW,DE,,,,,
+87,Reserved,::::::,,,,,,,
+88,NVDEC3 Error,HW:DE:::::,HW,DE,,,,,
+89,NVDEC4 Error,HW:DE:::::,HW,DE,,,,,
+90,Reserved,::::::,,,,,,,
+91,Reserved,::::::,,,,,,,
+92,High single-bit ECC error rate,HW:DE:::::,HW,DE,,,,,
+93,Non-fatal violation of provisioned InfoROM wear limit,:DE:UAE::::,,DE,UAE,,,,
+94,Contained ECC error,HW:DE:::::FBC,HW,DE,,,,,FBC
+95,Uncontained ECC error,HW:DE:::::FBC,HW,DE,,,,,FBC
+96,NVDEC5 Error,HW:DE:::::,HW,DE,,,,,
+97,NVDEC6 Error,HW:DE:::::,HW,DE,,,,,
+98,NVDEC7 Error,HW:DE:::::,HW,DE,,,,,
+99,NVJPG1 Error,HW:DE:::::,HW,DE,,,,,
+100,NVJPG2 Error,HW:DE:::::,HW,DE,,,,,
+101,NVJPG3 Error,HW:DE:::::,HW,DE,,,,,
+102,NVJPG4 Error,HW:DE:::::,HW,DE,,,,,
+103,NVJPG5 Error,HW:DE:::::,HW,DE,,,,,
+104,NVJPG6 Error,HW:DE:::::,HW,DE,,,,,
+105,NVJPG7 Error,HW:DE:::::,HW,DE,,,,,
+106,SMBPBI Test Message,::UAE::::,,,UAE,,,,
+107,SMBPBI Test Message Silent,::UAE::::,,,UAE,,,,
+108,Reserved,::::::,,,,,,,
+109,Context Switch Timeout Error,HW:DE:UAE:SMC:BE:TI:FBC,HW,DE,UAE,SMC,BE,TI,FBC
+110,Security Fault Error,HW::::::,HW,,,,,,
+111,Display Bundle Error Event,HW:DE:::BE::,HW,DE,,,BE,,
+112,Display Supervisor Error,HW:DE:::::,HW,DE,,,,,
+113,DP Link Training Error,HW:DE:::::,HW,DE,,,,,
+114,Display Pipeline Underflow Error,HW:DE:::::FBC,HW,DE,,,,,FBC
+115,Display Core Channel Error,HW:DE:::::,HW,DE,,,,,
+116,Display Window Channel Error,HW:DE:::::,HW,DE,,,,,
+117,Display Cursor Channel Error,HW:DE:::::,HW,DE,,,,,
+118,Display Pixel Pipeline Error,HW:DE:::::,HW,DE,,,,,
+119,GSP RPC Timeout,HW:DE::SMC:BE:TI:FBC,HW,DE,,SMC,BE,TI,FBC
+120,GSP Error,HW:DE::SMC:BE:TI:FBC,HW,DE,,SMC,BE,TI,FBC
+121,C2C Link Error,HW::::BE::,HW,,,,BE,,
+122,SPI PMU RPC Read Failure,HW:DE:::::,HW,DE,,,,,
+123,SPI PMU RPC Write Failure,HW:DE:::::,HW,DE,,,,,
+124,SPI PMU RPC Erase Failure,HW:DE:::::,HW,DE,,,,,
+125,Inforom FS Failure,HW:DE:::::,HW,DE,,,,,
+126,Reserved,::::::,,,,,,,
+139,Reserved,::::::,,,,,,,
+140,Unrecovered ECC Error,HW:DE:::::FBC,HW,DE,,,,,FBC
+141,Reserved,::::::,,,,,,,
+142,Reserved,::::::,,,,,,,
+143,GPU Initialization Failure,HW:DE:::::FBC,HW,DE,,,,,FBC

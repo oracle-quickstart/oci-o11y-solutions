@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<LoganContent xmlns="http://www.oracle.com/DataCenter/LogAnalyticsStd" content_version="2.94.1.0.0" name="content_ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq_1725558863192" oms_version="2.94.1.0.0">
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Hardware Slowdown</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Hardware Thermal Slowdown</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Software Power Cap</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Event GPU Idle </DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Hardwaer Power Brake Slowdown</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Software Thermal Slowdown</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Clocks default_applications memory (MHz)</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>FLOAT</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Clocks Event Reasons Active</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>PCI Bus ID</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Power Draw (W)</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>FLOAT</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>GPU Model</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>GPU Temperature tlimit</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>FLOAT</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>GPU Utilization</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Clocks current sm (MHz)</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>FLOAT</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Clocks current graphics (MHz)</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>FLOAT</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Clocks current memory (MHz)</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>FLOAT</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Clocks default_applications graphics (MHz)</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>FLOAT</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Memory Temperature</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>FLOAT</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>GPU Temperature</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>FLOAT</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Memory Utilization</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>FLOAT</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>GPU Utulization</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>FLOAT</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>GPU Count</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>INTEGER</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Parser oms_version="2.94.1.0.0" tokenize_orig_text="1" type="4">
+      <Name>NVIDIA SMI Status</Name>
+      <DisplayName>NVIDIA SMI Status</DisplayName>
+      <IsSingleLineContent>1</IsSingleLineContent>
+      <HeaderContent>timestamp, serial, pci.bus_id, clocks_event_reasons.active, clocks_event_reasons.gpu_idle, clocks_event_reasons.sw_power_cap, clocks_event_reasons.hw_slowdown, clocks_event_reasons.hw_thermal_slowdown, clocks_event_reasons.hw_power_brake_slowdown, clocks_event_reasons.sw_thermal_slowdown, memory.used [MiB], utilization.gpu [%], utilization.memory [%], temperature.gpu, temperature.memory, clocks.current.graphics [MHz], clocks.current.sm [MHz], clocks.current.memory [MHz], clocks.default_applications.graphics [MHz], clocks.default_applications.memory [MHz], power.draw [W], temperature.gpu.tlimit</HeaderContent>
+      <ExampleContent>2024/06/19 00:10:06.250, 1653923027477, 00000000:0F:00.0, 0x0000000000000000, Not Active, Not Active, Not Active, Not Active, Not Active, Not Active, 76121, 0, 0, 31, 39, 1980, 1980, 2619, 1980, 2619, 115.94, 56
+2024/06/19 00:10:06.274, 1654223009021, 00000000:2D:00.0, 0x0000000000000000, Not Active, Not Active, Not Active, Not Active, Not Active, Not Active, 48655, 100, 0, 38, 44, 1980, 1980, 2619, 1980, 2619, 128.28, 49</ExampleContent>
+      <IsSystem>0</IsSystem>
+      <Encoding>UTF-8</Encoding>
+      <Language>en_US</Language>
+      <ParserFields>
+         <ParserField>
+            <FieldSeq>11</FieldSeq>
+            <FieldName>memusenow</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>2</FieldSeq>
+            <FieldName>serialnum</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>1</FieldSeq>
+            <FieldName>time</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>18</FieldSeq>
+            <FieldName>udff10</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>19</FieldSeq>
+            <FieldName>udff11</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>20</FieldSeq>
+            <FieldName>udff12</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>21</FieldSeq>
+            <FieldName>udff13</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>22</FieldSeq>
+            <FieldName>udff14</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>12</FieldSeq>
+            <FieldName>udff4</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>13</FieldSeq>
+            <FieldName>udff5</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>14</FieldSeq>
+            <FieldName>udff6</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>15</FieldSeq>
+            <FieldName>udff7</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>16</FieldSeq>
+            <FieldName>udff8</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>17</FieldSeq>
+            <FieldName>udff9</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>8</FieldSeq>
+            <FieldName>udfs10</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>9</FieldSeq>
+            <FieldName>udfs11</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>10</FieldSeq>
+            <FieldName>udfs12</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>3</FieldSeq>
+            <FieldName>udfs2</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>4</FieldSeq>
+            <FieldName>udfs3</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>5</FieldSeq>
+            <FieldName>udfs7</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>6</FieldSeq>
+            <FieldName>udfs8</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>7</FieldSeq>
+            <FieldName>udfs9</FieldName>
+         </ParserField>
+      </ParserFields>
+      <WrittenOnce>0</WrittenOnce>
+      <IsDefaultParser>1</IsDefaultParser>
+      <FieldDelimiter>,</FieldDelimiter>
+   </Parser>
+   <Source configWarningSettings="0" name="NVIDIA SMI Status" oms_version="2.94.1.0.0">
+      <SourceType>os_file</SourceType>
+      <TargetTypes>
+         <TargetType>omc_host_linux</TargetType>
+      </TargetTypes>
+      <DisplayName>NVIDIA SMI Status</DisplayName>
+      <IsSystem>0</IsSystem>
+      <IsSecureContent>1</IsSecureContent>
+      <Patterns>
+         <Pattern>
+            <Value>/opt/oracle/logs/smi_logs/*.log</Value>
+            <IsInclude>1</IsInclude>
+            <InUse>1</InUse>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </Pattern>
+      </Patterns>
+      <Parsers>
+         <Parser>
+            <ParserSeq>1</ParserSeq>
+            <ParserName>NVIDIA SMI Status</ParserName>
+         </Parser>
+      </Parsers>
+      <ExtFieldDefinitions>
+         <ExtFieldDefinition>
+            <BaseFieldName>udff4</BaseFieldName>
+            <BaseFieldLogText>50</BaseFieldLogText>
+            <RegexExpression>{udfl32:\S+}</RegexExpression>
+            <ExtFieldName>udfl32</ExtFieldName>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </ExtFieldDefinition>
+         <ExtFieldDefinition>
+            <BaseFieldName>mlogent</BaseFieldName>
+            <BaseFieldLogText>/opt/oracle/logs/smi_logs/smi_2349xlg039_octane-ord-non-restricted-bm-gpu-h100-8-ad1-002_20240624-151501.log</BaseFieldLogText>
+            <RegexExpression>smi_{hwid:[^\_]+}_octane-ord-non-restricted-bm-gpu-{udfs1:.*}-{udfi2:\d+}-{availdomain:.*}-{instid:\d+}_2024.*.log</RegexExpression>
+            <ExtFieldName>availdomain</ExtFieldName>
+            <ExtFieldName>hwid</ExtFieldName>
+            <ExtFieldName>instid</ExtFieldName>
+            <ExtFieldName>udfi2</ExtFieldName>
+            <ExtFieldName>udfs1</ExtFieldName>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </ExtFieldDefinition>
+         <ExtFieldDefinition>
+            <BaseFieldName>mtgt</BaseFieldName>
+            <BaseFieldLogText>octane-ord-non-restricted-bm-gpu-h100-8-ad1-008.compute.nrphxvcnc.oraclevcn.com</BaseFieldLogText>
+            <RegexExpression>ctane-ord-non-restricted-bm-gpu-h100-8-{nodedisplayname:\S+}.compute.nrphxvcnc.oraclevcn.com</RegexExpression>
+            <ExtFieldName>nodedisplayname</ExtFieldName>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </ExtFieldDefinition>
+      </ExtFieldDefinitions>
+      <AutoAssociation>
+         <IsEnabled>1</IsEnabled>
+         <LogGroupName>octane</LogGroupName>
+      </AutoAssociation>
+      <IsHidden>0</IsHidden>
+      <IsSMAEnabled>0</IsSMAEnabled>
+   </Source>
+   <FieldNameMaps>
+      <FieldNameMap>
+         <Name>udfs9</Name>
+         <DisplayName>Hardware Slowdown</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs10</Name>
+         <DisplayName>Hardware Thermal Slowdown</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs8</Name>
+         <DisplayName>Software Power Cap</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs7</Name>
+         <DisplayName>Event GPU Idle </DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs11</Name>
+         <DisplayName>Hardwaer Power Brake Slowdown</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs12</Name>
+         <DisplayName>Software Thermal Slowdown</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udff12</Name>
+         <DisplayName>Clocks default_applications memory (MHz)</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs3</Name>
+         <DisplayName>Clocks Event Reasons Active</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs2</Name>
+         <DisplayName>PCI Bus ID</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udff13</Name>
+         <DisplayName>Power Draw (W)</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs1</Name>
+         <DisplayName>GPU Model</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udff14</Name>
+         <DisplayName>GPU Temperature tlimit</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl32</Name>
+         <DisplayName>GPU Utilization</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udff9</Name>
+         <DisplayName>Clocks current sm (MHz)</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udff8</Name>
+         <DisplayName>Clocks current graphics (MHz)</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udff10</Name>
+         <DisplayName>Clocks current memory (MHz)</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udff11</Name>
+         <DisplayName>Clocks default_applications graphics (MHz)</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udff7</Name>
+         <DisplayName>Memory Temperature</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udff6</Name>
+         <DisplayName>GPU Temperature</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udff5</Name>
+         <DisplayName>Memory Utilization</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udff4</Name>
+         <DisplayName>GPU Utulization</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfi2</Name>
+         <DisplayName>GPU Count</DisplayName>
+      </FieldNameMap>
+   </FieldNameMaps>
+</LoganContent>
