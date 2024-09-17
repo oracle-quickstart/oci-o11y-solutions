@@ -2,8 +2,6 @@
 
 This solution helps in monitoring all the components of the Enterprise Manager using Observability and Management Services.
 To enable the monitoring we can follow the below steps,
-<img width="1314" alt="image" src="https://github.com/user-attachments/assets/c8285dfa-1c6c-498a-935e-14078616e392">
-
 
 ### Management Agent
 
@@ -26,10 +24,23 @@ To setup Managent Agents ...
 
 APM service allows to monitor the performance and availability of the OEM application.It instruments the application and collects the traces and spans which give more insights into OEM.
 To setup APM , we need to install APM Java agent.It can be downloaded from below,
-Observability & Management --> Application Performance Monitoring --> Administration --> Download APM Agents --> Select JAVA agent
+Observability & Management --> Application Performance Monitoring --> Administration --> Download APM agents --> Select JAVA agent
 <img width="1314" alt="image" src="https://github.com/user-attachments/assets/77e2b7bc-876f-4c11-8096-8afbdc48c08a">
 
-
+Once downloaded , follow the steps to provision the APM agent.
+* Connect to the host where the OMS server is installed and copy the APM Java Agent software file that you downloaded to any preferred location.
+* Ensure to login as the same user as the OMS server and that the OMS server user has read and write permissions to the directory to which the APM Java agent is downloaded or copied.
+* Review the following mandatory arguments that must be specified to provision an APM Java Agent.
+-service-name: The name of the service being monitored. This argument enables you to filter by service and view traces in the Trace Explorer user interface.
+-destination: The destination directory in which the APM Java Agent will be provisioned.We can use the value $OMS_HOME 
+-private-data-key: The agent installation key used by APM Java agents (private dataKey), which is generated when the APM domain is created.
+-data-upload-endpoint: The dataUploadEndpoint URL that is generated when the APM domain is created.
+* To view the help information for the provision-agent argument, run the following:        
+  java -jar ./apm-java-agent-installer-<version>.jar provision-agent -help
+* Provision the agent by specifying the mandatory arguments described in the previous step and running the following java command:
+  Example:
+  java -jar ./apm-java-agent-installer-1.1.jar provision-agent -service-name=apm_service -destination=$OMS_HOME -private-data-key=IMWJ5UN2C6YOLQSUZ5Q7IGN3QACF4AZD -data-upload-endpoint=https://dataUploadEndpoint.com
+* On running the java command, if the APM Java agent is provisioned successfully
 
 
 ### Logging Analytics
