@@ -43,10 +43,10 @@ Once downloaded, follow the steps to provision the APM agent.
       java -jar ./apm-java-agent-installer-1.1.jar provision-agent -service-name=apm_service -destination=$DOMAIN_HOME -private-data-key=IMWJ5UN2C6YOLQSUZ5Q7IGN3QACF4AZD -data-upload-endpoint=https://dataUploadEndpoint.com
 * On running the java command, if the APM Java agent is provisioned successfully.
 
-Next step is to modify the WebLogic startup command to include the APM Agent. For this, edit file $DOMAIN_HOME/bin/startWebLogic.sh, locate the line
-<samp>. ${DOMAIN_HOME}/bin/setDomainEnv.sh $*</samp>
-and add this line after it:
-<samp>JAVA_OPTIONS="${JAVA_OPTIONS} -javaagent:$DOMAIN_HOME/oracle-apm-agent/bootstrap/ApmAgent.jar"</samp>
+Next step is to modify the WebLogic startup command to include the APM Agent. For this, edit file $DOMAIN_HOME/bin/startWebLogic.sh, locate the line\
+<pre>. \${DOMAIN_HOME}/bin/setDomainEnv.sh \$*</pre>\
+and add this line after it:\
+<pre>JAVA_OPTIONS="\${JAVA_OPTIONS} -javaagent:\$DOMAIN_HOME/oracle-apm-agent/bootstrap/ApmAgent.jar"</pre>\
 
 Once the APM agent is successfully installed and OEM got fully restarted (including the WebLogic AdminServer), we can start seeing the traces and spans from the application.
 <img width="1385" alt="image" src="https://github.com/user-attachments/assets/c4357c24-d71d-4abe-9604-1322708eb5be">
