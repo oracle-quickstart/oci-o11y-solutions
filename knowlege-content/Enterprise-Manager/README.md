@@ -23,26 +23,32 @@ To setup Managent Agents ...
 ### Application Performance Monitoring
 
 APM service allows to monitor the performance and availability of the OEM application.It instruments the application and collects the traces and spans which give more insights into OEM.
-To setup APM , we need to install APM Java agent.It can be downloaded from below,
+To setup APM, we need to install APM Java agent.It can be downloaded from below,
 Observability & Management --> Application Performance Monitoring --> Administration --> Download APM agents --> Select JAVA agent
 <img width="1314" alt="image" src="https://github.com/user-attachments/assets/77e2b7bc-876f-4c11-8096-8afbdc48c08a">
 
-Once downloaded , follow the steps to provision the APM agent.
+Once downloaded, follow the steps to provision the APM agent.
 * Connect to the host where the OMS server is installed and copy the APM Java Agent software file that you downloaded to any preferred location.
 * Ensure to login as the same user as the OMS server and that the OMS server user has read and write permissions to the directory to which the APM Java agent is downloaded or copied.
+* Ensure that WebLogic variable DOMAIN_HOME is set, example "DOMAIN_HOME=/u01/app/gc_inst/user_projects/domains/GCDomain". 
 * Review the following mandatory arguments that must be specified to provision an APM Java Agent.
     * -service-name: The name of the service being monitored. This argument enables you to filter by service and view traces in the Trace Explorer user interface.
-    * -destination: The destination directory in which the APM Java Agent will be provisioned.We can use the value $OMS_HOME
+    * -destination: The destination directory in which the APM Java Agent will be provisioned. We will use the value of WebLogic $DOMAIN_HOME for this.
     * -private-data-key: The agent installation key used by APM Java agents (private dataKey), which is generated when the APM domain is created.
     * -data-upload-endpoint: The dataUploadEndpoint URL that is generated when the APM domain is created.
 * To view the help information for the provision-agent argument, run the following:
     * java -jar ./apm-java-agent-installer-<version>.jar provision-agent -help
 * Provision the agent by specifying the mandatory arguments described in the previous step and running the following java command:
     * Example:
-      java -jar ./apm-java-agent-installer-1.1.jar provision-agent -service-name=apm_service -destination=$OMS_HOME -private-data-key=IMWJ5UN2C6YOLQSUZ5Q7IGN3QACF4AZD -data-upload-endpoint=https://dataUploadEndpoint.com
+      java -jar ./apm-java-agent-installer-1.1.jar provision-agent -service-name=apm_service -destination=$DOMAIN_HOME -private-data-key=IMWJ5UN2C6YOLQSUZ5Q7IGN3QACF4AZD -data-upload-endpoint=https://dataUploadEndpoint.com
 * On running the java command, if the APM Java agent is provisioned successfully.
-  
-Once the APM agent is successfully installed we can start seeing the traces and spans from the application.
+
+Next step is to modify the WebLogic startup command to include the APM Agent. For this, edit file $DOMAIN_HOME/bin/startWebLogic.sh, locate the line
+<samp>. ${DOMAIN_HOME}/bin/setDomainEnv.sh $*</samp>
+and add this line after it:
+<samp>JAVA_OPTIONS="${JAVA_OPTIONS} -javaagent:$DOMAIN_HOME/oracle-apm-agent/bootstrap/ApmAgent.jar"</samp>
+
+Once the APM agent is successfully installed and OEM got fully restarted (including the WebLogic AdminServer), we can start seeing the traces and spans from the application.
 
 
 
