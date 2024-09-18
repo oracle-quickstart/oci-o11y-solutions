@@ -49,6 +49,7 @@ and add this line after it:
 <samp>JAVA_OPTIONS="${JAVA_OPTIONS} -javaagent:$DOMAIN_HOME/oracle-apm-agent/bootstrap/ApmAgent.jar"</samp>
 
 Once the APM agent is successfully installed and OEM got fully restarted (including the WebLogic AdminServer), we can start seeing the traces and spans from the application.
+<img width="1385" alt="image" src="https://github.com/user-attachments/assets/c4357c24-d71d-4abe-9604-1322708eb5be">
 
 
 
