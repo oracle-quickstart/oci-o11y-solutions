@@ -101,7 +101,7 @@ After deployment, you can import custom dashboards in Grafana to visualise your 
 All dashboards are located in the Dashboards directory (<https://github.com/Mesh44/Grafana-Install/tree/main/Dashboards>)
 
 1. Click on one of dashboard json files (for example Stack_Monitoring.json)
-2. Copy the content the content.
+2. Copy the content.
 ![copyjson](Images/GH-dashboardjson.jpg)
 3. On the Grafana install click on Dashboards and New > Import
 ![Import](Images/GF-Import.jpg)
