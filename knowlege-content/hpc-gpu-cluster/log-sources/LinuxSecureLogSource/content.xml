@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<LoganContent xmlns="http://www.oracle.com/DataCenter/LogAnalyticsStd" content_version="2.94.1.0.0" name="content_ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq_1725559495759" oms_version="2.94.1.0.0">
+   <Source configWarningSettings="2" name="LinuxSecureLogSource" oms_version="2.94.1.0.0">
+      <SourceType>os_file</SourceType>
+      <DisplayName nlsid="logan_nlsid">Linux Secure Logs</DisplayName>
+      <Description nlsid="logan_nlsid">Standard Security Trace log files for Oracle Linux, Ubuntu</Description>
+      <IsSystem>1</IsSystem>
+      <IsSecureContent>0</IsSecureContent>
+      <Parsers>
+         <Parser>
+            <ParserSeq>1</ParserSeq>
+            <ParserName>host_syslog_logtype</ParserName>
+         </Parser>
+      </Parsers>
+      <ExtFieldDefinitions>
+         <ExtFieldDefinition>
+            <BaseFieldName>mtgt</BaseFieldName>
+            <BaseFieldLogText>octane-ord-non-restricted-bm-gpu-h100-8-ad1-008.compute.nrphxvcnc.oraclevcn.com</BaseFieldLogText>
+            <RegexExpression>octane-ord-non-restricted-bm-gpu-h100-8-{nodedisplayname:\S+}.compute.nrphxvcnc.oraclevcn.com</RegexExpression>
+            <ExtFieldName>nodedisplayname</ExtFieldName>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </ExtFieldDefinition>
+      </ExtFieldDefinitions>
+      <AutoAssociation>
+         <IsEnabled>1</IsEnabled>
+         <LogGroupName>octane</LogGroupName>
+      </AutoAssociation>
+      <IsHidden>0</IsHidden>
+      <IsSMAEnabled>0</IsSMAEnabled>
+   </Source>
+</LoganContent>

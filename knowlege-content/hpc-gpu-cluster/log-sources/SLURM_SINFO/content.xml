@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<LoganContent xmlns="http://www.oracle.com/DataCenter/LogAnalyticsStd" content_version="2.94.1.0.0" name="content_ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq_1725558399056" oms_version="2.94.1.0.0">
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Cores Count</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Socket Count</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Features Available</DisplayName>
+      <Description>Features available on the nodes. Also see features_act.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Node Count</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Root Restricted Partition</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Is Oversubscribed</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Reservation</DisplayName>
+      <Description>If a node is in an advanced reservation print the name of that reservation.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Time Limit</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Job Size</DisplayName>
+      <Description>Maximum job size in nodes.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Weight</DisplayName>
+      <Description>Scheduling weight of the nodes.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Temporary Disk space (MB)</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Threads Count</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Parser oms_version="2.94.1.0.0" tokenize_orig_text="1" type="4">
+      <Name>SLURM SINFO (CSV comma)</Name>
+      <DisplayName>SLURM SINFO (CSV comma)</DisplayName>
+      <IsSingleLineContent>1</IsSingleLineContent>
+      <HeaderContent>NODELIST,NODES,PARTITION,STATE,CPUS,SOCKETS,CORES,THREADS,MEMORY,TMP_DISK,WEIGHT,AVAIL_FEATURES,AVAIL,TIMELIMIT,JOB_SIZE,ROOT,OVERSUBSCRIBE,GROUPS,RESERVATION,REASON</HeaderContent>
+      <ExampleContent>octane-ord-non-restricted-bm-gpu-h100-8-ad1-028,1,sdg,inval,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,gres/gpu count changed and jobs are using them (0 != 8)
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-028,1,verticalization,inval,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,gres/gpu count changed and jobs are using them (0 != 8)
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-028,1,scavenge,inval,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,gres/gpu count changed and jobs are using them (0 != 8)
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-028,1,genai-iman,inval,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,gres/gpu count changed and jobs are using them (0 != 8)
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-028,1,speech,inval,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,gres/gpu count changed and jobs are using them (0 != 8)
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-029,1,batch,inval,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,gres/gpu count changed and jobs are using them (0 != 8)
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-029,1,vision,inval,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,gres/gpu count changed and jobs are using them (0 != 8)
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-029,1,dus,inval,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,gres/gpu count changed and jobs are using them (0 != 8)
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-029,1,genai-pm,inval,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,gres/gpu count changed and jobs are using them (0 != 8)
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-029,1,genai-tao,inval,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,gres/gpu count changed and jobs are using them (0 != 8)
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-029,1,language,inval,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,gres/gpu count changed and jobs are using them (0 != 8)
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-029,1,sdg,inval,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,gres/gpu count changed and jobs are using them (0 != 8)
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-029,1,verticalization,inval,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,gres/gpu count changed and jobs are using them (0 != 8)
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-029,1,scavenge,inval,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,gres/gpu count changed and jobs are using them (0 != 8)
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-029,1,genai-iman,inval,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,gres/gpu count changed and jobs are using them (0 != 8)
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-029,1,speech,inval,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,gres/gpu count changed and jobs are using them (0 != 8)
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-030,1,batch,down*,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,node to be moved : Not responding
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-030,1,vision,down*,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,node to be moved : Not responding
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-030,1,dus,down*,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,node to be moved : Not responding
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-030,1,genai-pm,down*,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,node to be moved : Not responding
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-030,1,genai-tao,down*,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,node to be moved : Not responding
+octane-ord-non-restricted-bm-gpu-h100-8-ad1-030,1,language,down*,224,2,56,2,2048000,0,1,shape=BM.GPU.H100.8,ad=1,up,infinite,1-infinite,no,NO,all,,node to be moved : Not responding</ExampleContent>
+      <IsSystem>0</IsSystem>
+      <Encoding>UTF-8</Encoding>
+      <Language>en_US</Language>
+      <ParserFields>
+         <ParserField>
+            <FieldSeq>13</FieldSeq>
+            <FieldName>avlblstatus</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>5</FieldSeq>
+            <FieldName>cpucnt</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>9</FieldSeq>
+            <FieldName>memcapki</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>1</FieldSeq>
+            <FieldName>node</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>3</FieldSeq>
+            <FieldName>partition</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>20</FieldSeq>
+            <FieldName>reas</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>4</FieldSeq>
+            <FieldName>statecurr</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>2</FieldSeq>
+            <FieldName>udfl2</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>6</FieldSeq>
+            <FieldName>udfl3</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>7</FieldSeq>
+            <FieldName>udfl4</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>8</FieldSeq>
+            <FieldName>udfl5</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>10</FieldSeq>
+            <FieldName>udfl6</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>11</FieldSeq>
+            <FieldName>udfl7</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>15</FieldSeq>
+            <FieldName>udfl8</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>14</FieldSeq>
+            <FieldName>udfs26</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>12</FieldSeq>
+            <FieldName>udfs31</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>16</FieldSeq>
+            <FieldName>udfs32</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>17</FieldSeq>
+            <FieldName>udfs33</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>19</FieldSeq>
+            <FieldName>udfs34</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>18</FieldSeq>
+            <FieldName>usergroups</FieldName>
+         </ParserField>
+      </ParserFields>
+      <WrittenOnce>0</WrittenOnce>
+      <IsDefaultParser>1</IsDefaultParser>
+      <FieldDelimiter>,</FieldDelimiter>
+   </Parser>
+   <Source configWarningSettings="0" name="SLURM SINFO" oms_version="2.94.1.0.0">
+      <SourceType>os_file</SourceType>
+      <TargetTypes>
+         <TargetType>omc_host_linux</TargetType>
+      </TargetTypes>
+      <DisplayName>SLURM SINFO</DisplayName>
+      <IsSystem>0</IsSystem>
+      <IsSecureContent>1</IsSecureContent>
+      <Patterns>
+         <Pattern>
+            <Value>/opt/oracle/mgmt_agent/slurm_logs/slurm_sinfo*.log</Value>
+            <IsInclude>1</IsInclude>
+            <InUse>1</InUse>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </Pattern>
+      </Patterns>
+      <Parsers>
+         <Parser>
+            <ParserSeq>1</ParserSeq>
+            <ParserName>SLURM SINFO (CSV comma)</ParserName>
+         </Parser>
+      </Parsers>
+      <ExtFieldDefinitions>
+         <ExtFieldDefinition>
+            <BaseFieldName>node</BaseFieldName>
+            <BaseFieldLogText>octane-ord-non-restricted-bm-gpu-h100-8-ad1-000</BaseFieldLogText>
+            <RegexExpression>octane-ord-non-restricted-bm-gpu-h100-8-{nodedisplayname:\S+}</RegexExpression>
+            <ExtFieldName>nodedisplayname</ExtFieldName>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </ExtFieldDefinition>
+      </ExtFieldDefinitions>
+      <IsHidden>0</IsHidden>
+      <IsSMAEnabled>0</IsSMAEnabled>
+   </Source>
+   <FieldNameMaps>
+      <FieldNameMap>
+         <Name>udfl4</Name>
+         <DisplayName>Cores Count</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl3</Name>
+         <DisplayName>Socket Count</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs31</Name>
+         <DisplayName>Features Available</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl2</Name>
+         <DisplayName>Node Count</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs32</Name>
+         <DisplayName>Root Restricted Partition</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs33</Name>
+         <DisplayName>Is Oversubscribed</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs34</Name>
+         <DisplayName>Reservation</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs26</Name>
+         <DisplayName>Time Limit</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl8</Name>
+         <DisplayName>Job Size</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl7</Name>
+         <DisplayName>Weight</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl6</Name>
+         <DisplayName>Temporary Disk space (MB)</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl5</Name>
+         <DisplayName>Threads Count</DisplayName>
+      </FieldNameMap>
+   </FieldNameMaps>
+</LoganContent>

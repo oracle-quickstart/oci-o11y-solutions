@@ -84,6 +84,10 @@ Gather the following information before deployment:
 
 ### Configuring OCI Monitoring Data Source to add Instance Principle
 
+
+
+Next step is to add the OCI datasource and configure the Instance Principle.
+
 1. Navigate to the Menu on the left > Connections > Data Sources
 2. Click on Add data source
 ![AddDataSource](Images/GF-AddDataSource.jpg)
@@ -94,6 +98,9 @@ Gather the following information before deployment:
 ![Instance](Images/GF-Connection.jpg)
 6. Click on Save & test and verify Success
 ![Success](Images/GF-ConnectionSuccess.jpg)
+
+Once the Success box has appeared this confirms the oci-metrics-datasource and Instance Principle have been configured.
+
 
 ### Adding Custom Dashboards
 
@@ -108,6 +115,9 @@ All dashboards are located in the Dashboards directory (<https://github.com/Mesh
 4. Past the copied content (from step 2) to the section under "Import via dashboard JSON model" and click Load
 ![LoadImport](Images/GF-LoadImport.jpg)
 Ensure to choose oci-metrics-datasource as the Default data source.
+
+At this point you have now imported an example Dashboard, follow the instructions in the Dashboard to view your metrics.
+
 
 ## Troubleshooting
 

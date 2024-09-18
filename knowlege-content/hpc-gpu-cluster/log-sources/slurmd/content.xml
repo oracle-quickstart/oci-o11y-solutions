@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<LoganContent xmlns="http://www.oracle.com/DataCenter/LogAnalyticsStd" content_version="2.94.1.0.0" name="content_ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq_1725558713886" oms_version="2.94.1.0.0">
+   <Parser oms_version="2.94.1.0.0" tokenize_orig_text="1" type="0">
+      <Name>slurmtest</Name>
+      <DisplayName>slurmtest</DisplayName>
+      <ParserContent>\[{TIMEDATE}(?:\]\s+\[(\d+)\.([^\]]+))?(?:\]\s+(\S+)\:\s)?\]*(.*)</ParserContent>
+      <IsSingleLineContent>1</IsSingleLineContent>
+      <ExampleContent>[2024-02-17T15:08:42.748] error: Invalid GRES data for gpu, CPUs=48-63,176-191
+[2024-02-17T15:08:42.748] error: xcpuinfo_abs_to_mac: failed
+[2024-02-17T15:08:42.748] error: Invalid GRES data for gpu, CPUs=48-63,176-191
+[2024-02-17T15:08:42.748] error: xcpuinfo_abs_to_mac: failed
+[2024-02-17T15:08:42.748] error: Invalid GRES data for gpu, CPUs=16-31,144-159
+[2024-02-17T22:42:11.706] [11.extern] task/cgroup: _memcg_initialize: job: alloc=131072MB mem.limit=131072MB memsw.limit=unlimited
+[2024-02-17T22:42:11.706] [11.extern] task/cgroup: _memcg_initialize: step: alloc=131072MB mem.limit=131072MB memsw.limit=unlimited
+[2024-02-17T22:42:12.393] launch task StepId=11.0 request from UID:5011 GID:5507 HOST:10.3.0.126 PORT:48380
+[2024-02-17T22:42:12.393] task/affinity: lllp_distribution: JobId=11 implicit auto binding: cores,one_thread, dist 1
+[2024-02-17T22:42:12.393] task/affinity: _task_layout_lllp_block: _task_layout_lllp_block
+[2024-02-17T22:42:12.393] task/affinity: _lllp_generate_cpu_bind: _lllp_generate_cpu_bind jobid [11]: mask_cpu,one_thread, 0x00000000000000000000000000000000000000000000000000000000000000FF
+[2024-02-17T22:42:12.399] [11.0] error: Thread count (255) not multiple of core count (128)
+[2024-02-17T22:42:12.411] [11.0] task/cgroup: _memcg_initialize: job: alloc=131072MB mem.limit=131072MB memsw.limit=unlimited
+[2024-02-17T22:42:12.411] [11.0] task/cgroup: _memcg_initialize: step: alloc=131072MB mem.limit=131072MB memsw.limit=unlimited
+[2024-02-18T18:47:53.428] [11.0] error: *** STEP 11.0 ON aid-nrt-slurm-bm-gpu-b4-8-ad1-000 CANCELLED AT 2024-02-18T18:47:53 ***
+[2024-02-18T18:47:53.430] [11.extern] done with job
+[2024-02-18T18:48:24.107] [11.0] done with job
+[2024-02-18T19:00:01.404] [14.extern] error: Thread count (255) not multiple of core count (128)
+[2024-02-18T19:00:01.422] [14.extern] task/cgroup: _memcg_initialize: job: alloc=250000MB mem.limit=250000MB memsw.limit=unlimited
+[2024-02-18T19:00:01.422] [14.extern] task/cgroup: _memcg_initialize: step: alloc=250000MB mem.limit=250000MB memsw.limit=unlimited
+[2024-02-18T19:00:02.098] launch task StepId=14.0 request from UID:5011 GID:5507 HOST:10.3.0.126 PORT:60554
+[2024-02-18T19:00:02.098] task/affinity: lllp_distribution: JobId=14 auto binding off: mask_cpu,one_thread
+[2024-02-18T19:00:02.104] [14.0] error: Thread count (255) not multiple of core count (128)
+[2024-02-18T19:00:02.117] [14.0] task/cgroup: _memcg_initialize: job: alloc=250000MB mem.limit=250000MB memsw.limit=unlimited
+[2024-02-18T19:00:02.117] [14.0] task/cgroup: _memcg_initialize: step: alloc=250000MB mem.limit=250000MB memsw.limit=unlimited
+[2024-02-18T20:32:13.316] [14.0] error: *** STEP 14.0 ON aid-nrt-slurm-bm-gpu-b4-8-ad1-000 CANCELLED AT 2024-02-18T20:32:13 ***
+[2024-02-18T20:32:13.319] [14.extern] done with job
+[2024-02-18T20:32:43.996] [14.0] done with job
+[2024-05-11T02:08:30.488] sched: _slurm_rpc_allocate_resources JobId=5054 NodeList=octane-ord-non-restricted-bm-gpu-h100-8-ad1-030 usec=522
+[2024-05-11T02:08:33.685] _job_complete: JobId=5054 WTERMSIG 2
+[2024-05-11T02:08:33.686] _job_complete: JobId=5054 done
+[2024-05-11T02:08:33.686] _slurm_rpc_complete_job_allocation: JobId=5054 error Job/step already completing or completed
+[2024-05-11T02:08:33.691] Node octane-ord-non-restricted-bm-gpu-h100-8-ad1-030 now responding
+[2024-05-11T02:08:36.703] sched: _slurm_rpc_allocate_resources JobId=5055 NodeList=octane-ord-non-restricted-bm-gpu-h100-8-ad1-030 usec=314
+[2024-05-11T02:10:42.219] _job_complete: JobId=5055 WTERMSIG 2
+[2024-05-11T02:10:42.220] _job_complete: JobId=5055 done
+[2024-05-11T02:10:42.220] _slurm_rpc_complete_job_allocation: JobId=5055 error Job/step already completing or completed
+[2024-05-11T02:10:51.955] sched: _slurm_rpc_allocate_resources JobId=5056 NodeList=octane-ord-non-restricted-bm-gpu-h100-8-ad1-031 usec=406
+[2024-05-11T02:11:00.984] _job_complete: JobId=5056 WEXITSTATUS 0
+[2024-05-11T02:11:00.984] _job_complete: JobId=5056 done</ExampleContent>
+      <IsSystem>0</IsSystem>
+      <Encoding>UTF-8</Encoding>
+      <Language>en_US</Language>
+      <ParserFields>
+         <ParserField>
+            <FieldSeq>1</FieldSeq>
+            <FieldName>jobid</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>4</FieldSeq>
+            <FieldName>msg</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>3</FieldSeq>
+            <FieldName>msgtype</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>2</FieldSeq>
+            <FieldName>task</FieldName>
+         </ParserField>
+      </ParserFields>
+      <WrittenOnce>0</WrittenOnce>
+      <IsDefaultParser>1</IsDefaultParser>
+   </Parser>
+   <Source configWarningSettings="0" name="slurmd" oms_version="2.94.1.0.0">
+      <SourceType>os_file</SourceType>
+      <TargetTypes>
+         <TargetType>omc_host_linux</TargetType>
+      </TargetTypes>
+      <DisplayName>slurmd</DisplayName>
+      <IsSystem>0</IsSystem>
+      <IsSecureContent>1</IsSecureContent>
+      <Patterns>
+         <Pattern>
+            <Value>/var/log/slurm/slurmd*.log</Value>
+            <Description>Slurm Daemon Logs</Description>
+            <IsInclude>1</IsInclude>
+            <InUse>1</InUse>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </Pattern>
+      </Patterns>
+      <Parsers>
+         <Parser>
+            <ParserSeq>1</ParserSeq>
+            <ParserName>slurmtest</ParserName>
+         </Parser>
+      </Parsers>
+      <ExtFieldDefinitions>
+         <ExtFieldDefinition>
+            <BaseFieldName>msg</BaseFieldName>
+            <BaseFieldLogText>JobId=23381 cancelled by interactive user</BaseFieldLogText>
+            <RegexExpression>JobId={jobid:\d+}</RegexExpression>
+            <ExtFieldName>jobid</ExtFieldName>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </ExtFieldDefinition>
+         <ExtFieldDefinition>
+            <BaseFieldName>msg</BaseFieldName>
+            <BaseFieldLogText>launch task StepId=14.0 request from UID:5011 GID:5507 HOST:10.3.0.126 PORT:60554</BaseFieldLogText>
+            <RegexExpression>UID\:{usrid:\d+} GID:{usrgrpid:\d+}</RegexExpression>
+            <ExtFieldName>usrgrpid</ExtFieldName>
+            <ExtFieldName>usrid</ExtFieldName>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </ExtFieldDefinition>
+      </ExtFieldDefinitions>
+      <TagConditions>
+         <TagCondition alertRuleVisible="0">
+            <ConditionTags tagField="mtag">
+               <ConditionTag>actninterr</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+            <ConditionBlock>
+               <ConditionBlocksOperator>AND</ConditionBlocksOperator>
+               <ConditionBlocks>
+                  <ConditionBlock>
+                     <FieldName>msg</FieldName>
+                     <Operator>CONTAINS</Operator>
+                     <ConditionValues>
+                        <ConditionValue>cancelled by interactive user</ConditionValue>
+                     </ConditionValues>
+                  </ConditionBlock>
+                  <ConditionBlock>
+                     <FieldName>msgtype</FieldName>
+                     <Operator>EQUAL</Operator>
+                     <ConditionValues>
+                        <ConditionValue>_job_complete</ConditionValue>
+                     </ConditionValues>
+                  </ConditionBlock>
+               </ConditionBlocks>
+            </ConditionBlock>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0">
+            <ConditionTags tagField="mtag">
+               <ConditionTag>actnstart</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+            <ConditionBlock>
+               <ConditionBlocksOperator>AND</ConditionBlocksOperator>
+               <ConditionBlocks>
+                  <ConditionBlock>
+                     <FieldName>jobid</FieldName>
+                     <Operator>IS_NULL</Operator>
+                  </ConditionBlock>
+                  <ConditionBlock>
+                     <FieldName>task</FieldName>
+                     <Operator>IS_NULL</Operator>
+                  </ConditionBlock>
+                  <ConditionBlock>
+                     <FieldName>msgtype</FieldName>
+                     <Operator>IS_NULL</Operator>
+                  </ConditionBlock>
+                  <ConditionBlock>
+                     <FieldName>msg</FieldName>
+                     <Operator>STARTS_WITH</Operator>
+                     <ConditionValues>
+                        <ConditionValue>launch task</ConditionValue>
+                     </ConditionValues>
+                  </ConditionBlock>
+               </ConditionBlocks>
+            </ConditionBlock>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="msg" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>CANCELLED AT</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="mtag">
+               <ConditionTag>actnstop</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0">
+            <ConditionTags tagField="mtag">
+               <ConditionTag>actnsucc</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+            <ConditionBlock>
+               <ConditionBlocksOperator>AND</ConditionBlocksOperator>
+               <ConditionBlocks>
+                  <ConditionBlock>
+                     <FieldName>task</FieldName>
+                     <Operator>EQUAL</Operator>
+                     <ConditionValues>
+                        <ConditionValue>0</ConditionValue>
+                     </ConditionValues>
+                  </ConditionBlock>
+                  <ConditionBlock>
+                     <FieldName>msg</FieldName>
+                     <Operator>STARTS_WITH</Operator>
+                     <ConditionValues>
+                        <ConditionValue>done with job</ConditionValue>
+                     </ConditionValues>
+                  </ConditionBlock>
+               </ConditionBlocks>
+            </ConditionBlock>
+         </TagCondition>
+      </TagConditions>
+      <IsHidden>0</IsHidden>
+      <IsSMAEnabled>0</IsSMAEnabled>
+   </Source>
+</LoganContent>

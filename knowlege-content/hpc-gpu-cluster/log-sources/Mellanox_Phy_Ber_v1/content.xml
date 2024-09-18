@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<LoganContent xmlns="http://www.oracle.com/DataCenter/LogAnalyticsStd" content_version="2.94.1.0.0" name="content_ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq_1725558414507" oms_version="2.94.1.0.0">
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Vendor</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>GPU Model</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>GPU Count</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>INTEGER</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Parser oms_version="2.94.1.0.0" tokenize_orig_text="1" type="0">
+      <Name>Mellanox Network Checks and Stats</Name>
+      <DisplayName>Mellanox Network Checks and Stats</DisplayName>
+      <ParserContent>{TIMEDATE}\:\s+([^:]+)\:\s+(.*)</ParserContent>
+      <IsSingleLineContent>1</IsSingleLineContent>
+      <ExampleContent>20240624-225628: octane-ord-non-restricted-bm-gpu-h100-8-ad1-011: rdma_stats: rdma_stat_rx_read_requests{device="mlx5_9"} 0
+20240624-225628: octane-ord-non-restricted-bm-gpu-h100-8-ad1-011: rdma_stats: rdma_stat_rx_write_requests{device="mlx5_0"} 2567107662
+20240624-225628: octane-ord-non-restricted-bm-gpu-h100-8-ad1-011: rdma_stats: rdma_stat_rx_write_requests{device="mlx5_10"} 17659476
+20240624-225628: octane-ord-non-restricted-bm-gpu-h100-8-ad1-011: rdma_stats: rdma_stat_rx_write_requests{device="mlx5_11"} 0
+20240624-225628: octane-ord-non-restricted-bm-gpu-h100-8-ad1-011: rdma_stats: rdma_stat_rx_write_requests{device="mlx5_1"} 18314003
+20240624-233001: octane-ord-non-restricted-bm-gpu-h100-8-ad1-011: rdma_stats: rdma_stat_rx_write_requests{device="mlx5_9"} 2419806626
+20240624-225628: octane-ord-non-restricted-bm-gpu-h100-8-ad1-011: mlxlink_troubleshooting_status_code: device="mlx5_1", vendor="FINISARCORP", serial="WB1A62K"  0
+20240624-225628: octane-ord-non-restricted-bm-gpu-h100-8-ad1-011: mlxlink_troubleshooting_status_code: device="mlx5_2", vendor="Amphenol", serial="APE21431027ZKH"  0
+20240624-225628: octane-ord-non-restricted-bm-gpu-h100-8-ad1-011: mlxlink_troubleshooting_status_code: device="mlx5_3", vendor="FINISARCORP", serial="WB1A5ZT"  0
+20240624-225628: octane-ord-non-restricted-bm-gpu-h100-8-ad1-011: mlxlink_troubleshooting_status_code: device="mlx5_4", vendor="FINISARCORP", serial="WB1A5ZT"  0</ExampleContent>
+      <IsSystem>0</IsSystem>
+      <Encoding>UTF-8</Encoding>
+      <Language>en_US</Language>
+      <ParserFields>
+         <ParserField>
+            <FieldSeq>1</FieldSeq>
+            <FieldName>clnthostname</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>2</FieldSeq>
+            <FieldName>msg</FieldName>
+         </ParserField>
+      </ParserFields>
+      <WrittenOnce>0</WrittenOnce>
+      <IsDefaultParser>1</IsDefaultParser>
+   </Parser>
+   <Source configWarningSettings="0" name="Mellanox Phy Ber v1" oms_version="2.94.1.0.0">
+      <SourceType>os_file</SourceType>
+      <TargetTypes>
+         <TargetType>omc_host_linux</TargetType>
+      </TargetTypes>
+      <DisplayName>Mellanox Phy Ber v1</DisplayName>
+      <IsSystem>0</IsSystem>
+      <IsSecureContent>1</IsSecureContent>
+      <Patterns>
+         <Pattern>
+            <Value>/opt/oracle/logs/scan_logs/mlx_phy_ber_*.log</Value>
+            <IsInclude>1</IsInclude>
+            <InUse>1</InUse>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </Pattern>
+      </Patterns>
+      <Parsers>
+         <Parser>
+            <ParserSeq>1</ParserSeq>
+            <ParserName>Mellanox Network Checks and Stats</ParserName>
+         </Parser>
+      </Parsers>
+      <ExtFieldDefinitions>
+         <ExtFieldDefinition>
+            <BaseFieldName>msg</BaseFieldName>
+            <BaseFieldLogText>mlxlink_raw_phy_ber: device="mlx5_10", vendor="FINISARCORP", serial="WB1A60Q"  3e-10</BaseFieldLogText>
+            <RegexExpression>{test:\w+}:\s+device="{dev:\w+}",\s+vendor="{udfs14:\w+}",\s+serial="{serialnum:\w+}"\s+{value:.*}</RegexExpression>
+            <ExtFieldName>dev</ExtFieldName>
+            <ExtFieldName>value</ExtFieldName>
+            <ExtFieldName>udfs14</ExtFieldName>
+            <ExtFieldName>test</ExtFieldName>
+            <ExtFieldName>serialnum</ExtFieldName>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </ExtFieldDefinition>
+         <ExtFieldDefinition>
+            <BaseFieldName>mtgt</BaseFieldName>
+            <BaseFieldLogText>octane-ord-non-restricted-bm-gpu-h100-8-ad1-008.compute.nrphxvcnc.oraclevcn.com</BaseFieldLogText>
+            <RegexExpression>octane-ord-non-restricted-bm-gpu-h100-8-{nodedisplayname:\S+}.compute.nrphxvcnc.oraclevcn.com</RegexExpression>
+            <ExtFieldName>nodedisplayname</ExtFieldName>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </ExtFieldDefinition>
+         <ExtFieldDefinition>
+            <BaseFieldName>mlogent</BaseFieldName>
+            <BaseFieldLogText>/mnt/shared/hc/health_checks/cloud_scripts/oci/h100_health_checks/mlx_phy_ber_2348XLG08X_octane-ord-non-restricted-bm-gpu-h100-8-ad1-011_20240624-234801.log</BaseFieldLogText>
+            <RegexExpression>mlx_phy_ber_{hwid:[^\_]+}_octane-ord-non-restricted-bm-gpu-{udfs1:.*}-{udfi2:\d+}-{availdomain:.*}-{instid:\d+}_\d{4}.*.log</RegexExpression>
+            <ExtFieldName>availdomain</ExtFieldName>
+            <ExtFieldName>hwid</ExtFieldName>
+            <ExtFieldName>instid</ExtFieldName>
+            <ExtFieldName>udfi2</ExtFieldName>
+            <ExtFieldName>udfs1</ExtFieldName>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </ExtFieldDefinition>
+      </ExtFieldDefinitions>
+      <IsHidden>0</IsHidden>
+      <IsSMAEnabled>0</IsSMAEnabled>
+   </Source>
+   <FieldNameMaps>
+      <FieldNameMap>
+         <Name>udfs14</Name>
+         <DisplayName>Vendor</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs1</Name>
+         <DisplayName>GPU Model</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfi2</Name>
+         <DisplayName>GPU Count</DisplayName>
+      </FieldNameMap>
+   </FieldNameMaps>
+</LoganContent>

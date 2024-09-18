@@ -1,0 +1,1423 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<LoganContent xmlns="http://www.oracle.com/DataCenter/LogAnalyticsStd" content_version="2.94.1.0.0" name="content_ocid1.tenancy.oc1..aaaaaaaa5s2vdjjrydixjulorcwozffbpna37w5a35p3jhgpyshlkmio6oiq_1725559239239" oms_version="2.94.1.0.0">
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>POWERING_DOWN</DisplayName>
+      <Description>The node is in the process of powering down and not capable of running any jobs.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>POWERING_UP</DisplayName>
+      <Description>The node is in the process of being powered up.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Node State</DisplayName>
+      <Description>https://slurm.schedmd.com/sinfo.html#SECTION_NODE-STATE-CODES</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>RESERVED</DisplayName>
+      <Description>The node is in an advanced reservation and not generally available.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>DRAINING</DisplayName>
+      <Description>The node is currently allocated a job, but will not be allocated additional jobs. The node state will be changed to state DRAINED when the last job on it completes.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Partitions List</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>FAIL</DisplayName>
+      <Description>The node is expected to fail soon and is unavailable for use per system administrator request. See the update node command in the scontrol(1) man page or the slurm.conf(5) man page for more information.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>UNKNOWN</DisplayName>
+      <Description>The Slurm controller has just started and the node's state has not yet been determined.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>ALLOCATED</DisplayName>
+      <Description>The node has been allocated to one or more jobs.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>FAILING</DisplayName>
+      <Description>The node is currently executing a job, but is expected to fail soon and is unavailable for use per system administrator request.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>JOB Generic Resources</DisplayName>
+      <Description>SLURM Multi Category Security label. see https://slurm.schedmd.com/</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>ALLOCATED_PLUS</DisplayName>
+      <Description>The node is allocated to one or more active jobs plus one or more jobs are in the process of COMPLETING.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>BLOCKED</DisplayName>
+      <Description>The node has been blocked by exclusive topo job.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>PERFCTRS (NPC)</DisplayName>
+      <Description>Network Performance Counters associated with this node are in use,rendering this node as not usable for any other jobs</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>PLANNED</DisplayName>
+      <Description>The node is planned by the backfill scheduler for a higher priority job.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>POWER_DOWN</DisplayName>
+      <Description>The node is pending power down.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>POWERED_DOWN</DisplayName>
+      <Description>The node is currently powered down and not capable of running any jobs.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Weight</DisplayName>
+      <Description>Scheduling weight of the nodes.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>FUTURE</DisplayName>
+      <Description>The node is currently not fully configured,but expected to be available at some point in the indefinite future for use.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>IDLE</DisplayName>
+      <Description>The node is not allocated to any jobs and is available for use.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Features Available</DisplayName>
+      <Description>Features available on the nodes. Also see features_act.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Generic Resources GPU Requested (TRES)</DisplayName>
+      <Description>SLURM Multi Category Security label. see https://slurm.schedmd.com/</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>INVAL</DisplayName>
+      <Description>The node did not register correctly with the controller. This happens when a node registers with less resources than configured in the slurm.conf file. The node will clear from this state with a valid registrat</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>CPUs Allocated (TRES)</DisplayName>
+      <Description>SLURM Multi Category Security label. see https://slurm.schedmd.com/</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>MAINT</DisplayName>
+      <Description>The node is currently in a reservation with a flag value of maintenance.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Memory Allocated (TRES)</DisplayName>
+      <Description>SLURM Multi Category Security label. see https://slurm.schedmd.com/</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>REBOOT_ISSUED</DisplayName>
+      <Description>A reboot request has been sent to the agent configured to handle this request.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>REBOOT_REQUESTED</DisplayName>
+      <Description>A request to reboot this node has been made,but hasn't been handled yet.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>MIXED</DisplayName>
+      <Description>The node has some of its CPUs ALLOCATED while others are IDLE. Or the node has a suspended job allocated to some of its TRES (e.g. memory).</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Billing Resource Allocatable</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Generic Resource GPU Allocatable</DisplayName>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>LONG</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>COMPLETING</DisplayName>
+      <Description>All jobs associated with this node are in the process of COMPLETING. This node state will be removed when all of the job's processes have terminated and the Slurm epilog program (if any) has terminated.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>DOWN</DisplayName>
+      <Description>The node is unavailable for use. Slurm can automatically place nodes in this state if some failure occurs. System administrators may also explicitly place nodes in this state.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>DRAINED</DisplayName>
+      <Description>The node is unavailable for use per system administrator request. See the update node command in the scontrol(1) man page or the slurm.conf(5) man page for more information.</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>Generic Resources</DisplayName>
+      <Description>SLURM Multi Category Security label. see https://slurm.schedmd.com/</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>STRING</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>CPU Usage</DisplayName>
+      <Description>CPU Usage number</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>INTEGER</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Field oms_version="2.94.1.0.0">
+      <DisplayName>SLURM  cores per socket</DisplayName>
+      <Description>SLURM  cores per socket</Description>
+      <FieldType>1</FieldType>
+      <IsSystem>0</IsSystem>
+      <IsPrimary>1</IsPrimary>
+      <DataType>INTEGER</DataType>
+      <IsMetricKeyEligible>0</IsMetricKeyEligible>
+      <IsMetricValueEligible>0</IsMetricValueEligible>
+      <FacetEligible>1</FacetEligible>
+      <RangeFacetEligible>0</RangeFacetEligible>
+      <TableEligible>1</TableEligible>
+      <FacetPriority>1</FacetPriority>
+      <Summarizable>1</Summarizable>
+      <HighCardinality>1</HighCardinality>
+      <LargeData>0</LargeData>
+      <MultiValued>0</MultiValued>
+      <SMAEnabledSetting>0</SMAEnabledSetting>
+   </Field>
+   <Tag>
+      <Name>#node_not_available</Name>
+      <DisplayName>Node Not Available</DisplayName>
+      <Description>SLURM Node not available due to various reasons</Description>
+      <IsSystem>0</IsSystem>
+      <ProblemPriority>HIGH</ProblemPriority>
+   </Tag>
+   <Tag>
+      <Name>#resource_available</Name>
+      <DisplayName>Resource Available</DisplayName>
+      <IsSystem>0</IsSystem>
+      <ProblemPriority>NONE</ProblemPriority>
+   </Tag>
+   <Parser oms_version="2.94.1.0.0" tokenize_orig_text="1" type="0">
+      <Name>Copy of scontrol nodes file</Name>
+      <DisplayName>Copy of scontrol nodes file</DisplayName>
+      <ParserContent>NodeName=([^\s]+)\s+(?:Arch=([^\s]+)\s+)?CoresPerSocket=([^\s]+)\s+CPUAlloc=([^\s]+)\s+CPUEfctv=([^\s]+)\s+CPUTot=([^\s]+)\s+CPULoad=([^\s]+)\s+AvailableFeatures=shape=(?:([^\s]+)\s+ActiveFeatures=shape=)?([^\s]+)\s+Gres=([^\s]+)\s+GresDrain=([^\s]+)\s+GresUsed=([^\s]+)\s+NodeAddr=([^\s]+)\s+NodeHostName=([^\s]+)\s+(?:RealMemory=([^\s]+)\s+)?(.*$)</ParserContent>
+      <IsSingleLineContent>1</IsSingleLineContent>
+      <ExampleContent>NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-000 Arch=x86_64 CoresPerSocket=56  CPUAlloc=16 CPUEfctv=224 CPUTot=224 CPULoad=2.59 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:1 NodeAddr=10.11.41.139 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-000 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-001 Arch=x86_64 CoresPerSocket=56  CPUAlloc=16 CPUEfctv=224 CPUTot=224 CPULoad=0.77 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:1 NodeAddr=10.11.46.65 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-001 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-002 Arch=x86_64 CoresPerSocket=56  CPUAlloc=16 CPUEfctv=224 CPUTot=224 CPULoad=16.50 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:1 NodeAddr=10.11.47.207 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-002 Version=23.02.
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-003 CoresPerSocket=56  CPUAlloc=0 CPUEfctv=224 CPUTot=224 CPULoad=N/A AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:0 NodeAddr=10.11.45.60 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-003  RealMemory=2048000 AllocMem=0
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-004 Arch=x86_64 CoresPerSocket=56  CPUAlloc=128 CPUEfctv=224 CPUTot=224 CPULoad=1.96 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:8 NodeAddr=10.11.47.47 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-004 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-005 Arch=x86_64 CoresPerSocket=56  CPUAlloc=128 CPUEfctv=224 CPUTot=224 CPULoad=0.92 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:8 NodeAddr=10.11.44.77 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-005 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-006 Arch=x86_64 CoresPerSocket=56  CPUAlloc=32 CPUEfctv=224 CPUTot=224 CPULoad=0.73 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:8 NodeAddr=10.11.46.7 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-006 Version=23.02.4 O
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-007 Arch=x86_64 CoresPerSocket=56  CPUAlloc=16 CPUEfctv=224 CPUTot=224 CPULoad=1.92 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:1 NodeAddr=10.11.46.126 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-007 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-008 Arch=x86_64 CoresPerSocket=56  CPUAlloc=16 CPUEfctv=224 CPUTot=224 CPULoad=2.37 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:1 NodeAddr=10.11.44.138 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-008 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-009 Arch=x86_64 CoresPerSocket=56  CPUAlloc=16 CPUEfctv=224 CPUTot=224 CPULoad=1.98 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:1 NodeAddr=10.11.42.196 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-009 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-010 Arch=x86_64 CoresPerSocket=56  CPUAlloc=128 CPUEfctv=224 CPUTot=224 CPULoad=0.60 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:8 NodeAddr=10.11.47.231 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-010 Version=23.02.
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-011 Arch=x86_64 CoresPerSocket=56  CPUAlloc=32 CPUEfctv=224 CPUTot=224 CPULoad=1.23 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:4 NodeAddr=10.11.46.235 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-011 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-012 Arch=x86_64 CoresPerSocket=56  CPUAlloc=80 CPUEfctv=224 CPUTot=224 CPULoad=6.48 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:7 NodeAddr=10.11.46.124 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-012 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-013 Arch=x86_64 CoresPerSocket=56  CPUAlloc=32 CPUEfctv=224 CPUTot=224 CPULoad=2.84 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:2 NodeAddr=10.11.42.160 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-013 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-014 Arch=x86_64 CoresPerSocket=56  CPUAlloc=48 CPUEfctv=224 CPUTot=224 CPULoad=0.83 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:2 NodeAddr=10.11.47.163 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-014 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-015 Arch=x86_64 CoresPerSocket=56  CPUAlloc=32 CPUEfctv=224 CPUTot=224 CPULoad=0.84 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:8 NodeAddr=10.11.43.173 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-015 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-016 Arch=x86_64 CoresPerSocket=56  CPUAlloc=64 CPUEfctv=224 CPUTot=224 CPULoad=3.36 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:6 NodeAddr=10.11.43.21 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-016 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-017 Arch=x86_64 CoresPerSocket=56  CPUAlloc=128 CPUEfctv=224 CPUTot=224 CPULoad=0.73 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:8 NodeAddr=10.11.40.122 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-017 Version=23.02.
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-018 Arch=x86_64 CoresPerSocket=56  CPUAlloc=128 CPUEfctv=224 CPUTot=224 CPULoad=9.46 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:8 NodeAddr=10.11.44.215 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-018 Version=23.02.
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-019 CoresPerSocket=56  CPUAlloc=0 CPUEfctv=224 CPUTot=224 CPULoad=N/A AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:0 NodeAddr=10.11.46.36 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-019  RealMemory=2048000 AllocMem=0
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-020 Arch=x86_64 CoresPerSocket=56  CPUAlloc=0 CPUEfctv=224 CPUTot=224 CPULoad=1.50 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:0 NodeAddr=10.11.46.30 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-020 Version=23.02.4 O
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-021 Arch=x86_64 CoresPerSocket=56  CPUAlloc=128 CPUEfctv=224 CPUTot=224 CPULoad=6.91 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:8 NodeAddr=10.11.40.68 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-021 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-022 Arch=x86_64 CoresPerSocket=56  CPUAlloc=128 CPUEfctv=224 CPUTot=224 CPULoad=0.56 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:8 NodeAddr=10.11.46.66 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-022 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-023 Arch=x86_64 CoresPerSocket=56  CPUAlloc=0 CPUEfctv=224 CPUTot=224 CPULoad=17.35 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:0 NodeAddr=10.11.42.46 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-023 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-024 Arch=x86_64 CoresPerSocket=56  CPUAlloc=0 CPUEfctv=224 CPUTot=224 CPULoad=19.98 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:0 NodeAddr=10.11.45.252 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-024 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-025 Arch=x86_64 CoresPerSocket=56  CPUAlloc=148 CPUEfctv=224 CPUTot=224 CPULoad=2.93 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:(null):5(IDX:0-2,6-7) NodeAddr=10.11.45.230 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-026 Arch=x86_64 CoresPerSocket=56  CPUAlloc=128 CPUEfctv=224 CPUTot=224 CPULoad=0.60 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:8 NodeAddr=10.11.40.224 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-026 Version=23.02.
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-027 Arch=x86_64 CoresPerSocket=56  CPUAlloc=80 CPUEfctv=224 CPUTot=224 CPULoad=6.51 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:8 NodeAddr=10.11.46.64 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-027 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-028 Arch=x86_64 CoresPerSocket=56  CPUAlloc=154 CPUEfctv=224 CPUTot=224 CPULoad=4.37 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:5 NodeAddr=10.11.43.61 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-028 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-029 Arch=x86_64 CoresPerSocket=56  CPUAlloc=80 CPUEfctv=224 CPUTot=224 CPULoad=1.48 AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:8 NodeAddr=10.11.42.215 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-029 Version=23.02.4
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-030 CoresPerSocket=56  CPUAlloc=0 CPUEfctv=224 CPUTot=224 CPULoad=N/A AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:0 NodeAddr=10.11.44.154 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-030  RealMemory=2048000 AllocMem=
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-031 CoresPerSocket=56  CPUAlloc=0 CPUEfctv=224 CPUTot=224 CPULoad=N/A AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:0 NodeAddr=10.11.43.174 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-031  RealMemory=2048000 AllocMem=
+NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-031 CoresPerSocket=56  CPUAlloc=0 CPUEfctv=224 CPUTot=224 CPULoad=N/A AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:0 NodeAddr=10.11.43.174 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-031  RealMemory=2048000 AllocMem=0 FreeMem=N/A Sockets=2 Boards=1 State=DOWN+CLOUD+NOT_RESPONDING ThreadsPerCore=2 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A Partitions=batch,vision,dus,language,sdg,genai-tao,genai-iman,verticalization,speech,genai-pm,scavenge  BootTime=None SlurmdStartTime=None LastBusyTime=2024-08-01T09:34:38 ResumeAfterTime=None CfgTRES=cpu=224,mem=2000G,billing=224,gres/gpu=8 AllocTRES= CapWatts=n/a CurrentWatts=0 AveWatts=0 ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s Reason=node to be moved : Not responding [root@2024-06-21T15:50:29]
+</ExampleContent>
+      <IsSystem>0</IsSystem>
+      <Encoding>UTF-8</Encoding>
+      <Language>en_US</Language>
+      <ParserFields>
+         <ParserField>
+            <FieldSeq>9</FieldSeq>
+            <FieldName>adapt</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>16</FieldSeq>
+            <FieldName>additionalinfo</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>2</FieldSeq>
+            <FieldName>architecture</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>5</FieldSeq>
+            <FieldName>cpuallocatable</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>6</FieldSeq>
+            <FieldName>cpucapacity</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>13</FieldSeq>
+            <FieldName>hostip</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>15</FieldSeq>
+            <FieldName>memavail</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>1</FieldSeq>
+            <FieldName>node</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>14</FieldSeq>
+            <FieldName>srvrhostname</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>3</FieldSeq>
+            <FieldName>udfi3</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>7</FieldSeq>
+            <FieldName>udfi8</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>12</FieldSeq>
+            <FieldName>udfl16</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>4</FieldSeq>
+            <FieldName>udfl17</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>8</FieldSeq>
+            <FieldName>udfs31</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>11</FieldSeq>
+            <FieldName>udfs45</FieldName>
+         </ParserField>
+         <ParserField>
+            <FieldSeq>10</FieldSeq>
+            <FieldName>udfs48</FieldName>
+         </ParserField>
+      </ParserFields>
+      <ParserPlugins>
+         <ParserPlugin>
+            <Name>header</Name>
+            <Type>master_detail</Type>
+            <Priority>1</Priority>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+            <Params>
+               <Param name="header_parser_name">scontrol header</Param>
+            </Params>
+         </ParserPlugin>
+      </ParserPlugins>
+      <WrittenOnce>0</WrittenOnce>
+      <IsDefaultParser>1</IsDefaultParser>
+   </Parser>
+   <Parser oms_version="2.94.1.0.0" tokenize_orig_text="1" type="0">
+      <Name>scontrol header</Name>
+      <DisplayName>scontrol header</DisplayName>
+      <ParserContent>last_update_time={TIMEDATE}\,\s+records=(\d+)</ParserContent>
+      <IsSingleLineContent>1</IsSingleLineContent>
+      <ExampleContent>last_update_time=2024-08-14T01:46:51, records=42</ExampleContent>
+      <IsSystem>0</IsSystem>
+      <Encoding>UTF-8</Encoding>
+      <Language>en_US</Language>
+      <ParserFields>
+         <ParserField>
+            <FieldSeq>1</FieldSeq>
+            <FieldName>nentries</FieldName>
+         </ParserField>
+      </ParserFields>
+      <WrittenOnce>0</WrittenOnce>
+      <IsDefaultParser>1</IsDefaultParser>
+   </Parser>
+   <Source configWarningSettings="0" name="SLURM scontrol nodes" oms_version="2.94.1.0.0">
+      <SourceType>os_file</SourceType>
+      <TargetTypes>
+         <TargetType>omc_host_linux</TargetType>
+      </TargetTypes>
+      <DisplayName>SLURM scontrol nodes</DisplayName>
+      <IsSystem>0</IsSystem>
+      <IsSecureContent>1</IsSecureContent>
+      <Patterns>
+         <Pattern>
+            <Value>/opt/oracle/mgmt_agent/slurm_logs/slurm_scontrol_oneline_node_*.log</Value>
+            <IsInclude>1</IsInclude>
+            <InUse>1</InUse>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </Pattern>
+      </Patterns>
+      <Parsers>
+         <Parser>
+            <ParserSeq>1</ParserSeq>
+            <ParserName>Copy of scontrol nodes file</ParserName>
+         </Parser>
+      </Parsers>
+      <ExtFieldDefinitions>
+         <ExtFieldDefinition>
+            <BaseFieldName>additionalinfo</BaseFieldName>
+            <BaseFieldLogText>AllocMem=0 FreeMem=N/A Sockets=2 Boards=1 State=DOWN+CLOUD+NOT_RESPONDING ThreadsPerCore=2 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A Partitions=batch,vision,dus,language,sdg,genai-tao,genai-iman,verticalization,speech,genai-pm,scavenge BootTime=None SlurmdStartTime=None LastBusyTime=2024-08-01T09:34:38 ResumeAfterTime=None CfgTRES=cpu=224,mem=2000G,billing=224,gres/gpu=8 AllocTRES= CapWatts=n/a CurrentWatts=0 AveWatts=0 ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s Reason='OCI: The following service limits were exceeded: gpu-h100-count. Request a service limit increase from the service limits page in the console. ' [root@2024-07-10T19:55:11]
+</BaseFieldLogText>
+            <RegexExpression>LastBusyTime={lasteventtime:\S+}</RegexExpression>
+            <ExtFieldName>lasteventtime</ExtFieldName>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </ExtFieldDefinition>
+         <ExtFieldDefinition>
+            <BaseFieldName>node</BaseFieldName>
+            <BaseFieldLogText>octane-ord-non-restricted-bm-gpu-h100-8-ad1-000</BaseFieldLogText>
+            <RegexExpression>octane-ord-non-restricted-bm-gpu-h100-8-{nodedisplayname:\S+}</RegexExpression>
+            <ExtFieldName>nodedisplayname</ExtFieldName>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </ExtFieldDefinition>
+         <ExtFieldDefinition>
+            <BaseFieldName>additionalinfo</BaseFieldName>
+            <BaseFieldLogText> Version=23.02.4 OS=Linux 4.18.0-513.11.0.1.el8_9.x86_64 #1 SMP Thu Jan 11 11:30:45 PST 2024  RealMemory=2048000 AllocMem=2048000 FreeMem=10685 Sockets=2 Boards=1 State=MIXED+CLOUD+DRAIN+INVALID_REG ThreadsPerCore=2 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A Partitions=batch,vision,dus,language,sdg,genai-tao,genai-iman,verticalization,speech,genai-pm,scavenge  BootTime=2024-04-13T18:55:41 SlurmdStartTime=2024-08-15T00:18:26 LastBusyTime=2024-08-01T09:34:38 ResumeAfterTime=None CfgTRES=cpu=224,mem=2000G,billing=224,gres/gpu=8 AllocTRES=cpu=128,mem=2000G,gres/gpu=8 CapWatts=n/a CurrentWatts=0 AveWatts=0 ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s Reason=gres/gpu count changed and jobs are using them (0 != 8) [root@2024-08-01T09:34:42]</BaseFieldLogText>
+            <RegexExpression>Reason={reas:.*}</RegexExpression>
+            <ExtFieldName>reas</ExtFieldName>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </ExtFieldDefinition>
+         <ExtFieldDefinition>
+            <BaseFieldName>additionalinfo</BaseFieldName>
+            <BaseFieldLogText>AllocMem=0 FreeMem=N/A Sockets=2 Boards=1 State=DOWN+CLOUD+NOT_RESPONDING ThreadsPerCore=2 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A Partitions=batch,vision,dus,language,sdg,genai-tao,genai-iman,verticalization,speech,genai-pm,scavenge BootTime=None SlurmdStartTime=None LastBusyTime=2024-08-01T09:34:38 ResumeAfterTime=None CfgTRES=cpu=224,mem=2000G,billing=224,gres/gpu=8 AllocTRES= CapWatts=n/a CurrentWatts=0 AveWatts=0 ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s Reason='OCI: The following service limits were exceeded: gpu-h100-count. Request a service limit increase from the service limits page in the console. ' [root@2024-07-10T19:55:11]
+</BaseFieldLogText>
+            <RegexExpression>AllocMem={udfl18:\d+}.*?State={udfs64:\S+}.*?Weight={udfl7:\d+}.*?Partitions={udfs65:\S+}.*?CfgTRES=cpu={cpucapacity:\d+},mem={memallocatableki:\d+}G,billing={udfl30:\d+},gres/gpu={udfl31:\d+}</RegexExpression>
+            <ExtFieldName>cpucapacity</ExtFieldName>
+            <ExtFieldName>memallocatableki</ExtFieldName>
+            <ExtFieldName>udfl18</ExtFieldName>
+            <ExtFieldName>udfl30</ExtFieldName>
+            <ExtFieldName>udfl31</ExtFieldName>
+            <ExtFieldName>udfl7</ExtFieldName>
+            <ExtFieldName>udfs64</ExtFieldName>
+            <ExtFieldName>udfs65</ExtFieldName>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </ExtFieldDefinition>
+      </ExtFieldDefinitions>
+      <ExtFieldDefinitions>
+         <Condition field="additionalinfo" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>Reason</ConditionValue>
+            </ConditionValues>
+         </Condition>
+         <ExtFieldDefinition>
+            <BaseFieldName>additionalinfo</BaseFieldName>
+            <BaseFieldLogText>NodeName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-019 CoresPerSocket=56  CPUAlloc=0 CPUEfctv=224 CPUTot=224 CPULoad=N/A AvailableFeatures=shape=BM.GPU.H100.8,ad=1 ActiveFeatures=shape=BM.GPU.H100.8,ad=1 Gres=gpu:8 GresDrain=N/A GresUsed=gpu:0 NodeAddr=10.11.46.36 NodeHostName=octane-ord-non-restricted-bm-gpu-h100-8-ad1-019  RealMemory=2048000 AllocMem=0 FreeMem=N/A Sockets=2 Boards=1 State=DOWN+CLOUD+NOT_RESPONDING ThreadsPerCore=2 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A Partitions=batch,vision,dus,language,sdg,genai-tao,genai-iman,verticalization,speech,genai-pm,scavenge  BootTime=None SlurmdStartTime=None LastBusyTime=2024-08-01T09:34:38 ResumeAfterTime=None CfgTRES=cpu=224,mem=2000G,billing=224,gres/gpu=8 AllocTRES= CapWatts=n/a CurrentWatts=0 AveWatts=0 ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s Reason='OCI: The following service limits were exceeded: gpu-h100-count. Request a service limit increase from the service limits page in the console. ' [root@2024-07-10T19:55:37]</BaseFieldLogText>
+            <RegexExpression>Reason={msg:.*}</RegexExpression>
+            <ExtFieldName>msg</ExtFieldName>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </ExtFieldDefinition>
+      </ExtFieldDefinitions>
+      <TagConditions>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>DOWN</ConditionValue>
+               <ConditionValue>DRAINED</ConditionValue>
+               <ConditionValue>DRAINING</ConditionValue>
+               <ConditionValue>FAIL</ConditionValue>
+               <ConditionValue>FAILING</ConditionValue>
+               <ConditionValue>INVAL</ConditionValue>
+               <ConditionValue>PERFCTRS</ConditionValue>
+               <ConditionValue>POWERED_DOWN</ConditionValue>
+               <ConditionValue>POWERING_DOWN</ConditionValue>
+               <ConditionValue>RESERVED</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="mtag">
+               <ConditionTag>#node_not_available</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>ALLOCATED</ConditionValue>
+               <ConditionValue>ALLOCATED_PLUS</ConditionValue>
+               <ConditionValue>IDLE</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="mtag">
+               <ConditionTag>#resource_available</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>UNKNOWN</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs66">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>ALLOCATED</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs67">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>ALLOCATED+</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs68">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>BLOCKED</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs69">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>COMPLETING</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs70">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>DOWN</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs71">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>DRAINED</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs72">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>FUTURE</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs73">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>IDLE</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs74">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>INVAL</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs75">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>REBOOT_ISSUED</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs77">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>REBOOT_REQUESTED</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs78">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>MIXED</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs79">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>PERFCTRS</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs80">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>PLANNED</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs81">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>POWER_DOWN</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs82">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>POWERED_DOWN</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs83">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>POWERING_DOWN</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs84">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>POWERING_UP</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs85">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>RESERVED</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs86">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>DRAINING</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs87">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>FAIL</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs88">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>FAILING</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs89">
+               <ConditionTag>1</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0">
+            <ConditionTags tagField="avlblstatus">
+               <ConditionTag>False</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+            <ConditionBlock>
+               <ConditionBlocksOperator>OR</ConditionBlocksOperator>
+               <ConditionBlocks>
+                  <ConditionBlock>
+                     <FieldName>udfs64</FieldName>
+                     <Operator>NOT_CONTAINS</Operator>
+                     <ConditionValues>
+                        <ConditionValue>IDLE</ConditionValue>
+                     </ConditionValues>
+                  </ConditionBlock>
+                  <ConditionBlock>
+                     <FieldName>udfs64</FieldName>
+                     <Operator>NOT_CONTAINS</Operator>
+                     <ConditionValues>
+                        <ConditionValue>ALLOCATED</ConditionValue>
+                     </ConditionValues>
+                  </ConditionBlock>
+                  <ConditionBlock>
+                     <FieldName>udfs64</FieldName>
+                     <Operator>NOT_CONTAINS</Operator>
+                     <ConditionValues>
+                        <ConditionValue>ALLOCATED_PLUS</ConditionValue>
+                     </ConditionValues>
+                  </ConditionBlock>
+               </ConditionBlocks>
+            </ConditionBlock>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0" field="udfs64" operator="CONTAINS">
+            <ConditionValues>
+               <ConditionValue>MAINT</ConditionValue>
+            </ConditionValues>
+            <ConditionTags tagField="udfs76">
+               <ConditionTag>MAINT</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+         </TagCondition>
+         <TagCondition alertRuleVisible="0">
+            <ConditionTags tagField="avlblstatus">
+               <ConditionTag>True</ConditionTag>
+            </ConditionTags>
+            <IsSystem>0</IsSystem>
+            <IsEnabled>1</IsEnabled>
+            <ConditionBlock>
+               <ConditionBlocksOperator>OR</ConditionBlocksOperator>
+               <ConditionBlocks>
+                  <ConditionBlock>
+                     <FieldName>udfs64</FieldName>
+                     <Operator>CONTAINS</Operator>
+                     <ConditionValues>
+                        <ConditionValue>ALLOCATED</ConditionValue>
+                     </ConditionValues>
+                  </ConditionBlock>
+                  <ConditionBlock>
+                     <FieldName>udfs64</FieldName>
+                     <Operator>CONTAINS</Operator>
+                     <ConditionValues>
+                        <ConditionValue>IDLE</ConditionValue>
+                     </ConditionValues>
+                  </ConditionBlock>
+               </ConditionBlocks>
+            </ConditionBlock>
+         </TagCondition>
+      </TagConditions>
+      <IsHidden>0</IsHidden>
+      <IsSMAEnabled>0</IsSMAEnabled>
+   </Source>
+   <FieldNameMaps>
+      <FieldNameMap>
+         <Name>udfs84</Name>
+         <DisplayName>POWERING_DOWN</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs85</Name>
+         <DisplayName>POWERING_UP</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs64</Name>
+         <DisplayName>Node State</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs86</Name>
+         <DisplayName>RESERVED</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs87</Name>
+         <DisplayName>DRAINING</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs65</Name>
+         <DisplayName>Partitions List</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs88</Name>
+         <DisplayName>FAIL</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs66</Name>
+         <DisplayName>UNKNOWN</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs67</Name>
+         <DisplayName>ALLOCATED</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs89</Name>
+         <DisplayName>FAILING</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs45</Name>
+         <DisplayName>JOB Generic Resources</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs68</Name>
+         <DisplayName>ALLOCATED_PLUS</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs69</Name>
+         <DisplayName>BLOCKED</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs80</Name>
+         <DisplayName>PERFCTRS (NPC)</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs81</Name>
+         <DisplayName>PLANNED</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs82</Name>
+         <DisplayName>POWER_DOWN</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs83</Name>
+         <DisplayName>POWERED_DOWN</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl7</Name>
+         <DisplayName>Weight</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs73</Name>
+         <DisplayName>FUTURE</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs74</Name>
+         <DisplayName>IDLE</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs31</Name>
+         <DisplayName>Features Available</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl16</Name>
+         <DisplayName>Generic Resources GPU Requested (TRES)</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs75</Name>
+         <DisplayName>INVAL</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl17</Name>
+         <DisplayName>CPUs Allocated (TRES)</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs76</Name>
+         <DisplayName>MAINT</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl18</Name>
+         <DisplayName>Memory Allocated (TRES)</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs77</Name>
+         <DisplayName>REBOOT_ISSUED</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs78</Name>
+         <DisplayName>REBOOT_REQUESTED</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs79</Name>
+         <DisplayName>MIXED</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl30</Name>
+         <DisplayName>Billing Resource Allocatable</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfl31</Name>
+         <DisplayName>Generic Resource GPU Allocatable</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs70</Name>
+         <DisplayName>COMPLETING</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs71</Name>
+         <DisplayName>DOWN</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs72</Name>
+         <DisplayName>DRAINED</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfs48</Name>
+         <DisplayName>Generic Resources</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfi8</Name>
+         <DisplayName>CPU Usage</DisplayName>
+      </FieldNameMap>
+      <FieldNameMap>
+         <Name>udfi3</Name>
+         <DisplayName>SLURM  cores per socket</DisplayName>
+      </FieldNameMap>
+   </FieldNameMaps>
+</LoganContent>
