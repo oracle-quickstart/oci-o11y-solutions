@@ -37,7 +37,7 @@ Once downloaded, follow the steps to provision the APM agent.
     * -private-data-key: The agent installation key used by APM Java agents (private dataKey), which is generated when the APM domain is created.
     * -data-upload-endpoint: The dataUploadEndpoint URL that is generated when the APM domain is created.
 * To view the help information for the provision-agent argument, run the following:
-    * java -jar ./apm-java-agent-installer-<version>.jar provision-agent -help
+    * java -jar ./apm-java-agent-installer-\<version\>.jar provision-agent -help
 * Provision the agent by specifying the mandatory arguments described in the previous step and running the following java command:
     * Example:
       java -jar ./apm-java-agent-installer-1.1.jar provision-agent -service-name=apm_service -destination=$DOMAIN_HOME -private-data-key=IMWJ5UN2C6YOLQSUZ5Q7IGN3QACF4AZD -data-upload-endpoint=https://dataUploadEndpoint.com
