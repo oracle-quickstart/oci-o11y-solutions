@@ -76,6 +76,7 @@ Logging Analytics service helps to analyse the logs from EM application and agen
 * create entities
 * create entity associations
 * give mgmt_agent the needed permissions to access logs from system, OMS and DB/Listener
+* import log sources
 * associate log sources to entities
 )
 ### Stack monitoring
