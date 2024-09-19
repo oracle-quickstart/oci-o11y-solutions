@@ -63,12 +63,21 @@ com.oracle.apm.agent.rum.service.name="EM_APM_Browser"
 
 <img width="1363" alt="image" src="https://github.com/user-attachments/assets/fd202d88-ce29-4099-9e8e-5d9224acadda">
 
+(to-do:
+* setting up synthetic monitoring
+* point to documenation how to set up dedicated vantage points or on-premise vantage points
+) 
 
 ### Logging Analytics
 Logging Analytics service helps to analyse the logs from EM application and agent to help give insights into the application.
 
-
-
+(to-do:
+* define entity types oem_oms and oem_agent
+* create entities
+* create entity associations
+* give mgmt_agent the needed permissions to access logs from system, OMS and DB/Listener
+* associate log sources to entities
+)
 ### Stack monitoring
 (I would go first with Stack Monitoring since it provides an additional value which OEM cannot deliver: Anomaly Detection in metrics and alarms based on it, where OEM needs given fixed threshold values.)
 
