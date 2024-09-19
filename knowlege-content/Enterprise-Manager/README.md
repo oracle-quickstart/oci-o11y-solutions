@@ -51,10 +51,21 @@ and add this line after it:
 Once the APM agent is successfully installed and OEM got fully restarted (including the WebLogic AdminServer), we can start seeing the traces and spans from the application.
 <img width="1385" alt="image" src="https://github.com/user-attachments/assets/c4357c24-d71d-4abe-9604-1322708eb5be">
 
+We can also instrument the Real User monitoring using the Browser agent which helps us understand how the user is experiencing the EM application.We can install the RUM monitoring using the steps below,
+* Open the AgentConfig.properties file from the location $DOMAIN_HOME/oracle-apm-agent/
+* Uncomment the below parameters, update their values and save the file.
+<pre>
+com.oracle.apm.agent.rum.enable.injection=true
+com.oracle.apm.agent.public.data.key="Public_Data_Key"
+com.oracle.apm.agent.rum.service.name="EM_APM_Browser"
+</pre>
+   * The value of the Public_Data_Key can be obtained from the APM Domain details page.
+
+<img width="1363" alt="image" src="https://github.com/user-attachments/assets/fd202d88-ce29-4099-9e8e-5d9224acadda">
 
 
 ### Logging Analytics
-
+Logging Analytics service helps to analyse the logs from EM application and agent to help give insights into the application.
 
 
 
