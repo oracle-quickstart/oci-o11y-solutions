@@ -1,6 +1,6 @@
 # Grafana on OCI
 
-## Overview 
+## Overview
 
 This OCI Resource Manager (RM) Stack deploys a pre-configured Grafana Linux instance on OCI.  It automates the setup of a Linux instance, Grafana installation, security configurations, polices and OCI metric integration.
 
@@ -37,7 +37,7 @@ Gather the following information before deployment:
 - Dynamic group name
 - Policy name
 
-### Step 2: Using and Configuring the Marketplace image
+### Step 2: Using and Configuring the Grafana Marketplace image
 
 1. Log in to OCI Console
 2. Navigate to Marketplace > All Applications
@@ -46,25 +46,25 @@ Gather the following information before deployment:
 5. Fill in the required variables as prompted:
 
    - General Configuration:
-     - Compartment Name
-     - Availability Domain
-     - Virtual Cloud Network
-     - Subnet
+     - Select your Compartment Name
+     - Select your Availability Domain
+     - Select your Virtual Cloud Network
+     - Select your Public Subnet
     ![General config](Images/RM-GenConfig.jpg)
 
    - Instance Configuration:
-     - Hostname
+     - Create a Hostname of your choice. (Maximum length of 15 alphanumeric characters. Hyphens and underscores are not allowed.)
      - Linux Image (Oracle-Linux-8.9-2024.05.29-0 recommended and tested)
      - Linux Instance Shape (Choose from list, to suite your monitoring requirements). Minimum requirements; memory:512MB, CPU:1.
      - Number of OCPUs (for flexible shapes)
      - Memory in GBs (for flexible shapes)
      - Assign Public IP (default: true)
-     - SSH Public Key
+     - Past in your SSH Public Key
     ![Instance Config1](Images/RM-InstanceConfig.jpg)
 
    - Policy Name:
-     - Dynamic Group Name
-     - Policy Name
+     - Create a Dynamic Group Name
+     - Create a Policy Name
     ![Instance Config2](Images/RM-InstanceSSHkey.jpg)
 
 ## Post-Deployment Configuration
@@ -84,8 +84,6 @@ Gather the following information before deployment:
 
 ### Configuring OCI Monitoring Data Source to add Instance Principle
 
-
-
 Next step is to add the OCI datasource and configure the Instance Principle.
 
 1. Navigate to the Menu on the left > Connections > Data Sources
@@ -101,16 +99,17 @@ Next step is to add the OCI datasource and configure the Instance Principle.
 
 Once the Success box has appeared this confirms the oci-metrics-datasource and Instance Principle have been configured.
 
+Next step is to import the example custom dashboards.
 
 ### Adding Custom Dashboards
 
 After deployment, you can import custom dashboards in Grafana to visualise your OCI metrics.
-All dashboards are located in the Dashboards directory (<https://github.com/Mesh44/Grafana-Install/tree/main/Dashboards>)
+All dashboards are located in the Dashboards directory (<https://github.com/oracle-quickstart/oci-o11y-solutions/tree/main/knowlege-content/grafana-on-oci>)
 
 1. Click on one of dashboard json files (for example Stack_Monitoring.json)
-2. Copy the content.
+2. Click on "Copy raw content" to copy the json content.
 ![copyjson](Images/GH-dashboardjson.jpg)
-3. On the Grafana install click on Dashboards and New > Import
+3. On the Grafana install click on Dashboards from the Main Menu and then New > Import
 ![Import](Images/GF-Import.jpg)
 4. Past the copied content (from step 2) to the section under "Import via dashboard JSON model" and click Load
 ![LoadImport](Images/GF-LoadImport.jpg)
