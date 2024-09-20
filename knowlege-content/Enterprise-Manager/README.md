@@ -63,6 +63,10 @@ com.oracle.apm.agent.rum.service.name="EM_APM_Browser"
 
 <img width="1363" alt="image" src="https://github.com/user-attachments/assets/fd202d88-ce29-4099-9e8e-5d9224acadda">
 
+We can also enable Synthetic Monitoring. That lets the user to monitor the EM application and detect potential availability and performance issues before the end user experiences it. It enables proactive monitoring that helps developers and operators prevent issues before users are impacted.
+
+
+
 (to-do:
 * setting up synthetic monitoring
 * point to documenation how to set up dedicated vantage points or on-premise vantage points
