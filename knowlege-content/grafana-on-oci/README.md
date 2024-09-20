@@ -117,7 +117,6 @@ Ensure to choose oci-metrics-datasource as the Default data source.
 
 At this point you have now imported an example Dashboard, follow the instructions in the Dashboard to view your metrics.
 
-
 ## Troubleshooting
 
 1. **Cannot access Grafana**: Verify that port 3000 is open in your VCN's security list and the instance's firewall.
