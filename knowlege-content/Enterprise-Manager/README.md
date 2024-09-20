@@ -64,13 +64,10 @@ com.oracle.apm.agent.rum.service.name="EM_APM_Browser"
 <img width="1363" alt="image" src="https://github.com/user-attachments/assets/fd202d88-ce29-4099-9e8e-5d9224acadda">
 
 We can also enable Synthetic Monitoring. That lets the user to monitor the EM application and detect potential availability and performance issues before the end user experiences it. It enables proactive monitoring that helps developers and operators prevent issues before users are impacted.
-
-
-
-(to-do:
-* setting up synthetic monitoring
-* point to documenation how to set up dedicated vantage points or on-premise vantage points
-) 
+Follow the steps from the document to setup [Synthetic monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/set-synthetic-monitoring.html).
+Based on the OMS environment we can select the type of vantage point needed to setup the monitor.
+If its an on-prem OMS server we can use the [On-premise vantage point](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-onpremise-vantage-points.html#APMGN-GUID-BA93F27B-E0BB-4891-885D-FEB2FDB00041) .
+If its behind a firewall and not exposed to the outside network we can use [Dedicated vantage point](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-dedicated-vantage-points.html#APMGN-GUID-B2BD78B1-ACFD-4D6B-8397-C8DBBD744603) .
 
 ### Logging Analytics
 Logging Analytics service helps to analyse the logs from EM application and agent to help give insights into the application.
