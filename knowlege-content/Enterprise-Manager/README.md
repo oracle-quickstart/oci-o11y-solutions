@@ -68,6 +68,10 @@ Follow the steps from the document to setup [Synthetic monitoring](https://docs.
 Based on the OMS environment we can select the type of vantage point needed to setup the monitor.
 If its an on-prem OMS server we can use the [On-premise vantage point](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-onpremise-vantage-points.html#APMGN-GUID-BA93F27B-E0BB-4891-885D-FEB2FDB00041) .
 If its behind a firewall and not exposed to the outside network we can use [Dedicated vantage point](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-dedicated-vantage-points.html#APMGN-GUID-B2BD78B1-ACFD-4D6B-8397-C8DBBD744603) .
+Once the monitors are setup it collects details such as HAR file and network data which should be useful to understand the customer experience with application.
+
+<img width="1368" alt="image" src="https://github.com/user-attachments/assets/5303a82d-a7e8-48b0-a10b-07f0ecb47500">
+
 
 ### Logging Analytics
 Logging Analytics service helps to analyse the logs from EM application and agent to help give insights into the application.
@@ -81,7 +85,7 @@ Logging Analytics service helps to analyse the logs from EM application and agen
 * associate log sources to entities
 )
 ### Stack monitoring
-(I would go first with Stack Monitoring since it provides an additional value which OEM cannot deliver: Anomaly Detection in metrics and alarms based on it, where OEM needs given fixed threshold values.)
+Stack monitoring service allows to monitor all the components of the EM application.It collects useful metrics which helps in monitoring and troubleshoot.
 
 
 ### Database Management
