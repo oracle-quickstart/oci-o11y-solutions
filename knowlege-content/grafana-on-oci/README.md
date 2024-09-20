@@ -97,8 +97,8 @@ Next step is to add the OCI datasource and configure the Instance Principle.
 6. Click on Save & test and verify Success
 ![Success](Images/GF-ConnectionSuccess.jpg)
 
-Once the Success box has appeared this confirms the oci-metrics-datasource and Instance Principle have been configured.
 
+Once the Success box has appeared this confirms the oci-metrics-datasource and Instance Principle have been configured.
 Next step is to import the example custom dashboards.
 
 ### Adding Custom Dashboards
@@ -107,13 +107,16 @@ After deployment, you can import custom dashboards in Grafana to visualise your 
 All dashboards are located in the Dashboards directory (<https://github.com/oracle-quickstart/oci-o11y-solutions/tree/main/knowlege-content/grafana-on-oci>)
 
 1. Click on one of dashboard json files (for example Stack_Monitoring.json)
+
 2. Click on "Copy raw content" to copy the json content.
+
 ![copyjson](Images/GH-dashboardjson.jpg)
 3. On the Grafana install click on Dashboards from the Main Menu and then New > Import
 ![Import](Images/GF-Import.jpg)
 4. Past the copied content (from step 2) to the section under "Import via dashboard JSON model" and click Load
 ![LoadImport](Images/GF-LoadImport.jpg)
 Ensure to choose oci-metrics-datasource as the Default data source.
+
 
 At this point you have now imported an example Dashboard, follow the instructions in the Dashboard to view your metrics.
 
