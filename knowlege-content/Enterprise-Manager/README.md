@@ -85,7 +85,7 @@ Logging Analytics service helps to analyse the logs from EM application and agen
 * associate log sources to entities
 )
 ### Stack monitoring
-Stack monitoring service allows to monitor all the components of the EM application.It collects useful metrics which helps in monitoring and troubleshoot.
+Stack Monitoring lets you proactively monitor the EM application and its underlying application stack, including OMS servers and databases. Once discovered, it automatically collects status, load, response, error, and utilization metrics for all application components.
 
 
 ### Database Management
