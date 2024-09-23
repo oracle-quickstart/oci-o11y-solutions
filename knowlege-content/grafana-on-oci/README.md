@@ -80,6 +80,7 @@ Gather the following information before deployment:
    - Username: admin
    - Password: admin
 2. You will be prompted to change the password on first login
+
 ![Password Change](Images/GF-passwd.jpg)
 
 ### Configuring OCI Monitoring Data Source to add Instance Principle
