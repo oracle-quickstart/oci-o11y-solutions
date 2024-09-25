@@ -7,13 +7,13 @@ To enable the monitoring we can follow the below steps,
 
 Management Agent is a service that provides communication and data collection between OCI and any other targets. The Management Agent will get installed on the OEM server(s) and the EM Repository DB server(s). It is used to collect OMS, EM Agent, WebLogic, Database and system logs and application, DB and system metrics. If desired, it can be used to run SQL queries against the EM Repo DB for custom metric extensions or SQL based log sources. 
 
-To setup Managent Agents ...
+To setup Management Agent we need to follow this [document](https://docs.oracle.com/en-us/iaas/management-agents/doc/install-management-agent-chapter.html#OCIAG-GUID-92777625-6549-4D8E-A27D-C1C5583071CA)
 
-(some ideas for content to cover: pointer to official docs with installation details. If OEM or EM repo DB is running in an OCI VM, we have to mention that the Mgmt Agent can be enabled as a plugin of the Oracle Cloud Agent (OCA). How to enable plugins for O&M services from OCI Mgmt Agent page.)
 
-<img width="1427" alt="image" src="https://github.com/user-attachments/assets/4fd884ba-3003-478b-b46a-12eeddfe2b10">
-
+If the OMS server and EM repository database are running on OCI VM, we can just enable the Management Agent plugin available as part of Oracle Cloud Agent (OCA)
 ![image](https://github.com/user-attachments/assets/ece7975e-a522-481a-b0cd-ceee968dd99b)
+
+Once the agent is successfully installed , we need to enable the plugins for utilizing the O&M services. Steps for this is available [here](https://docs.oracle.com/en-us/iaas/management-agents/doc/management-agents-administration-tasks.html#OCIAG-GUID-4D3F3DC5-4ACF-48C6-B624-F74700D0C73F)
 
 <img width="1424" alt="image" src="https://github.com/user-attachments/assets/d96bec9a-43f4-4b96-9e42-68ed8c01f2b0">
 
