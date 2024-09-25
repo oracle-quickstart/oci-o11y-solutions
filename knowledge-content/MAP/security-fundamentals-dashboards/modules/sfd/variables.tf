@@ -55,39 +55,11 @@ variable configure_flow_logs {  #RM use
   default = false
 }
 
-variable flow_logs_log_group {
-  type = string
-  default = "sfd-flow-logs-log-group"
-}
 
-variable subnet_flow_logs_compartment_ids {
+variable flow_logs_log_groups_ids {
   type = list(string)
   default = null
 }
 
-variable first_subnet_flow_logs_compartment_id {  #RM use
-  type = string
-  default = null
-}
-
-variable second_subnet_flow_logs_compartment_id {  #RM use
-  type = string
-  default = null
-}
-
-variable third_subnet_flow_logs_compartment_id {  #RM use
-  type = string
-  default = null
-}
-
-variable add_second_subnet_flow_logs_compartment {  #RM use
-  type = bool
-  default = false
-}
-
-variable add_third_subnet_flow_logs_compartment {  #RM use
-  type = bool
-  default = false
-}
 
 
