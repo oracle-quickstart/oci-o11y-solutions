@@ -42,12 +42,24 @@ variable create_service_connector_audit {
 
 variable logging_analytics_log_group_name {
   type = string
-  default = "sfd_identity_domain_audit"
+  default = null
 }
 
 variable service_connector_audit_state {
   type = string
   default = "INACTIVE"
 }
+
+variable configure_flow_logs {  #RM use
+  type = bool
+  default = false
+}
+
+
+variable flow_logs_log_groups_ids {
+  type = list(string)
+  default = null
+}
+
 
 

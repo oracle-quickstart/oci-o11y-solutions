@@ -28,3 +28,5 @@ provider "oci" {
   private_key_path     = var.private_key_path
   private_key_password = var.private_key_password
 }
+
+
