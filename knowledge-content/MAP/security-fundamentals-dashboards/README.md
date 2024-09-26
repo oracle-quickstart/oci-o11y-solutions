@@ -1,6 +1,6 @@
 # Security Fundamentals Dashboards for MAP
 
-[![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/oracle-quickstart/oci-o11y-solutions/releases/download/sfd-updates/sfd-la-2.0.zip)
+[![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/jujufugh/oci-o11y-solutions/releases/download/sfd-la-2.1/sfd-la-2.1.zip)
 
 
 ### Dashboards screenshots

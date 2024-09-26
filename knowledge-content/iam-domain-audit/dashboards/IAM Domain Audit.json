@@ -1,0 +1,1448 @@
+{
+	"dashboards": [
+		{
+			"dashboardId": "ocid1.managementdashboard.oc1..aaaaaaaashmnic7k3oqvwum6zlsji2j76332elmbccvbkuxzochnh4irp4na",
+			"providerId": "log-analytics",
+			"providerName": "Logging Analytics",
+			"providerVersion": "3.0.0",
+			"tiles": [
+				{
+					"displayName": "Tab Widget Group 1",
+					"savedSearchId": "OOBSS-management-dashboard-container",
+					"row": 0,
+					"column": 0,
+					"height": 20,
+					"width": 12,
+					"nls": {},
+					"uiConfig": {
+						"internalKey": "OOBSS-management-dashboard-container",
+						"vizType": "tileContainer",
+						"containerInfo": {
+							"layout": {
+								"type": "tab"
+							},
+							"subTiles": [
+								{
+									"displayName": "Audit Log",
+									"savedSearchId": "OOBSS-management-dashboard-container",
+									"row": 8,
+									"column": 0,
+									"height": 20,
+									"width": 12,
+									"nls": {},
+									"uiConfig": {
+										"internalKey": "OOBSS-management-dashboard-container",
+										"vizType": "tileContainer",
+										"containerInfo": {
+											"subTiles": [
+												{
+													"displayName": "Audit Log",
+													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaanaa7kmxkfbi2s3xeymrdprlekdk7j35chs5hsybaolimv4v3tjwq",
+													"row": 0,
+													"column": 0,
+													"height": 20,
+													"width": 12,
+													"nls": {},
+													"uiConfig": {},
+													"dataConfig": [],
+													"state": "DEFAULT",
+													"drilldownConfig": [],
+													"parametersMap": {
+														"time": "$(dashboard.params.time)",
+														"log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+														"log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+														"log-analytics-region": "$(dashboard.params.regionFilter)"
+													},
+													"description": null
+												}
+											]
+										}
+									},
+									"dataConfig": [],
+									"state": "DEFAULT",
+									"drilldownConfig": [],
+									"parametersMap": {},
+									"description": null
+								},
+								{
+									"displayName": "Successful Logins",
+									"savedSearchId": "OOBSS-management-dashboard-container",
+									"row": 0,
+									"column": 0,
+									"height": 20,
+									"width": 12,
+									"nls": {},
+									"uiConfig": {
+										"internalKey": "OOBSS-management-dashboard-container",
+										"vizType": "tileContainer",
+										"containerInfo": {
+											"subTiles": [
+												{
+													"displayName": "Successful Logins",
+													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaavppmuczqhjds4grdjkr6oouwhvu75kzytp2cgufgo662hienu2ya",
+													"row": 0,
+													"column": 0,
+													"height": 20,
+													"width": 12,
+													"nls": {},
+													"uiConfig": {},
+													"dataConfig": [],
+													"state": "DEFAULT",
+													"drilldownConfig": [],
+													"parametersMap": {
+														"time": "$(dashboard.params.time)",
+														"log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+														"log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+														"log-analytics-region": "$(dashboard.params.regionFilter)"
+													},
+													"description": null
+												}
+											]
+										}
+									},
+									"dataConfig": [],
+									"state": "DEFAULT",
+									"drilldownConfig": [],
+									"parametersMap": {},
+									"description": null
+								},
+								{
+									"displayName": "Unsuccessful Logins",
+									"savedSearchId": "OOBSS-management-dashboard-container",
+									"row": 0,
+									"column": 0,
+									"height": 20,
+									"width": 12,
+									"nls": {},
+									"uiConfig": {
+										"internalKey": "OOBSS-management-dashboard-container",
+										"vizType": "tileContainer",
+										"containerInfo": {
+											"subTiles": [
+												{
+													"displayName": "Unsuccessful Logins",
+													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaa2b6uowbs57aveb5jaienyrnamkw4sl4dbja3meclfrg3adczhn6q",
+													"row": 0,
+													"column": 0,
+													"height": 20,
+													"width": 12,
+													"nls": {},
+													"uiConfig": {},
+													"dataConfig": [],
+													"state": "DEFAULT",
+													"drilldownConfig": [],
+													"parametersMap": {
+														"time": "$(dashboard.params.time)",
+														"log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+														"log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+														"log-analytics-region": "$(dashboard.params.regionFilter)"
+													},
+													"description": null
+												}
+											]
+										}
+									},
+									"dataConfig": [],
+									"state": "DEFAULT",
+									"drilldownConfig": [],
+									"parametersMap": {},
+									"description": null
+								},
+								{
+									"displayName": "Application Access",
+									"savedSearchId": "OOBSS-management-dashboard-container",
+									"row": 0,
+									"column": 0,
+									"height": 20,
+									"width": 12,
+									"nls": {},
+									"uiConfig": {
+										"internalKey": "OOBSS-management-dashboard-container",
+										"vizType": "tileContainer",
+										"containerInfo": {
+											"subTiles": [
+												{
+													"displayName": "Application Access",
+													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaavokfycbue5nzpuajhim2i577ub75irun26vco3jjs2tv67jvk4na",
+													"row": 0,
+													"column": 0,
+													"height": 20,
+													"width": 12,
+													"nls": {},
+													"uiConfig": {},
+													"dataConfig": [],
+													"state": "DEFAULT",
+													"drilldownConfig": [],
+													"parametersMap": {
+														"time": "$(dashboard.params.time)",
+														"log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+														"log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+														"log-analytics-region": "$(dashboard.params.regionFilter)"
+													},
+													"description": null
+												}
+											]
+										}
+									},
+									"dataConfig": [],
+									"state": "DEFAULT",
+									"drilldownConfig": [],
+									"parametersMap": {},
+									"description": null
+								},
+								{
+									"displayName": "Application Role Assignment",
+									"savedSearchId": "OOBSS-management-dashboard-container",
+									"row": 0,
+									"column": 0,
+									"height": 20,
+									"width": 12,
+									"nls": {},
+									"uiConfig": {
+										"internalKey": "OOBSS-management-dashboard-container",
+										"vizType": "tileContainer",
+										"containerInfo": {
+											"subTiles": [
+												{
+													"displayName": "Application Role Assignment",
+													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaa5uhcsv7naj7plaeda3fc2ykc2ufojzbjs6llaoe7euffnzk7ymgq",
+													"row": 0,
+													"column": 0,
+													"height": 20,
+													"width": 12,
+													"nls": {},
+													"uiConfig": {},
+													"dataConfig": [],
+													"state": "DEFAULT",
+													"drilldownConfig": [],
+													"parametersMap": {
+														"time": "$(dashboard.params.time)",
+														"log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+														"log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+														"log-analytics-region": "$(dashboard.params.regionFilter)"
+													},
+													"description": null
+												}
+											]
+										}
+									},
+									"dataConfig": [],
+									"state": "DEFAULT",
+									"drilldownConfig": [],
+									"parametersMap": {},
+									"description": null
+								}
+							]
+						}
+					},
+					"dataConfig": [],
+					"state": "DEFAULT",
+					"drilldownConfig": [],
+					"parametersMap": {},
+					"description": null
+				}
+			],
+			"displayName": "IAM Domain Audit",
+			"description": "IAM Domain Audit Dashboard",
+			"compartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+			"isOobDashboard": false,
+			"isShowInHome": false,
+			"metadataVersion": "2.0",
+			"isShowDescription": true,
+			"screenImage": "todo: provide value[mandatory]",
+			"nls": {},
+			"uiConfig": {
+				"isFilteringEnabled": false,
+				"isTimeRangeEnabled": true,
+				"isRefreshEnabled": true
+			},
+			"dataConfig": [],
+			"type": "normal",
+			"isFavorite": false,
+			"savedSearches": [
+				{
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaavppmuczqhjds4grdjkr6oouwhvu75kzytp2cgufgo662hienu2ya",
+					"displayName": "Successful Logins",
+					"providerId": "log-analytics",
+					"providerVersion": "3.0.0",
+					"providerName": "Logging Analytics",
+					"compartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+					"isOobSavedSearch": false,
+					"description": "Successful Logins",
+					"nls": {},
+					"type": "WIDGET_SHOW_IN_DASHBOARD",
+					"uiConfig": {
+						"timeSelection": {
+							"timePeriod": "l24hr"
+						},
+						"showTitle": true,
+						"visualizationType": "table",
+						"visualizationOptions": {},
+						"queryString": "'Log Source' = 'OCI Audit Logs' and 'Event ID' = sso.session.create.success | fields -*, -'Log Source', Time as Date, 'Identity Domain', 'User Name' as Login, 'Event ID' as Result, Provider",
+						"scopeFilters": {
+							"filters": [
+								{
+									"type": "LogGroup",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
+											"label": "orasenatdpltsecitom02 (root)"
+										}
+									]
+								},
+								{
+									"type": "MetricCompartment",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "Entity",
+									"flags": {
+										"IncludeDependents": true,
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+									},
+									"values": []
+								},
+								{
+									"type": "LogSet",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "ResourceCompartment",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+											"label": "obs_mgmt_comp"
+										}
+									]
+								},
+								{
+									"type": "Region",
+									"flags": {},
+									"values": [
+										{
+											"value": "us-phoenix-1",
+											"label": "us-phoenix-1"
+										}
+									]
+								}
+							],
+							"isGlobal": false,
+							"LogGroup": {
+								"type": "LogGroup",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
+										"label": "orasenatdpltsecitom02 (root)"
+									}
+								]
+							},
+							"MetricCompartment": {
+								"type": "MetricCompartment",
+								"flags": {},
+								"values": []
+							},
+							"Entity": {
+								"type": "Entity",
+								"flags": {
+									"IncludeDependents": true,
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+								},
+								"values": []
+							},
+							"LogSet": {
+								"type": "LogSet",
+								"flags": {},
+								"values": []
+							},
+							"ResourceCompartment": {
+								"type": "ResourceCompartment",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+										"label": "obs_mgmt_comp"
+									}
+								]
+							},
+							"Region": {
+								"type": "Region",
+								"flags": {},
+								"values": [
+									{
+										"value": "us-phoenix-1",
+										"label": "us-phoenix-1"
+									}
+								]
+							}
+						},
+						"vizType": "lxSavedSearchWidgetType",
+						"enableWidgetInApp": true
+					},
+					"dataConfig": [],
+					"screenImage": " ",
+					"metadataVersion": "2.0",
+					"widgetTemplate": "visualizations/chartWidgetTemplate.html",
+					"widgetVM": "visualizations/chartWidget",
+					"freeformTags": {},
+					"definedTags": {},
+					"parametersConfig": [
+						{
+							"name": "log-analytics-log-group-compartment",
+							"displayName": "Log Group Compartment",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-4a"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-filter-4a"
+								}
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-entity",
+							"displayName": "Entity",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-2a"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-filter-2a"
+								}
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-log-set",
+							"displayName": "Log Set",
+							"required": true,
+							"hidden": "$(window.logSetNotEnabled)",
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-3a"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-filter-3a"
+								}
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-region",
+							"displayName": "Region",
+							"required": false,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-region-filter"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-region-filter"
+								}
+							},
+							"valueFormat": {
+								"type": "array"
+							}
+						},
+						{
+							"name": "time",
+							"displayName": "$(bundle.globalSavedSearch.TIME)",
+							"required": true,
+							"hidden": true
+						},
+						{
+							"name": "flex"
+						}
+					],
+					"featuresConfig": {
+						"crossService": {
+							"shared": true
+						}
+					},
+					"drilldownConfig": []
+				},
+				{
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaa2b6uowbs57aveb5jaienyrnamkw4sl4dbja3meclfrg3adczhn6q",
+					"displayName": "Unsuccessful Logins",
+					"providerId": "log-analytics",
+					"providerVersion": "3.0.0",
+					"providerName": "Logging Analytics",
+					"compartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+					"isOobSavedSearch": false,
+					"description": "Unsuccessful Logins",
+					"nls": {},
+					"type": "WIDGET_SHOW_IN_DASHBOARD",
+					"uiConfig": {
+						"timeSelection": {
+							"timePeriod": "l7day"
+						},
+						"showTitle": true,
+						"visualizationType": "table",
+						"visualizationOptions": {},
+						"queryString": "'Log Source' = 'OCI Audit Logs' and 'Event ID' = sso.authentication.failure | fields -*, -'Log Source', Time as Date, 'Identity Domain', 'Security Actor Display Name' as User, 'Event ID' as Result, Comment as Comments",
+						"scopeFilters": {
+							"filters": [
+								{
+									"type": "LogGroup",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
+											"label": "orasenatdpltsecitom02 (root)"
+										}
+									]
+								},
+								{
+									"type": "MetricCompartment",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "Entity",
+									"flags": {
+										"IncludeDependents": true,
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+									},
+									"values": []
+								},
+								{
+									"type": "LogSet",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "ResourceCompartment",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+											"label": "obs_mgmt_comp"
+										}
+									]
+								},
+								{
+									"type": "Region",
+									"flags": {},
+									"values": [
+										{
+											"value": "us-phoenix-1",
+											"label": "US West (Phoenix)"
+										}
+									]
+								}
+							],
+							"isGlobal": false,
+							"LogGroup": {
+								"type": "LogGroup",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
+										"label": "orasenatdpltsecitom02 (root)"
+									}
+								]
+							},
+							"MetricCompartment": {
+								"type": "MetricCompartment",
+								"flags": {},
+								"values": []
+							},
+							"Entity": {
+								"type": "Entity",
+								"flags": {
+									"IncludeDependents": true,
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+								},
+								"values": []
+							},
+							"LogSet": {
+								"type": "LogSet",
+								"flags": {},
+								"values": []
+							},
+							"ResourceCompartment": {
+								"type": "ResourceCompartment",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+										"label": "obs_mgmt_comp"
+									}
+								]
+							},
+							"Region": {
+								"type": "Region",
+								"flags": {},
+								"values": [
+									{
+										"value": "us-phoenix-1",
+										"label": "US West (Phoenix)"
+									}
+								]
+							}
+						},
+						"vizType": "lxSavedSearchWidgetType",
+						"enableWidgetInApp": true
+					},
+					"dataConfig": [],
+					"screenImage": " ",
+					"metadataVersion": "2.0",
+					"widgetTemplate": "visualizations/chartWidgetTemplate.html",
+					"widgetVM": "visualizations/chartWidget",
+					"freeformTags": {},
+					"definedTags": {},
+					"parametersConfig": [
+						{
+							"name": "log-analytics-log-group-compartment",
+							"displayName": "Log Group Compartment",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-4a"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-filter-4a"
+								}
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-entity",
+							"displayName": "Entity",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-2a"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-filter-2a"
+								}
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-log-set",
+							"displayName": "Log Set",
+							"required": true,
+							"hidden": "$(window.logSetNotEnabled)",
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-3a"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-filter-3a"
+								}
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-region",
+							"displayName": "Region",
+							"required": false,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-region-filter"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-region-filter"
+								}
+							},
+							"valueFormat": {
+								"type": "array"
+							}
+						},
+						{
+							"name": "time",
+							"displayName": "$(bundle.globalSavedSearch.TIME)",
+							"required": true,
+							"hidden": true
+						},
+						{
+							"name": "flex"
+						}
+					],
+					"featuresConfig": {
+						"crossService": {
+							"shared": true
+						}
+					},
+					"drilldownConfig": []
+				},
+				{
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaa5uhcsv7naj7plaeda3fc2ykc2ufojzbjs6llaoe7euffnzk7ymgq",
+					"displayName": "Application Role Assignment",
+					"providerId": "log-analytics",
+					"providerVersion": "3.0.0",
+					"providerName": "Logging Analytics",
+					"compartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+					"isOobSavedSearch": false,
+					"description": "Application Role Assignment",
+					"nls": {},
+					"type": "WIDGET_SHOW_IN_DASHBOARD",
+					"uiConfig": {
+						"timeSelection": {
+							"numUnits": 3,
+							"units": "MONTHS",
+							"timePeriod": "relative"
+						},
+						"showTitle": true,
+						"visualizationType": "table",
+						"visualizationOptions": {},
+						"queryString": "'Log Source' = 'OCI Audit Logs' and 'Event ID' in (admin.approle.add.member.success, admin.approle.remove.member.success) | fields -*, -'Log Source', Time as Date, 'Identity Domain', 'Security Actor Display Name' as Approver, Program as 'Application Name', 'Destination Resource' as Beneficiary, 'Destination Resource Type' as 'User/Group', Resource as 'Application Role Name'",
+						"scopeFilters": {
+							"filters": [
+								{
+									"type": "LogGroup",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
+											"label": "orasenatdpltsecitom02 (root)"
+										}
+									]
+								},
+								{
+									"type": "MetricCompartment",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "Entity",
+									"flags": {
+										"IncludeDependents": true,
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+									},
+									"values": []
+								},
+								{
+									"type": "LogSet",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "ResourceCompartment",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+											"label": "obs_mgmt_comp"
+										}
+									]
+								},
+								{
+									"type": "Region",
+									"flags": {},
+									"values": [
+										{
+											"value": "us-phoenix-1",
+											"label": "US West (Phoenix)"
+										}
+									]
+								}
+							],
+							"isGlobal": false,
+							"LogGroup": {
+								"type": "LogGroup",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
+										"label": "orasenatdpltsecitom02 (root)"
+									}
+								]
+							},
+							"MetricCompartment": {
+								"type": "MetricCompartment",
+								"flags": {},
+								"values": []
+							},
+							"Entity": {
+								"type": "Entity",
+								"flags": {
+									"IncludeDependents": true,
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+								},
+								"values": []
+							},
+							"LogSet": {
+								"type": "LogSet",
+								"flags": {},
+								"values": []
+							},
+							"ResourceCompartment": {
+								"type": "ResourceCompartment",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+										"label": "obs_mgmt_comp"
+									}
+								]
+							},
+							"Region": {
+								"type": "Region",
+								"flags": {},
+								"values": [
+									{
+										"value": "us-phoenix-1",
+										"label": "US West (Phoenix)"
+									}
+								]
+							}
+						},
+						"vizType": "lxSavedSearchWidgetType",
+						"enableWidgetInApp": true
+					},
+					"dataConfig": [],
+					"screenImage": " ",
+					"metadataVersion": "2.0",
+					"widgetTemplate": "visualizations/chartWidgetTemplate.html",
+					"widgetVM": "visualizations/chartWidget",
+					"freeformTags": {},
+					"definedTags": {},
+					"parametersConfig": [
+						{
+							"name": "log-analytics-log-group-compartment",
+							"displayName": "Log Group Compartment",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-4a"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-filter-4a"
+								}
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-entity",
+							"displayName": "Entity",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-2a"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-filter-2a"
+								}
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-log-set",
+							"displayName": "Log Set",
+							"required": true,
+							"hidden": "$(window.logSetNotEnabled)",
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-3a"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-filter-3a"
+								}
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-region",
+							"displayName": "Region",
+							"required": false,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-region-filter"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-region-filter"
+								}
+							},
+							"valueFormat": {
+								"type": "array"
+							}
+						},
+						{
+							"name": "time",
+							"displayName": "$(bundle.globalSavedSearch.TIME)",
+							"required": true,
+							"hidden": true
+						},
+						{
+							"name": "flex"
+						}
+					],
+					"featuresConfig": {
+						"crossService": {
+							"shared": true
+						}
+					},
+					"drilldownConfig": []
+				},
+				{
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaavokfycbue5nzpuajhim2i577ub75irun26vco3jjs2tv67jvk4na",
+					"displayName": "Application Access",
+					"providerId": "log-analytics",
+					"providerVersion": "3.0.0",
+					"providerName": "Logging Analytics",
+					"compartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+					"isOobSavedSearch": false,
+					"description": "Application Access",
+					"nls": {},
+					"type": "WIDGET_SHOW_IN_DASHBOARD",
+					"uiConfig": {
+						"timeSelection": {
+							"timePeriod": "l24hr"
+						},
+						"showTitle": true,
+						"visualizationType": "table",
+						"visualizationOptions": {},
+						"queryString": "'Log Source' = 'OCI Audit Logs' and 'Event ID' in (sso.session.create.success, sso.authentication.failure, sso.session.modify.success) | fields -*, -'Log Source', Time as Date, 'Identity Domain', 'Security Actor Display Name' as User, 'User Name' as Login, 'Event ID' as 'Success/Failure', Application, 'Application ID'",
+						"scopeFilters": {
+							"filters": [
+								{
+									"type": "LogGroup",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
+											"label": "orasenatdpltsecitom02 (root)"
+										}
+									]
+								},
+								{
+									"type": "MetricCompartment",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "Entity",
+									"flags": {
+										"IncludeDependents": true,
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+									},
+									"values": []
+								},
+								{
+									"type": "LogSet",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "ResourceCompartment",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+											"label": "obs_mgmt_comp"
+										}
+									]
+								},
+								{
+									"type": "Region",
+									"flags": {},
+									"values": [
+										{
+											"value": "us-phoenix-1",
+											"label": "US West (Phoenix)"
+										}
+									]
+								}
+							],
+							"isGlobal": false,
+							"LogGroup": {
+								"type": "LogGroup",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
+										"label": "orasenatdpltsecitom02 (root)"
+									}
+								]
+							},
+							"MetricCompartment": {
+								"type": "MetricCompartment",
+								"flags": {},
+								"values": []
+							},
+							"Entity": {
+								"type": "Entity",
+								"flags": {
+									"IncludeDependents": true,
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+								},
+								"values": []
+							},
+							"LogSet": {
+								"type": "LogSet",
+								"flags": {},
+								"values": []
+							},
+							"ResourceCompartment": {
+								"type": "ResourceCompartment",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+										"label": "obs_mgmt_comp"
+									}
+								]
+							},
+							"Region": {
+								"type": "Region",
+								"flags": {},
+								"values": [
+									{
+										"value": "us-phoenix-1",
+										"label": "US West (Phoenix)"
+									}
+								]
+							}
+						},
+						"vizType": "lxSavedSearchWidgetType",
+						"enableWidgetInApp": true
+					},
+					"dataConfig": [],
+					"screenImage": " ",
+					"metadataVersion": "2.0",
+					"widgetTemplate": "visualizations/chartWidgetTemplate.html",
+					"widgetVM": "visualizations/chartWidget",
+					"freeformTags": {},
+					"definedTags": {},
+					"parametersConfig": [
+						{
+							"name": "log-analytics-log-group-compartment",
+							"displayName": "Log Group Compartment",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-4a"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-filter-4a"
+								}
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-entity",
+							"displayName": "Entity",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-2a"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-filter-2a"
+								}
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-log-set",
+							"displayName": "Log Set",
+							"required": true,
+							"hidden": "$(window.logSetNotEnabled)",
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-3a"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-filter-3a"
+								}
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-region",
+							"displayName": "Region",
+							"required": false,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-region-filter"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-region-filter"
+								}
+							},
+							"valueFormat": {
+								"type": "array"
+							}
+						},
+						{
+							"name": "time",
+							"displayName": "$(bundle.globalSavedSearch.TIME)",
+							"required": true,
+							"hidden": true
+						},
+						{
+							"name": "flex"
+						}
+					],
+					"featuresConfig": {
+						"crossService": {
+							"shared": true
+						}
+					},
+					"drilldownConfig": []
+				},
+				{
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaanaa7kmxkfbi2s3xeymrdprlekdk7j35chs5hsybaolimv4v3tjwq",
+					"displayName": "Audit Log",
+					"providerId": "log-analytics",
+					"providerVersion": "3.0.0",
+					"providerName": "Logging Analytics",
+					"compartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+					"isOobSavedSearch": false,
+					"description": "Audit Log",
+					"nls": {},
+					"type": "WIDGET_SHOW_IN_DASHBOARD",
+					"uiConfig": {
+						"timeSelection": {
+							"timePeriod": "l24hr"
+						},
+						"showTitle": true,
+						"visualizationType": "table",
+						"visualizationOptions": {},
+						"queryString": "'Log Source' = 'OCI Audit Logs' and 'Event ID' in (sso.app.access.success, sso.app.access.failure, sso.session.create.success, sso.authentication.failure, sso.session.delete.success, admin.user.create.success, admin.user.activated.success, admin.user.deactivated.success, admin.user.update.success, admin.user.delete.success, admin.user.password.reset.success, admin.me.password.reset.success, admin.me.password.change.success, admin.policy.create.success, admin.rule.create.success, admin.policy.update.success, admin.rule.update.success, admin.passwordpolicy.create.success, admin.passwordpolicy.update.success, admin.grant.create.success, admin.grant.delete.success, admin.group.create.success, admin.group.add.member.success, admin.group.remove.member.success, admin.group.delete.success, admin.app.create.success, admin.app.update.success, admin.app.delete.success, admin.app.activated.success, admin.app.deactivated.success, notification.delivery.success, notification.delivery.failure, sso.auth.factor.initiated, sso.bypasscode.create.success) | fields -*, -'Log Source', Time as Date, 'Identity Domain', 'User Name' as Actor, 'Event ID', 'Event Description', 'Event Source' as Target",
+						"scopeFilters": {
+							"filters": [
+								{
+									"type": "LogGroup",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
+											"label": "orasenatdpltsecitom02 (root)"
+										}
+									]
+								},
+								{
+									"type": "MetricCompartment",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "Entity",
+									"flags": {
+										"IncludeDependents": true,
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+									},
+									"values": []
+								},
+								{
+									"type": "LogSet",
+									"flags": {},
+									"values": []
+								},
+								{
+									"type": "ResourceCompartment",
+									"flags": {
+										"IncludeSubCompartments": true
+									},
+									"values": [
+										{
+											"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+											"label": "obs_mgmt_comp"
+										}
+									]
+								},
+								{
+									"type": "Region",
+									"flags": {},
+									"values": [
+										{
+											"value": "us-phoenix-1",
+											"label": "US West (Phoenix)"
+										}
+									]
+								}
+							],
+							"isGlobal": false,
+							"LogGroup": {
+								"type": "LogGroup",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
+										"label": "orasenatdpltsecitom02 (root)"
+									}
+								]
+							},
+							"MetricCompartment": {
+								"type": "MetricCompartment",
+								"flags": {},
+								"values": []
+							},
+							"Entity": {
+								"type": "Entity",
+								"flags": {
+									"IncludeDependents": true,
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+								},
+								"values": []
+							},
+							"LogSet": {
+								"type": "LogSet",
+								"flags": {},
+								"values": []
+							},
+							"ResourceCompartment": {
+								"type": "ResourceCompartment",
+								"flags": {
+									"IncludeSubCompartments": true
+								},
+								"values": [
+									{
+										"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+										"label": "obs_mgmt_comp"
+									}
+								]
+							},
+							"Region": {
+								"type": "Region",
+								"flags": {},
+								"values": [
+									{
+										"value": "us-phoenix-1",
+										"label": "US West (Phoenix)"
+									}
+								]
+							}
+						},
+						"vizType": "lxSavedSearchWidgetType",
+						"enableWidgetInApp": true
+					},
+					"dataConfig": [],
+					"screenImage": " ",
+					"metadataVersion": "2.0",
+					"widgetTemplate": "visualizations/chartWidgetTemplate.html",
+					"widgetVM": "visualizations/chartWidget",
+					"freeformTags": {},
+					"definedTags": {},
+					"parametersConfig": [
+						{
+							"name": "log-analytics-log-group-compartment",
+							"displayName": "Log Group Compartment",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-4a"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-filter-4a"
+								}
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-entity",
+							"displayName": "Entity",
+							"required": true,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-2a"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-filter-2a"
+								}
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-log-set",
+							"displayName": "Log Set",
+							"required": true,
+							"hidden": "$(window.logSetNotEnabled)",
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-filter-3a"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-filter-3a"
+								}
+							},
+							"valueFormat": {
+								"type": "object"
+							}
+						},
+						{
+							"name": "log-analytics-region",
+							"displayName": "Region",
+							"required": false,
+							"defaultFilterIds": [
+								"OOBSS-management-dashboard-region-filter"
+							],
+							"editUi": {
+								"inputType": "savedSearch",
+								"filterTile": {
+									"filterId": "OOBSS-management-dashboard-region-filter"
+								}
+							},
+							"valueFormat": {
+								"type": "array"
+							}
+						},
+						{
+							"name": "time",
+							"displayName": "$(bundle.globalSavedSearch.TIME)",
+							"required": true,
+							"hidden": true
+						},
+						{
+							"name": "flex"
+						}
+					],
+					"featuresConfig": {
+						"crossService": {
+							"shared": true
+						}
+					},
+					"drilldownConfig": []
+				}
+			],
+			"parametersConfig": [
+				{
+					"savedSearchId": "OOBSS-management-dashboard-filter-4a",
+					"width": 4,
+					"state": "DEFAULT",
+					"parametersMap": {
+						"isStoreInLocalStorage": true
+					},
+					"name": "log-analytics-loggroup-filter",
+					"localStorageKey": "log-analytics-loggroup-filter"
+				},
+				{
+					"savedSearchId": "OOBSS-management-dashboard-filter-2a",
+					"width": 6,
+					"state": "DEFAULT",
+					"parametersMap": {
+						"isStoreInLocalStorage": true
+					},
+					"name": "log-analytics-entity-filter",
+					"localStorageKey": "log-analytics-entity-filter"
+				},
+				{
+					"savedSearchId": "OOBSS-management-dashboard-region-filter",
+					"width": 2,
+					"state": "DEFAULT",
+					"parametersMap": {
+						"isStoreInLocalStorage": true
+					},
+					"name": "regionFilter",
+					"localStorageKey": "regionFilter"
+				},
+				{
+					"name": "time",
+					"displayName": "$(bundle.globalSavedSearch.TIME)",
+					"src": "$(context.time)"
+				}
+			],
+			"featuresConfig": {
+				"crossService": {
+					"shared": true
+				},
+				"serviceTypes": [
+					"log-analytics",
+					"management-dashboard"
+				],
+				"dependencies": [
+					{
+						"libProviderId": "management-dashboard",
+						"version": "1.88.1"
+					}
+				]
+			},
+			"drilldownConfig": [],
+			"freeformTags": {},
+			"definedTags": {}
+		}
+	]
+}

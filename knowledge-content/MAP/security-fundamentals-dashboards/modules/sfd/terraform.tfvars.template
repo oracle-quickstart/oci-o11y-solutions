@@ -1,0 +1,20 @@
+#---------------------------------------
+# Tenancy Connectivity Variables
+#---------------------------------------
+
+tenancy_ocid         = "<REPLACE WITH TENANCY OCID>"             # Get this from OCI Console (after logging in, go to top-right-most menu item and click option "Tenancy: <your tenancy name>").
+user_ocid            = "<REPLACE WITH USER OCID>"                # Get this from OCI Console (after logging in, go to top-right-most menu item and click option "My profile").
+fingerprint          = "<REPLACE WITH API KEY FINGERPRINT>"      # The fingerprint can be gathered from your user account. In the "My profile page, click "API keys" on the menu in left hand side).
+private_key_path     = "<REPLACE WITH PRIVATE API KEY PATH>"  # This is the full path on your local system to the API signing private key.
+private_key_password = ""                           # This is the password that protects the private key, if any.
+region               = "us-ashburn-1" 
+
+#---------------------------------------
+# input Variables
+#---------------------------------------
+
+sfd_compartment_ocid = "<REPLACE WITH SFD COMPARTMENT OCID>"
+logging_analytics_log_group_name = "sfd_log_group"
+subnet_flow_logs_compartment_ids = ["<COMPARTMENT1 OCID>","<COMPARTMENT2 OCID>"]
+configure_flow_logs = true
+create_service_connector_audit = true
