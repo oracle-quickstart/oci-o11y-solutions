@@ -109,9 +109,10 @@ With anomoly detection built with the metrics collected it helps in understandin
 This [document](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/promotion-and-discovery.html#STMON-GUID-DA187C14-8317-41E8-97B1-3AC8DC660458) has the details on the resouce discovery for the components of the EM.
 
 
-### Database Management
-(we may name these 'optional' services, since it will be hard to show something which OEM does not provide)
-
+## Optional Services
+### Database Management 
+[Database Management](https://docs.oracle.com/en-us/iaas/database-management/home.htm) provides a comprehensive set of database performance monitoring and management features.
+SQL Watch in the Oracle Cloud Infrastructure Database Management service proactively predict and prevent the SQL execution performance issues caused by system modifications or environmental changes, and ensure optimal database health.
 
 ### Ops Insights
-(same here, the value for the EM Repo DB is not there yet, we might describe probably using a Cloud Bridge to forward target data into Ops Insights)
+[Ops Insights](https://docs.oracle.com/en-us/iaas/operations-insights/home.htm) provides comprehensive information about the resource use and capacity of databases and hosts. 
