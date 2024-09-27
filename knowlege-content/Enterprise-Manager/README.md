@@ -74,16 +74,34 @@ Once the monitors are setup it collects details such as HAR file and network dat
 
 
 ### Logging Analytics
-Logging Analytics service helps to analyse the logs from EM application and agent to help give insights into the application.
-
-(to-do:
+Logging Analytics service helps to analyse the logs from EM application and agent to help give insights into the application.We can collect the logs from all components of EM and analyse them during an issue. We can follow the steps below for the setup,
 * define entity types oem_oms and oem_agent
+
 * create entities
+  
 * create entity associations
+  <pre>
+     oci log-analytics entity add-associations --association-entities '["'$Agent_OMS'"]' --namespace-name $NS --entity-id $OEM_ID
+     oci log-analytics entity add-associations --association-entities '["'$Agent_REPO'"]' --namespace-name $NS --entity-id $OEM_ID
+     oci log-analytics entity add-associations --association-entities '["'$Domain_ID'"]' --namespace-name $NS --entity-id $OEM_ID
+     oci log-analytics entity add-associations --association-entities '["'$Admin_ID'"]' --namespace-name $NS --entity-id $Domain_ID
+     oci log-analytics entity add-associations --association-entities '["'$OHS_ID'"]' --namespace-name $NS --entity-id $Domain_ID
+     oci log-analytics entity add-associations --association-entities '["'$OMS1_ID'"]' --namespace-name $NS --entity-id $Domain_ID
+     oci log-analytics entity add-associations --association-entities '["'$OEM_Server'"]' --namespace-name $NS --entity-id $OMS1_ID
+     oci log-analytics entity add-associations --association-entities '["'$OEM_Server'"]' --namespace-name $NS --entity-id $OHS_ID
+     oci log-analytics entity add-associations --association-entities '["'$OEM_Server'"]' --namespace-name $NS --entity-id $Admin_ID
+     oci log-analytics entity add-associations --association-entities '["'$DB_ID'"]' --namespace-name $NS --entity-id $OEM_ID
+     oci log-analytics entity add-associations --association-entities '["'$LSNR_ID'"]' --namespace-name $NS --entity-id $DB_ID
+     oci log-analytics entity add-associations --association-entities '["'$EMREPO_Server'"]' --namespace-name $NS --entity-id $DB_ID
+     oci log-analytics entity add-associations --association-entities '["'$EMREPO_Server'"]' --namespace-name $NS --entity-id $LSNR_ID
+     oci log-analytics entity add-associations --association-entities '["'$EMREPO_Server'"]' --namespace-name $NS --entity-id $Agent_REPO
+     oci log-analytics entity add-associations --association-entities '["'$OEM_Server'"]' --namespace-name $NS --entity-id $Agent_OMS
+  </pre>
 * give mgmt_agent the needed permissions to access logs from system, OMS and DB/Listener
-* import log sources
+  
+* import log sources 
 * associate log sources to entities
-)
+
 ### Stack monitoring
 Stack Monitoring lets you proactively monitor the EM application and its underlying application stack, including OMS servers and databases. Once discovered, it automatically collects status, load, response, error, and utilization metrics for all application components.
 With anomoly detection built with the metrics collected it helps in understanding the environment abnormalities.
