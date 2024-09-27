@@ -100,7 +100,7 @@ Logging Analytics service helps to analyse the logs from EM application and agen
 * give mgmt_agent the needed permissions to access logs from system, OMS and DB/Listener
   
 * Need to associate the log sources to entities using [this](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/manage-source-entity-association.html#LOGAN-GUID-C4604513-1D68-4F19-9352-8DE60C5788A5)
-* We will be able to corelate and view the topoly wise log collection for the EM application.
+* We will be able to corelate and view topology-wise log collection for the EM application.
   <img width="993" alt="image" src="https://github.com/user-attachments/assets/68936f56-2f42-4ab5-acfa-399c7d9971ac">
 
   
