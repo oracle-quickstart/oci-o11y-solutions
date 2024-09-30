@@ -80,7 +80,7 @@ To get started with Logging Analytics, follow [these steps](https://docs.oracle.
 
 ### Defining custom entity types
 
-After enabling Logging Analytics service the initial task will be to create entities for all components of the EM environment. Since there are not yet OOB entity types for the EM OMS and EM Agent components, we will create two custom entity types, "oem_oms" and "oem_agent", upfront using the OCI CLI e.g. from a Cloud Shell:
+After enabling Logging Analytics service the initial task will be to create entities for all components of the EM environment. Since there are not yet OOB entity types for the EM OMS and EM Agent components, we will create two custom entity types (_oem_oms_ and _oem_agent_) upfront using the OCI CLI e.g. from a Cloud Shell:
 ```
    Getting the namespace used by a tenant (required by the next commands):
    $ oci os ns get
@@ -139,30 +139,47 @@ With that we are ready using the OCI Console to create all needed entities from 
 
 Alternatively, the above WebLogic related entities can be created by [discovering the WebLogic domain](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/auto-discovery-entities-and-log-collection.html). 
 
-Similar, the feature ```Discover New Resource``` can be used to discover the EM Repository DB and Listener. This process will create all needed entities. Otherwise, they can get created manually like described above.
+Similar, the feature ```Discover New Resource``` can be used to discover the EM Repository DB and Listener. This process will create all needed entities. Otherwise, they can get created manually like shown above for the other entities.
 
-The host entities have already been auto-created while installing the Management Agents. 
+The host entities have already been auto-created as part of the Management Agent installation. 
   
-* create entity associations
+### Create entity associations
+
+To make use of the very useful and valueable [_Topology View_](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/view-topology-your-entities.html) feature of Logging Analytics we will now create associations between all created or discovered entities.
+
+For this we will use again OCI CLI commands run in the Cloud Shell. To create the associations we need the `<NameSpace>` value again together with the Entity OCID values which can be easily copied from the Entity page: 
   ```
-     oci log-analytics entity add-associations --association-entities '["'$Agent_OMS'"]' --namespace-name $NS --entity-id $OEM_ID
-     oci log-analytics entity add-associations --association-entities '["'$Agent_REPO'"]' --namespace-name $NS --entity-id $OEM_ID
-     oci log-analytics entity add-associations --association-entities '["'$Domain_ID'"]' --namespace-name $NS --entity-id $OEM_ID
-     oci log-analytics entity add-associations --association-entities '["'$Admin_ID'"]' --namespace-name $NS --entity-id $Domain_ID
-     oci log-analytics entity add-associations --association-entities '["'$OHS_ID'"]' --namespace-name $NS --entity-id $Domain_ID
-     oci log-analytics entity add-associations --association-entities '["'$OMS1_ID'"]' --namespace-name $NS --entity-id $Domain_ID
-     oci log-analytics entity add-associations --association-entities '["'$OEM_Server'"]' --namespace-name $NS --entity-id $OMS1_ID
-     oci log-analytics entity add-associations --association-entities '["'$OEM_Server'"]' --namespace-name $NS --entity-id $OHS_ID
-     oci log-analytics entity add-associations --association-entities '["'$OEM_Server'"]' --namespace-name $NS --entity-id $Admin_ID
-     oci log-analytics entity add-associations --association-entities '["'$DB_ID'"]' --namespace-name $NS --entity-id $OEM_ID
-     oci log-analytics entity add-associations --association-entities '["'$LSNR_ID'"]' --namespace-name $NS --entity-id $DB_ID
-     oci log-analytics entity add-associations --association-entities '["'$EMREPO_Server'"]' --namespace-name $NS --entity-id $DB_ID
-     oci log-analytics entity add-associations --association-entities '["'$EMREPO_Server'"]' --namespace-name $NS --entity-id $LSNR_ID
-     oci log-analytics entity add-associations --association-entities '["'$EMREPO_Server'"]' --namespace-name $NS --entity-id $Agent_REPO
-     oci log-analytics entity add-associations --association-entities '["'$OEM_Server'"]' --namespace-name $NS --entity-id $Agent_OMS
+    $ NS=<NameSpace>
+    $ OEM_ID=ocid1.loganalyticsentity.oc1.........
+    $ Agent_OMS_ID=ocid1.loganalyticsentity.oc1.........
+    $ Agent_REPO_ID=ocid1.loganalyticsentity.oc1.........
+    $ GCDomain_ID=ocid1.loganalyticsentity.oc1.........
+    $ Admin_ID=ocid1.loganalyticsentity.oc1.........
+    $ OMS1_ID=ocid1.loganalyticsentity.oc1.........
+    $ OHS_ID=ocid1.loganalyticsentity.oc1.........
+    $ DB_ID=ocid1.loganalyticsentity.oc1.........
+    $ LSNR_ID=ocid1.loganalyticsentity.oc1.........
+    $ OEM_Host_ID=ocid1.loganalyticsentity.oc1.........
+    $ EMREPO_Host_ID=ocid1.loganalyticsentity.oc1.........
+
+    $ oci log-analytics entity add-associations --namespace-name $NS --association-entities '["'$Agent_OMS_ID'"]' --entity-id $OEM_ID
+    $ oci log-analytics entity add-associations --namespace-name $NS --association-entities '["'$Agent_REPO_ID'"]' --entity-id $OEM_ID
+    $ oci log-analytics entity add-associations --namespace-name $NS --association-entities '["'$GCDomain_ID'"]' --entity-id $OEM_ID
+    $ oci log-analytics entity add-associations --namespace-name $NS --association-entities '["'$Admin_ID'"]' --entity-id $GCDomain_ID
+    $ oci log-analytics entity add-associations --namespace-name $NS --association-entities '["'$OHS_ID'"]' --entity-id $GCDomain_ID
+    $ oci log-analytics entity add-associations --namespace-name $NS --association-entities '["'$OMS1_ID'"]' --entity-id $GCDomain_ID
+    $ oci log-analytics entity add-associations --namespace-name $NS --association-entities '["'$OEM_Host_ID'"]' --entity-id $OMS1_ID
+    $ oci log-analytics entity add-associations --namespace-name $NS --association-entities '["'$OEM_Host_ID'"]' --entity-id $OHS_ID
+    $ oci log-analytics entity add-associations --namespace-name $NS --association-entities '["'$OEM_Host_ID'"]' --entity-id $Admin_ID
+    $ oci log-analytics entity add-associations --namespace-name $NS --association-entities '["'$DB_ID'"]' --entity-id $OEM_ID
+    $ oci log-analytics entity add-associations --namespace-name $NS --association-entities '["'$LSNR_ID'"]' ---entity-id $DB_ID
+    $ oci log-analytics entity add-associations --namespace-name $NS --association-entities '["'$EMREPO_Host_ID'"]' --entity-id $DB_ID
+    $ oci log-analytics entity add-associations --namespace-name $NS --association-entities '["'$EMREPO_Host_ID'"]' --entity-id $LSNR_ID
+    $ oci log-analytics entity add-associations --namespace-name $NS --association-entities '["'$EMREPO_Host_ID'"]' --entity-id $Agent_REPO_ID
+    $ oci log-analytics entity add-associations --namespace-name $NS --association-entities '["'$OEM_Host_ID'"]' --entity-id $Agent_OMS_ID
   ```
 * give mgmt_agent the needed permissions to access logs from system, OMS and DB/Listener
-  
+* import Log Sources for oem_oms and oem_agent type log sources  
 * Need to associate the log sources to entities using [this](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/manage-source-entity-association.html#LOGAN-GUID-C4604513-1D68-4F19-9352-8DE60C5788A5)
 * We will be able to corelate and view topology-wise log collection for the EM application.
   <img width="993" alt="image" src="https://github.com/user-attachments/assets/68936f56-2f42-4ab5-acfa-399c7d9971ac">
