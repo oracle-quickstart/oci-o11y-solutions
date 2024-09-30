@@ -87,7 +87,7 @@ For the EM OMS and EM Agent components we will create upfront two new entity typ
    Getting the namespace used by a tenant (required by the further coomands):
    $ oci os ns get
    {
-     "data": "<NameSpace>"
+     "data": "\<NameSpace\>"
    }
         
    Creating custom entity type "oem_oms":
