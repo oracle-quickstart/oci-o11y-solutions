@@ -135,14 +135,20 @@ Stack Monitoring lets you proactively monitor the EM application and its underly
 With anomoly detection built with the metrics collected it helps in understanding the environment abnormalities.
 This [document](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/promotion-and-discovery.html#STMON-GUID-DA187C14-8317-41E8-97B1-3AC8DC660458) has the details on the resouce discovery for the components of the EM.
 To discover any resource in Stack monitoring , go to Resource management --> Discover resources
+
 <img width="1384" alt="image" src="https://github.com/user-attachments/assets/c8a1fb3c-9dbf-4200-8514-5a1b49db260d">
 Click on Discover New Resource and select the Resource Type that is needed.
+
 <img width="1188" alt="image" src="https://github.com/user-attachments/assets/cad84cd3-98ef-4e37-89a8-099706079aea">
 Fill in the details related to the Resource that need to be discovered and click on Discover New Resource to submit the job.
+
 <img width="587" alt="image" src="https://github.com/user-attachments/assets/afc52e35-27d0-4ada-9f29-9cd5d715db21">
+
 Once discovered , the resource home shows all the components related.
 <img width="1361" alt="image" src="https://github.com/user-attachments/assets/746875a6-d9cc-4f86-a94a-823d848f5189">
+
 It also starts collecting basic metrics along with enabling baseline and anomoly detection.
+
 
 ## Optional Services
 ### Database Management 
