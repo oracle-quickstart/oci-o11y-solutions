@@ -3,7 +3,7 @@
 This solution helps in monitoring all the components of the Enterprise Manager using Observability and Management Services.
 To enable the monitoring we can follow the below steps,
 
-### Management Agent
+## Management Agent
 
 Management Agent is a service that provides communication and data collection between OCI and any other targets. The Management Agent will get installed on the OEM server(s) and the EM Repository DB server(s). It is used to collect OMS, EM Agent, WebLogic, Database and system logs and application, DB and system metrics. If desired, it can be used to run SQL queries against the EM Repo DB for custom metric extensions or SQL based log sources. 
 
@@ -20,7 +20,7 @@ Once the agent is successfully installed , we need to enable the plugins for uti
 
 
 
-### Application Performance Monitoring
+## Application Performance Monitoring
 
 APM service allows to monitor the performance and availability of the OEM application.It instruments the application and collects the traces and spans which give more insights into OEM.
 To setup APM, we need to install APM Java agent.It can be downloaded from below,
@@ -73,29 +73,31 @@ Once the monitors are setup it collects details such as HAR file and network dat
 <img width="1368" alt="image" src="https://github.com/user-attachments/assets/5303a82d-a7e8-48b0-a10b-07f0ecb47500">
 
 
-### Logging Analytics
+## Logging Analytics
 Logging Analytics service helps to analyse the logs from EM application, EM agents, EM repository DB and system logs to give insights into the application and infrastructure health. This can be used for normal day to day monitoring or in case of issues for root cause analysis. 
 
 To get started with Logging Analytics, follow [these steps](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/quick-start.html).
 
-After enabling Logging Analytics service we will create now entities for all components of the EM environment. 
+### Defining custom entity types
 
-* define entity types oem_oms and oem_agent
+After enabling Logging Analytics service the 1st task willbe we will create now entities for all components of the EM environment. 
+
+### Defining entity types oem_oms and oem_agent
 
 For the EM OMS and EM Agent components we will create upfront two new entity types, "oem_oms" and "oem_agent", using the OCI CLI e.g. from a Cloud Shell:
-<pre>
-   Getting the namespace used by a tenant (required by the further coomands):
+```
+   Getting the namespace used by a tenant (required by the next coomands):
    $ oci os ns get
    {
-     "data": "\<NameSpace\>"
+     "data": "<NameSpace>"
    }
         
    Creating custom entity type "oem_oms":
-   oci log-analytics entity-type create --name oem_oms --category Application --namespace-name <NameSpace>
+   $ oci log-analytics entity-type create --name oem_oms --category Application --namespace-name <NameSpace>
 
    Creating custom entity type "oem_agent":
-   oci log-analytics entity-type create --name oem_agent --category Application --namespace-name <NameSpace>
-</pre>
+   $ oci log-analytics entity-type create --name oem_agent --category Application --namespace-name <NameSpace>
+```
 
 We can follow the steps below for the setup,
 
@@ -104,7 +106,7 @@ We can follow the steps below for the setup,
 * create entities
   
 * create entity associations
-  <pre>
+  ```
      oci log-analytics entity add-associations --association-entities '["'$Agent_OMS'"]' --namespace-name $NS --entity-id $OEM_ID
      oci log-analytics entity add-associations --association-entities '["'$Agent_REPO'"]' --namespace-name $NS --entity-id $OEM_ID
      oci log-analytics entity add-associations --association-entities '["'$Domain_ID'"]' --namespace-name $NS --entity-id $OEM_ID
@@ -120,7 +122,7 @@ We can follow the steps below for the setup,
      oci log-analytics entity add-associations --association-entities '["'$EMREPO_Server'"]' --namespace-name $NS --entity-id $LSNR_ID
      oci log-analytics entity add-associations --association-entities '["'$EMREPO_Server'"]' --namespace-name $NS --entity-id $Agent_REPO
      oci log-analytics entity add-associations --association-entities '["'$OEM_Server'"]' --namespace-name $NS --entity-id $Agent_OMS
-  </pre>
+  ```
 * give mgmt_agent the needed permissions to access logs from system, OMS and DB/Listener
   
 * Need to associate the log sources to entities using [this](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/manage-source-entity-association.html#LOGAN-GUID-C4604513-1D68-4F19-9352-8DE60C5788A5)
