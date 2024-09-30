@@ -183,6 +183,7 @@ For this we will use again OCI CLI commands run in the Cloud Shell. To create th
     oci log-analytics entity-topology list --entity-id $OEM_ID -ns $NS --all | grep -c '"id": '
   ```
 
+To do:
 
 * give mgmt_agent the needed permissions to access logs from system, OMS and DB/Listener
 * import Log Sources for oem_oms and oem_agent type log sources  
