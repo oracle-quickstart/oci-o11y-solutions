@@ -74,7 +74,31 @@ Once the monitors are setup it collects details such as HAR file and network dat
 
 
 ### Logging Analytics
-Logging Analytics service helps to analyse the logs from EM application, EM agents, EM repository DB and system logs to help give insights into the application and infrastructure. This can be used for normal day to day monitoring or in case of issues for a root cause analysis. We can follow the steps below for the setup,
+Logging Analytics service helps to analyse the logs from EM application, EM agents, EM repository DB and system logs to give insights into the application and infrastructure health. This can be used for normal day to day monitoring or in case of issues for root cause analysis. 
+
+To get started with Logging Analytics, follow [these steps](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/quick-start.html).
+
+After enabling Logging Analytics service we will create now entities for all components of the EM environment. 
+
+* define entity types oem_oms and oem_agent
+
+For the EM OMS and EM Agent components we will create upfront two new entity types, "oem_oms" and "oem_agent", using the OCI CLI e.g. from a Cloud Shell:
+<pre>
+   Getting the namespace used by a tenant (required by the further coomands):
+   $ oci os ns get
+   {
+     "data": "<NameSpace>"
+   }
+        
+   Creating custom entity type "oem_oms":
+   oci log-analytics entity-type create --name oem_oms --category Application --namespace-name <NameSpace>
+
+   Creating custom entity type "oem_agent":
+   oci log-analytics entity-type create --name oem_agent --category Application --namespace-name <NameSpace>
+</pre>
+
+We can follow the steps below for the setup,
+
 * define entity types oem_oms and oem_agent
 
 * create entities
