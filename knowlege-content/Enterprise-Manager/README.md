@@ -82,7 +82,7 @@ To get started with Logging Analytics, follow [these steps](https://docs.oracle.
 
 After enabling Logging Analytics service the initial task will be to create entities for all components of the EM environment. Since there are not yet OOB entity types for the EM OMS and EM Agent components, we will create two custom entity types, "oem_oms" and "oem_agent", upfront using the OCI CLI e.g. from a Cloud Shell:
 ```
-   Getting the namespace used by a tenant (required by the next coomands):
+   Getting the namespace used by a tenant (required by the next commands):
    $ oci os ns get
    {
      "data": "<NameSpace>"
@@ -94,11 +94,49 @@ After enabling Logging Analytics service the initial task will be to create enti
    Creating custom entity type "oem_agent":
    $ oci log-analytics entity-type create --name oem_agent --category Application --namespace-name <NameSpace>
 ```
-Now, we are ready using the OCI Console to create all needed entities from  ``` Logging Analytics / Administration / Entities / Craete Entity ```
+With that we are ready using the OCI Console to create all needed entities from  `Logging Analytics / Administration / Entities / Create Entity`:
 
-We can follow the steps below for the setup,
+* EM OMS Entity:
+  - Entity Type: oem_oms
+  - Name: e.g. _OEM-Prod_ 
+  - Management Agent Compartment: `pick compartment`
+  - Management Agent: `pick management agent`
+  - Add property:
+    - Property Name: InstanceHome
+    - Property Value: e.g. _/u01/app/gc_inst/em/EMGC_OMS1_         
 
-* define entity types oem_oms and oem_agent
+* EM Agent Entities:
+  - Entity Type: oem_agent
+  - Name: e.g. _Agent_OEM-Server_ or _Agent_DB-Server_  
+  - Add property:
+    - Property Name: AgentState
+    - Property Value: e.g. _/u01/app/em_agent/agent_inst_   
+
+* WebLogic Doamin Entity:
+  - Entity Type: WebLogic Domain
+  - Name: e.g. _GCDomain_  
+  - Add property:
+    - Property Name: domain_home
+    - Property Value: e.g. _/u01/app/gcinst/user_projects/domains/GCDomain_   
+
+* WebLogic Server Entities:
+  - Entity Type: WebLogic Server
+  - Name: e.g. _EMGC_OMS1_ or _EMGC_ADMINSERVER_
+  - Add property:
+    - Property Name: domain_home
+    - Property Value: e.g. _/u01/app/gcinst/user_projects/domains/GCDomain_
+    - Property Name: server_names
+    - Property Value: e.g. _EMGC_OMS1_ or _EMGC_ADMINSERVER_
+
+* Oracle HTTP Server Entity:
+  - Entity Type: Oracle HTTP Server
+  - Name: e.g. _EMGC_OHS1_
+  - Add property:
+    - Property Name: ohs_home
+    - Property Value: e.g. _/u01/app/gcinst/user_projects/domains/GCDomain_
+    - Property Name: component_name
+    - Property Value: e.g. _ohs1_
+
 
 * create entities
   
