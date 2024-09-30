@@ -74,7 +74,7 @@ Once the monitors are setup it collects details such as HAR file and network dat
 
 
 ### Logging Analytics
-Logging Analytics service helps to analyse the logs from EM application and agent to help give insights into the application.We can collect the logs from all components of EM and analyse them during an issue. We can follow the steps below for the setup,
+Logging Analytics service helps to analyse the logs from EM application, EM agents, EM repository DB and system logs to help give insights into the application and infrastructure. This can be used for normal day to day monitoring or in case of issues for a root cause analysis. We can follow the steps below for the setup,
 * define entity types oem_oms and oem_agent
 
 * create entities
