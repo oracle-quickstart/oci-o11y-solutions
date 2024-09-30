@@ -80,7 +80,7 @@ To get started with Logging Analytics, follow [these steps](https://docs.oracle.
 
 ### Defining custom entity types
 
-After enabling Logging Analytics service the initial task will be to create entities for all components of the EM environment. Since there are not yet out-OOB Entity Types for the EM OMS and EM Agent components, we will create two custom entity types, "oem_oms" and "oem_agent", upfront using the OCI CLI e.g. from a Cloud Shell:
+After enabling Logging Analytics service the initial task will be to create entities for all components of the EM environment. Since there are not yet OOB entity types for the EM OMS and EM Agent components, we will create two custom entity types, "oem_oms" and "oem_agent", upfront using the OCI CLI e.g. from a Cloud Shell:
 ```
    Getting the namespace used by a tenant (required by the next coomands):
    $ oci os ns get
