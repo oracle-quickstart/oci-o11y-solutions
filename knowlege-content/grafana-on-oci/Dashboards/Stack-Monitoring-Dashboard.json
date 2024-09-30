@@ -21,13 +21,13 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "11.1.0"
+      "version": "10.4.1"
     },
     {
       "type": "datasource",
       "id": "oci-metrics-datasource",
       "name": "Oracle Cloud Infrastructure Metrics",
-      "version": "5.5.1"
+      "version": "5.1.1"
     },
     {
       "type": "panel",
@@ -70,10 +70,10 @@
       }
     ]
   },
-  "description": "namspac - oracle_appmgmt",
+  "description": "namspace - oracle_appmgmt",
   "editable": true,
   "fiscalYearStartMonth": 0,
-  "graphTooltip": 0,
+  "graphTooltip": 1,
   "id": null,
   "links": [],
   "panels": [
@@ -84,8 +84,8 @@
       },
       "gridPos": {
         "h": 13,
-        "w": 15,
-        "x": 5,
+        "w": 24,
+        "x": 0,
         "y": 0
       },
       "id": 9,
@@ -98,7 +98,7 @@
         "content": "   <h1>Stack Monitoring Dashboard Instructions</h1>\n    <p><a href=\"https://docs.oracle.com/en-us/iaas/stack-monitoring/index.html\">Click here for Stack Monitoring Documentation</a></p>\n    <br>\n    <h2>How to use the Stack Monitoring Dashboard</h2>\n    <p>This dashboard provides examples that can be edited or duplicated to show <strong>Stack Monitoring </strong> metrices. </p>\n    <br>\n\n\n    <h3>Step-by-Step Instructions:</h3>\n    <ol>\n        <li>Choose a Region</li>\n        <li>Choose a Compartment</li>\n        <li>Enter <span style=\"color:red;\">namespace: oracle_appmgmt</span></li>\n        <li>Select host for  Resource Group</li>\n        <li>Experiment with Dimensions, in most cases resourceName , hostType, osType should work </li>\n    </ol>\n\n    <h3>Important Notes:</h3>\n    <ol>\n        <li>This dashboard is intended for use with the OCI Stack Monitoring services.</li>\n        <li>Please ensure that you have the necessary permissions and credentials to access the dashboard.</li>",
         "mode": "html"
       },
-      "pluginVersion": "11.1.0",
+      "pluginVersion": "10.4.1",
       "title": "Instructions",
       "transparent": true,
       "type": "text"
@@ -271,7 +271,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "11.1.0",
+      "pluginVersion": "10.4.1",
       "targets": [
         {
           "compartment": "$compartment",
@@ -369,8 +369,8 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 8,
-        "w": 24,
+        "h": 10,
+        "w": 8,
         "x": 0,
         "y": 21
       },
@@ -449,7 +449,7 @@
           "tenancyName": "DEFAULT/"
         }
       ],
-      "title": "Host CPU Utilisation - System and User",
+      "title": "CPU Utilisation - System and User",
       "type": "timeseries"
     },
     {
@@ -515,10 +515,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 8,
-        "w": 24,
-        "x": 0,
-        "y": 29
+        "h": 10,
+        "w": 8,
+        "x": 8,
+        "y": 21
       },
       "id": 1,
       "options": {
@@ -595,7 +595,123 @@
           "tenancyName": "DEFAULT/"
         }
       ],
-      "title": "Host CPU Utilisation - Total and Idle",
+      "title": "CPU Utilisation - Total and Idle",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "description": "Showing Idle and Total CPU Utilisation with a maximum threshold of 80%",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "series",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 25,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "count"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 8,
+        "x": 16,
+        "y": 21
+      },
+      "id": 11,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "hidden",
+          "placement": "right",
+          "showLegend": false
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "compartment": "$compartment",
+          "compartmentName": "$compartment",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "dimensionValues": [
+            "$dimension",
+            "LoadInterval=\"5minutes\""
+          ],
+          "groupBy": "select option (optional)",
+          "hide": false,
+          "interval": "[1m]",
+          "intervalLabel": "1 minute",
+          "legendFormat": "{{resourceName}}",
+          "metric": "CpuLoad",
+          "metricNames": "$resourcegroup",
+          "namespace": "$namespace",
+          "queryText": "CpuLoad[1m]{$dimension,LoadInterval=\"5minutes\"}.avg()",
+          "queryTextRaw": "",
+          "rawQuery": true,
+          "refId": "A",
+          "region": "$region",
+          "resourcegroup": "$resourcegroup",
+          "statistic": "avg()",
+          "statisticLabel": "average",
+          "tagsValues": [],
+          "tenancy": "DEFAULT/",
+          "tenancyName": "DEFAULT/"
+        }
+      ],
+      "title": "CPU Load -Every 15mins",
       "type": "timeseries"
     },
     {
@@ -645,7 +761,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -657,10 +774,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 16,
+        "h": 8,
         "w": 12,
         "x": 0,
-        "y": 37
+        "y": 31
       },
       "id": 8,
       "options": {
@@ -727,7 +844,8 @@
             "mode": "percentage",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -743,7 +861,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 37
+        "y": 31
       },
       "id": 2,
       "options": {
@@ -763,7 +881,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "11.1.0",
+      "pluginVersion": "10.4.1",
       "targets": [
         {
           "compartment": "$compartment",
@@ -857,6 +975,124 @@
       "fieldConfig": {
         "defaults": {
           "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": -1,
+            "drawStyle": "line",
+            "fillOpacity": 27,
+            "gradientMode": "hue",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "stepAfter",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 3,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "ops"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 39
+      },
+      "id": 10,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.1.0",
+      "targets": [
+        {
+          "compartment": "$compartment",
+          "compartmentName": "$compartment",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "dimensionValues": [
+            "Type=\"Total\"",
+            "$dimension"
+          ],
+          "groupBy": "select option (optional)",
+          "hide": false,
+          "interval": "[1m]",
+          "legendFormat": "{{resourceName}} {{diskName}}",
+          "metric": "DiskActivitySummary",
+          "metricNames": "$resourcegroup",
+          "namespace": "$namespace",
+          "queryText": "DiskActivitySummary[1m]{Type=\"Total\",$dimension}.max()",
+          "queryTextRaw": "",
+          "rawQuery": true,
+          "refId": "A",
+          "region": "$region",
+          "resourcegroup": "$resourcegroup",
+          "statistic": "max()",
+          "statisticLabel": "maximum",
+          "tagsValues": [],
+          "tenancy": "DEFAULT/",
+          "tenancyName": "DEFAULT/"
+        }
+      ],
+      "title": "Total Disk Activity",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
             "mode": "thresholds"
           },
           "fieldMinMax": false,
@@ -865,7 +1101,8 @@
             "mode": "percentage",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -881,7 +1118,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 45
+        "y": 39
       },
       "id": 5,
       "options": {
@@ -901,7 +1138,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "11.1.0",
+      "pluginVersion": "10.4.1",
       "targets": [
         {
           "compartment": "$compartment",
@@ -1094,6 +1331,6 @@
   "timezone": "browser",
   "title": "Stack-Monitoring",
   "uid": "ddvazzhe5fwn4a",
-  "version": 10,
+  "version": 16,
   "weekStart": ""
 }

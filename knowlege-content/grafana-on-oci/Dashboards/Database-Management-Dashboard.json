@@ -27,13 +27,13 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "11.1.0"
+      "version": "10.4.1"
     },
     {
       "type": "datasource",
       "id": "oci-metrics-datasource",
       "name": "Oracle Cloud Infrastructure Metrics",
-      "version": "5.5.1"
+      "version": "5.1.1"
     },
     {
       "type": "panel",
@@ -89,8 +89,8 @@
       },
       "gridPos": {
         "h": 13,
-        "w": 16,
-        "x": 5,
+        "w": 24,
+        "x": 0,
         "y": 0
       },
       "id": 10,
@@ -100,11 +100,10 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "   <h1>Database Management Dashboard Instructions</h1>\n    <p><a href=\"https://docs.oracle.com/en-us/iaas/database-management/home.htm\">Click here for Database Management Documentation</a></p>\n    <br>\n    <h2>How to use the Database Management  Dashboard</h2>\n    <p>This dashboard provides examples that can be edited or duplicated to show <strong>Database Management</strong> metrices. </p>\n    <br>\n\n\n    <h3>Step-by-Step Instructions:</h3>\n    <ol>\n        <li>Choose a Region</li>\n        <li>Choose a Compartment</li>\n        <li>Enter <span style=\"color:red;\">namespace: oracle_oci_database</span></li>\n        <li>No Resource Groupis required at the moment</li>\n        <li>Experiment with Dimensions, in most cases resourceName , hostName, deploymentType should work </li>\n    </ol>\n\n    <h3>Important Notes:</h3>\n    <ol>\n        <li>This dashboard is intended for use with the OCI Database Manaement Services.</li>\n        <li>Please ensure that you have the necessary permissions and credentials to access the dashboard.</li>\n",
+        "content": "   <h1>Database Management Dashboard Instructions</h1>\n    <p><a href=\"https://docs.oracle.com/en-us/iaas/database-management/home.htm\">Click here for Database Management Documentation</a></p>\n    <br>\n    <h2>How to use the Database Management  Dashboard</h2>\n    <p>This dashboard provides examples that can be edited or duplicated to show <strong>Database Management</strong> metrices. </p>\n    <br>\n\n\n    <h3>Step-by-Step Instructions:</h3>\n    <ol>\n        <li>Choose a Region</li>\n        <li>Choose a Compartment</li>\n        <li>Enter <span style=\"color:red;\">namespace: oracle_oci_database</span></li>\n        <li>For resourcegroup, type in NoResourceGroup for Oracle DB's</li>\n        <li>Experiment with Dimensions, in most cases resourceName , hostName, deploymentType should work </li>\n    </ol>\n\n    <h3>Important Notes:</h3>\n    <ol>\n        <li>This dashboard is intended for use with the OCI Database Manaement Services.</li>\n        <li>Please ensure that you have the necessary permissions and credentials to access the dashboard.</li>\n",
         "mode": "html"
       },
-      "pluginVersion": "11.1.0",
-      "title": "Instructions",
+      "pluginVersion": "10.4.1",
       "transparent": true,
       "type": "text"
     },
@@ -177,7 +176,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "11.1.0",
+      "pluginVersion": "10.4.1",
       "targets": [
         {
           "compartment": "$compartment",
@@ -264,7 +263,7 @@
         "sizing": "auto",
         "valueMode": "color"
       },
-      "pluginVersion": "11.1.0",
+      "pluginVersion": "10.4.1",
       "targets": [
         {
           "compartment": "$compartment",
@@ -356,7 +355,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "11.1.0",
+      "pluginVersion": "10.4.1",
       "targets": [
         {
           "compartment": "$compartment",
@@ -370,7 +369,8 @@
           ],
           "groupBy": "select option (optional)",
           "hide": false,
-          "interval": "select interval",
+          "interval": "[1m]",
+          "intervalLabel": "1 minute",
           "legendFormat": "{{hostName}} ",
           "metric": "CpuUtilization",
           "metricNames": "$resourcegroup",
@@ -552,7 +552,8 @@
             "mode": "percentage",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -589,7 +590,7 @@
         "sizing": "auto",
         "valueMode": "color"
       },
-      "pluginVersion": "11.1.0",
+      "pluginVersion": "10.4.1",
       "targets": [
         {
           "compartment": "$compartment",
@@ -649,7 +650,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -682,7 +684,7 @@
         "frameIndex": 1,
         "showHeader": true
       },
-      "pluginVersion": "11.1.0",
+      "pluginVersion": "10.4.1",
       "targets": [
         {
           "compartment": "$compartment",
@@ -734,7 +736,8 @@
             "mode": "percentage",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "orange",
@@ -772,7 +775,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "11.1.0",
+      "pluginVersion": "10.4.1",
       "targets": [
         {
           "compartment": "$compartment",
@@ -832,7 +835,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "#EAB839",
@@ -868,7 +872,7 @@
         },
         "showHeader": true
       },
-      "pluginVersion": "11.1.0",
+      "pluginVersion": "10.4.1",
       "targets": [
         {
           "compartment": "$compartment",
@@ -901,6 +905,238 @@
       ],
       "title": "Storage Used By TableSpace every 5hrs",
       "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "description": "Transaction Count represents the total number of commits\nand rollbacks performed during a sample period. This statistic is an indication of how much work is being accomplished within the database.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 20,
+            "gradientMode": "scheme",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineWidth": 3,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 0,
+          "fieldMinMax": false,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "transactions"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 53
+      },
+      "id": 11,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "hidden",
+          "placement": "right",
+          "showLegend": false
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "compartment": "$compartment",
+          "compartmentName": "$compartment",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "dimensionValues": [
+            "$dimension"
+          ],
+          "groupBy": "select option (optional)",
+          "hide": false,
+          "interval": "[1m]",
+          "legendFormat": "Hostname: {{hostName}}",
+          "metric": "TransactionCount",
+          "metricNames": "$resourcegroup",
+          "metricNamesFromNS": "$namespace",
+          "namespace": "$namespace",
+          "queryText": "TransactionCount[1m]{$dimension}.avg()",
+          "queryTextRaw": "",
+          "rawQuery": true,
+          "refId": "A",
+          "region": "$region",
+          "resourcegroup": "$resourcegroup",
+          "statistic": "avg()",
+          "tagsValues": [],
+          "tenancy": "DEFAULT/",
+          "tenancyName": "DEFAULT/"
+        }
+      ],
+      "title": "Transaction Count",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "description": "This represents the total time spent by user sessions either actively waiting for a resource (such as I/O, CPU, or locks) or actually using the CPU to process database work.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 20,
+            "gradientMode": "scheme",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineWidth": 3,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 0,
+          "fieldMinMax": false,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "ms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 53
+      },
+      "id": 12,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "hidden",
+          "placement": "right",
+          "showLegend": false
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "compartment": "$compartment",
+          "compartmentName": "$compartment",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "dimensionValues": [
+            "$dimension"
+          ],
+          "groupBy": "select option (optional)",
+          "hide": false,
+          "interval": "[1m]",
+          "legendFormat": "Hostname: {{hostName}}",
+          "metric": "DBTime",
+          "metricNames": "$resourcegroup",
+          "metricNamesFromNS": "$namespace",
+          "namespace": "$namespace",
+          "queryText": "TransactionCount[1m]{$dimension}.avg()",
+          "queryTextRaw": "",
+          "rawQuery": true,
+          "refId": "A",
+          "region": "$region",
+          "resourcegroup": "$resourcegroup",
+          "statistic": "avg()",
+          "tagsValues": [],
+          "tenancy": "DEFAULT/",
+          "tenancyName": "DEFAULT/"
+        }
+      ],
+      "title": "Average Active Sessions",
+      "type": "timeseries"
     }
   ],
   "schemaVersion": 39,
@@ -1031,6 +1267,6 @@
   "timezone": "browser",
   "title": "Database-Management",
   "uid": "bdwrp58zojn5sa",
-  "version": 36,
+  "version": 8,
   "weekStart": ""
 }
