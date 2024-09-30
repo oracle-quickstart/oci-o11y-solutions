@@ -76,7 +76,7 @@ Once the monitors are setup it collects details such as HAR file and network dat
 ## Logging Analytics
 Logging Analytics service helps to analyse the logs from EM application, EM agents, EM repository DB and system logs to give insights into the application and infrastructure health. This can be used for normal day to day monitoring or in case of issues for root cause analysis. 
 
-To get started with Logging Analytics, follow [these steps](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/quick-start.html).
+To get started with Logging Analytics, follow [these steps](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/quick-start.html) from the documentation.
 
 ### Defining custom entity types
 
