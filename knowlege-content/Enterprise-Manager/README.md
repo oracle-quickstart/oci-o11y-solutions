@@ -112,7 +112,7 @@ With that we are ready using the OCI Console to create all needed entities from 
     - Property Name: AgentState
     - Property Value: e.g. _/u01/app/em_agent/agent_inst_   
 
-* WebLogic Doamin Entity:
+* WebLogic Domain Entity:
   - Entity Type: WebLogic Domain
   - Name: e.g. _GCDomain_  
   - Add property:
@@ -137,8 +137,11 @@ With that we are ready using the OCI Console to create all needed entities from 
     - Property Name: component_name
     - Property Value: e.g. _ohs1_
 
+Alternatively, the above WebLogic related entities can be created by [discovering the WebLogic domain](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/auto-discovery-entities-and-log-collection.html). 
 
-* create entities
+Similar, the feature ```Discover New Resource``` can be used to discover the EM Repository DB and Listener. This process will create all needed entities. Otherwise, they can get created manually like described above.
+
+The host entities have already been auto-created while installing the Management Agents. 
   
 * create entity associations
   ```
