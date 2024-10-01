@@ -194,7 +194,7 @@ To do:
   
   
 
-### Stack monitoring
+## Stack monitoring
 Stack Monitoring lets you proactively monitor the EM application and its underlying application stack, including OMS servers and databases. Once discovered, it automatically collects status, load, response, error, and utilization metrics for all application components.
 With anomoly detection built with the metrics collected it helps in understanding the environment abnormalities.
 This [document](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/promotion-and-discovery.html#STMON-GUID-DA187C14-8317-41E8-97B1-3AC8DC660458) has the details on the resouce discovery for the components of the EM.
