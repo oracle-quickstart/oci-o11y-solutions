@@ -185,16 +185,28 @@ For this we will use again OCI CLI commands run in the Cloud Shell. To create th
     oci log-analytics entity-topology list --entity-id $OEM_ID -ns $NS --all | grep -c '"id": '
   ```
 
-So by entering just the EM OMS Entity name e.g. _OEM-Prod_ in the Entity filter from Log Explorer, we will be able to get all the logs from all related components and will be able to correlate and view topology-wise log collection for the EM application:
+With these associations in place, we will be able to get all the logs from all related components by entering just the EM OMS Entity name e.g. _OEM-Prod_ in the Entity filter from Log Explorer. From there, we will be able to correlate and view topology-wise log collection for the whole EM application:
 
 <img width="993" alt="image" src="https://github.com/user-attachments/assets/68936f56-2f42-4ab5-acfa-399c7d9971ac">
 
 ### Import EM specific Log Sources
 
-To be able to properly parse the EM OMS and EM Agent logs, we have provided [several custom log sources](log-sources) which needs to get imported after successful creation of the entity types 
-* import Log Sources for oem_oms and oem_agent type log sources  
-* give mgmt_agent the needed permissions to access logs from system, OMS and DB/Listener
-* Need to associate the log sources to entities using [this](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/manage-source-entity-association.html#LOGAN-GUID-C4604513-1D68-4F19-9352-8DE60C5788A5)
+To be able to properly parse the EM OMS and EM Agent logs, we have provided several custom [log sources](log-sources) which are not yet available OOB in LA. To make them available as sources, download all the provided zip files and upload them using the action `Import Configuration Content` from `Logging Analytics -> Administration`. 
+
+### Associate Log Sources to Entities
+
+Before we can start collecting application, database or system logs, we have to ensure that the Management Agent user is allowed to access all the desired files. The Management Agent user will either be `mgmt_agent` or in case of an OCI VM `oracle-cloud-agent` due to the Management being a plugin of the Oracle Cloud Agent (OCA). There are now different approaches to give this user access to the various log files depending on the location and who is owning them.
+
+* Adding the Management Agent user to the group of the application owner
+  * This is the easiest solution for EM, WebLogic, OHS or database logs.
+  * Verify that all directories in the whole path to the logs and the log files itselves are group readable.
+* Use `setfacl` command to give Management Agent user access to system logs
+  * Example commands to be run as root user or via sudo:
+    *  `setfacl -m u:mgmt_agent:rx /var/log`
+    *  `setfacl -m u:mgmt_agent:r /var/log/messages*`
+    *  `setfacl -m u:mgmt_agent:r /var/log/secure*`   
+
+Now that we ensured readability by the Management Agent user you can follow the [offical docs](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/manage-source-entity-association.html#LOGAN-GUID-C4604513-1D68-4F19-9352-8DE60C5788A5) to associate log sources to the entities.
 
   
   
