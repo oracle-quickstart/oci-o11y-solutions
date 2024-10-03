@@ -231,7 +231,9 @@ Once discovered , the resource home shows all the components related.
 It also starts collecting basic metrics along with enabling baseline and anomoly detection.
 
 ## Management Dashboard
-Once all the services are enabled we can create dashboard and customise it. Here we are giving a sample [dashboard](knowlege-content/Enterprise-Manager/dashboards/Enterprise-Manager-Monitoring-Dashboard.json) which can be imported to your tenancy.
+Once all the services are enabled we can create dashboard and customise it. Here we are giving a sample [dashboard](dashboards) which can be imported to your tenancy. To import this you can ,
+Go to Observability and Management --> Logging Analytics --> Dashboards --> Click on Import Dashboard.
+
 <img width="1386" alt="image" src="https://github.com/user-attachments/assets/d870f741-6430-495d-a777-8462eadfefdf">
 
 ## Optional Services
