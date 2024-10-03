@@ -21,13 +21,13 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "11.1.0"
+      "version": "10.4.1"
     },
     {
       "type": "datasource",
       "id": "oci-metrics-datasource",
       "name": "Oracle Cloud Infrastructure Metrics",
-      "version": "5.5.1"
+      "version": "5.1.1"
     },
     {
       "type": "panel",
@@ -82,9 +82,9 @@
         "uid": "${DS_OCI-METRICS-DATASOURCE}"
       },
       "gridPos": {
-        "h": 15,
-        "w": 12,
-        "x": 6,
+        "h": 14,
+        "w": 24,
+        "x": 0,
         "y": 0
       },
       "id": 9,
@@ -94,11 +94,10 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "    <h1>Application Performance Monitoring Dashboard Instructions</h1>\n    <p><a href=\"https://docs.oracle.com/en-us/iaas/application-performance-monitoring/home.htm\">Click here for APM Documentation</a></p>\n    <br>\n    <h2>How to use the Application Performance Monitoring Dashboard</h2>\n    <p>This dashboard provides examples that can be edited or duplicated to show <strong>APM </strong> metrices. </p>\n    <br>\n\n\n    <h3>Step-by-Step Instructions:</h3>\n    <ol>\n        <li>Choose a Region</li>\n        <li>Choose a Compartment</li>\n        <li>Enter <span style=\"color:red;\">namespace: oracle_apm_moonitoring</span></li>\n        <li>No Resource Group required at present</li>\n        <li>Experiment with Dimensions, in most cases AppserverName, Hostname, AppserverType should work </li>\n    </ol>\n\n    <h3>Important Notes:</h3>\n    <ol>\n        <li>This dashboard is intended for use with the OCI APM services.</li>\n        <li>Please ensure that you have the necessary permissions and credentials to access the dashboard.</li>",
+        "content": "    <h1>Application Performance Monitoring Dashboard Instructions</h1>\n    <p><a href=\"https://docs.oracle.com/en-us/iaas/application-performance-monitoring/home.htm\">Click here for APM Documentation</a></p>\n    <br>\n    <h2>How to use the Application Performance Monitoring Dashboard</h2>\n    <p>This dashboard provides examples that can be edited or duplicated to show <strong>APM </strong> metrices. </p>\n    <br>\n\n\n    <h3>Step-by-Step Instructions:</h3>\n    <ol>\n        <li>Choose a Region</li>\n        <li>Choose a Compartment</li>\n        <li>Enter <span style=\"color:red;\">namespace: oracle_apm_monitoring</span></li>\n        <li>No Resource Group required at present</li>\n        <li>Experiment with Dimensions, in most cases AppserverName, Hostname, AppserverType should work </li>\n    </ol>\n\n    <h3>Important Notes:</h3>\n    <ol>\n        <li>This dashboard is intended for use with the OCI APM services.</li>\n        <li>Please ensure that you have the necessary permissions and credentials to access the dashboard.</li>",
         "mode": "html"
       },
-      "pluginVersion": "11.1.0",
-      "title": "Instructions",
+      "pluginVersion": "10.4.1",
       "transparent": true,
       "type": "text"
     },
@@ -128,7 +127,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 15
+        "y": 14
       },
       "id": 1,
       "options": {
@@ -166,8 +165,8 @@
           ],
           "groupBy": "select option (optional)",
           "hide": false,
-          "interval": "select interval",
-          "legendFormat": " Hostname:  {{Hostname}}, Application: {{AppserverType}}",
+          "interval": "[1m]",
+          "legendFormat": "",
           "metric": "Uptime",
           "metricNames": [
             "BrowserAgentInjectionCount",
@@ -189,7 +188,7 @@
             "UploadErrorCount"
           ],
           "namespace": "$namespace",
-          "queryText": "Uptime[5m]{$dimension}.count()",
+          "queryText": "Uptime[1m]{$dimension}.count()",
           "queryTextRaw": "",
           "rawQuery": true,
           "refId": "A",
@@ -202,7 +201,7 @@
           "tenancyName": "DEFAULT/"
         }
       ],
-      "title": "Uptime by HostName ($Dimension)",
+      "title": "Uptime by Dimension",
       "type": "piechart"
     },
     {
@@ -237,7 +236,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 15
+        "y": 14
       },
       "id": 8,
       "options": {
@@ -258,7 +257,7 @@
         "sizing": "auto",
         "valueMode": "color"
       },
-      "pluginVersion": "11.1.0",
+      "pluginVersion": "10.4.1",
       "targets": [
         {
           "compartment": "$compartment",
@@ -472,7 +471,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 23
+        "y": 22
       },
       "id": 2,
       "options": {
@@ -500,8 +499,8 @@
           ],
           "groupBy": "select option (optional)",
           "hide": false,
-          "interval": "select interval",
-          "legendFormat": "Hostname:  {{HostNames}}, Apllication:  {{AppserverType}} ",
+          "interval": "[1m]",
+          "legendFormat": "",
           "metric": "ProcessCpuLoad",
           "metricNames": [
             "BrowserAgentInjectionCount",
@@ -523,7 +522,7 @@
             "UploadErrorCount"
           ],
           "namespace": "$namespace",
-          "queryText": "ProcessCpuLoad[5m]{$dimension}.avg()",
+          "queryText": "ProcessCpuLoad[1m]{$dimension}.avg()",
           "queryTextRaw": "",
           "rawQuery": true,
           "refId": "A",
@@ -536,7 +535,7 @@
           "tenancyName": "DEFAULT/"
         }
       ],
-      "title": "CPU process Load {Dimension}",
+      "title": "CPU process Load ",
       "type": "timeseries"
     },
     {
@@ -589,7 +588,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -597,7 +597,7 @@
               }
             ]
           },
-          "unit": "ms"
+          "unit": "ns"
         },
         "overrides": []
       },
@@ -605,7 +605,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 31
+        "y": 30
       },
       "id": 3,
       "options": {
@@ -657,20 +657,20 @@
             "UploadErrorCount"
           ],
           "namespace": "$namespace",
-          "queryText": "ProcessCpuTime[1m]{$dimension}.avg()",
+          "queryText": "ProcessCpuTime[1m]{$dimension}.increment()",
           "queryTextRaw": "",
           "rawQuery": true,
           "refId": "A",
           "region": "$region",
           "resourcegroup": "NoResourceGroup",
-          "statistic": "avg()",
-          "statisticLabel": "average",
+          "statistic": "increment()",
+          "statisticLabel": "per-interval change",
           "tagsValues": [],
           "tenancy": "DEFAULT/",
           "tenancyName": "DEFAULT/"
         }
       ],
-      "title": "CPU Process Time {Dimension}",
+      "title": "CPU Process Time ",
       "type": "timeseries"
     },
     {
@@ -689,7 +689,8 @@
             "mode": "percentage",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -697,7 +698,7 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "decbytes"
         },
         "overrides": []
       },
@@ -705,7 +706,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 38
+        "y": 37
       },
       "id": 6,
       "options": {
@@ -725,7 +726,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "11.1.0",
+      "pluginVersion": "10.4.1",
       "targets": [
         {
           "compartment": "$compartment",
@@ -824,7 +825,7 @@
           "tenancyName": "DEFAULT/"
         }
       ],
-      "title": "Heap Commited and Heap Used for a given Host",
+      "title": "Heap Commited and Heap Used ",
       "type": "stat"
     },
     {
@@ -843,7 +844,8 @@
             "mode": "percentage",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -851,7 +853,7 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "decbytes"
         },
         "overrides": []
       },
@@ -859,7 +861,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 38
+        "y": 37
       },
       "id": 7,
       "options": {
@@ -879,7 +881,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "11.1.0",
+      "pluginVersion": "10.4.1",
       "targets": [
         {
           "compartment": "$compartment",
@@ -895,7 +897,7 @@
           "hide": false,
           "interval": "[1m]",
           "intervalLabel": "1 minute",
-          "legendFormat": "GC After Old Committed",
+          "legendFormat": "Heap Commited After Old GC",
           "metric": "GcAfterOldCommitted",
           "metricNames": [
             "BrowserAgentInjectionCount",
@@ -917,14 +919,14 @@
             "UploadErrorCount"
           ],
           "namespace": "$namespace",
-          "queryText": "GcAfterOldCommitted[1m]{$dimension}.avg()",
+          "queryText": "GcAfterOldCommitted[1m]{$dimension}.min()",
           "queryTextRaw": "",
           "rawQuery": true,
           "refId": "A",
           "region": "$region",
           "resourcegroup": "NoResourceGroup",
-          "statistic": "avg()",
-          "statisticLabel": "average",
+          "statistic": "min()",
+          "statisticLabel": "minimum",
           "tagsValues": [],
           "tenancy": "DEFAULT/",
           "tenancyName": "DEFAULT/"
@@ -943,7 +945,7 @@
           "hide": false,
           "interval": "[1m]",
           "intervalLabel": "1 minute",
-          "legendFormat": "GC After Young Committed ",
+          "legendFormat": "Heap Commited After Young GC",
           "metric": "GcAfterYoungCommitted",
           "metricNames": [
             "BrowserAgentInjectionCount",
@@ -978,7 +980,7 @@
           "tenancyName": "DEFAULT/"
         }
       ],
-      "title": "Committed GC After Old v After Young  for a given Host",
+      "title": "Committed GC After Old v After Young  ",
       "type": "stat"
     },
     {
@@ -1029,7 +1031,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1037,7 +1040,7 @@
               }
             ]
           },
-          "unit": "decmbytes"
+          "unit": "decbytes"
         },
         "overrides": []
       },
@@ -1045,7 +1048,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 46
+        "y": 45
       },
       "id": 4,
       "options": {
@@ -1075,7 +1078,7 @@
           "hide": false,
           "interval": "[1m]",
           "intervalLabel": "1 minute",
-          "legendFormat": "GC After Old Used {{HostNames}}",
+          "legendFormat": "GC After Old Used ",
           "metric": "GcAfterOldUsed",
           "metricNames": [
             "BrowserAgentInjectionCount",
@@ -1123,7 +1126,7 @@
           "hide": false,
           "interval": "[1m]",
           "intervalLabel": "1 minute",
-          "legendFormat": "GC After Young Used {{HostNames}}",
+          "legendFormat": "GC After Young Used ",
           "metric": "GcAfterYoungUsed",
           "metricNames": [
             "BrowserAgentInjectionCount",
@@ -1158,7 +1161,7 @@
           "tenancyName": "DEFAULT/"
         }
       ],
-      "title": "Used GC After Old v After Young for a given Host",
+      "title": "Used GC After Old v After Young ",
       "type": "timeseries"
     },
     {
@@ -1179,9 +1182,9 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
-            "drawStyle": "bars",
-            "fillOpacity": 0,
-            "gradientMode": "none",
+            "drawStyle": "line",
+            "fillOpacity": 36,
+            "gradientMode": "hue",
             "hideFrom": {
               "legend": false,
               "tooltip": false,
@@ -1189,11 +1192,10 @@
             },
             "insertNulls": false,
             "lineInterpolation": "linear",
-            "lineWidth": 1,
+            "lineWidth": 2,
             "pointSize": 5,
             "scaleDistribution": {
-              "log": 2,
-              "type": "log"
+              "type": "linear"
             },
             "showPoints": "always",
             "spanNulls": false,
@@ -1210,7 +1212,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1226,7 +1229,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 54
+        "y": 53
       },
       "id": 5,
       "options": {
@@ -1256,7 +1259,7 @@
           "hide": false,
           "interval": "[1m]",
           "intervalLabel": "1 minute",
-          "legendFormat": "GC Young Total  - {{HostNames}}",
+          "legendFormat": "GC Young Total  ",
           "metric": "GcYoungTotalTime",
           "metricNames": [
             "BrowserAgentInjectionCount",
@@ -1304,7 +1307,7 @@
           "hide": false,
           "interval": "[1m]",
           "intervalLabel": "1 minute",
-          "legendFormat": "GC Old Total - {{HostNames}}",
+          "legendFormat": "GC Old Total ",
           "metric": "GcOldTotalTime",
           "metricNames": [
             "BrowserAgentInjectionCount",
@@ -1339,7 +1342,7 @@
           "tenancyName": "DEFAULT/"
         }
       ],
-      "title": "Total Time GC Young v Old Total for a given Hostname",
+      "title": "Total Time GC Young v Old Total ",
       "type": "timeseries"
     }
   ],
@@ -1471,6 +1474,6 @@
   "timezone": "browser",
   "title": "APM Monitoring",
   "uid": "fdw7bd7fejvgga",
-  "version": 27,
+  "version": 21,
   "weekStart": ""
 }
