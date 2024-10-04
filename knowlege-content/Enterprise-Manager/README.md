@@ -233,7 +233,8 @@ It also starts collecting basic metrics along with enabling baseline and anomoly
 ## Management Dashboard
 Once all the services are enabled we can create dashboard and customise it. Here we are giving a sample [dashboard](dashboards) which can be imported to your tenancy. To import this you can ,
 Go to Observability and Management --> Logging Analytics --> Dashboards --> Click on Import Dashboard.
-<img width="1372" alt="image" src="https://github.com/user-attachments/assets/c50e19be-5eb7-48ef-a19d-f08e22852d14">
+<img width="1371" alt="image" src="https://github.com/user-attachments/assets/0a929077-c466-4c74-89d8-97159f87fa33">
+
 
 ## Optional Services
 ### Database Management 
