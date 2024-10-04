@@ -41,9 +41,10 @@ Gather the following information before deployment:
 
 1. Log in to OCI Console
 2. Navigate to Marketplace > All Applications
-3. Search for *Grafana*
-4. Choose the compartment and version and click Launch Instance
-5. Fill in the required variables as prompted:
+3. Search for *Grafana* and click on "OCI Observability with Grafana"
+4. Choose the latest Version and choose your Compartment, review and acknowledge the terms and click *Launch Stack*
+5. Click "Next" on the Stack information page
+6. Fill in the required variables as prompted:
 
    - General Configuration:
      - Select your Compartment Name
@@ -79,8 +80,11 @@ Gather the following information before deployment:
 1. Log in with the default credentials:
    - Username: admin
    - Password: admin
-2. You will be prompted to change the password on first login
+     
 ![Password Change](Images/GF-passwd.jpg)
+
+2. You will be prompted to change the password on first login
+
 
 ### Configuring OCI Monitoring Data Source to add Instance Principle
 
@@ -89,11 +93,14 @@ Next step is to add the OCI datasource and configure the Instance Principle.
 1. Navigate to the Menu on the left > Connections > Data Sources
 2. Click on Add data source
 ![AddDataSource](Images/GF-AddDataSource.jpg)
+
 3. In the Search box type : oracle
 4. Click on Oracle Cloud Infrastructure Metrics
 ![MetricSource](Images/GF-OCIMetricDataSource.jpg)
+
 5. Click on Authentication Provider under Connection Details and select OCI Instance
 ![Instance](Images/GF-Connection.jpg)
+
 6. Click on Save & test and verify Success
 ![Success](Images/GF-ConnectionSuccess.jpg)
 
@@ -109,10 +116,11 @@ All dashboards are located in the Dashboards directory (<https://github.com/orac
 1. Click on one of dashboard json files (for example Stack_Monitoring.json)
 
 2. Click on "Copy raw content" to copy the json content.
-
 ![copyjson](Images/GH-dashboardjson.jpg)
+
 3. On the Grafana install click on Dashboards from the Main Menu and then New > Import
 ![Import](Images/GF-Import.jpg)
+
 4. Past the copied content (from step 2) to the section under "Import via dashboard JSON model" and click Load
 ![LoadImport](Images/GF-LoadImport.jpg)
 Ensure to choose oci-metrics-datasource as the Default data source.
