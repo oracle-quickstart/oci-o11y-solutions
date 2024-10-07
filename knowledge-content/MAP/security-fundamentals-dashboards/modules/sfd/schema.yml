@@ -18,6 +18,9 @@ variableGroups:
       - "create_service_connector_audit"
       - "logging_analytics_log_group_name"
       - "service_connector_audit_state"
+      - "configure_flow_logs"
+      - "flow_logs_log_groups_ids"
+ 
 
   - title: "Hidden Variables"
     visible: false
@@ -28,6 +31,8 @@ variableGroups:
       - "private_key_path"
       - "private_key_password"
       - "iam_dashboard_import_custom_content_file"
+      - "subnet_flow_logs_compartment_ids"
+      
 
 variables:
   region:
@@ -63,10 +68,32 @@ variables:
   logging_analytics_log_group_name:
     type: string
     required: true
-    default: "sfd_identity_domain_audit"
-    description: "Name of the Logging Analytics Log Group that will have the Audit Logs"
+    default: "sfd_la_log_group"
+    description: "Name of the Logging Analytics Log Group that will have the Logs.  The log group is create in the same compartment as the dasboard."
     title: "Logging Analytic Log Group Name"
     visible: create_service_connector_audit
+
+  configure_flow_logs:
+    type: boolean
+    title: "Include Subnet Flow Logs?"
+    description: "Allows to include OCI Log Groups with Flow Logs as sources for the Service Connector."
+    required: true
+    default: false
+    visible: create_service_connector_audit
+
+  flow_logs_log_groups_ids:
+    type: array
+    required: false
+    items:
+      type: string
+    uniqueItems: true
+    maxItems: 10
+    minItems: 1
+    description: "List of existing OCI Log Group OCIDs that contain the flow logs.  These log groups will be added as a source of the Service Connector."
+    title: "Existing OCI Flow Log Groups OCIDs"
+    visible: configure_flow_logs
+
+  
 
 # Variables not required to display to user
   user_ocid:

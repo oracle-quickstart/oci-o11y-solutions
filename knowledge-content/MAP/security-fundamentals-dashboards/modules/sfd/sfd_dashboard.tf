@@ -7,7 +7,8 @@ locals {
     regions_map              = { for r in data.oci_identity_regions.these.regions : r.key => r.name } # All regions indexed by region key.
     sfd_repo                 = "https://raw.githubusercontent.com/oracle-quickstart/oci-o11y-solutions/main/knowlege-content/MAP/security-fundamentals-dashboards/"
     dashboard_names          = toset(["Identity%20Security.json","Network%20Security.json","Security%20Operations.json"])
-    
+    sch_source_logs          = concat(["_Audit_Include_Subcompartment"], var.configure_flow_logs ? var.flow_logs_log_groups_ids : [] )
+     
 }
 
 data "oci_identity_regions" "these" {}
@@ -23,14 +24,19 @@ data "http" "security_dashboards" {
   }
 }
 
-data "oci_logging_log_groups" "oci_log_groups" {
-    #Required
-    compartment_id = var.sfd_compartment_ocid
-
-    #Optional
-    display_name = "_Audit_Include_Subcompartment"
-    #is_compartment_id_in_subtree = var.log_group_is_compartment_id_in_subtree
+data "oci_logging_log_group" "flow_log_group" {
+  for_each = var.flow_logs_log_groups_ids != null ? toset(var.flow_logs_log_groups_ids) : []
+    log_group_id = each.value
 }
+
+# data "oci_logging_log_groups" "oci_log_groups" {
+#     #Required
+#     compartment_id = var.sfd_compartment_ocid
+
+#     #Optional
+#     display_name = "_Audit_Include_Subcompartment"
+#     #is_compartment_id_in_subtree = var.log_group_is_compartment_id_in_subtree
+# }
 
 
 # output "audit_id" {
@@ -88,20 +94,38 @@ data "oci_log_analytics_log_analytics_log_group" "iam_dashboard_log_group_detail
 
 resource "oci_sch_service_connector" "iam_dashboard_service_connector" {
   count = (var.create_service_connector_audit  == true ) ? 1 : 0
+  lifecycle {
+      ## Check 1: Valid log group ocid.
+      precondition {
+        condition = var.configure_flow_logs == true ? !contains([for logid in var.flow_logs_log_groups_ids : data.oci_logging_log_group.flow_log_group[logid].id == null],true): true
+        error_message = "VALIDATION FAILURE.  A provided OCI Log Group OCID is not valid."
+      }
+  }  
   compartment_id = var.sfd_compartment_ocid
   #defined_tags  = {"${oci_identity_tag_namespace.tag-namespace1.name}.${oci_identity_tag.tag1.name}" = "updatedValue"}
-  description    = "Used to populate Logging Analytics with OCI Audit Logs"
-  display_name   = "IAM Identity Domain Audit to Logging Analytics"
+  description    = "Used to populate Logging Analytics with OCI Audit Logs and Flow Logs used by SFD"
+  display_name   = "SFD Service Connector for Logging Analytics"
 
 
   source {
     kind = "logging"
     #Audit
-    log_sources {
-      compartment_id = var.sfd_compartment_ocid
-      log_group_id   = "_Audit"
-      log_id = ""
+    # log_sources {
+    #   compartment_id = var.sfd_compartment_ocid
+    #   log_group_id   = "_Audit"
+    #   log_id = ""
+    # }
+  dynamic "log_sources" {
+    for_each = local.sch_source_logs 
+
+    content {
+      #compartment_id = var.sfd_compartment_ocid
+      compartment_id = log_sources.value == "_Audit_Include_Subcompartment" ? var.tenancy_ocid : data.oci_logging_log_group.flow_log_group[log_sources.value].compartment_id
+      log_group_id   = log_sources.value
+      log_id = ""      
     }
+
+  }
   }
   target {
     kind            = "loggingAnalytics"
