@@ -48,7 +48,7 @@ Knowledge content files in [knowldge-content](./knowlege-content/) folder are or
 
 ## :raising_hand: I am a subject matter expert
 
-* Instruction for contributing to this repository
+* Instruction for contributing to this repository.
 
 ## License
 
