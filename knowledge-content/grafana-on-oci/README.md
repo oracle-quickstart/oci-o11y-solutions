@@ -111,7 +111,7 @@ Next step is to import the example custom dashboards.
 ### Adding Custom Dashboards
 
 After deployment, you can import custom dashboards in Grafana to visualise your OCI metrics.
-All dashboards are located in the Dashboards directory (<https://github.com/oracle-quickstart/oci-o11y-solutions/tree/main/knowlege-content/grafana-on-oci>)
+All dashboards are located in the Dashboards directory (<https://github.com/oracle-quickstart/oci-o11y-solutions/tree/main/knowledge-content/grafana-on-oci>)
 
 1. Click on one of dashboard json files (for example Stack_Monitoring.json)
 
