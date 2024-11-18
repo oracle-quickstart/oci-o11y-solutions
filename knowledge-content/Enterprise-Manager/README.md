@@ -218,10 +218,9 @@ With anomoly detection built with the metrics collected it helps in understandin
 This [document](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/promotion-and-discovery.html#STMON-GUID-DA187C14-8317-41E8-97B1-3AC8DC660458) has the details on the resouce discovery for the components of the EM.
 To discover any resource in Stack monitoring , go to Resource management --> Discover resources
 
-<img width="1384" alt="image" src="https://github.com/user-attachments/assets/c8a1fb3c-9dbf-4200-8514-5a1b49db260d">
-Click on Discover New Resource and select the Resource Type that is needed.
-
 <img width="1384" alt="Image-4" src="https://github.com/user-attachments/assets/01f1478d-1513-4108-aec7-7726dc5a3334">
+
+Click on Discover New Resource and select the Resource Type that is needed.
 
 Fill in the details related to the Resource that need to be discovered and click on Discover New Resource to submit the job.
 
