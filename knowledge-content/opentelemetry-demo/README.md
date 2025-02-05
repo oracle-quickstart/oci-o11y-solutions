@@ -8,7 +8,7 @@ Our aim is to guide you through the needed steps to deploy the OpenTelemetry Dem
 The following prerequisites are needed:
 1. Ensure to have an [OCI account](https://signup.cloud.oracle.com).
 2. In Application Performance Monitoring (APM) service, create an APM domain.
-3. Have the Data Upload Endpoint URL and the private data key of that domain available.
+3. Have the [Data Upload Endpoint URL and the private data key](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/obtain-data-upload-endpoint-and-data-keys.html#GUID-912EA36F-4E58-4954-B9C2-4E9A9BADDAE9) of that domain available.
 4. Have a Kubernetes Cluster available, either locally, in OCI or at other cloud vendors.
 
 ## Deploy the Demo App
