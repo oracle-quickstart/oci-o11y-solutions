@@ -2,7 +2,7 @@
 
 The [OpenTelemetry Astronomy Shop](https://github.com/open-telemetry/opentelemetry-demo) is a demo app to illustrate the implementation of OpenTelemetry in a near real-world environment. It is a microservice-based distributed system which can be easily deployed using Docker or Kubernetes, where we will focus here on deploying it using Kubernetes/Helm.
 
-Our aim is to guide you through the needed steps to deploy the OpenTelemetry Demo in a K8s cluster and send its data to OCI Observability and Management Services.
+Our aim is to guide you through the needed steps to deploy the OpenTelemetry Demo in a K8s cluster and send its data to OCI Observability and Management Services...
 
 ## Prerequisites
 The following prerequisites are needed:
