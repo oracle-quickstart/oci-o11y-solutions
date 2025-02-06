@@ -80,3 +80,14 @@ Here is the expected output:
   Load Generator UI    http://localhost:8080/loadgen/
   Feature Flags UI     http://localhost:8080/feature/    
 ```
+
+## Using OCI APM service to observe traces and spans
+With the OpenTelemetry Demo App installed, you are now ready to explore the capabilities of OCI APM (Application Performance Monitoring) and gain deep insights into your application's performance. Lets start by showing you the process of visualising spans and traces using OCI APM, showcasing its powerful features and benefits.
+
+### Getting Started with OCI APM
+-
+-
+
+### Visulaising Spans and Traces
+-
+-
