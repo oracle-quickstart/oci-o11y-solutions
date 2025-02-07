@@ -107,5 +107,15 @@ Click on any of the spans to see the span details, which include kubernetes data
 OCI Logging Analytics provides a [complete solution](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/kubernetes-solution.html) for monitoring Kubernetes (K8s) cluster deployed in OCI, third party public clouds, private clouds, or on-premises including managed Kubernetes deployments. We will start with discovering the K8s cluster running the OpenTelemetry Demo App.
 
 ### Getting Started with monitoring a K8s Cluster using OCI Logging Analytics
-Log in to your Oracle Cloud Infrastructure console and navigate to Logging Analytics Administration. Select Solutions -> Kubernetes -> Connect Clusters -> Monitor Kubernetes -> Oracle OKE, here we are assuming that the K8s cluster is running in OCI. Select the Cluster and press *Next* and select there the Comparment to be used for telemetry data and related monitoring resources, usually it will be the same like the one used for collecting the logs. Click on *Configure log collection* o kick-off collecting logs, metrics, and object information from related Kubernetes components, computer nodes, subnets, and load balancers.
-
+Log in to your Oracle Cloud Infrastructure console and navigate to Logging Analytics Administration. Select Solutions -> Kubernetes -> Connect Clusters -> Monitor Kubernetes -> Oracle OKE, here we are assuming that the K8s cluster is running in OCI. Select the Cluster, press *Next* and select the right compartment to be used for telemetry data and related monitoring resources, usually it will be the same like the one used for collecting the logs. Click on *Configure log collection*, this will create all neded dynamic groups and policies to allow collecting logs, metrics, and object information from related Kubernetes components, computer nodes, subnets, and load balancers. The deployed solution will create these statefulsets, daemonsets and cronjobs in namespace *oci-onm*:
+```bash
+$ kubectl get pods -n oci-onm
+NAME                               READY   STATUS      RESTARTS   AGE
+oci-onm-discovery-28982290-zdkxx   0/1     Completed   0          14m
+oci-onm-discovery-28982295-bztr2   0/1     Completed   0          9m12s
+oci-onm-discovery-28982300-zrxxq   0/1     Completed   0          4m12s
+oci-onm-logan-krcmb                1/1     Running     3          80d
+oci-onm-logan-npltp                1/1     Running     2          80d
+oci-onm-logan-tthvm                1/1     Running     2          80d
+oci-onm-mgmt-agent-0               1/1     Running     2          80d
+```
