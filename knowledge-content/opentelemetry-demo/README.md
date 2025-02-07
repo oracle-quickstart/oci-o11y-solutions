@@ -119,3 +119,31 @@ oci-onm-logan-npltp                1/1     Running     2          80d
 oci-onm-logan-tthvm                1/1     Running     2          80d
 oci-onm-mgmt-agent-0               1/1     Running     2          80d
 ```
+### Screenshots from the Solution Dashboard
+Cluster overview:
+![K8s-Solution-01](https://github.com/user-attachments/assets/3d767718-60aa-4b47-b84a-93fedf5f9db4)
+
+Workload overview:
+![K8s-Solution-02](https://github.com/user-attachments/assets/e8bad199-f6c0-4155-8140-0758cdffab12)
+
+Node overview:
+![K8s-Solution-03](https://github.com/user-attachments/assets/ce809518-70e9-4d09-8cbe-0f3ff4662172)
+
+Pod overview:
+![K8s-Solution-04](https://github.com/user-attachments/assets/a0d7dbe1-9cc9-4219-886e-fa8f4691a382)
+
+### Screenshots from Log Explorer
+
+List of TOP Log Sources:
+![K8s-Log-Sources](https://github.com/user-attachments/assets/a4637601-d932-436a-9921-2f333f0d5450)
+
+Log Records by Pod name:
+![K8s-Log-by-Pods](https://github.com/user-attachments/assets/47934bca-3084-47e7-87e6-4df986cbe42a)
+
+Compare Cluster results:
+![K8s-Log-Sources_compare-cluster](https://github.com/user-attachments/assets/27d78650-85fe-4c73-9566-08e115e3ebc4)
+
+
+
+
+
