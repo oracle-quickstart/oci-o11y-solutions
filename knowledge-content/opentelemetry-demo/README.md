@@ -102,10 +102,9 @@ Click on any of the spans to see the span details, which include kubernetes data
 
 Services Topology view allows to visualize associations between services, several parameters can be used for the arrow width:
 
-![Service-Topology-06](https://github.com/user-attachments/assets/b98a2b79-b9cc-4bd9-aa4b-e9a1ce21245d)
+![Service-Topology-07](https://github.com/user-attachments/assets/78e97dde-f569-4e18-b9e2-ebc5c95077f5)
 
-![Service-Topology-05](https://github.com/user-attachments/assets/f7f64081-980e-46b3-b0e4-964fb37f3f38)
-
+![Service-Topology-08](https://github.com/user-attachments/assets/be3f58ec-7875-4514-a759-36e8297e2488)
 
 ## Using OCI Logging Analytics service to collect and analyze Logs from Kubernetes Infrastructure and Pods
 OCI Logging Analytics provides a [complete solution](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/kubernetes-solution.html) for monitoring Kubernetes (K8s) cluster deployed in OCI, third party public clouds, private clouds, or on-premises including managed Kubernetes deployments. We will start with discovering the K8s cluster running the OpenTelemetry Demo App.
