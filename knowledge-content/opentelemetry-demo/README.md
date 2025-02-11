@@ -147,6 +147,25 @@ Compare Cluster results:
 ![K8s-Log-Sources_compare-cluster](https://github.com/user-attachments/assets/27d78650-85fe-4c73-9566-08e115e3ebc4)
 
 
+## Using OCI Monitoring service to inspect the collected metrics
 
+Metrics from the OpenTelemetry Demo App are routed via OpenTelemetry Collector to OCI APM service which in turn will forwarded them to OCI Monitoring service. In parallel, infrastructure metrics from the Kubernetes cluster itself are getting collected by the OCI Management Agent which is running as statefulset in the cluster.
+
+The collected metrics can be inspected using the Metrics Explorer from the OCI Monitoring service.
+
+Metrics collected by the Management Agent can be found in metric namespace *mgmtagent_kubernetes_metrics*:
+
+![Metrics-Explorer-06](https://github.com/user-attachments/assets/9863f36e-7097-4b34-ae7e-c11454335118)
+
+
+Metrics sent by the OpenTelemetry Collector can be found in metric namespace *oracle_apm_monitoring*:
+
+![Metrics-Explorer-03](https://github.com/user-attachments/assets/1aa3bea0-4bd1-4bba-81e1-eff9a2d474ea)
+
+Finally, out-of-the-box or custom dashboards can be used to visualize the collected metrics:
+
+![k8s-metrics-dashboard-01](https://github.com/user-attachments/assets/5b93d412-4974-4049-a22b-5c8d5be89fc1) 
+
+![k8s-metrics-dashboard-02](https://github.com/user-attachments/assets/8b6ff3d8-f168-4581-b68e-0baf21b5b986)
 
 
