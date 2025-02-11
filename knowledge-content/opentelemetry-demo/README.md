@@ -18,7 +18,7 @@ kubectl create namespace otel-demo-app
 ```
 Next, we will create a secret named <samp>oci-apm-secret</samp>:
 ```bash
-kubectl create secret generic oci-apm-secret -n otel-demo-app --from-literal="OCI_APM_ENDPOINT=<Data Upload Endpoint>" --from-literal="OCI_APM_DATAKEY=<Data Key>"
+kubectl create secret generic oci-apm-secret -n otel-demo-app --from-literal="OCI_APM_ENDPOINT=<Data Upload Endpoint>" --from-literal="OCI_APM_DATAKEY=<Private Data Key>"
 ```
 Add the OpenTelemetry Helm charts site to your repo to allow deploying the OpenTelemetry Demo:
 ```bash
