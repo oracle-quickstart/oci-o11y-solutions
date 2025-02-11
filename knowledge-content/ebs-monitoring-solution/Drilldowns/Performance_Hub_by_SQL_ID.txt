@@ -1,0 +1,20 @@
+dbmgmt-ui/perfhub?ocid=[PDB OCID]&perfhubContext={
+	"dateTime": {
+		"startDate":,
+		"endDate":
+	},
+	"viewPort": {
+		"startDate": "",
+		"endDate": ""
+	},
+	"selectedTab": {
+		"name": "activityTab",
+		"filters": [
+			{
+				"key": "filter_list",
+				"value": "{\"sqlid\":{\"value\":\"\",\"disabled\":false}}"
+			}
+		]
+	}
+}
+					
