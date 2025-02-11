@@ -92,7 +92,7 @@ Click on the "Traces" tab in the APM console / Trace Explorer. You will see a li
 
 ![Trace-Explorer-05](https://github.com/user-attachments/assets/81e98ec3-cac9-4498-9c58-4a204e361dc0)
 
-Select a specific trace to view its details, including the span topology and tree topology:
+Select a specific trace to view its details, including the topology of the trace and its spans:
 
 ![Trace-Explorer-04](https://github.com/user-attachments/assets/e864abb7-3db0-4491-8bde-a3a7e7141c30)
 
