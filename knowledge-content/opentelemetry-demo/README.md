@@ -110,7 +110,7 @@ Services Topology view allows to visualize associations between services, severa
 OCI Logging Analytics provides a [complete solution](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/kubernetes-solution.html) for monitoring Kubernetes (K8s) cluster deployed in OCI, third party public clouds, private clouds, or on-premises including managed Kubernetes deployments. We will start with discovering the K8s cluster running the OpenTelemetry Demo App.
 
 ### Getting Started with monitoring a K8s Cluster using OCI Logging Analytics
-Log in to your Oracle Cloud Infrastructure console and navigate to Logging Analytics Administration. Select Solutions -> Kubernetes -> Connect Clusters -> Monitor Kubernetes -> Oracle OKE, here we are assuming that the K8s cluster is running in OCI. Select the Cluster, press *Next* and select the right compartment to be used for telemetry data and related monitoring resources, usually it will be the same like the one used for collecting the logs. Click on *Configure log collection*, this will create all neded dynamic groups and policies to allow collecting logs, metrics, and object information from related Kubernetes components, computer nodes, subnets, and load balancers. The deployed solution will create these statefulsets, daemonsets and cronjobs in namespace *oci-onm*:
+Log in to your Oracle Cloud Infrastructure console and navigate to Logging Analytics Administration. Select Solutions -> Kubernetes -> Connect Clusters -> Monitor Kubernetes -> Oracle OKE, here we are assuming that the K8s cluster is running in OCI. Select the Cluster, press *Next* and select the right compartment to be used for telemetry data and related monitoring resources, usually it will be the same like the one used for collecting the logs. Click on *Configure log collection*, this will create all neded dynamic groups and policies to allow collecting logs, metrics, and object information from related Kubernetes components, compute nodes, subnets, and load balancers. The deployed solution will create these statefulsets, daemonsets and cronjobs in namespace *oci-onm*:
 ```bash
 $ kubectl get pods -n oci-onm
 NAME                               READY   STATUS      RESTARTS   AGE
@@ -149,7 +149,7 @@ Compare Cluster results:
 
 ## Using OCI Monitoring service to inspect the collected metrics
 
-Metrics from the OpenTelemetry Demo App are routed via OpenTelemetry Collector to OCI APM service which in turn will forwarded them to OCI Monitoring service. In parallel, infrastructure metrics from the Kubernetes cluster itself are getting collected by the OCI Management Agent which is running as statefulset in the cluster.
+Metrics from the OpenTelemetry Demo App are routed via OpenTelemetry Collector to OCI APM service which in turn will forward them to OCI Monitoring service. In parallel, infrastructure metrics from the Kubernetes cluster itself are getting collected by the OCI Management Agent which is running as statefulset in the cluster.
 
 The collected metrics can be inspected using the Metrics Explorer from the OCI Monitoring service.
 
