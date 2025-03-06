@@ -1,0 +1,10 @@
+https://cloud.oracle.com/opsi/dashboard/sqlInsights?
+dashId=OOBD-opsi-sql-dashboard
+&dashFilter.opsiFlexFilter=<DbOracleSqlId>
+&compartmentId=<OciCompartmentId>
+&activeCompartmentId=<OciCompartmentId>
+&dashFilter.opsiSqlId=<DbOracleSqlId>
+®ion=<OciRegion>
+&dashFilter.opsiDatabaseFilter=[OPSI DB OCID]
+&dashFilter.opsiContext=sqlInsights
+&dashFilter.compartmentId=<OciCompartmentId>
