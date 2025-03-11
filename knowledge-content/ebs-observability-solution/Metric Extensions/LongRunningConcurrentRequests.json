@@ -1,0 +1,63 @@
+{
+  "type": "MetricExtension",
+  "schemaVersion": "1.0.0",
+  "on": "2025-02-05 20:47:36.918285321",
+  "data": {
+    "name": "<give name of metric extension, e.g. ME_LongRunningConcurrentRequests10m>",
+    "displayName": "<give display name of metric extension, e.g. Long Running Concurrent Requests>",
+    "resourceType": "oci_oracle_pdb",
+    "compartmentId": "<give compartment Id of metric extension, e.g. ocid1.compartment.oc1..aaaaaaaatggblydhmdaqbrr4zzfzuktfslhhinycefjvapa4ltvz7z6nzy2a>",
+    "description": "<give description of metric extension, e.g. Gathers all active concurrent requests which are running over 10 minutes>",
+    "collectionRecurrences": "<give collection frequency of metric extension, e.g. FREQ=MINUTELY;INTERVAL=10>",
+    "metricList": [
+      {
+        "name": "RequestId",
+        "isDimension": true,
+        "dataType": "NUMBER",
+        "isHidden": false
+      },
+      {
+        "name": "ProgramName",
+        "isDimension": true,
+        "dataType": "STRING",
+        "isHidden": false
+      },
+      {
+        "name": "Phase",
+        "isDimension": true,
+        "dataType": "STRING",
+        "isHidden": false
+      },
+      {
+        "name": "RuntimeMinutes",
+        "isDimension": false,
+        "dataType": "NUMBER",
+        "isHidden": false,
+        "unit": "Mins"
+      },
+      {
+        "name": "Username",
+        "isDimension": true,
+        "dataType": "STRING",
+        "isHidden": false
+      },
+      {
+        "name": "SQLId",
+        "isDimension": true,
+        "dataType": "STRING",
+        "isHidden": false
+      }
+    ],
+    "queryProperties": {
+      "collectionMethod": "SQL",
+      "sqlType": "STATEMENT",
+      "sqlDetails": {
+        "content": "U0VMRUNUIERJU1RJTkNUIAogICAgY29uYy5yZXF1ZXN0X2lkIEFTIFJlcXVlc3RJZCwKICAgIGNvbmMucHJvZ3JhbV9zaG9ydF9uYW1lIEFTIFByb2dyYW1OYW1lLAogICAgY29uYy5waGFzZV9jb2RlIEFTIFBoYXNlLAogICAgUk9VTkQoKE5WTChjb25jLmFjdHVhbF9jb21wbGV0aW9uX2RhdGUsIFNZU0RBVEUpIC0gY29uYy5hY3R1YWxfc3RhcnRfZGF0ZSkgKiAyNCAqIDYwLCAyKSBBUyBSdW50aW1lTWludXRlcywKICAgIGNvbmMucmVxdWVzdG9yIEFTIFVzZXJuYW1lLAogICAgTlZMKHNxbC5zcWxfaWQsICdOL0EnKSBBUyBTUUxJZApGUk9NIAogICAgYXBwcy5mbmRfY29uY19yZXFfc3VtbWFyeV92IGNvbmMKTEVGVCBKT0lOIAogICAgYXBwcy5mbmRfY29uY3VycmVudF9wcm9jZXNzZXMgY3Byb2MKICAgIE9OIGNvbmMuY29udHJvbGxpbmdfbWFuYWdlciA9IGNwcm9jLmNvbmN1cnJlbnRfcHJvY2Vzc19pZApMRUZUIEpPSU4gCiAgICBndiRwcm9jZXNzIG9yYXAKICAgIE9OIG9yYXAucGlkID0gY3Byb2Mub3JhY2xlX3Byb2Nlc3NfaWQKTEVGVCBKT0lOIAogICAgZ3Ykc2Vzc2lvbiBvcmFzCiAgICBPTiBvcmFzLnBhZGRyID0gb3JhcC5hZGRyCkxFRlQgSk9JTiAKICAgIGd2JHNxbCBzcWwKICAgIE9OIG9yYXMuc3FsX2lkID0gc3FsLnNxbF9pZApXSEVSRSAKICAgIGNvbmMucGhhc2VfY29kZSAhPSAnQycKICAgIEFORCAoTlZMKGNvbmMuYWN0dWFsX2NvbXBsZXRpb25fZGF0ZSwgU1lTREFURSkgLSBjb25jLmFjdHVhbF9zdGFydF9kYXRlKSAqIDE0NDAgPiAxMApPUkRFUiBCWQogICAgUk9VTkQoKE5WTChjb25jLmFjdHVhbF9jb21wbGV0aW9uX2RhdGUsIFNZU0RBVEUpIC0gY29uYy5hY3R1YWxfc3RhcnRfZGF0ZSkgKiAyNCAqIDYwLCAyKSBERVNDOw=="
+      },
+      "outParamDetails": {
+        "outParamPosition": -1,
+        "outParamType": "NO_OUT_PARAM"
+      }
+    }
+  }
+}
