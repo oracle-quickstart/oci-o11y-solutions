@@ -1,0 +1,8 @@
+https://cloud.oracle.com/loganalytics/explorer?
+viz=records_histogram
+&query=ECID%20%3D%20%27<ECID>%27%20%7C%20timestats%20count%20as%20logrecords%20by%20%27Log%20Source%27
+&vizOptions=%7B%22customVizOpt%22%3A%7B%22primaryFieldIname%22%3A%22mbody%22%2C%22primaryFieldDname%22%3A%22Original%20Log%20Content%22%7D%7D
+&scopeFilters=lg%3Aroot%2Ctrue%3Brs%3A<OciCompartmentId>%2Ctrue
+&startTime=<APMStartTimeMs>
+&endTime=<APMEndTimeMs>®ion=<OciRegion>
+				
