@@ -49,7 +49,8 @@ and add this line after it:
 <pre>JAVA_OPTIONS="${JAVA_OPTIONS} -javaagent:$DOMAIN_HOME/oracle-apm-agent/bootstrap/ApmAgent.jar"</pre>
 
 Once the APM agent is successfully installed and OEM got fully restarted (including the WebLogic AdminServer), we can start seeing the traces and spans from the application.
-<img width="1385" alt="image" src="https://github.com/user-attachments/assets/c4357c24-d71d-4abe-9604-1322708eb5be">
+
+<img width="1385" alt="Image-1" src="https://github.com/user-attachments/assets/14b3c3cf-0d7f-4b55-a8df-745d760c9cb6">
 
 We can also instrument the Real User monitoring using the Browser agent which helps us understand how the user is experiencing the EM application.We can install the RUM monitoring using the steps below,
 * Open the AgentConfig.properties file from the location $DOMAIN_HOME/oracle-apm-agent/
@@ -61,7 +62,7 @@ com.oracle.apm.agent.rum.service.name="EM_APM_Browser"
 </pre>
    * The value of the Public_Data_Key can be obtained from the APM Domain details page.
 
-<img width="1363" alt="image" src="https://github.com/user-attachments/assets/fd202d88-ce29-4099-9e8e-5d9224acadda">
+<img width="1363" alt="Image-2" src="https://github.com/user-attachments/assets/4e338ad3-185d-47cd-9a49-63e2fc0898a5">
 
 We can also enable Synthetic Monitoring. That lets the user to monitor the EM application and detect potential availability and performance issues before the end user experiences it. It enables proactive monitoring that helps developers and operators prevent issues before users are impacted.
 Follow the steps from the document to setup [Synthetic monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/set-synthetic-monitoring.html).
@@ -70,7 +71,7 @@ If its an on-prem OMS server we can use the [On-premise vantage point](https://d
 If its behind a firewall and not exposed to the outside network we can use [Dedicated vantage point](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-dedicated-vantage-points.html#APMGN-GUID-B2BD78B1-ACFD-4D6B-8397-C8DBBD744603) .
 Once the monitors are setup it collects details such as HAR file and network data which should be useful to understand the customer experience with application.
 
-<img width="1368" alt="image" src="https://github.com/user-attachments/assets/5303a82d-a7e8-48b0-a10b-07f0ecb47500">
+<img width="1368" alt="Image-3" src="https://github.com/user-attachments/assets/534eeeef-e9a4-4274-8933-cf15d1812858">
 
 
 ## Logging Analytics
@@ -217,10 +218,10 @@ With anomoly detection built with the metrics collected it helps in understandin
 This [document](https://docs.oracle.com/en-us/iaas/stack-monitoring/doc/promotion-and-discovery.html#STMON-GUID-DA187C14-8317-41E8-97B1-3AC8DC660458) has the details on the resouce discovery for the components of the EM.
 To discover any resource in Stack monitoring , go to Resource management --> Discover resources
 
-<img width="1384" alt="image" src="https://github.com/user-attachments/assets/c8a1fb3c-9dbf-4200-8514-5a1b49db260d">
+<img width="1384" alt="Image-4" src="https://github.com/user-attachments/assets/01f1478d-1513-4108-aec7-7726dc5a3334">
+
 Click on Discover New Resource and select the Resource Type that is needed.
 
-<img width="1188" alt="image" src="https://github.com/user-attachments/assets/cad84cd3-98ef-4e37-89a8-099706079aea">
 Fill in the details related to the Resource that need to be discovered and click on Discover New Resource to submit the job.
 
 <img width="587" alt="image" src="https://github.com/user-attachments/assets/afc52e35-27d0-4ada-9f29-9cd5d715db21">
