@@ -1,0 +1,252 @@
+{
+  "filterId": "<replace with OpenTelemetry Span Filter OCID>",
+  "disabled": false,
+  "rules": [
+    {
+      "disabled": false,
+      "displayName": "Apply Oracle provided OTel rule",
+      "systemRuleId": 500
+    },
+    {
+      "actions": [
+        {
+          "config": {
+            "output": "WebApplicationName",
+            "value": "OTel Demo App"
+          },
+          "disabled": false,
+          "name": "basic.Set"
+        },
+        {
+          "config": {
+            "output": "ApmrumPageUpdateType",
+            "value": "Page Load"
+          },
+          "disabled": false,
+          "name": "basic.Set"
+        },
+        {
+          "config": {
+            "output": "ApmrumType",
+            "value": "Page"
+          },
+          "disabled": false,
+          "name": "basic.Set"
+        },
+        {
+          "config": {
+            "input": "Component",
+            "output": "OtelComponent"
+          },
+          "disabled": false,
+          "name": "basic.Rename"
+        },
+        {
+          "config": {
+            "output": "Component",
+            "value": "BROWSER"
+          },
+          "disabled": false,
+          "name": "basic.Set"
+        },
+        {
+          "config": {
+            "output": "PageViews",
+            "value": "1"
+          },
+          "disabled": false,
+          "name": "basic.Set"
+        },
+        {
+          "config": {
+            "input": "PageViews",
+            "output": "PageViews"
+          },
+          "disabled": false,
+          "name": "string.ToNumber"
+        },
+        {
+          "config": {
+            "input": "SpanDuration",
+            "output": "PageResponseTime",
+            "pattern": "(.*)",
+            "valueOnFail": "0"
+          },
+          "disabled": false,
+          "name": "string.Extract"
+        },
+        {
+          "config": {
+            "input": "PageResponseTime",
+            "output": "PageResponseTime"
+          },
+          "disabled": false,
+          "name": "string.ToNumber"
+        },
+        {
+          "config": {
+            "input": "ProcessRuntimeVersion",
+            "output": "UserName",
+            "pattern": "^.*Chrome/116.*$",
+            "replaceWith": "Synthetic_User"
+          },
+          "disabled": false,
+          "name": "string.Replace"
+        },
+        {
+          "config": {
+            "input": "HttpUserAgent",
+            "output": "UserName",
+            "pattern": "^.*HeadlessChrome.*$",
+            "replaceWith": "Loadgen_User"
+          },
+          "disabled": false,
+          "name": "string.Replace"
+        },
+        {
+          "config": {
+            "input": "ProcessRuntimeVersion",
+            "output": "UserName",
+            "pattern": "^.*Mac OS X.*$",
+            "replaceWith": "Demo_User"
+          },
+          "disabled": false,
+          "name": "string.Replace"
+        },
+        {
+          "config": {
+            "input": "ProcessRuntimeVersion",
+            "output": "UserName",
+            "pattern": "^.*iPhone.*$",
+            "replaceWith": "iOS_User"
+          },
+          "disabled": false,
+          "name": "string.Replace"
+        },
+        {
+          "config": {
+            "input": "ProcessRuntimeVersion",
+            "output": "UserName",
+            "pattern": "^.*Android.*$",
+            "replaceWith": "Android_User"
+          },
+          "disabled": false,
+          "name": "string.Replace"
+        }
+      ],
+      "disabled": false,
+      "displayName": "Add attributes to browser agent spans",
+      "filterText": "ServiceName = 'frontend-web'"
+    },
+    {
+      "actions": [
+        {
+          "config": {
+            "input": "HttpUrl",
+            "output": "HttpUrl",
+            "pattern": "/_next/static.*$",
+            "replaceWith": "/_next/static"
+          },
+          "disabled": false,
+          "name": "string.Replace"
+        },
+        {
+          "config": {
+            "input": "HttpUrl",
+            "output": "HttpUrl",
+            "pattern": "/api/cart.*$",
+            "replaceWith": "/api/cart"
+          },
+          "disabled": false,
+          "name": "string.Replace"
+        },
+        {
+          "config": {
+            "input": "HttpUrl",
+            "output": "HttpUrl",
+            "pattern": "/api/recommendations.*$",
+            "replaceWith": "/api/recommendations"
+          },
+          "disabled": false,
+          "name": "string.Replace"
+        },
+        {
+          "config": {
+            "input": "HttpUrl",
+            "output": "HttpUrl",
+            "pattern": "/images.*$",
+            "replaceWith": "/images"
+          },
+          "disabled": false,
+          "name": "string.Replace"
+        },
+        {
+          "config": {
+            "input": "HttpUrl",
+            "output": "HttpUrl",
+            "pattern": "/api/data.*$",
+            "replaceWith": "/api/data"
+          },
+          "disabled": false,
+          "name": "string.Replace"
+        },
+        {
+          "config": {
+            "input": "HttpUrl",
+            "output": "HttpUrl",
+            "pattern": "/api/products.*$",
+            "replaceWith": "/api/products"
+          },
+          "disabled": false,
+          "name": "string.Replace"
+        },
+        {
+          "config": {
+            "input": "HttpUrl",
+            "output": "HttpUrl",
+            "pattern": "/icons.*$",
+            "replaceWith": "/icons"
+          },
+          "disabled": false,
+          "name": "string.Replace"
+        }
+      ],
+      "disabled": false,
+      "displayName": "Create short unique HttpUrl patterns"
+    },
+    {
+      "actions": [
+        {
+          "config": {
+            "input": "K8sDeploymentName",
+            "output": "DisplayName",
+            "pattern": "otel-demo-app-(.*$)"
+          },
+          "disabled": false,
+          "name": "string.Extract"
+        }
+      ],
+      "disabled": false,
+      "displayName": "Add attributes to application services spans",
+      "filterText": "ServiceName like '%service' or ServiceName = 'imageprovider'"
+    },
+    {
+      "actions": [
+        {
+          "config": {
+            "input": "ProcessRuntimeVersion",
+            "output": "UserAgent",
+            "pattern": "(.*)"
+          },
+          "disabled": false,
+          "name": "string.Extract"
+        }
+      ],
+      "description": "Recognize load generation scripts to capture userAgent for load data.",
+      "disabled": false,
+      "displayName": "Mark browser",
+      "filterText": "ProcessRuntimeName = 'browser'"
+    }
+  ],
+  "type": "data-manipulation.group"
+}
