@@ -168,4 +168,6 @@ Finally, out-of-the-box or custom dashboards can be used to visualize the collec
 
 ## Further Logging Analytics and APM Resources
 
-In folders 
+Further resources for Logging Analytics can be found in folders [log-sources](log-sources/README.md), [logan-lookups](logan-lookups/README.md) and [dashboards](dashboards/README.md). We are providing there an enhanced log source definition to allow queries used in a dashboard with Business Analytics charts.
+
+To maximize the usage value of APM, you can find in folder [apm-configs](apm-configs/README.md) all needed info to enrich the OTel spans with attributes matching the expected APM naming schema.  
