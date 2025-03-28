@@ -1,0 +1,5 @@
+{
+  "displayName": "OpenTelemetry Spans",
+  "description": "All spans coming from OTel Collector",
+  "filterText": "\"k8s.namespace.name\" = 'otel-demo-app'"
+}

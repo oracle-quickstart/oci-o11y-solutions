@@ -1,0 +1,5 @@
+{
+  "displayName": "OTel Spans Enrichment Group",
+  "description": "Rules to modify and enhance OTel spans to be in sync with APM schema",
+  "group": "data-manipulation.spans"
+}
