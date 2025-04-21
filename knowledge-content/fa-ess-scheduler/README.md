@@ -265,9 +265,10 @@ To enable the Management Agent to use the REST API for log collection, you need 
 
 * Import Fusion Apps Lookup Table
    - Navigate to Logging Analytics > Administration > Lookup Tables
-   - Click **Import Lookup Table**
-   - Select the Fusion Apps Lookup Table file - **FusionApps_Product_Family_Lookup_Table.csv**
-   - Import the Fusion Apps Lookup Table configuration: **FusionApps_Product_Family_Lookup_Table**
+   - Click **Create Lookup**
+   - Select Type - Simple
+   - Select the Fusion Apps Lookup file - **Fusion_Products_Lookup.csv**
+   - Click **Create**
 
 * Add Field Enrichment to ESS Log Source
    - Select Lookup as Function
