@@ -296,4 +296,5 @@ By implementing this solution, organizations can achieve comprehensive monitorin
 ## Acknowledgments
 
 **Kumar Varun** - Logging Analytics Product Management
+
 **Bala Mahalingam** - Fusion Apps Deep Expert, A-Team Oracle
