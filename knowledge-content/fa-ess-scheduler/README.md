@@ -261,6 +261,8 @@ To enable the Management Agent to use the REST API for log collection, you need 
 * Create User Defined Field in Logging Analytics
    ![Create User Defined Field](./images/blog-ess-create-user-defined-field.png)
 
+   *Figure 7: Create User Defined Field*
+
 * Import Fusion Apps Lookup Table
    - Navigate to Logging Analytics > Administration > Lookup Tables
    - Click **Import Lookup Table**
@@ -276,7 +278,7 @@ To enable the Management Agent to use the REST API for log collection, you need 
 
    ![Fusion Apps product code Field Enrichment](./images/blog-ess-product-code-field-enrichment.png)
 
-   *Figure 7: Fusion Apps product code Field Enrichment*
+   *Figure 8: Fusion Apps product code Field Enrichment*
 
 ## Conclusion
 
