@@ -1,0 +1,369 @@
+PRODUCT_ID,PRODUCT_ABBREVIATION,PRODUCT_NAME,PRODUCT_FAMILY_CODE,PRODUCT_FAMILY_NAME
+14084,atk, Application Toolkit,atf, Applications Technology
+14087,exm, Expenses,fin, Financials
+14088,xcc, Budgetary Control,fin, Financials
+14089,hrt, Profile Management,hcm, Human Capital Management
+14090,wlm,Obsoleted - 14090 -  Workforce Lifecycle Manager,hcm, Human Capital Management
+14091,cmp, Compensation,hcm, Human Capital Management
+14092,pyt, Payroll Test Harness,hcm, Human Capital Management
+14093,hra, Performance Management,hcm, Human Capital Management
+14094,poz, Supplier Model,prc, Procurement
+14095,pjo, Project Control,prj, Projects
+14096,pjs, Project Performance Reporting,prj, Projects
+14097,doo, Distributed Order Orchestration,scm, Supply Chain Management
+14098,m4u, Messages for UCCNet Registry,scm, Supply Chain Management
+14099,cst, Cost Management,scm, Supply Chain Management
+14100,egi, Product Hub,scm, Supply Chain Management
+14101,rcv, Receiving,scm, Supply Chain Management
+14102,gmq, Process Manufacturing Quality Management,scm, Supply Chain Management
+14103,egp, Product Model,scm, Supply Chain Management
+14104,msp, Global Order Promising,scm, Supply Chain Management
+14105,hrc, HCM Common Architecture,hcm, Human Capital Management
+14106,hrw, HCM Configuration Workbench,hcm, Human Capital Management
+14144,zbs, Sales,crm, Customer Relationship Management
+14145,zmm, Applications Common Components,crm, Customer Relationship Management
+14146,zca, Common CRM,crm, Customer Relationship Management
+14147,zcc, Contact Center Application,crm, Customer Relationship Management
+14148,zon, Contact Center Common Components,crm, Customer Relationship Management
+14149,mkt, Marketing,crm, Customer Relationship Management
+14150,zoe, CRM for Microsoft Outlook,crm, Customer Relationship Management
+14151,emc, E-Commerce,crm, Customer Relationship Management
+14152,ewm, E-Mail and Web Marketing,crm, Customer Relationship Management
+14153,emv, E-Service,crm, Customer Relationship Management
+14154,zfs, Field Service Management,crm, Customer Relationship Management
+14155,csh, Helpdesk,crm, Customer Relationship Management
+14156,mkl, Lead Management,crm, Customer Relationship Management
+14157,zmc, Marketing Common Components,crm, Customer Relationship Management
+14158,mct, Multichannel Technologies,crm, Customer Relationship Management
+14159,moo, Opportunity Management,crm, Customer Relationship Management
+14160,zoc, Order Capture Common Components,crm, Customer Relationship Management
+14161,qsc, Sales Catalog,crm, Customer Relationship Management
+14162,qoc, Quote and Order Capture,crm, Customer Relationship Management
+14163,zsf, Sales Forecasting,crm, Customer Relationship Management
+14164,mks, Segmentation,crm, Customer Relationship Management
+14165,emk, Self Service Common CRM Components,crm, Customer Relationship Management
+14166,zvc, CRM Infrastructure Components,crm, Customer Relationship Management
+14167,cso, Knowledge Management,crm, Customer Relationship Management
+14168,csy, Service Request Management,crm, Customer Relationship Management
+14169,mot, Territory Management,crm, Customer Relationship Management
+14170,zcq, Trading Community Data Quality,crm, Customer Relationship Management
+14171,zch, Trading Community Hub,crm, Customer Relationship Management
+14172,zcp, Trading Community Policies,crm, Customer Relationship Management
+14173,zhc, CDM Common Components,crm, Customer Relationship Management
+14174,mow, Work Management,crm, Customer Relationship Management
+14264,por, Self Service Procurement,prc, Procurement
+14266,arc, Credit Management,fin, Financials
+14464,cto, Configure To Order,scm, Supply Chain Management
+14465,mcr, Campaign Run Optimization,scm, Supply Chain Management
+14466,mop, Promotions and Deal Management,crm, Customer Relationship Management
+14467,msn, Strategic Network Optimization,scm, Supply Chain Management
+14471,dde, Deductions and Settlement Management,scm, Supply Chain Management
+14472,ypd, Demand Management,scm, Supply Chain Management
+14473,ddt, Predictive Trade Planning,scm, Supply Chain Management
+14474,ddo, Trade Promotion Optimization,scm, Supply Chain Management
+14475,dda, Advanced Forecasting and Demand Modeling,scm, Supply Chain Management
+14476,ypa, Sales and Operations Planning,scm, Supply Chain Management
+14704,fuf, Upgrade Framework,atf, Applications Technology
+14705,mss, Production Scheduling,scm, Supply Chain Management
+14764,hrx, HCM Country and Vertical Extensions,hcm, Human Capital Management
+14848,ap, Payables,fin, Financials
+14849,ar, Receivables,fin, Financials
+14850,ben, Benefits,hcm, Human Capital Management
+14852,ce, Cash Management,fin, Financials
+14854,cn, Incentive Compensation,ic, Incentive Compensation.
+14855,csd, Depot Repair,scm, Supply Chain Management
+14856,cse, Asset Tracking,scm, Supply Chain Management
+14858,csi, Installed Base,scm, Supply Chain Management
+14865,cz, Configurator,scm, Supply Chain Management
+14866,eam, Enterprise Asset Management,scm, Supply Chain Management
+14867,edr, E-Signatures and E-Records,scm, Supply Chain Management
+14868,ego, Product and Catalog Management,scm, Supply Chain Management
+14870,fa, Assets,fin, Financials
+14871,ff, Fast Formula,hcm, Human Capital Management
+14872,flm, Flow Manufacturing,scm, Supply Chain Management
+14873,pjp, Project Portfolio Analysis,prj, Projects
+14875,fun, Financials Common Module,fin, Financials
+14876,fv,Obsoleted - 14876 -  U.S. Federal Financials,fin, Financials
+14877,gcs, Financial Consolidation Hub,fin, Financials
+14878,ghr, US Federal Human Resources,hcm, Human Capital Management
+14879,gl, General Ledger,fin, Financials
+14880,gme, Process Manufacturing Process Execution,scm, Supply Chain Management
+14881,gmo, MES for Process Manufacturing,scm, Supply Chain Management
+14882,gms, Grants Management,prj, Projects
+14885,hxt, Time and Labor,hcm, Human Capital Management
+14886,hz, Trading Community Model,crm, Customer Relationship Management
+14887,iby, Payments,fin, Financials
+14888,iex, Advanced Collections,fin, Financials
+14889,igi,Obsoleted - 14889 -  Public Sector Financials (International),fin, Financials
+14893,igw, Grants Proposal,prj, Projects
+14894,inv, Inventory Management,scm, Supply Chain Management
+14896,irc, Recruiting,hcm, Human Capital Management
+14898,ja, Financials for Asia/Pacific,fin, Financials
+14899,je, Financials for EMEA,fin, Financials
+14900,jl, Financials for the Americas,fin, Financials
+14904,msc, Planning Common,scm, Supply Chain Management
+14905,msr, Inventory Optimization,scm, Supply Chain Management
+14906,mwa, Mobile Supply Chain Applications,scm, Supply Chain Management
+14907,okc, Enterprise Contracts,crm, Customer Relationship Management
+14910,pay, Global Payroll,hcm, Human Capital Management
+14911,per, Global Human Resources,hcm, Human Capital Management
+14912,pjb, Project Billing,prj, Projects
+14913,pjc, Project Costing,prj, Projects
+14914,pjf, Project Foundation,prj, Projects
+14915,pjl, Project Collaboration,prj, Projects
+14916,pjm, Project Manufacturing,scm, Supply Chain Management
+14917,pjr, Project Resource Management,prj, Projects
+14918,pjt, Project Management,prj, Projects
+14919,pnl, Real Estate Leases,prj, Projects
+14920,po, Purchasing,prc, Procurement
+14921,poi, Spend Analyzer,prc, Procurement
+14922,pon, Sourcing,prc, Procurement
+14923,pos, Supplier Portal,prc, Procurement
+14924,psp, Labor Distribution,hcm, Human Capital Management
+14925,qa, Quality Inspection Management,scm, Supply Chain Management
+14926,qp, Pricing,scm, Supply Chain Management
+14927,qpr, Price Planning,scm, Supply Chain Management
+14928,rlm, Release Management,scm, Supply Chain Management
+14931,vea, Automotive Integration Kit,scm, Supply Chain Management
+14932,wip, Discrete Manufacturing,scm, Supply Chain Management
+14933,wms, Warehouse Management,scm, Supply Chain Management
+14934,wsh, Shipping,scm, Supply Chain Management
+14936,xla, Subledger Accounting,fin, Financials
+14937,xle, Legal Entity Configurator,fin, Financials
+14938,xtr,Obsoleted - 14938 -  Treasury,fin, Financials
+14939,zx, Tax,fin, Financials
+14940,jmf, Supply Chain Localizations,scm, Supply Chain Management
+14942,ota, Learning Management,hcm, Human Capital Management
+14943,gmd, Process Manufacturing Product Development,scm, Supply Chain Management
+14946,mso, Constraint Based Optimization,scm, Supply Chain Management
+14947,hts, Workforce Scheduling,hcm, Human Capital Management
+14948,jai,Obsoleted - 14948 -  Financials for India,fin, Financials
+15264,hrs, Social Connection,hcm, Human Capital Management
+16525,xlh, Accounting Hub,fin, Financials
+16526,zcx, CRM Application Composer,crm, Customer Relationship Management
+16527,zcm, Customer Center,crm, Customer Relationship Management
+16528,hry_obs, Global Payroll Interface_obsoleted,hcm, Human Capital Management
+16529,hrg, Goal Management,hcm, Human Capital Management
+16530,hcmcn, HRMS (China),hcm, Human Capital Management
+16531,hcmsa, HRMS (Saudi Arabia),hcm, Human Capital Management
+16532,hcmuk, HRMS (UK),hcm, Human Capital Management
+16533,hcmae, HRMS (United Arab Emirates),hcm, Human Capital Management
+16534,hcmus, HRMS (US),hcm, Human Capital Management
+16535,zms, Mobile Sales,crm, Customer Relationship Management
+16536,pjg, Project Integration Gateway,prj, Projects
+16537,cmr, Receipt Accounting,scm, Supply Chain Management
+16538,zsp, Sales Prediction Engine,crm, Customer Relationship Management
+16539,hrr, Talent Review,hcm, Human Capital Management
+16540,cms, Total Compensation Statement,hcm, Human Capital Management
+16987,hrl, Workforce Directory Management,hcm, Human Capital Management
+16988,rcs, Supply Chain Management Common Components,scm, Supply Chain Management
+17366,zpm, Partner Management,crm, Customer Relationship Management
+17367,hcmkw, HRMS (Kuwait),hcm, Human Capital Management
+17368,hwp, Workforce Predictions,hcm, Human Capital Management
+17886,acr, Application Common Resources,com, Common
+17985,fod, SaaS Enablement,crm, Customer Relationship Management
+19389,ach, Common Search,fscm, Financials and Supply Chain Management
+19390,acl, Common Analytics,fscm, Financials and Supply Chain Management
+19391,acj, Common Java Authorization,fscm, Financials and Supply Chain Management
+19769,grc_obs,Obsoleted - 19769 -  GRC Manager,grc," Governance, Risk, and Compliance"
+20135,gra, GRC Application Access Controls Governor,grc," Governance, Risk, and Compliance"
+20534,acg,Obsoleted - 20534 -  Agile Product Compliance,scm, Supply Chain Management
+20535,acx,Obsoleted - 20535 -  Roll Up Engine,scm, Supply Chain Management
+20536,acs,Obsoleted - 20536 -  Direct Material Sourcing,scm, Supply Chain Management
+20537,acb,Obsoleted - 20537 -  Sandbox,scm, Supply Chain Management
+20538,aca, Product Development,scm, Supply Chain Management
+20539,mtm, Transportation Management,scm, Supply Chain Management
+20540,hcmru, HRMS (Russia),hcm, Human Capital Management
+20541,hcmno, HRMS (Norway),hcm, Human Capital Management
+20542,hcmpl, HRMS (Poland),hcm, Human Capital Management
+20543,hcmkr, HRMS (Republic of Korea),hcm, Human Capital Management
+20544,hcmnz, HRMS (New Zealand),hcm, Human Capital Management
+20545,hcmza, HRMS (South Africa),hcm, Human Capital Management
+20546,hcmjp, HRMS (Japan),hcm, Human Capital Management
+20547,hcmit, HRMS (Italy),hcm, Human Capital Management
+20548,hcmhu, HRMS (Hungary),hcm, Human Capital Management
+20549,hcmfi, HRMS (Finland),hcm, Human Capital Management
+20550,hcmdk, HRMS (Denmark),hcm, Human Capital Management
+20551,hcmes, HRMS (Spain),hcm, Human Capital Management
+20552,hcmse, HRMS (Sweden),hcm, Human Capital Management
+20553,hcmbe, HRMS (Belgium),hcm, Human Capital Management
+20554,hbm, Budget Management,hcm, Human Capital Management
+20555,dos, Supply Chain Orchestration,scm, Supply Chain Management
+20556,vfc, Consumer Goods,crm, Customer Relationship Management
+20557,vrm, Revenue Management,fin, Financials
+20558,act, Advanced Constraint Technology,scm, Supply Chain Management
+20559,hlr, Workforce Relations,hcm, Human Capital Management
+20560,hmo, Workforce Modeling,hcm, Human Capital Management
+20561,hwa, Workforce Administration,hcm, Human Capital Management
+20562,fos, Supply Chain Financial Orchestration Foundation,scm, Supply Chain Management
+20563,zst, State Management,crm, Customer Relationship Management
+20564,zmf, Disconnected Mobile Client,crm, Customer Relationship Management
+20565,acd, Product Concept Design,scm, Supply Chain Management
+20566,gbl, Supply Chain Globalization,scm, Supply Chain Management
+20567,acn, Product Requirements and Ideation Management,scm, Supply Chain Management
+20568,ace, Product Lifecycle Portfolio Management,scm, Supply Chain Management
+20569,zso, Activity Stream for CRM,crm, Customer Relationship Management
+20570,hcmca, HRMS (Canada),hcm, Human Capital Management
+20571,poq, Supplier Qualification,prc, Procurement
+20572,hcmde, HRMS (Germany),hcm, Human Capital Management
+20573,hcmnl, HRMS (Netherlands),hcm, Human Capital Management
+20574,hcmmx, HRMS (Mexico),hcm, Human Capital Management
+20575,cml, Landed Cost Management,scm, Supply Chain Management
+20576,hwm, Workforce Management,hcm, Human Capital Management
+20577,anc, Absence Management,hcm, Human Capital Management
+20578,hcmfr, HRMS (France),hcm, Human Capital Management
+20579,osm, Social Media Manager,atf, Applications Technology
+20580,hcmie, HRMS (Ireland),hcm, Human Capital Management
+20581,hrm, Succession Management,hcm, Human Capital Management
+20582,hcmhk, HRMS (Hong Kong),hcm, Human Capital Management
+20583,hrq, Questionnaire,hcm, Human Capital Management
+20584,hcmsg, HRMS (Singapore),hcm, Human Capital Management
+20585,hcmau, HRMS (Australia),hcm, Human Capital Management
+20586,hcmin, HRMS (India),hcm, Human Capital Management
+21135,acm, CRM Analytics,crm, Customer Relationship Management
+21136,pje, Project Management Control,prj, Projects
+21137,mkw, Web Marketing,crm, Customer Relationship Management
+21138,grp, GRC Audit Controls Composer,grc," Governance, Risk, and Compliance"
+21139,ccc, GRC Configuration Controls Governor,grc," Governance, Risk, and Compliance"
+21140,gtg, Risks and Controls,grc," Governance, Risk, and Compliance"
+21141,jg, Financials for Regional Localizations,fin, Financials
+21142,ism, Social Media and Intelligence,grc," Governance, Risk, and Compliance"
+21143,vvc,Obsoleted - 21143 -  Value Chain Visualizer,scm, Supply Chain Management
+21144,ypc, Planning Collaboration,scm, Supply Chain Management
+21145,yps, Supply Planning,scm, Supply Chain Management
+21146,ypm, Planning Performance Management,scm, Supply Chain Management
+21147,ypb, Planning Central,scm, Supply Chain Management
+21148,fta,Oracle Tap for Oracle Applications,com, Common
+21149,hns, Workforce Health and Safety Incidents,hcm, Human Capital Management
+21150,pnp, Real Estate Portfolio Management,prj, Projects
+21151,pnr, Real Estate Accounting,prj, Projects
+21152,arb, Bill Management,fin, Financials
+21153,cmf, Fiscal Document Capture,scm, Supply Chain Management
+22075,gti, Applications Integration for Oracle Global Trade Management,scm, Supply Chain Management
+22076,mti, Applications Integration for Oracle Transportation Management,scm, Supply Chain Management
+22077,cmk, Collaboration Messaging Framework,scm, Supply Chain Management
+22078,hwr, Workforce Reputation Management,hcm, Human Capital Management
+22079,cmm,Obsoleted - 22079 -  Human Capital Management Communications Center,hcm, Human Capital Management
+22080,hry, Global Payroll Interface,hcm, Human Capital Management
+22081,egrcm," Enterprise Governance, Risk, and Compliance Manager",grc," Governance, Risk, and Compliance"
+22215,hcmch, HRMS (Switzerland),hcm, Human Capital Management
+22216,hrd, Career Development,hcm, Human Capital Management
+22556,evi, Enterprise Visualization,scm, Supply Chain Management
+22838,ase, Applications Security,hcm, Human Capital Management
+22839,evn, Visual Information Navigator,scm, Supply Chain Management
+22976,vfa,Oracle Voice for Oracle Cloud Applications,atf, Applications Technology
+22977,egs, Product Hub Portal,scm, Supply Chain Management
+23456,msa, Mobilytics,atf, Applications Technology
+23457,foa, Supply Chain Financial Orchestration,scm, Supply Chain Management
+23636,wie, Common Work Execution,scm, Supply Chain Management
+23637,wis, Common Work Setup,scm, Supply Chain Management
+26679,EVB, Visual Information Builder,scm, Supply Chain Management
+27058,atg, Applications Technology Infrastructure,com, Common
+27079,hea, Advisement,hed, Higher Education
+27080,hef, Financial Aid,hed, Higher Education
+27081,hey, Campus Community,hed, Higher Education
+27082,her, Student Records,hed, Higher Education
+27083,hes, Student Financials,hed, Higher Education
+24958,hcmar, HRMS (Argentina),hcm, Human Capital Management
+24959,hcmbr, HRMS (Brazil),hcm, Human Capital Management
+24960,hcmmy, HRMS (Malaysia),hcm, Human Capital Management
+24961,hcmth, HRMS (Thailand),hcm, Human Capital Management
+25619,ehw, Employee Wellness,hcm, Human Capital Management
+26199,HRH, HCM Connect,hcm, Human Capital Management
+26278,wlf, Work Life,hcm, Human Capital Management
+18369,afh, Help Portal Content,ahc, AHC Operations
+25118,fom, Order Management,scm, Supply Chain Management
+25506,hcmrs, HRMS (Serbia),hcm, Human Capital Management
+25507,hcmng, HRMS (Nigeria),hcm, Human Capital Management
+25508,hcmma, HRMS (Morocco),hcm, Human Capital Management
+25509,hcmkz, HRMS (Kazakhstan),hcm, Human Capital Management
+25510,hcmve, HRMS (Venezuela),hcm, Human Capital Management
+25511,hcmua, HRMS (Ukraine),hcm, Human Capital Management
+25512,hcmsy, HRMS (Syria),hcm, Human Capital Management
+25513,hcmsd, HRMS (Sudan),hcm, Human Capital Management
+25514,hcmsi, HRMS (Slovenia),hcm, Human Capital Management
+25515,hcmsk, HRMS (Slovakia),hcm, Human Capital Management
+25516,hcmqa, HRMS (Qatar),hcm, Human Capital Management
+25517,hcmpt, HRMS (Portugal),hcm, Human Capital Management
+25518,hcmom, HRMS (Oman),hcm, Human Capital Management
+25519,hcmlu, HRMS (Luxembourg),hcm, Human Capital Management
+25520,hcmlt, HRMS (Lithuania),hcm, Human Capital Management
+25521,hcmli, HRMS (Liechtenstein),hcm, Human Capital Management
+25522,hcmlb, HRMS (Lebanon),hcm, Human Capital Management
+25523,hcmlv, HRMS (Latvia),hcm, Human Capital Management
+25524,hcmil, HRMS (Israel),hcm, Human Capital Management
+25525,hcmiq, HRMS (Iraq),hcm, Human Capital Management
+25526,hcmgr, HRMS (Greece),hcm, Human Capital Management
+25527,hcmee, HRMS (Estonia),hcm, Human Capital Management
+25528,hcmeg, HRMS (Egypt),hcm, Human Capital Management
+25529,hcmcz, HRMS (Czech Republic),hcm, Human Capital Management
+25530,hcmcy, HRMS (Cyprus),hcm, Human Capital Management
+25531,hcmhr, HRMS (Croatia),hcm, Human Capital Management
+25532,hcmbh, HRMS (Bahrain),hcm, Human Capital Management
+25533,hcmat, HRMS (Austria),hcm, Human Capital Management
+25535,hcmtw, HRMS (Taiwan),hcm, Human Capital Management
+25536,hcmjo, HRMS (Jordan),hcm, Human Capital Management
+25537,hcmvn, HRMS (Vietnam),hcm, Human Capital Management
+25538,hcmph, HRMS (Philippines),hcm, Human Capital Management
+25539,hcmpk, HRMS (Pakistan),hcm, Human Capital Management
+25540,hcmro, HRMS (Romania),hcm, Human Capital Management
+25541,hcmid, HRMS (Indonesia),hcm, Human Capital Management
+25542,hcmtr, HRMS (Turkey),hcm, Human Capital Management
+25543,hcmcl, HRMS (Chile),hcm, Human Capital Management
+25544,hcmco, HRMS (Colombia),hcm, Human Capital Management
+30059,enq, Quality Issue and Action Management,scm, Supply Chain Management
+30138,mnt, Maintenance Management,scm, Supply Chain Management
+30158,loy, Loyalty,crm, Customer Relationship Management
+31298,hhr, Corporate Social Responsibility,hcm, Human Capital Management
+31479,CXI, Customer Experience Integration Solution,crm, Customer Relationship Management
+29042,svc, Service,crm, Customer Relationship Management
+29098,afs, Sales for Retail Banking,crm, Customer Relationship Management
+29099,aht, Sales for High Tech Manufacturing,crm, Customer Relationship Management
+29100,atc, Sales for Communications,crm, Customer Relationship Management
+29101,aco, Sales for Consumer Goods Retail Execution,crm, Customer Relationship Management
+29498,vcs, Supply Chain Collaboration,scm, Supply Chain Management
+29499,vcf, Value Chain Collaboration Framework,scm, Supply Chain Management
+29918,zqa, Sales for Automotive,crm, Customer Relationship Management
+29919,zqp, Sales for Pharmaceuticals,crm, Customer Relationship Management
+29920,zqu, Sales for Utilities,crm, Customer Relationship Management
+29921,zqw, Sales for Wealth Management,crm, Customer Relationship Management
+32138,gto, Business Intelligence for Risk Management,grc," Governance, Risk, and Compliance"
+32139,gtr, Risk Manager,grc," Governance, Risk, and Compliance"
+32178,zps_gm, Sales Cloud for Gmail,crm, Customer Relationship Management
+32179,zps_ibm, Sales Cloud for IBM Notes,crm, Customer Relationship Management
+32180,zps_365, Sales Cloud for Office 365,crm, Customer Relationship Management
+32438,css,Oracle Digital Customer Service,crm, Customer Relationship Management
+27898,hcmbg, HRMS (Bulgaria),hcm, Human Capital Management
+28638,fim, Internal Mobility,hcm, Human Capital Management
+39242,FV, U.S. Federal Financials,fin, Financials
+35078,ahe, Sales Cloud for Higher Education,crm, Customer Relationship Management
+36058,hqz, Human Resources Advisor,hcm, Human Capital Management
+36438,zem, CX Cloud Mobile,crm, Customer Relationship Management
+36819,hcm_cc, HCM Central Components,hcm, Human Capital Management
+36938,hex, HCM Extracts,hcm, Human Capital Management
+37279,ypr, Replenishment Planning,scm, Supply Chain Management
+37506,hcm_im, Human Resources Management Systems (Isle of Man),hcm, Human Capital Management
+37507,hcm_gg, Human Resources Management Systems (Guernsey),hcm, Human Capital Management
+37508,hcm_je, Human Resources Management Systems (Jersey),hcm, Human Capital Management
+37518,heq, Student Admissions,hed, Higher Education
+44060,PSX,Oracle PSCR Subledger,psc, Public Sector Cloud
+44120,FLA, Lease Accounting,fin, Financials
+40422,psc_pz,Oracle Public Sector Planning and Zoning Cloud Service,psc, Public Sector Cloud
+40423,psc_per,Oracle Public Sector Permits Cloud Service,psc, Public Sector Cloud
+40424,psc_ce,Oracle Public Sector Code Enforcement Cloud Service,psc, Public Sector Cloud
+40425,psc_bl,Oracle Public Sector Business Licenses Cloud Service,psc, Public Sector Cloud
+40426,psc_pol,Oracle Public Sector Professional Licenses Cloud Service,psc, Public Sector Cloud
+40838,RCL, Service Logistics,scm, Supply Chain Management
+40839,ZUP, Policy Automation Data Connector,crm, Customer Relationship Management
+40982,psc_cc,Oracle Public Sector Common Components,psc, Public Sector Cloud
+40983,psc_ts,Oracle Public Sector Tech Stack,psc, Public Sector Cloud
+41524,OSS, Subscription Management Cloud Service,crm, Customer Relationship Management
+41579,MOB, HCM Cloud Mobile,hcm, Human Capital Management
+42499,cjm,Oracle Channel Revenue Management,scm, Supply Chain Management
+42727,JV, Joint Venture Management,fin, Financials
+43339,PSC,Oracle Public Sector Subledger,psc, Public Sector Cloud
+19391,acj, Common Java Authorization,scm, Supply Chain Management
+19391,acj, Common Java Authorization,prj, Projects
+44842,sch, Supply Chain for Healthcare,scm, Supply Chain Management
+1,p4fa,p4fa,p4fa,p4fa
+14875,fintech(fun), Financials Common Module,fin, Financials
