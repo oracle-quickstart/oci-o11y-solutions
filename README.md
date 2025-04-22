@@ -24,6 +24,7 @@ Logging Analytics knowledge content consists of one or more of the following:
 | :arrow_double_down: Oracle Enterprise Manager monitored by O&M Services | OCI Cloud Service or On-prem | :heavy_check_mark:  | :heavy_check_mark:              | :raising_hand: |:raising_hand:|  :no_entry_sign: 
 | :arrow_double_down: ZFS Storage Appliance Monitoring | OCI Cloud Service | :heavy_check_mark:  | :heavy_check_mark:              | :raising_hand: |:raising_hand:|  :no_entry_sign: 
 | :arrow_double_down: GenAI Solutions Monitoring using APM | OCI Cloud Service | :heavy_check_mark:  | :raising_hand:              | :raising_hand: |:raising_hand:|  :no_entry_sign: 
+| :arrow_double_down: Oracle Enterprise Scheduler  | Fusion Apps       | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: | :raising_hand:
 
 
 Legend
@@ -57,5 +58,5 @@ Knowledge content files in [knowldge-content](./knowlege-content/) folder are or
 
 ## License
 
-Copyright (c) 2023, Oracle and/or its affiliates.
+Copyright (c) 2025, Oracle and/or its affiliates.
 Licensed under the Universal Permissive License v1.0 as shown at <https://oss.oracle.com/licenses/upl>.
