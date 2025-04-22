@@ -37,20 +37,19 @@ Fusion Apps provided three options to visualize and analyze the ESS job requests
 
 In this blog, we will explore the Scheduler REST API by leveraging OCI Logging Analytics' REST API log collection method to ingest ESS process job requests and status data. This approach provides a robust solution for monitoring and analyzing scheduled processes while ensuring ongoing log collection. The solution uses the Management Agent with appropriate authentication methods to securely collect and analyze ESS logs.
 
-The ideal solution addresses several critical monitoring requirements:
+The solution addresses several critical monitoring requirements:
 
 - **Complete process visibility**: Ability to collect and analyze ESS process logs comprehensively, including investigating process failures that occurred days or weeks ago
 - **Historical analysis**: Track process execution patterns and performance over time, allowing you to analyze performance trends to optimize scheduling
 - **Proactive monitoring**: Set up alerts for process failures and performance issues, and generate compliance reports for audit purposes
 - **Automated collection**: Management Agent handles log collection based on configured intervals, enabling monitoring of process execution across multiple Fusion Applications instances
-- **Enhanced security**: Supports secure authentication methods for accessing ESS logs
 
-Reference Architecture:
-![Reference Architecture for ESS Log Collection](./images/blog-ess_logs_reference_architecture.png)
+### Reference Architecture
+![Reference Architecture for ESS Log Collection](./images/blog-ess_logs_ref_architecture.png)
 
 *Figure 2: Reference Architecture showing the flow of ESS logs from Fusion Applications to OCI Logging Analytics using REST API ingestion method with Management Agent*
 
-Fusion Applications ESS job requests workflow
+[Bala Mahalingam](https://blogs.oracle.com/authors/bala-mahalingam) from the A-Team has created a great blog post on the best practices for Fusion Applications ESS monitoring using the Scheduler REST API [here](https://www.ateam-oracle.com/post/introducing-the-scheduler-rest-api-and-guidelines-for-monitoring-scheduled-processes-in-fusion-cloud-applications). Based on the state transition for a submitted ESS job, you can gain insights into the job requests and status.
 
 ![Fusion Applications ESS job requests workflow](./images/blog-ess-job-requests-workflow.png)
 
@@ -68,28 +67,28 @@ Fusion Applications ESS job requests workflow
 ### Step 1: Create Integration User Account in Fusion Applications with appropriate permissions
 
 1. Sign in to Oracle Fusion Applications using administrator privileges
-2. Navigate to My Team > Users and Roles
+2. Navigate to **My Team** > Users and Roles
 3. Create a new user account with the following details:
-   - Last Name: SERVICE_APP_ICS_ID
-   - Email: Valid email address
-   - User Name: SERVICE_APP_ICS_ID
-   - Person Type: Employee
-   - Legal Employer: Select appropriate organization
-   - Business Unit: Select appropriate business unit
+   - **Last Name**: SERVICE_APP_ICS_ID
+   - **Email**: Valid email address
+   - **User Name**: SERVICE_APP_ICS_ID
+   - **Person Type**: Employee
+   - **Legal Employer**: Select appropriate organization
+   - **Business Unit**: Select appropriate business unit
 
 4. Configure the necessary security roles for the integration user
-   - Customer Service Representative
-   - Employee
-   - Resource
-   - SVC SOA Operator
+   - **Customer Service Representative**
+   - **Employee**
+   - **Resource**
+   - **SVC SOA Operator**
 
 5. Test API Access via Postman
    - Create a new Postman request
    - Set the request type to GET
    - Set the request headers to include the following:
-     - Authorization: Basic {Base64 encoded username:password}
-     - Accept: application/json
-     - Content-Type: application/json; charset=UTF-8
+     - **Authorization**: Basic {Base64 encoded username:password}
+     - **Accept**: application/json
+     - **Content-Type**: application/json; charset=UTF-8
    - Obtain the REST Server URL from the the FA admin
    - Construct the request URL by combining the REST Server URL and the appropriate resource path. For example:
    ```
@@ -108,7 +107,7 @@ To enable the Management Agent to use the REST API for log collection, you need 
    ssh opc@<your-vm-ip-address>
    ```
 
-2. Switch to the root user:
+2. Switch to the **root** user:
    ```
    sudo su -
    ```
@@ -124,7 +123,7 @@ To enable the Management Agent to use the REST API for log collection, you need 
      cd /opt/oracle/mgmt_agent/agent_inst/config
      ```
 
-4. Open the emd.properties file for editing:
+4. Open the **emd.properties** file for editing:
    ```
    vi emd.properties
    ```
@@ -144,6 +143,7 @@ To enable the Management Agent to use the REST API for log collection, you need 
    systemctl restart oracle-cloud-agent
    ```
 
+   If you use standalone Management Agent:
    ```
    systemctl restart mgmt_agent
    ```
@@ -177,7 +177,7 @@ To enable the Management Agent to use the REST API for log collection, you need 
          { "name":"HTTPSPassword", "value":"CLEAR[password]" },
          { "name":"ssl_trustStoreType", "value":"JKS" },
          { "name":"ssl_trustStoreLocation", "value":"/etc/pki/ca-trust/extracted/java/cacerts" },
-         { "name":"ssl_trustStorePassword", "value":"password" }
+         { "name":"ssl_trustStorePassword", "value":"changeit" }
       ]
    }
    ```
@@ -190,7 +190,7 @@ To enable the Management Agent to use the REST API for log collection, you need 
    chmod 755 /tmp/FA_CRED.json
    ```
 
-7. Switch to the root user:
+7. Switch to the **root** user:
    ```
    sudo su -
    ```
@@ -212,11 +212,14 @@ To enable the Management Agent to use the REST API for log collection, you need 
    - Select the ESS Log Source file - **Oracle Fusion Apps_ Enterprise Scheduler Service (ESS)_1745244403805.zip**
    - Import the ESS Log Source configuration: **Oracle Fusion Apps_ Enterprise Scheduler Service (ESS)**
 
-3. Configure Log Endpoint:
-   - Create endpoint for ESS REST API
-   - Set URL to your Fusion Applications ESS endpoint
-   - Configure authentication using integration user credentials
-   - Set appropriate request headers and payload
+2. Validate the Log Endpoints:
+   - Navigate to Logging Analytics > Administration > Sources
+   - Click the **Oracle Fusion Apps_ Enterprise Scheduler Service (ESS)** log source
+   - There are two log endpoints for the ESS Log Source:
+      * sshishod-ess-requests-v2_1h: ESS job requests log collection with 1 hour interval
+      * sshishod-ess-requests-v2: ESS job requests log collection with 1 day interval
+   - Check the **Enabled** checkbox to enable specific log endpoint
+   - Click **Save Changes** to apply the configuration
 
 ### Step 4: Configure Management Agent Entity Properties for log collection
 
@@ -226,7 +229,7 @@ To enable the Management Agent to use the REST API for log collection, you need 
    - Find and select your VM Linux Host Entity
    - Click **Edit**
    - In the **Agent Collection Properties** list, locate the following properties and update them:
-     - (Optional) Set **Historical Data** to **P180D** (this configures the collection to retrieve ESS logs for the past 180 days)
+     - (Optional) Set **Historical Data** to **P30D** (this configures the collection to retrieve ESS logs for the past 30 days)
      - Set **Enable Filter Duplicate Records** to **true** (this prevents duplicate log entries)
    - Click **Save Changes** to apply the configuration
 
@@ -252,34 +255,36 @@ To enable the Management Agent to use the REST API for log collection, you need 
 5. Specify the compartment for the dashboard
 6. Specify the compartment for the saved searches
 
-![Import ESS Monitoring Dashboard](./images/blog-ess-import-ess-monitoring-dashboard.png)
+   ![Import ESS Monitoring Dashboard](./images/blog-ess-import-ess-monitoring-dashboard.png)
 
-*Figure 6: Import ESS Monitoring Dashboard*
+   *Figure 6: Import ESS Monitoring Dashboard*
 
 ### Optional: Integrate Fusion Apps Product Family mapping with ESS logs
 
 * Create User Defined Field in Logging Analytics
+
    ![Create User Defined Field](./images/blog-ess-create-user-defined-field.png)
 
    *Figure 7: Create User Defined Field*
 
 * Import Fusion Apps Lookup Table
-   - Navigate to Logging Analytics > Administration > Lookup Tables
+   - Download the Fusion Apps Lookup file from github [here](https://github.com/jujufugh/oci-o11y-solutions/blob/main/knowledge-content/fa-ess-scheduler/lookups/Fusion_Products_Lookup.csv)
+   - Navigate to **Logging Analytics** > **Administration** > **Lookups**
    - Click **Create Lookup**
-   - Select Type - Simple
+   - Select Type - **Simple**
    - Select the Fusion Apps Lookup file - **Fusion_Products_Lookup.csv**
    - Click **Create**
 
 * Add Field Enrichment to ESS Log Source
-   - Select Lookup as Function
-   - Select Lookup Table as Fusion Apps Lookup Table
-   - Select Log Source Field as Condition value
-   - Select Actinos to add new Log Source Fields to the Log Source
+   - Select **Lookup** as Function
+   - Select **FA_product_map** as Lookup Table Name
+   - Select Product as the Log Source Field and PRODUCT_ABBREVIATION as the Lookup Table Column
+   - Select Actionsto map the New Log Source Field with the Field Value in the Lookup Table
    - Add Field Enrichment
 
-   ![Fusion Apps product code Field Enrichment](./images/blog-ess-product-code-field-enrichment.png)
+      ![Fusion Apps product code Field Enrichment](./images/blog-ess-product-code-field-enrichment.png)
 
-   *Figure 8: Fusion Apps product code Field Enrichment*
+      *Figure 8: Fusion Apps product code Field Enrichment*
 
 ## Conclusion
 
@@ -292,6 +297,11 @@ By implementing this solution, organizations can achieve comprehensive monitorin
 - [Oracle Fusion Applications REST API QuickStart](https://docs.oracle.com/en/cloud/saas/applications-common/24c/farca/Quick_Start.html)
 - [Security User and Role Documentation](https://docs.oracle.com/en/cloud/saas/applications-common/24c/oacsm/index.html)
 - [Best Practices for Scheduled Processes](https://docs.oracle.com/en/cloud/saas/applications-common/24c/fabps/how-do-i-make-sure-that-scheduled-processes-run-smoothly-and-quickly.html)
+- [Oracle Fusion Financials Documentation](https://docs.oracle.com/en/cloud/saas/financials/24c/farfa/index.html)
+- [Oracle Fusion Service: Create a Customer Account](https://docs.oracle.com/en/cloud/saas/fusion-service/faids/create-a-customer-account-in-oracle-fusion-service.html)
+- [Oracle Fusion Service: Integration User Account](https://docs.oracle.com/en/cloud/saas/fusion-service/faiec/create-a-fusion-service-integration-user-account-for-other.html)
+- [Oracle Fusion Applications REST API QuickStart (24A)](https://docs.oracle.com/en/cloud/saas/applications-common/24a/farca/Quick_Start.html)
+- [Oracle Fusion Applications REST API Documentation](https://docs.oracle.com/en/cloud/saas/applications-common/24c/farca/index.html)
 
 
 ## Acknowledgments
