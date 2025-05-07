@@ -1,0 +1,504 @@
+{
+    "dashboards": [
+        {
+            "dashboardId": "ocid1.managementdashboard....zdh6xfxq",
+            "providerId": "dbm",
+            "providerName": "dbm",
+            "providerVersion": "3.0.0",
+            "tiles": [
+                {
+                    "displayName": "Tab Widget Group 1",
+                    "savedSearchId": "OOBSS-management-dashboard-container",
+                    "row": 0,
+                    "column": 0,
+                    "height": 3,
+                    "width": 12,
+                    "nls": {},
+                    "uiConfig": {
+                        "internalKey": "OOBSS-management-dashboard-container",
+                        "vizType": "tileContainer",
+                        "containerInfo": {
+                            "layout": {
+                                "type": "tab"
+                            },
+                            "subTiles": [
+                                {
+                                    "displayName": "Database",
+                                    "savedSearchId": "OOBSS-management-dashboard-container",
+                                    "row": 6,
+                                    "column": 0,
+                                    "height": 3,
+                                    "width": 12,
+                                    "nls": {},
+                                    "uiConfig": {
+                                        "internalKey": "OOBSS-management-dashboard-container",
+                                        "vizType": "tileContainer",
+                                        "containerInfo": {
+                                            "subTiles": [
+                                                {
+                                                    "displayName": "$(nls.dashboard.DB_TIME_DISPLAY_NAME)",
+                                                    "savedSearchId": "OOBSS-dbm-dbtime",
+                                                    "row": 0,
+                                                    "column": 0,
+                                                    "height": 3,
+                                                    "width": 6,
+                                                    "nls": {},
+                                                    "uiConfig": {},
+                                                    "dataConfig": [],
+                                                    "state": "DEFAULT",
+                                                    "drilldownConfig": [],
+                                                    "parametersMap": {
+                                                        "time": "$(dashboard.params.time)",
+                                                        "compartmentId": "$(dashboard.params.compartmentId)",
+                                                        "resourceName": "$(dashboard.params.dbm_resourceName)"
+                                                    },
+                                                    "description": null
+                                                },
+                                                {
+                                                    "displayName": "$(nls.dashboard.CPU_UTIL_DISPLAY_NAME)",
+                                                    "savedSearchId": "OOBSS-dbm-cpuUtil",
+                                                    "row": 0,
+                                                    "column": 6,
+                                                    "height": 3,
+                                                    "width": 6,
+                                                    "nls": {},
+                                                    "uiConfig": {},
+                                                    "dataConfig": [],
+                                                    "state": "DEFAULT",
+                                                    "drilldownConfig": [],
+                                                    "parametersMap": {
+                                                        "time": "$(dashboard.params.time)",
+                                                        "compartmentId": "$(dashboard.params.compartmentId)",
+                                                        "resourceName": "$(dashboard.params.dbm_resourceName)"
+                                                    },
+                                                    "description": null
+                                                },
+                                                {
+                                                    "displayName": "$(nls.dashboard.CPU_WAIT_DISPLAY_NAME)",
+                                                    "savedSearchId": "OOBSS-dbm-cpuWait",
+                                                    "row": 3,
+                                                    "column": 0,
+                                                    "height": 3,
+                                                    "width": 6,
+                                                    "nls": {},
+                                                    "uiConfig": {},
+                                                    "dataConfig": [],
+                                                    "state": "DEFAULT",
+                                                    "drilldownConfig": [],
+                                                    "parametersMap": {
+                                                        "time": "$(dashboard.params.time)",
+                                                        "compartmentId": "$(dashboard.params.compartmentId)",
+                                                        "resourceName": "$(dashboard.params.dbm_resourceName)"
+                                                    },
+                                                    "description": null
+                                                },
+                                                {
+                                                    "displayName": "$(nls.dashboard.MEMORY_USAGE_DISPLAY_NAME)",
+                                                    "savedSearchId": "OOBSS-dbm-memUtil",
+                                                    "row": 3,
+                                                    "column": 6,
+                                                    "height": 3,
+                                                    "width": 6,
+                                                    "nls": {},
+                                                    "uiConfig": {},
+                                                    "dataConfig": [],
+                                                    "state": "DEFAULT",
+                                                    "drilldownConfig": [],
+                                                    "parametersMap": {
+                                                        "time": "$(dashboard.params.time)",
+                                                        "compartmentId": "$(dashboard.params.compartmentId)",
+                                                        "resourceName": "$(dashboard.params.dbm_resourceName)"
+                                                    },
+                                                    "description": null
+                                                },
+                                                {
+                                                    "displayName": "$(nls.dashboard.USER_CALLS_DISPLAY_NAME)",
+                                                    "savedSearchId": "OOBSS-dbm-usercall",
+                                                    "row": 9,
+                                                    "column": 0,
+                                                    "height": 3,
+                                                    "width": 6,
+                                                    "nls": {},
+                                                    "uiConfig": {},
+                                                    "dataConfig": [],
+                                                    "state": "DEFAULT",
+                                                    "drilldownConfig": [],
+                                                    "parametersMap": {
+                                                        "time": "$(dashboard.params.time)",
+                                                        "compartmentId": "$(dashboard.params.compartmentId)",
+                                                        "resourceName": "$(dashboard.params.dbm_resourceName)"
+                                                    },
+                                                    "description": null
+                                                },
+                                                {
+                                                    "displayName": "$(nls.dashboard.CURRENT_LOGONS_DISPLAY_NAME)",
+                                                    "savedSearchId": "OOBSS-dbm-currentlogon",
+                                                    "row": 6,
+                                                    "column": 6,
+                                                    "height": 3,
+                                                    "width": 6,
+                                                    "nls": {},
+                                                    "uiConfig": {},
+                                                    "dataConfig": [],
+                                                    "state": "DEFAULT",
+                                                    "drilldownConfig": [],
+                                                    "parametersMap": {
+                                                        "time": "$(dashboard.params.time)",
+                                                        "compartmentId": "$(dashboard.params.compartmentId)",
+                                                        "resourceName": "$(dashboard.params.dbm_resourceName)"
+                                                    },
+                                                    "description": null
+                                                },
+                                                {
+                                                    "displayName": "$(nls.dashboard.IO_THROUGHPUT_DISPLAY_NAME)",
+                                                    "savedSearchId": "OOBSS-dbm-iothruput",
+                                                    "row": 12,
+                                                    "column": 0,
+                                                    "height": 3,
+                                                    "width": 6,
+                                                    "nls": {},
+                                                    "uiConfig": {},
+                                                    "dataConfig": [],
+                                                    "state": "DEFAULT",
+                                                    "drilldownConfig": [],
+                                                    "parametersMap": {
+                                                        "time": "$(dashboard.params.time)",
+                                                        "compartmentId": "$(dashboard.params.compartmentId)",
+                                                        "resourceName": "$(dashboard.params.dbm_resourceName)"
+                                                    },
+                                                    "description": null
+                                                },
+                                                {
+                                                    "displayName": "$(nls.dashboard.PROCESS_USAGE_DISPLAY_NAME)",
+                                                    "savedSearchId": "OOBSS-dbm-processUtil",
+                                                    "row": 9,
+                                                    "column": 6,
+                                                    "height": 3,
+                                                    "width": 6,
+                                                    "nls": {},
+                                                    "uiConfig": {},
+                                                    "dataConfig": [],
+                                                    "state": "DEFAULT",
+                                                    "drilldownConfig": [],
+                                                    "parametersMap": {
+                                                        "time": "$(dashboard.params.time)",
+                                                        "compartmentId": "$(dashboard.params.compartmentId)",
+                                                        "resourceName": "$(dashboard.params.dbm_resourceName)"
+                                                    },
+                                                    "description": null
+                                                },
+                                                {
+                                                    "displayName": "$(nls.dashboard.IOPS_DISPLAY_NAME)",
+                                                    "savedSearchId": "OOBSS-dbm-iops",
+                                                    "row": 6,
+                                                    "column": 0,
+                                                    "height": 3,
+                                                    "width": 6,
+                                                    "nls": {},
+                                                    "uiConfig": {},
+                                                    "dataConfig": [],
+                                                    "state": "DEFAULT",
+                                                    "drilldownConfig": [],
+                                                    "parametersMap": {
+                                                        "time": "$(dashboard.params.time)",
+                                                        "compartmentId": "$(dashboard.params.compartmentId)",
+                                                        "resourceName": "$(dashboard.params.dbm_resourceName)"
+                                                    },
+                                                    "description": null
+                                                },
+                                                {
+                                                    "displayName": "$(nls.dashboard.FLASH_RECOVER_DISPLAY_NAME)",
+                                                    "savedSearchId": "OOBSS-dbm-flashRecover",
+                                                    "row": 12,
+                                                    "column": 6,
+                                                    "height": 3,
+                                                    "width": 6,
+                                                    "nls": {},
+                                                    "uiConfig": {},
+                                                    "dataConfig": [],
+                                                    "state": "DEFAULT",
+                                                    "drilldownConfig": [],
+                                                    "parametersMap": {
+                                                        "time": "$(dashboard.params.time)",
+                                                        "compartmentId": "$(dashboard.params.compartmentId)",
+                                                        "resourceName": "$(dashboard.params.dbm_resourceName)"
+                                                    },
+                                                    "description": null
+                                                },
+                                                {
+                                                    "displayName": "$(nls.dashboard.STORAGE_USAGE_DISPLAY_NAME)",
+                                                    "savedSearchId": "OOBSS-dbm-storageUsage",
+                                                    "row": 15,
+                                                    "column": 6,
+                                                    "height": 3,
+                                                    "width": 6,
+                                                    "nls": {},
+                                                    "uiConfig": {},
+                                                    "dataConfig": [],
+                                                    "state": "DEFAULT",
+                                                    "drilldownConfig": [],
+                                                    "parametersMap": {
+                                                        "time": "$(dashboard.params.time)",
+                                                        "compartmentId": "$(dashboard.params.compartmentId)",
+                                                        "resourceName": "$(dashboard.params.dbm_resourceName)"
+                                                    },
+                                                    "description": null
+                                                },
+                                                {
+                                                    "displayName": "$(nls.dashboard.TRANSACTION_DISPLAY_NAME)",
+                                                    "savedSearchId": "OOBSS-dbm-transactions",
+                                                    "row": 15,
+                                                    "column": 0,
+                                                    "height": 3,
+                                                    "width": 6,
+                                                    "nls": {},
+                                                    "uiConfig": {},
+                                                    "dataConfig": [],
+                                                    "state": "DEFAULT",
+                                                    "drilldownConfig": [],
+                                                    "parametersMap": {
+                                                        "time": "$(dashboard.params.time)",
+                                                        "compartmentId": "$(dashboard.params.compartmentId)",
+                                                        "resourceName": "$(dashboard.params.dbm_resourceName)"
+                                                    },
+                                                    "description": null
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "dataConfig": [],
+                                    "state": "DEFAULT",
+                                    "drilldownConfig": [],
+                                    "parametersMap": {},
+                                    "description": null
+                                },
+                                {
+                                    "displayName": "Hosts",
+                                    "savedSearchId": "OOBSS-management-dashboard-container",
+                                    "row": 0,
+                                    "column": 0,
+                                    "height": 3,
+                                    "width": 12,
+                                    "nls": {},
+                                    "uiConfig": {
+                                        "internalKey": "OOBSS-management-dashboard-container",
+                                        "vizType": "tileContainer",
+                                        "containerInfo": {
+                                            "subTiles": [
+                                                {
+                                                    "displayName": "__INHERIT__",
+                                                    "savedSearchId": "OOBSS-appmgmt-host-cpu-utilization-1",
+                                                    "row": 0,
+                                                    "column": 0,
+                                                    "height": 3,
+                                                    "width": 6,
+                                                    "nls": {},
+                                                    "uiConfig": {},
+                                                    "dataConfig": [],
+                                                    "state": "DEFAULT",
+                                                    "drilldownConfig": [],
+                                                    "parametersMap": {
+                                                        "time": "$(dashboard.params.time)",
+                                                        "compartmentId": "$(dashboard.params.compartmentId)",
+                                                        "hostName": "$(dashboard.params.hostName)"
+                                                    },
+                                                    "description": null
+                                                },
+                                                {
+                                                    "displayName": "__INHERIT__",
+                                                    "savedSearchId": "OOBSS-appmgmt-host-memory-utilization-1",
+                                                    "row": 0,
+                                                    "column": 6,
+                                                    "height": 3,
+                                                    "width": 6,
+                                                    "nls": {},
+                                                    "uiConfig": {},
+                                                    "dataConfig": [],
+                                                    "state": "DEFAULT",
+                                                    "drilldownConfig": [],
+                                                    "parametersMap": {
+                                                        "time": "$(dashboard.params.time)",
+                                                        "compartmentId": "$(dashboard.params.compartmentId)",
+                                                        "hostName": "$(dashboard.params.hostName)"
+                                                    },
+                                                    "description": null
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "dataConfig": [],
+                                    "state": "DEFAULT",
+                                    "drilldownConfig": [],
+                                    "parametersMap": {},
+                                    "description": null
+                                }
+                            ]
+                        }
+                    },
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {},
+                    "description": null
+                },
+                {
+                    "displayName": "__INHERIT__",
+                    "savedSearchId": "OOBSS-appmgmt-host-network-activity-1",
+                    "row": 3,
+                    "column": 0,
+                    "height": 3,
+                    "width": 6,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "time": "$(dashboard.params.time)",
+                        "compartmentId": "$(dashboard.params.compartmentId)",
+                        "hostName": "$(dashboard.params.hostName)"
+                    },
+                    "description": null
+                },
+                {
+                    "displayName": "__INHERIT__",
+                    "savedSearchId": "OOBSS-appmgmt-host-file-system-utilization-1",
+                    "row": 3,
+                    "column": 6,
+                    "height": 3,
+                    "width": 6,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "time": "$(dashboard.params.time)",
+                        "compartmentId": "$(dashboard.params.compartmentId)",
+                        "hostName": "$(dashboard.params.hostName)"
+                    },
+                    "description": null
+                }
+            ],
+            "displayName": "PeopleSoft Database and Hosts",
+            "description": "Provides an overview of the critical performance metrics for a single External Database or Oracle Cloud Database over a specified time period. The Compartment and Database filters specify the input to the widgets in this dashboard. To populate metrics, ensure that Database Management is enabled for the selected database. The second tab provides similar metrics for one or more hosts.",
+            "compartmentId": "ocid1.compartment....5cxpnghq",
+            "isOobDashboard": false,
+            "isShowInHome": false,
+            "metadataVersion": "2.0",
+            "isShowDescription": true,
+            "screenImage": "todo: provide value[mandatory]",
+            "nls": {
+                "DISPLAY_NAME": {
+                    "key": "dbm-dashboard-lib.singleDBDashboard.displayName"
+                },
+                "DESCRIPTION": {
+                    "key": "dbm-dashboard-lib.singleDBDashboard.description"
+                },
+                "DB_TIME_DISPLAY_NAME": {
+                    "key": "dbm-dashboard-lib.dbTime.dashboardDisplayName"
+                },
+                "CPU_WAIT_DISPLAY_NAME": {
+                    "key": "dbm-dashboard-lib.cpuWait.dashboardDisplayName"
+                },
+                "USER_CALLS_DISPLAY_NAME": {
+                    "key": "dbm-dashboard-lib.userCalls.dashboardDisplayName"
+                },
+                "TRANSACTION_DISPLAY_NAME": {
+                    "key": "dbm-dashboard-lib.transactions.dashboardDisplayName"
+                },
+                "IO_THROUGHPUT_DISPLAY_NAME": {
+                    "key": "dbm-dashboard-lib.ioThroughput.dashboardDisplayName"
+                },
+                "IOPS_DISPLAY_NAME": {
+                    "key": "dbm-dashboard-lib.iops.dashboardDisplayName"
+                },
+                "CURRENT_LOGONS_DISPLAY_NAME": {
+                    "key": "dbm-dashboard-lib.currentLogons.dashboardDisplayName"
+                },
+                "CPU_UTIL_DISPLAY_NAME": {
+                    "key": "dbm-dashboard-lib.cpuUtil.dashboardDisplayName"
+                },
+                "MEMORY_USAGE_DISPLAY_NAME": {
+                    "key": "dbm-dashboard-lib.memoryUsage.dashboardDisplayName"
+                },
+                "STORAGE_USAGE_DISPLAY_NAME": {
+                    "key": "dbm-dashboard-lib.storageUsage.dashboardDisplayName"
+                },
+                "PROCESS_USAGE_DISPLAY_NAME": {
+                    "key": "dbm-dashboard-lib.processUsage.dashboardDisplayName"
+                },
+                "FLASH_RECOVER_DISPLAY_NAME": {
+                    "key": "dbm-dashboard-lib.flashRecoverUsage.dashboardDisplayName"
+                }
+            },
+            "uiConfig": {
+                "isFilteringEnabled": false,
+                "isTimeRangeEnabled": true,
+                "isRefreshEnabled": true
+            },
+            "dataConfig": [],
+            "type": "normal",
+            "isFavorite": false,
+            "savedSearches": [],
+            "parametersConfig": [
+                {
+                    "savedSearchId": "OOBSS-management-dashboard-compartment-filter",
+                    "width": 3,
+                    "state": "DEFAULT",
+                    "parametersMap": {
+                        "isStoreInLocalStorage": false,
+                        "isActiveCompartment": "true"
+                    },
+                    "name": "compartmentId",
+                    "localStorageKey": "compartmentId"
+                },
+                {
+                    "savedSearchId": "OOBSS-dbm-single-resource-name-filter",
+                    "width": 3,
+                    "state": "DEFAULT",
+                    "parametersMap": {
+                        "compartmentId": "$(dashboard.params.compartmentId)"
+                    },
+                    "name": "dbm_resourceName",
+                    "required": true,
+                    "localStorageKey": "dbm_resourceName"
+                },
+                {
+                    "savedSearchId": "OOBSS-appmgmt-hostName-filter",
+                    "width": 2,
+                    "state": "DEFAULT",
+                    "parametersMap": {
+                        "isStoreInLocalStorage": true,
+                        "compartmentId": "$(dashboard.params.compartmentId)"
+                    },
+                    "name": "hostName",
+                    "localStorageKey": "hostName"
+                },
+                {
+                    "name": "time",
+                    "displayName": "$(bundle.globalSavedSearch.TIME)",
+                    "src": "$(context.time)"
+                }
+            ],
+            "featuresConfig": {
+                "serviceTypes": [
+                    "dbm",
+                    "appmgmt"
+                ],
+                "crossService": {
+                    "shared": false
+                },
+                "dependencies": [
+                    {
+                        "libProviderId": "management-dashboard",
+                        "version": "1.88.1"
+                    }
+                ]
+            },
+            "drilldownConfig": [],
+            "freeformTags": {},
+            "definedTags": {}
+        }
+    ]
+}
