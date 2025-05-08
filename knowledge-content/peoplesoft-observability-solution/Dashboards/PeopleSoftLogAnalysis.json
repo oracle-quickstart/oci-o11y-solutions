@@ -1,0 +1,1327 @@
+{
+    "dashboards": [
+        {
+            "dashboardId": "ocid1.managementdashboard....dxb7jopa",
+            "providerId": "log-analytics",
+            "providerName": "Logging Analytics",
+            "providerVersion": "3.0.0",
+            "tiles": [
+                {
+                    "displayName": "New PeopleSoft Log Issues Today",
+                    "savedSearchId": "ocid1.managementsavedsearch....es4jkuua",
+                    "row": 0,
+                    "column": 0,
+                    "height": 7,
+                    "width": 12,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                        "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                        "log-analytics-log-set": "$(dashboard.params.log-analytics-logset-filter)",
+                        "time": "$(dashboard.params.time)"
+                    },
+                    "description": null
+                },
+                {
+                    "displayName": "PeopleSoft Problem Logs by Entity Type",
+                    "savedSearchId": "ocid1.managementsavedsearch....fjor5e4q",
+                    "row": 7,
+                    "column": 0,
+                    "height": 5,
+                    "width": 5,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                        "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                        "log-analytics-log-set": "$(dashboard.params.log-analytics-logset-filter)",
+                        "time": "$(dashboard.params.time)"
+                    },
+                    "description": null
+                },
+                {
+                    "displayName": "PeopleSoft Problem Logs by Label and Entity",
+                    "savedSearchId": "ocid1.managementsavedsearch....jxvgmc5a",
+                    "row": 7,
+                    "column": 5,
+                    "height": 5,
+                    "width": 7,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                        "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                        "log-analytics-log-set": "$(dashboard.params.log-analytics-logset-filter)",
+                        "time": "$(dashboard.params.time)"
+                    },
+                    "description": null
+                },
+                {
+                    "displayName": "PeopleSoft and Host Logs",
+                    "savedSearchId": "ocid1.managementsavedsearch....7q22qsxq",
+                    "row": 12,
+                    "column": 0,
+                    "height": 6,
+                    "width": 12,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                        "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                        "time": "$(dashboard.params.time)"
+                    },
+                    "description": null
+                },
+                {
+                    "displayName": "PeopleSoft Database Logs",
+                    "savedSearchId": "ocid1.managementsavedsearch....rsenakta",
+                    "row": 18,
+                    "column": 0,
+                    "height": 6,
+                    "width": 12,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "log-analytics-log-group-compartment": "$(dashboard.params.log-analytics-loggroup-filter)",
+                        "log-analytics-entity": "$(dashboard.params.log-analytics-entity-filter)",
+                        "time": "$(dashboard.params.time)"
+                    },
+                    "description": null
+                }
+            ],
+            "displayName": "PeopleSoft Log Analysis",
+            "description": "This dashboard provides an analytic view of logs from across the PeopleSoft application stack. It provides a focus on new issues seen today that were not seen in the prior day. Additional graphs provide histogram views of logs with problems, as well as logs across the application tiers, hosts, and database.",
+            "compartmentId": "ocid1.compartment....5cxpnghq",
+            "isOobDashboard": false,
+            "isShowInHome": false,
+            "metadataVersion": "2.0",
+            "isShowDescription": true,
+            "screenImage": "todo: provide value[mandatory]",
+            "nls": {},
+            "uiConfig": {
+                "isFilteringEnabled": false,
+                "isTimeRangeEnabled": true,
+                "isRefreshEnabled": true
+            },
+            "dataConfig": [],
+            "type": "normal",
+            "isFavorite": false,
+            "savedSearches": [
+                {
+                    "id": "ocid1.managementsavedsearch....7q22qsxq",
+                    "displayName": "PeopleSoft and Host Logs",
+                    "providerId": "log-analytics",
+                    "providerVersion": "3.0.0",
+                    "providerName": "Logging Analytics",
+                    "compartmentId": "ocid1.compartment....5cxpnghq",
+                    "isOobSavedSearch": false,
+                    "description": "Histogram of logs from all PeopleSoft and Host sources based on Log Group",
+                    "nls": {},
+                    "type": "WIDGET_SHOW_IN_DASHBOARD",
+                    "uiConfig": {
+                        "timeSelection": {
+                            "numUnits": 24,
+                            "units": "HOURS",
+                            "timePeriod": "relative"
+                        },
+                        "showTitle": true,
+                        "visualizationType": "records_histogram",
+                        "visualizationOptions": {
+                            "customVizOpt": {
+                                "primaryFieldIname": "mbody",
+                                "primaryFieldDname": "Original Log Content"
+                            }
+                        },
+                        "queryString": "'Log Group' = PSFT and 'Entity Type' in ('PSFT PIA', 'Host (Linux)', 'PSFT Process Scheduler Domain', 'PSFT Application Server Domain') | timestats count as logrecords by 'Log Source'",
+                        "scopeFilters": {
+                            "filters": [
+                                {
+                                    "type": "LogGroup",
+                                    "flags": {
+                                        "IncludeSubCompartments": true
+                                    },
+                                    "values": [
+                                        {
+                                            "value": "ocid1.compartment....5cxpnghq",
+                                            "label": "OracleApps"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MetricCompartment",
+                                    "flags": {},
+                                    "values": []
+                                },
+                                {
+                                    "type": "Entity",
+                                    "flags": {
+                                        "IncludeDependents": true,
+                                        "ScopeCompartmentId": "ocid1.tenancy....lkmio6oiq"
+                                    },
+                                    "values": []
+                                },
+                                {
+                                    "type": "LogSet",
+                                    "flags": {},
+                                    "values": []
+                                },
+                                {
+                                    "type": "ResourceCompartment",
+                                    "flags": {
+                                        "IncludeSubCompartments": true
+                                    },
+                                    "values": [
+                                        {
+                                            "value": "ocid1.compartment....5cxpnghq",
+                                            "label": "OracleApps"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Region",
+                                    "flags": {},
+                                    "values": [
+                                        {
+                                            "value": "us-ashburn-1",
+                                            "label": "US East (Ashburn)"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "isGlobal": false,
+                            "LogGroup": {
+                                "type": "LogGroup",
+                                "flags": {
+                                    "IncludeSubCompartments": true
+                                },
+                                "values": [
+                                    {
+                                        "value": "ocid1.compartment....5cxpnghq",
+                                        "label": "OracleApps"
+                                    }
+                                ]
+                            },
+                            "MetricCompartment": {
+                                "type": "MetricCompartment",
+                                "flags": {},
+                                "values": []
+                            },
+                            "Entity": {
+                                "type": "Entity",
+                                "flags": {
+                                    "IncludeDependents": true,
+                                    "ScopeCompartmentId": "ocid1.tenancy....lkmio6oiq"
+                                },
+                                "values": []
+                            },
+                            "LogSet": {
+                                "type": "LogSet",
+                                "flags": {},
+                                "values": []
+                            },
+                            "ResourceCompartment": {
+                                "type": "ResourceCompartment",
+                                "flags": {
+                                    "IncludeSubCompartments": true
+                                },
+                                "values": [
+                                    {
+                                        "value": "ocid1.compartment....5cxpnghq",
+                                        "label": "OracleApps"
+                                    }
+                                ]
+                            },
+                            "Region": {
+                                "type": "Region",
+                                "flags": {},
+                                "values": [
+                                    {
+                                        "value": "us-ashburn-1",
+                                        "label": "US East (Ashburn)"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "dataConfig": [],
+                    "screenImage": " ",
+                    "metadataVersion": "2.0",
+                    "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+                    "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+                    "freeformTags": {},
+                    "definedTags": {},
+                    "parametersConfig": [
+                        {
+                            "name": "log-analytics-log-group-compartment",
+                            "displayName": "Log Group Compartment",
+                            "required": true,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-filter-4a"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-filter-4a"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "object"
+                            }
+                        },
+                        {
+                            "name": "log-analytics-entity",
+                            "displayName": "Entity",
+                            "required": true,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-filter-2a"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-filter-2a"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "object"
+                            }
+                        },
+                        {
+                            "name": "log-analytics-log-set",
+                            "displayName": "Log Set",
+                            "required": true,
+                            "hidden": "$(window.logSetNotEnabled)",
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-filter-3a"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-filter-3a"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "object"
+                            }
+                        },
+                        {
+                            "name": "log-analytics-region",
+                            "displayName": "Region",
+                            "required": false,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-region-filter"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-region-filter"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "array"
+                            }
+                        },
+                        {
+                            "name": "time",
+                            "displayName": "$(bundle.globalSavedSearch.TIME)",
+                            "required": true,
+                            "hidden": true
+                        },
+                        {
+                            "name": "flex"
+                        }
+                    ],
+                    "featuresConfig": {
+                        "crossService": {
+                            "shared": true
+                        }
+                    },
+                    "drilldownConfig": []
+                },
+                {
+                    "id": "ocid1.managementsavedsearch....fjor5e4q",
+                    "displayName": "PeopleSoft Problem Logs by Entity Type",
+                    "providerId": "log-analytics",
+                    "providerVersion": "3.0.0",
+                    "providerName": "Logging Analytics",
+                    "compartmentId": "ocid1.compartment....5cxpnghq",
+                    "isOobSavedSearch": false,
+                    "description": "Problem log records by entity type based on Log Group",
+                    "nls": {},
+                    "type": "WIDGET_SHOW_IN_DASHBOARD",
+                    "uiConfig": {
+                        "timeSelection": {
+                            "startTimeUtc": "2025-04-23T13:06:30.099Z",
+                            "endTimeUtc": "2025-04-23T21:06:30.099Z",
+                            "timePeriod": "cust"
+                        },
+                        "showTitle": true,
+                        "visualizationType": "records_histogram",
+                        "visualizationOptions": {
+                            "customVizOpt": {
+                                "primaryFieldIname": "mbody",
+                                "primaryFieldDname": "Original Log Content"
+                            }
+                        },
+                        "queryString": "'Log Group' in (PSFT) and 'Problem Priority' != null | fields Time | timestats count as logrecords by 'Entity Type'",
+                        "scopeFilters": {
+                            "filters": [
+                                {
+                                    "type": "LogGroup",
+                                    "flags": {
+                                        "IncludeSubCompartments": true
+                                    },
+                                    "values": [
+                                        {
+                                            "value": "ocid1.tenancy....kmio6oiq",
+                                            "label": "emdemo (root)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MetricCompartment",
+                                    "flags": {},
+                                    "values": []
+                                },
+                                {
+                                    "type": "Entity",
+                                    "flags": {
+                                        "IncludeDependents": true,
+                                        "ScopeCompartmentId": "ocid1.tenancy....lkmio6oiq"
+                                    },
+                                    "values": []
+                                },
+                                {
+                                    "type": "LogSet",
+                                    "flags": {},
+                                    "values": []
+                                },
+                                {
+                                    "type": "ResourceCompartment",
+                                    "flags": {
+                                        "IncludeSubCompartments": true
+                                    },
+                                    "values": [
+                                        {
+                                            "value": "ocid1.compartment....5cxpnghq",
+                                            "label": "OracleApps"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Region",
+                                    "flags": {},
+                                    "values": [
+                                        {
+                                            "value": "us-ashburn-1",
+                                            "label": "US East (Ashburn)"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "isGlobal": false,
+                            "LogGroup": {
+                                "type": "LogGroup",
+                                "flags": {
+                                    "IncludeSubCompartments": true
+                                },
+                                "values": [
+                                    {
+                                        "value": "ocid1.tenancy....kmio6oiq",
+                                        "label": "emdemo (root)"
+                                    }
+                                ]
+                            },
+                            "MetricCompartment": {
+                                "type": "MetricCompartment",
+                                "flags": {},
+                                "values": []
+                            },
+                            "Entity": {
+                                "type": "Entity",
+                                "flags": {
+                                    "IncludeDependents": true,
+                                    "ScopeCompartmentId": "ocid1.tenancy....lkmio6oiq"
+                                },
+                                "values": []
+                            },
+                            "LogSet": {
+                                "type": "LogSet",
+                                "flags": {},
+                                "values": []
+                            },
+                            "ResourceCompartment": {
+                                "type": "ResourceCompartment",
+                                "flags": {
+                                    "IncludeSubCompartments": true
+                                },
+                                "values": [
+                                    {
+                                        "value": "ocid1.compartment....5cxpnghq",
+                                        "label": "OracleApps"
+                                    }
+                                ]
+                            },
+                            "Region": {
+                                "type": "Region",
+                                "flags": {},
+                                "values": [
+                                    {
+                                        "value": "us-ashburn-1",
+                                        "label": "US East (Ashburn)"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "dataConfig": [],
+                    "screenImage": " ",
+                    "metadataVersion": "2.0",
+                    "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+                    "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+                    "freeformTags": {},
+                    "definedTags": {},
+                    "parametersConfig": [
+                        {
+                            "name": "log-analytics-log-group-compartment",
+                            "displayName": "Log Group Compartment",
+                            "required": true,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-filter-4a"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-filter-4a"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "object"
+                            }
+                        },
+                        {
+                            "name": "log-analytics-entity",
+                            "displayName": "Entity",
+                            "required": true,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-filter-2a"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-filter-2a"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "object"
+                            }
+                        },
+                        {
+                            "name": "log-analytics-log-set",
+                            "displayName": "Log Set",
+                            "required": true,
+                            "hidden": "$(window.logSetNotEnabled)",
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-filter-3a"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-filter-3a"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "object"
+                            }
+                        },
+                        {
+                            "name": "log-analytics-region",
+                            "displayName": "Region",
+                            "required": false,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-region-filter"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-region-filter"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "array"
+                            }
+                        },
+                        {
+                            "name": "time",
+                            "displayName": "$(bundle.globalSavedSearch.TIME)",
+                            "required": true,
+                            "hidden": true
+                        },
+                        {
+                            "name": "flex"
+                        }
+                    ],
+                    "featuresConfig": {
+                        "crossService": {
+                            "shared": true
+                        }
+                    },
+                    "drilldownConfig": []
+                },
+                {
+                    "id": "ocid1.managementsavedsearch....es4jkuua",
+                    "displayName": "New PeopleSoft Log Issues Today",
+                    "providerId": "log-analytics",
+                    "providerVersion": "3.0.0",
+                    "providerName": "Logging Analytics",
+                    "compartmentId": "ocid1.compartment....5cxpnghq",
+                    "isOobSavedSearch": false,
+                    "description": "Cluster comparison of last 24 hours to prior 24 hours over all logs related to the PeopleSoft infrastructure.",
+                    "nls": {},
+                    "type": "WIDGET_SHOW_IN_DASHBOARD",
+                    "uiConfig": {
+                        "timeSelection": {
+                            "numUnits": 24,
+                            "units": "HOURS",
+                            "timePeriod": "relative"
+                        },
+                        "showTitle": true,
+                        "visualizationType": "cluster_compare",
+                        "visualizationOptions": {},
+                        "queryString": "'Log Group' = PSFT | fields Time, 'Log Group' | clustercompare timeshift = -24hour size = 24hour",
+                        "scopeFilters": {
+                            "filters": [
+                                {
+                                    "type": "LogGroup",
+                                    "flags": {
+                                        "IncludeSubCompartments": true
+                                    },
+                                    "values": [
+                                        {
+                                            "value": "ocid1.tenancy....kmio6oiq",
+                                            "label": "emdemo (root)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Entity",
+                                    "flags": {
+                                        "IncludeDependents": true,
+                                        "ScopeCompartmentId": "ocid1.compartment....h5cxpnghq"
+                                    },
+                                    "values": []
+                                },
+                                {
+                                    "type": "LogSet",
+                                    "flags": {},
+                                    "values": []
+                                },
+                                {
+                                    "type": "Region",
+                                    "flags": {},
+                                    "values": [
+                                        {
+                                            "value": "us-ashburn-1",
+                                            "label": "US East (Ashburn)"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "isGlobal": false,
+                            "LogGroup": {
+                                "type": "LogGroup",
+                                "flags": {
+                                    "IncludeSubCompartments": true
+                                },
+                                "values": [
+                                    {
+                                        "value": "ocid1.tenancy....kmio6oiq",
+                                        "label": "emdemo (root)"
+                                    }
+                                ]
+                            },
+                            "Entity": {
+                                "type": "Entity",
+                                "flags": {
+                                    "IncludeDependents": true,
+                                    "ScopeCompartmentId": "ocid1.compartment....h5cxpnghq"
+                                },
+                                "values": []
+                            },
+                            "LogSet": {
+                                "type": "LogSet",
+                                "flags": {},
+                                "values": []
+                            },
+                            "Region": {
+                                "type": "Region",
+                                "flags": {},
+                                "values": [
+                                    {
+                                        "value": "us-ashburn-1",
+                                        "label": "US East (Ashburn)"
+                                    }
+                                ]
+                            }
+                        },
+                        "internalKey": "ocid1.managementsavedsearch....es4jkuua",
+                        "vizType": "lxSavedSearchWidgetType",
+                        "enableWidgetInApp": true
+                    },
+                    "dataConfig": [],
+                    "screenImage": " ",
+                    "metadataVersion": "2.0",
+                    "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+                    "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+                    "freeformTags": {},
+                    "definedTags": {},
+                    "parametersConfig": [
+                        {
+                            "name": "log-analytics-log-group-compartment",
+                            "displayName": "Log Group Compartment",
+                            "required": true,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-filter-4a"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-filter-4a"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "object"
+                            }
+                        },
+                        {
+                            "name": "log-analytics-entity",
+                            "displayName": "Entity",
+                            "required": true,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-filter-2a"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-filter-2a"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "object"
+                            }
+                        },
+                        {
+                            "name": "log-analytics-log-set",
+                            "displayName": "Log Set",
+                            "required": true,
+                            "hidden": "$(window.logSetNotEnabled)",
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-filter-3a"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-filter-3a"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "object"
+                            }
+                        },
+                        {
+                            "name": "log-analytics-region",
+                            "displayName": "Region",
+                            "required": false,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-region-filter"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-region-filter"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "array"
+                            }
+                        },
+                        {
+                            "name": "time",
+                            "displayName": "$(bundle.globalSavedSearch.TIME)",
+                            "required": true,
+                            "hidden": true
+                        },
+                        {
+                            "name": "flex"
+                        }
+                    ],
+                    "featuresConfig": {
+                        "crossService": {
+                            "shared": true
+                        }
+                    },
+                    "drilldownConfig": []
+                },
+                {
+                    "id": "ocid1.managementsavedsearch....rsenakta",
+                    "displayName": "PeopleSoft Database Logs",
+                    "providerId": "log-analytics",
+                    "providerVersion": "3.0.0",
+                    "providerName": "Logging Analytics",
+                    "compartmentId": "ocid1.compartment....5cxpnghq",
+                    "isOobSavedSearch": false,
+                    "description": "Histogram of logs from all Database sources based on Log Group",
+                    "nls": {},
+                    "type": "WIDGET_SHOW_IN_DASHBOARD",
+                    "uiConfig": {
+                        "timeSelection": {
+                            "numUnits": 24,
+                            "units": "HOURS",
+                            "timePeriod": "relative"
+                        },
+                        "showTitle": true,
+                        "visualizationType": "records_histogram",
+                        "visualizationOptions": {
+                            "customVizOpt": {
+                                "primaryFieldIname": "mbody",
+                                "primaryFieldDname": "Original Log Content"
+                            }
+                        },
+                        "queryString": "'Log Group' = PSFT and 'Entity Type' in ('Autonomous Transaction Processing', 'Oracle Database', 'Oracle Database Instance', 'Oracle Pluggable Database') | timestats count as logrecords by 'Log Source'",
+                        "scopeFilters": {
+                            "filters": [
+                                {
+                                    "type": "LogGroup",
+                                    "flags": {
+                                        "IncludeSubCompartments": true
+                                    },
+                                    "values": [
+                                        {
+                                            "value": "ocid1.compartment....5cxpnghq",
+                                            "label": "OracleApps"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MetricCompartment",
+                                    "flags": {},
+                                    "values": []
+                                },
+                                {
+                                    "type": "Entity",
+                                    "flags": {
+                                        "IncludeDependents": true,
+                                        "ScopeCompartmentId": "ocid1.tenancy....lkmio6oiq"
+                                    },
+                                    "values": []
+                                },
+                                {
+                                    "type": "LogSet",
+                                    "flags": {},
+                                    "values": []
+                                },
+                                {
+                                    "type": "ResourceCompartment",
+                                    "flags": {
+                                        "IncludeSubCompartments": true
+                                    },
+                                    "values": [
+                                        {
+                                            "value": "ocid1.compartment....5cxpnghq",
+                                            "label": "OracleApps"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Region",
+                                    "flags": {},
+                                    "values": [
+                                        {
+                                            "value": "us-ashburn-1",
+                                            "label": "US East (Ashburn)"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "isGlobal": false,
+                            "LogGroup": {
+                                "type": "LogGroup",
+                                "flags": {
+                                    "IncludeSubCompartments": true
+                                },
+                                "values": [
+                                    {
+                                        "value": "ocid1.compartment....5cxpnghq",
+                                        "label": "OracleApps"
+                                    }
+                                ]
+                            },
+                            "MetricCompartment": {
+                                "type": "MetricCompartment",
+                                "flags": {},
+                                "values": []
+                            },
+                            "Entity": {
+                                "type": "Entity",
+                                "flags": {
+                                    "IncludeDependents": true,
+                                    "ScopeCompartmentId": "ocid1.tenancy....lkmio6oiq"
+                                },
+                                "values": []
+                            },
+                            "LogSet": {
+                                "type": "LogSet",
+                                "flags": {},
+                                "values": []
+                            },
+                            "ResourceCompartment": {
+                                "type": "ResourceCompartment",
+                                "flags": {
+                                    "IncludeSubCompartments": true
+                                },
+                                "values": [
+                                    {
+                                        "value": "ocid1.compartment....5cxpnghq",
+                                        "label": "OracleApps"
+                                    }
+                                ]
+                            },
+                            "Region": {
+                                "type": "Region",
+                                "flags": {},
+                                "values": [
+                                    {
+                                        "value": "us-ashburn-1",
+                                        "label": "US East (Ashburn)"
+                                    }
+                                ]
+                            }
+                        },
+                        "vizType": "lxSavedSearchWidgetType",
+                        "enableWidgetInApp": true
+                    },
+                    "dataConfig": [],
+                    "screenImage": " ",
+                    "metadataVersion": "2.0",
+                    "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+                    "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+                    "freeformTags": {},
+                    "definedTags": {},
+                    "parametersConfig": [
+                        {
+                            "name": "log-analytics-log-group-compartment",
+                            "displayName": "Log Group Compartment",
+                            "required": true,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-filter-4a"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-filter-4a"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "object"
+                            }
+                        },
+                        {
+                            "name": "log-analytics-entity",
+                            "displayName": "Entity",
+                            "required": true,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-filter-2a"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-filter-2a"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "object"
+                            }
+                        },
+                        {
+                            "name": "log-analytics-log-set",
+                            "displayName": "Log Set",
+                            "required": true,
+                            "hidden": "$(window.logSetNotEnabled)",
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-filter-3a"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-filter-3a"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "object"
+                            }
+                        },
+                        {
+                            "name": "log-analytics-region",
+                            "displayName": "Region",
+                            "required": false,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-region-filter"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-region-filter"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "array"
+                            }
+                        },
+                        {
+                            "name": "time",
+                            "displayName": "$(bundle.globalSavedSearch.TIME)",
+                            "required": true,
+                            "hidden": true
+                        },
+                        {
+                            "name": "flex"
+                        }
+                    ],
+                    "featuresConfig": {
+                        "crossService": {
+                            "shared": true
+                        }
+                    },
+                    "drilldownConfig": []
+                },
+                {
+                    "id": "ocid1.managementsavedsearch....jxvgmc5a",
+                    "displayName": "PeopleSoft Problem Logs by Label and Entity",
+                    "providerId": "log-analytics",
+                    "providerVersion": "3.0.0",
+                    "providerName": "Logging Analytics",
+                    "compartmentId": "ocid1.compartment....5cxpnghq",
+                    "isOobSavedSearch": false,
+                    "description": "Logs flagged as problem, grouped by label (problem) and entity based on Log Group",
+                    "nls": {},
+                    "type": "WIDGET_SHOW_IN_DASHBOARD",
+                    "uiConfig": {
+                        "timeSelection": {
+                            "numUnits": 24,
+                            "units": "HOURS",
+                            "timePeriod": "relative"
+                        },
+                        "showTitle": true,
+                        "visualizationType": "summary_table",
+                        "visualizationOptions": {
+                            "customVizOpt": {
+                                "primaryFieldIname": "mbody",
+                                "primaryFieldDname": "Original Log Content"
+                            }
+                        },
+                        "queryString": "'Log Group' in (PSFT) and 'Problem Priority' != null | fields Time | stats count as logrecords by Label, Entity",
+                        "scopeFilters": {
+                            "filters": [
+                                {
+                                    "type": "LogGroup",
+                                    "flags": {
+                                        "IncludeSubCompartments": true
+                                    },
+                                    "values": [
+                                        {
+                                            "value": "ocid1.compartment....5cxpnghq",
+                                            "label": "OracleApps"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "MetricCompartment",
+                                    "flags": {},
+                                    "values": []
+                                },
+                                {
+                                    "type": "Entity",
+                                    "flags": {
+                                        "IncludeDependents": true,
+                                        "ScopeCompartmentId": "ocid1.compartment....h5cxpnghq"
+                                    },
+                                    "values": []
+                                },
+                                {
+                                    "type": "LogSet",
+                                    "flags": {},
+                                    "values": []
+                                },
+                                {
+                                    "type": "ResourceCompartment",
+                                    "flags": {
+                                        "IncludeSubCompartments": true
+                                    },
+                                    "values": [
+                                        {
+                                            "value": "ocid1.compartment....5cxpnghq",
+                                            "label": "OracleApps"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Region",
+                                    "flags": {},
+                                    "values": [
+                                        {
+                                            "value": "us-ashburn-1",
+                                            "label": "US East (Ashburn)"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "isGlobal": false,
+                            "LogGroup": {
+                                "type": "LogGroup",
+                                "flags": {
+                                    "IncludeSubCompartments": true
+                                },
+                                "values": [
+                                    {
+                                        "value": "ocid1.compartment....5cxpnghq",
+                                        "label": "OracleApps"
+                                    }
+                                ]
+                            },
+                            "MetricCompartment": {
+                                "type": "MetricCompartment",
+                                "flags": {},
+                                "values": []
+                            },
+                            "Entity": {
+                                "type": "Entity",
+                                "flags": {
+                                    "IncludeDependents": true,
+                                    "ScopeCompartmentId": "ocid1.compartment....h5cxpnghq"
+                                },
+                                "values": []
+                            },
+                            "LogSet": {
+                                "type": "LogSet",
+                                "flags": {},
+                                "values": []
+                            },
+                            "ResourceCompartment": {
+                                "type": "ResourceCompartment",
+                                "flags": {
+                                    "IncludeSubCompartments": true
+                                },
+                                "values": [
+                                    {
+                                        "value": "ocid1.compartment....5cxpnghq",
+                                        "label": "OracleApps"
+                                    }
+                                ]
+                            },
+                            "Region": {
+                                "type": "Region",
+                                "flags": {},
+                                "values": [
+                                    {
+                                        "value": "us-ashburn-1",
+                                        "label": "US East (Ashburn)"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "dataConfig": [],
+                    "screenImage": " ",
+                    "metadataVersion": "2.0",
+                    "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+                    "widgetVM": "jet-modules/dashboards/widgets/lxSavedSearchWidget",
+                    "freeformTags": {},
+                    "definedTags": {},
+                    "parametersConfig": [
+                        {
+                            "name": "log-analytics-log-group-compartment",
+                            "displayName": "Log Group Compartment",
+                            "required": true,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-filter-4a"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-filter-4a"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "object"
+                            }
+                        },
+                        {
+                            "name": "log-analytics-entity",
+                            "displayName": "Entity",
+                            "required": true,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-filter-2a"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-filter-2a"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "object"
+                            }
+                        },
+                        {
+                            "name": "log-analytics-log-set",
+                            "displayName": "Log Set",
+                            "required": true,
+                            "hidden": "$(window.logSetNotEnabled)",
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-filter-3a"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-filter-3a"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "object"
+                            }
+                        },
+                        {
+                            "name": "log-analytics-region",
+                            "displayName": "Region",
+                            "required": false,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-region-filter"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-region-filter"
+                                }
+                            },
+                            "valueFormat": {
+                                "type": "array"
+                            }
+                        },
+                        {
+                            "name": "time",
+                            "displayName": "$(bundle.globalSavedSearch.TIME)",
+                            "required": true,
+                            "hidden": true
+                        },
+                        {
+                            "name": "flex"
+                        }
+                    ],
+                    "featuresConfig": {
+                        "crossService": {
+                            "shared": true
+                        }
+                    },
+                    "drilldownConfig": []
+                }
+            ],
+            "parametersConfig": [
+                {
+                    "savedSearchId": "OOBSS-management-dashboard-filter-4a",
+                    "displayName": "Log Group Compartment",
+                    "width": 4,
+                    "state": "DEFAULT",
+                    "uiConfig": {
+                        "internalKey": "OOBSS-management-dashboard-filter-4a",
+                        "filterName": "log-analytics-loggroup-filter",
+                        "vizFilterType": "lxLogGroupDashFilterType",
+                        "defaultWidth": 4,
+                        "minWidth": 2
+                    },
+                    "parametersMap": {
+                        "isStoreInLocalStorage": true
+                    },
+                    "name": "log-analytics-loggroup-filter",
+                    "localStorageKey": "log-analytics-loggroup-filter"
+                },
+                {
+                    "savedSearchId": "OOBSS-management-dashboard-filter-2a",
+                    "displayName": "Entity",
+                    "width": 4,
+                    "state": "DEFAULT",
+                    "uiConfig": {
+                        "internalKey": "OOBSS-management-dashboard-filter-2a",
+                        "filterName": "log-analytics-entity-filter",
+                        "vizFilterType": "lxEntityDashFilterType",
+                        "defaultWidth": 4,
+                        "minWidth": 2
+                    },
+                    "parametersMap": {
+                        "isStoreInLocalStorage": true
+                    },
+                    "name": "log-analytics-entity-filter",
+                    "localStorageKey": "log-analytics-entity-filter"
+                },
+                {
+                    "savedSearchId": "OOBSS-management-dashboard-filter-100",
+                    "width": 3,
+                    "state": "DEFAULT",
+                    "parametersMap": {},
+                    "name": "temporaryFilerName",
+                    "visible": false
+                },
+                {
+                    "name": "time",
+                    "displayName": "$(bundle.globalSavedSearch.TIME)",
+                    "src": "$(context.time)"
+                },
+                {
+                    "savedSearchId": "OOBSS-management-dashboard-filter-3a",
+                    "displayName": "Log Set",
+                    "state": "DEFAULT",
+                    "uiConfig": {
+                        "internalKey": "OOBSS-management-dashboard-filter-3a",
+                        "filterName": "log-analytics-logset-filter",
+                        "vizFilterType": "lxLogSetDashFilterType",
+                        "defaultWidth": 4,
+                        "minWidth": 2,
+                        "hidden": "$(window.logSetNotEnabled)"
+                    },
+                    "parametersMap": {
+                        "isStoreInLocalStorage": true
+                    },
+                    "name": "log-analytics-logset-filter",
+                    "localStorageKey": "log-analytics-logset-filter",
+                    "uniqueId": "14c3beac-f618-55bb-1ca8-6ce3db767407"
+                }
+            ],
+            "featuresConfig": {
+                "crossService": {
+                    "shared": false
+                },
+                "serviceTypes": [
+                    "log-analytics",
+                    "management-dashboard"
+                ]
+            },
+            "drilldownConfig": [],
+            "freeformTags": {},
+            "definedTags": {}
+        }
+    ]
+}

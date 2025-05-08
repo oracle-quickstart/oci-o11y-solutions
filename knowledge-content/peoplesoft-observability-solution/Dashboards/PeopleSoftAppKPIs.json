@@ -1,0 +1,829 @@
+{
+    "dashboards": [
+        {
+            "dashboardId": "ocid1.managementdashboard....xlqgh4na",
+            "providerId": "APM",
+            "providerName": "APM",
+            "providerVersion": "3.0.0",
+            "tiles": [
+                {
+                    "displayName": "Top content",
+                    "savedSearchId": "OOBSS-APM-trace-table-1",
+                    "row": 0,
+                    "column": 0,
+                    "height": 4,
+                    "width": 5,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "time": "$(dashboard.params.time)",
+                        "compartmentId": "$(dashboard.params.compartmentId)",
+                        "apmDomain": "$(dashboard.params.apmDomain)",
+                        "apmTraceExplorerQuery": "SHOW SPANS psftContentId as ContentID, count(*) as count,  avg(apdexScore) as Apdex, cast(100* sum(errorCount)/count(*), 'PERCENTAGE') as Errors WHERE (psftContentType is not omitted) group by psftContentId order by avg(apdexScore) asc "
+                    },
+                    "description": null
+                },
+                {
+                    "displayName": "Apdex",
+                    "savedSearchId": "ocid1.managementsavedsearch....xndmy5wa",
+                    "row": 0,
+                    "column": 5,
+                    "height": 2,
+                    "width": 2,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "time": "$(dashboard.params.time)",
+                        "apmDomain": "$(dashboard.params.apmDomain)"
+                    },
+                    "description": null
+                },
+                {
+                    "displayName": "User sessions",
+                    "savedSearchId": "ocid1.managementsavedsearch....7eqlekua",
+                    "row": 0,
+                    "column": 7,
+                    "height": 2,
+                    "width": 2,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "time": "$(dashboard.params.time)",
+                        "apmDomain": "$(dashboard.params.apmDomain)",
+                        "apmQuery": "show traces count_distinct(sessionId) as value where component='BROWSER'"
+                    },
+                    "description": null
+                },
+                {
+                    "displayName": "Availability (Synthetic)",
+                    "savedSearchId": "OOBSS-APM-trace-table-1",
+                    "row": 0,
+                    "column": 9,
+                    "height": 2,
+                    "width": 3,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "time": "$(dashboard.params.time)",
+                        "compartmentId": "$(dashboard.params.compartmentId)",
+                        "apmDomain": "$(dashboard.params.apmDomain)",
+                        "apmTraceExplorerQuery": "show syn_traces ServiceName as \"Monitor\", cast(sum(isAvailable*reportingIntervalLengthMs)/(sum(isAvailable*reportingIntervalLengthMs) + sum(isUnavailable*reportingIntervalLengthMs)) * 100, 'PERCENTAGE') as \"Availability\", cast(sum(isUnavailable*reportingIntervalLengthMs), 'DURATION_MS') as Downtime  group by ServiceName"
+                    },
+                    "description": null
+                },
+                {
+                    "displayName": "Load throughput by program",
+                    "savedSearchId": "ocid1.managementsavedsearch....gzsvfa5a",
+                    "row": 2,
+                    "column": 5,
+                    "height": 3,
+                    "width": 7,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "time": "$(dashboard.params.time)",
+                        "regionName": "$(context.regionName)",
+                        "compartmentId": "$(dashboard.params.compartmentId)"
+                    },
+                    "description": null
+                },
+                {
+                    "displayName": "End users by location",
+                    "savedSearchId": "OOBSS-APM-geomap-1",
+                    "row": 4,
+                    "column": 0,
+                    "height": 4,
+                    "width": 5,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "time": "$(dashboard.params.time)",
+                        "compartmentId": "$(dashboard.params.compartmentId)",
+                        "apmDomain": "$(dashboard.params.apmDomain)"
+                    },
+                    "description": null
+                },
+                {
+                    "displayName": "AppServer load",
+                    "savedSearchId": "ocid1.managementsavedsearch....4rwzi6na",
+                    "row": 5,
+                    "column": 5,
+                    "height": 3,
+                    "width": 3,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "time": "$(dashboard.params.time)",
+                        "regionName": "$(context.regionName)",
+                        "compartmentId": "$(dashboard.params.compartmentId)"
+                    },
+                    "description": null
+                },
+                {
+                    "displayName": "Host CPU load",
+                    "savedSearchId": "ocid1.managementsavedsearch....wr6dm46q",
+                    "row": 5,
+                    "column": 8,
+                    "height": 3,
+                    "width": 4,
+                    "nls": {},
+                    "uiConfig": {},
+                    "dataConfig": [],
+                    "state": "DEFAULT",
+                    "drilldownConfig": [],
+                    "parametersMap": {
+                        "time": "$(dashboard.params.time)",
+                        "regionName": "$(context.regionName)",
+                        "compartmentId": "$(dashboard.params.compartmentId)",
+                        "hosts": "$(dashboard.params.hostName)"
+                    },
+                    "description": null
+                }
+            ],
+            "displayName": "PeopleSoft App KPIs",
+            "description": "This dashboard provides key performance indicators for the PeopleSoft application, including synthetic and real user performance and satisfaction measures.",
+            "compartmentId": "ocid1.compartment....5cxpnghq",
+            "isOobDashboard": false,
+            "isShowInHome": false,
+            "metadataVersion": "2.0",
+            "isShowDescription": true,
+            "screenImage": "todo: provide value[mandatory]",
+            "nls": {},
+            "uiConfig": {
+                "isFilteringEnabled": false,
+                "isTimeRangeEnabled": true,
+                "isRefreshEnabled": true
+            },
+            "dataConfig": [],
+            "type": "normal",
+            "isFavorite": false,
+            "savedSearches": [
+                {
+                    "id": "ocid1.managementsavedsearch....4rwzi6na",
+                    "displayName": "AppServer Load",
+                    "providerId": "APM",
+                    "providerVersion": "3.0.0",
+                    "providerName": "APM",
+                    "compartmentId": "ocid1.compartment....5cxpnghq",
+                    "isOobSavedSearch": false,
+                    "description": "psft appserver load",
+                    "nls": {},
+                    "type": "WIDGET_SHOW_IN_DASHBOARD",
+                    "uiConfig": {
+                        "vizType": "chart",
+                        "chartInfo": {
+                            "jetConfig": {
+                                "type": "pie",
+                                "dataCursor": "on",
+                                "stack": "on",
+                                "pieCenter": {
+                                    "labelStyle": {
+                                        "fontSize": "20px",
+                                        "color": "#999999"
+                                    }
+                                },
+                                "styleDefaults": {
+                                    "pieInnerRadius": 0.5
+                                },
+                                "legend": {
+                                    "rendered": true,
+                                    "position": "end"
+                                }
+                            },
+                            "value": "aggregatedDatapoints.value",
+                            "group": "",
+                            "colorBy": "dimensions.loadState",
+                            "series": "dimensions.loadState",
+                            "enableCorrelation": true
+                        },
+                        "defaultDataSource": "oracle_appmgmt/Load"
+                    },
+                    "dataConfig": [
+                        {
+                            "name": "oracle_appmgmt/Load",
+                            "type": "monitoringDataSource",
+                            "parameters": {
+                                "namespace": "oracle_appmgmt",
+                                "mql": "Load[auto].groupBy(loadState).max()",
+                                "resourceGroup": "oracle_psft_appserv",
+                                "compartmentId": "$(params.compartmentId)",
+                                "startTime": "$(params.time.start)",
+                                "endTime": "$(params.time.end)",
+                                "regionName": "$(params.regionName)"
+                            }
+                        }
+                    ],
+                    "screenImage": "...",
+                    "metadataVersion": "2.0",
+                    "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+                    "widgetVM": "visualizations/chartWidget",
+                    "freeformTags": {},
+                    "definedTags": {},
+                    "parametersConfig": [
+                        {
+                            "name": "time",
+                            "displayName": "Time",
+                            "required": true,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-time-selector-filter"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-time-selector-filter"
+                                }
+                            }
+                        },
+                        {
+                            "name": "compartmentId",
+                            "displayName": "Compartment",
+                            "required": true,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-compartment-filter"
+                            ],
+                            "editUi": {
+                                "inputType": "compartmentSelect"
+                            }
+                        },
+                        {
+                            "name": "regionName",
+                            "displayName": "Region",
+                            "required": false,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-region-filter"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-region-filter"
+                                }
+                            }
+                        }
+                    ],
+                    "featuresConfig": {
+                        "crossService": {
+                            "shared": true
+                        }
+                    },
+                    "drilldownConfig": []
+                },
+                {
+                    "id": "ocid1.managementsavedsearch....wr6dm46q",
+                    "displayName": "Host CPU Load",
+                    "providerId": "APM",
+                    "providerVersion": "3.0.0",
+                    "providerName": "APM",
+                    "compartmentId": "ocid1.compartment....5cxpnghq",
+                    "isOobSavedSearch": false,
+                    "description": "PSFT host CPU load",
+                    "nls": {},
+                    "type": "WIDGET_SHOW_IN_DASHBOARD",
+                    "uiConfig": {
+                        "vizType": "chart",
+                        "chartInfo": {
+                            "jetConfig": {
+                                "type": "line",
+                                "timeAxisType": "enabled",
+                                "xAxis": {
+                                    "viewportMin": "$(params.time.start)",
+                                    "viewportMax": "$(params.time.end)"
+                                },
+                                "legend": {
+                                    "rendered": true,
+                                    "position": "end"
+                                }
+                            },
+                            "value": "aggregatedDatapoints.value",
+                            "group": "aggregatedDatapoints.timestamp",
+                            "colorBy": "dimensions.resourceName",
+                            "series": "dimensions.resourceName"
+                        },
+                        "defaultDataSource": "oracle_appmgmt/CpuLoad"
+                    },
+                    "dataConfig": [
+                        {
+                            "name": "oracle_appmgmt/CpuLoad",
+                            "type": "monitoringDataSource",
+                            "parameters": {
+                                "namespace": "oracle_appmgmt",
+                                "mql": "CpuLoad[1m]{resourceId=$(params.hosts), LoadInterval = \"1minute\"}.groupBy(resourceName).mean()",
+                                "resourceGroup": "host",
+                                "compartmentId": "$(params.compartmentId)",
+                                "startTime": "$(params.time.start)",
+                                "endTime": "$(params.time.end)",
+                                "regionName": "$(params.regionName)",
+                                "maxDataPoints": "useIntervalExact"
+                            }
+                        }
+                    ],
+                    "screenImage": "...",
+                    "metadataVersion": "2.0",
+                    "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+                    "widgetVM": "visualizations/chartWidget",
+                    "freeformTags": {},
+                    "definedTags": {},
+                    "parametersConfig": [
+                        {
+                            "name": "time",
+                            "displayName": "Time",
+                            "required": true,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-time-selector-filter"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-time-selector-filter",
+                                    "parametersMap": {
+                                        "maxDurationDays": 89
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "name": "compartmentId",
+                            "displayName": "Compartment",
+                            "required": true,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-compartment-filter"
+                            ],
+                            "editUi": {
+                                "inputType": "compartmentSelect"
+                            }
+                        },
+                        {
+                            "name": "regionName",
+                            "displayName": "Region",
+                            "required": false,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-region-filter"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-region-filter",
+                                    "parametersMap": {
+                                        "selectionMode": "single"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "name": "hosts",
+                            "required": false,
+                            "valueFormat": {
+                                "type": "array"
+                            },
+                            "displayName": "hosts"
+                        }
+                    ],
+                    "featuresConfig": {
+                        "crossService": {
+                            "shared": true
+                        },
+                        "dependencies": [],
+                        "serviceTypes": [
+                            "appmgmt"
+                        ]
+                    },
+                    "drilldownConfig": []
+                },
+                {
+                    "id": "ocid1.managementsavedsearch....xndmy5wa",
+                    "displayName": "CTDW Apdex",
+                    "providerId": "APM",
+                    "providerVersion": "3.0.0",
+                    "providerName": "APM",
+                    "compartmentId": "ocid1.compartment....ir3epjca",
+                    "isOobSavedSearch": false,
+                    "description": "Pie chart with Apdex colors",
+                    "nls": {},
+                    "type": "WIDGET_SHOW_IN_DASHBOARD",
+                    "uiConfig": {
+                        "chartInfo": {
+                            "colorBy": "queryResultRowData.series",
+                            "group": "",
+                            "series": "queryResultRowData.series",
+                            "value": "queryResultRowData.value"
+                        },
+                        "color": {
+                            "paletteName": "standard",
+                            "valueToIdxMap": {
+                                "frustrated": 12,
+                                "satisfied": 10,
+                                "tolerating": 11
+                            }
+                        },
+                        "defaultDataSource": "queryData",
+                        "jetConfig": {
+                            "type": "pie",
+                            "timeAxisType": "auto",
+                            "styleDefaults": {
+                                "pieInnerRadius": 0.7,
+                                "dataLabelPosition": "auto",
+                                "dataLabelCollision": "fitInBounds"
+                            },
+                            "stack": "off",
+                            "dataCursor": "off",
+                            "legend": {
+                                "rendered": true,
+                                "position": "end"
+                            },
+                            "pieCenter": {
+                                "label": "$(provider.queryDataCenter.queryResultRowData.value)",
+                                "converterName": "numberConverter",
+                                "converterOptions": {
+                                    "maximumFractionDigits": "$(params.decimalDigits)"
+                                },
+                                "labelStyle": {
+                                    "fontSize": "16px"
+                                }
+                            }
+                        }
+                    },
+                    "dataConfig": [
+                        {
+                            "name": "queryData",
+                            "parameters": {
+                                "apmDomain": "$(params.apmDomain)",
+                                "apmQuery": "$(params.apmQuery)",
+                                "dimensionFilters": "$(params.flex)",
+                                "startTime": "$(params.time.start)",
+                                "endTime": "$(params.time.end)"
+                            },
+                            "type": "tracesDataSource"
+                        },
+                        {
+                            "name": "queryDataCenter",
+                            "parameters": {
+                                "apmDomain": "$(params.apmDomain)",
+                                "apmQuery": "$(params.apmQueryCenter)",
+                                "dimensionFilters": "$(params.flex)",
+                                "startTime": "$(params.time.start)",
+                                "endTime": "$(params.time.end)"
+                            },
+                            "type": "tracesDataSource"
+                        }
+                    ],
+                    "screenImage": "...",
+                    "metadataVersion": "2.0",
+                    "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+                    "widgetVM": "visualizations/chartWidget",
+                    "freeformTags": {},
+                    "definedTags": {},
+                    "parametersConfig": [
+                        {
+                            "name": "apmDomain",
+                            "required": true,
+                            "displayName": "APM domain",
+                            "defaultFilterIds": [
+                                "OOBSS-APM-domain-filter"
+                            ]
+                        },
+                        {
+                            "name": "apmQuery",
+                            "required": true,
+                            "displayName": "Trace query",
+                            "defaultValue": "show traces count(apdexLevel) as value, apdexLevel as series where apdexLevel is not omitted group by apdexLevel order by min(apdexScore) asc",
+                            "editUi": {
+                                "hideFilterOptions": true
+                            }
+                        },
+                        {
+                            "name": "apmQueryCenter",
+                            "required": true,
+                            "displayName": "Trace query center",
+                            "defaultValue": "show traces avg(apdexScore) as value where apdexScore is not omitted",
+                            "editUi": {
+                                "hideFilterOptions": true
+                            }
+                        },
+                        {
+                            "name": "decimalDigits",
+                            "required": true,
+                            "displayName": "Decimal digits",
+                            "defaultValue": 2,
+                            "editUi": {
+                                "inputType": "number",
+                                "hideFilterOptions": true
+                            }
+                        },
+                        {
+                            "name": "time",
+                            "displayName": "$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)",
+                            "required": true,
+                            "hidden": true
+                        },
+                        {
+                            "name": "flex"
+                        },
+                        {
+                            "name": "drillDown",
+                            "displayName": "Overrie default drilldown URL",
+                            "required": false,
+                            "editUi": {
+                                "inputType": "inputText",
+                                "hideFilterOptions": true
+                            }
+                        }
+                    ],
+                    "featuresConfig": {
+                        "crossService": {
+                            "shared": false
+                        }
+                    },
+                    "drilldownConfig": [
+                        {
+                            "source": "title",
+                            "urlFormat": "{{'$(params.drillDown)'?'$(params.drillDown)':'/apm/apm-traces?apmDomain=$(params.apmDomain)&apmFilter=$(params.apmQuery)'}}",
+                            "includeLocalContext": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ocid1.managementsavedsearch....7eqlekua",
+                    "displayName": "CTDW Single value",
+                    "providerId": "APM",
+                    "providerVersion": "3.0.0",
+                    "providerName": "APM",
+                    "compartmentId": "ocid1.compartment....ir3epjca",
+                    "isOobSavedSearch": false,
+                    "description": "Display the 'value' column of a single row",
+                    "nls": {},
+                    "type": "WIDGET_SHOW_IN_DASHBOARD",
+                    "uiConfig": {
+                        "defaultDataSource": "queryData",
+                        "singleValueInfo": {
+                            "VALUE": "queryResultRowData.value",
+                            "VALUEConverter": "numberConverter",
+                            "VALUEConverterOptions": {
+                                "maximumFractionDigits": "$(params.decimalDigits)"
+                            },
+                            "bundleVal": "{VALUE}",
+                            "xx__maxFontSize": 60
+                        },
+                        "vizType": "singleValue"
+                    },
+                    "dataConfig": [
+                        {
+                            "name": "queryData",
+                            "parameters": {
+                                "apmDomain": "$(params.apmDomain)",
+                                "apmQuery": "$(params.apmQuery)",
+                                "dimensionFilters": "$(params.flex)",
+                                "startTime": "$(params.time.start)",
+                                "endTime": "$(params.time.end)"
+                            },
+                            "type": "tracesDataSource"
+                        }
+                    ],
+                    "screenImage": "...",
+                    "metadataVersion": "2.0",
+                    "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+                    "widgetVM": "visualizations/chartWidget",
+                    "freeformTags": {},
+                    "definedTags": {},
+                    "parametersConfig": [
+                        {
+                            "name": "apmDomain",
+                            "required": true,
+                            "displayName": "APM domain",
+                            "defaultFilterIds": [
+                                "OOBSS-APM-domain-filter"
+                            ]
+                        },
+                        {
+                            "name": "apmQuery",
+                            "required": true,
+                            "displayName": "Trace query",
+                            "defaultValue": "show traces count_distinct(sessionId) as value",
+                            "editUi": {
+                                "hideFilterOptions": true
+                            }
+                        },
+                        {
+                            "name": "decimalDigits",
+                            "required": true,
+                            "displayName": "Decimal digits",
+                            "defaultValue": 2,
+                            "editUi": {
+                                "inputType": "number",
+                                "hideFilterOptions": true
+                            }
+                        },
+                        {
+                            "name": "time",
+                            "displayName": "$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)",
+                            "required": true,
+                            "hidden": true
+                        },
+                        {
+                            "name": "flex"
+                        },
+                        {
+                            "name": "drillDown",
+                            "displayName": "Overrie default drilldown URL",
+                            "required": false,
+                            "editUi": {
+                                "inputType": "inputText",
+                                "hideFilterOptions": true
+                            }
+                        }
+                    ],
+                    "featuresConfig": {
+                        "crossService": {
+                            "shared": false
+                        }
+                    },
+                    "drilldownConfig": [
+                        {
+                            "source": "title",
+                            "urlFormat": "{{'$(params.drillDown)'?'$(params.drillDown)':'/apm/apm-traces?apmDomain=$(params.apmDomain)&apmFilter=$(params.apmQuery)'}}",
+                            "includeLocalContext": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ocid1.managementsavedsearch....gzsvfa5a",
+                    "displayName": "AppServer Load Throughput",
+                    "providerId": "APM",
+                    "providerVersion": "3.0.0",
+                    "providerName": "APM",
+                    "compartmentId": "ocid1.compartment....5cxpnghq",
+                    "isOobSavedSearch": false,
+                    "description": "PSFT AppServer Load Throughput",
+                    "nls": {},
+                    "type": "WIDGET_SHOW_IN_DASHBOARD",
+                    "uiConfig": {
+                        "vizType": "chart",
+                        "chartInfo": {
+                            "jetConfig": {
+                                "type": "bar",
+                                "timeAxisType": "enabled",
+                                "xAxis": {
+                                    "viewportMin": "$(params.time.start)",
+                                    "viewportMax": "$(params.time.end)"
+                                },
+                                "stack": "on",
+                                "dataCursor": "on",
+                                "legend": {
+                                    "rendered": true,
+                                    "position": "top"
+                                }
+                            },
+                            "value": "aggregatedDatapoints.value",
+                            "group": "aggregatedDatapoints.timestamp",
+                            "colorBy": "dimensions.ProgramName",
+                            "series": "dimensions.ProgramName",
+                            "enableCorrelation": true
+                        },
+                        "defaultDataSource": "oracle_appmgmt/LoadThroughput"
+                    },
+                    "dataConfig": [
+                        {
+                            "name": "oracle_appmgmt/LoadThroughput",
+                            "type": "monitoringDataSource",
+                            "parameters": {
+                                "namespace": "oracle_appmgmt",
+                                "mql": "LoadThroughput[auto].groupBy(ProgramName).mean()",
+                                "resourceGroup": "oracle_psft_appserv",
+                                "compartmentId": "$(params.compartmentId)",
+                                "startTime": "$(params.time.start)",
+                                "endTime": "$(params.time.end)",
+                                "regionName": "$(params.regionName)"
+                            }
+                        }
+                    ],
+                    "screenImage": "...",
+                    "metadataVersion": "2.0",
+                    "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+                    "widgetVM": "visualizations/chartWidget",
+                    "freeformTags": {},
+                    "definedTags": {},
+                    "parametersConfig": [
+                        {
+                            "name": "time",
+                            "displayName": "Time",
+                            "required": true,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-time-selector-filter"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-time-selector-filter"
+                                }
+                            }
+                        },
+                        {
+                            "name": "compartmentId",
+                            "displayName": "Compartment",
+                            "required": true,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-compartment-filter"
+                            ],
+                            "editUi": {
+                                "inputType": "compartmentSelect"
+                            }
+                        },
+                        {
+                            "name": "regionName",
+                            "displayName": "Region",
+                            "required": false,
+                            "defaultFilterIds": [
+                                "OOBSS-management-dashboard-region-filter"
+                            ],
+                            "editUi": {
+                                "inputType": "savedSearch",
+                                "filterTile": {
+                                    "filterId": "OOBSS-management-dashboard-region-filter"
+                                }
+                            }
+                        }
+                    ],
+                    "featuresConfig": {
+                        "crossService": {
+                            "shared": true
+                        }
+                    },
+                    "drilldownConfig": []
+                }
+            ],
+            "parametersConfig": [
+                {
+                    "savedSearchId": "OOBSS-management-dashboard-compartment-filter",
+                    "displayName": "Compartment",
+                    "width": 3,
+                    "state": "DEFAULT",
+                    "parametersMap": {
+                        "isStoreInLocalStorage": false,
+                        "isActiveCompartment": "true"
+                    },
+                    "name": "compartmentId",
+                    "localStorageKey": "compartmentId"
+                },
+                {
+                    "savedSearchId": "OOBSS-APM-domain-filter",
+                    "displayName": "APM Domain",
+                    "width": 3,
+                    "state": "DEFAULT",
+                    "parametersMap": {
+                        "isStoreInLocalStorage": true,
+                        "compartmentId": "$(dashboard.params.compartmentId)"
+                    },
+                    "name": "apmDomain",
+                    "localStorageKey": "apmDomain"
+                },
+                {
+                    "savedSearchId": "OOBSS-appmgmt-hostName-filter",
+                    "width": 2,
+                    "state": "DEFAULT",
+                    "parametersMap": {
+                        "isStoreInLocalStorage": true,
+                        "compartmentId": "$(dashboard.params.compartmentId)"
+                    },
+                    "name": "hostName",
+                    "localStorageKey": "hostName"
+                },
+                {
+                    "name": "time",
+                    "displayName": "$(bundle.globalSavedSearch.TIME)",
+                    "src": "$(context.time)"
+                }
+            ],
+            "featuresConfig": {
+                "crossService": {
+                    "shared": false
+                },
+                "serviceTypes": [
+                    "APM",
+                    "appmgmt"
+                ]
+            },
+            "drilldownConfig": [],
+            "freeformTags": {},
+            "definedTags": {}
+        }
+    ]
+}
