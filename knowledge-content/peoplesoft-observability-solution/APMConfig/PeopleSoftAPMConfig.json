@@ -183,6 +183,57 @@
         },
         {
             "configType": "OPTIONS",
+<<<<<<< HEAD
+            "id": "ocid1.apmconfig....su6zanva",
+            "freeformTags": {},
+            "definedTags": {},
+            "displayName": "Set pagename",
+            "options": {
+                "type": "data-manipulation.group",
+                "filterText": "pageviews > 0 and pageName is omitted",
+                "disabled": false,
+                "rules": [
+                    {
+                        "displayName": "Set pagename = ApmrumPageTitle",
+                        "filterText": "ApmrumPageTitle is not omitted",
+                        "disabled": false,
+                        "actions": [
+                            {
+                                "name": "string.Extract",
+                                "config": {
+                                    "input": "ApmrumPageTitle",
+                                    "pattern": "(.*)",
+                                    "output": "PageName"
+                                },
+                                "disabled": false
+                            }
+                        ]
+                    },
+                    {
+                        "displayName": "Set pagename = psftContentId",
+                        "filterText": "PageName is omitted and psftContentId is not omitted",
+                        "disabled": false,
+                        "actions": [
+                            {
+                                "name": "string.Extract",
+                                "config": {
+                                    "input": "psftContentId",
+                                    "pattern": "(.*)",
+                                    "output": "PageName"
+                                },
+                                "disabled": false
+                            }
+                        ]
+                    }
+                ]
+            },
+            "group": "data-manipulation.spans",
+            "description": null
+        },
+        {
+            "configType": "OPTIONS",
+=======
+>>>>>>> 8d379c0a929836ad83dcc8a848f5f8dceabdf202
             "id": "ocid1.apmconfig....kqx5fqpq",
             "freeformTags": {},
             "definedTags": {},
