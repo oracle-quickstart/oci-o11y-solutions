@@ -1,4 +1,4 @@
-<b><h2>Observability solution for Oracle Financial Products (OFSS)</h2><b>
+<b><h2>Observability solution for Oracle Financial Products (OFSS)</h2></b>
 
 Oracle Financial Services enables financial institutions to solve the challenges of building customer intimacy and competitive advantage through cost-effective solutions while adhering to the stringent demands of a dynamic regulatory environment. Oracle Financial Services comprises the following banking applications and a technology footprint that addresses complex IT and business requirements.
 
