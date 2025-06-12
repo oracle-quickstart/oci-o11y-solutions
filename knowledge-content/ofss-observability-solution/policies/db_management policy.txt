@@ -1,0 +1,4 @@
+Allow service dpd to read secret-family in compartment hsbccmsroot:observability:monitoring
+Allow service dpd to manage objects in compartment hsbccmsroot:observability:monitoring
+Allow service dpd to manage objects in compartment hsbccmsroot:database
+Allow service dpd to use dbmgmt-family in compartment hsbccmsroot:database
