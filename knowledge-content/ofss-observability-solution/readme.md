@@ -1,4 +1,4 @@
-Observability solution for Oracle Financial Products (OFSS)
+<b><h2>Observability solution for Oracle Financial Products (OFSS)</h2><b>
 
 Oracle Financial Services enables financial institutions to solve the challenges of building customer intimacy and competitive advantage through cost-effective solutions while adhering to the stringent demands of a dynamic regulatory environment. Oracle Financial Services comprises the following banking applications and a technology footprint that addresses complex IT and business requirements.
 
@@ -12,8 +12,8 @@ This is the high level architecture diagram for different components of Oracle f
 <img width="447" alt="image" src="https://github.com/user-attachments/assets/85f7eb9e-89d7-47bf-a489-7d49d88d3e61" />
 
 <img width="478" alt="image" src="https://github.com/user-attachments/assets/7007c6d3-5d99-40bb-909a-7c89e39c450b" />
-
-High level Components:
+<br>
+<b><h3>High level Components:</b></h3>
 
 OCI
 •	Compute Instances
@@ -27,7 +27,7 @@ Application
 •	Weblogic
 •	OHS
 
-OCI O&M Application Performance Monitoring
+<b><h3>OCI O&M Application Performance Monitoring</b></h3>
 OCI Application Performance Monitoring (APM) helps to monitor, troubleshoot, and optimize the performance of applications especially distributed, cloud-native, or hybrid applications. APM provides end-to-end visibility into application performance using Open Telemetry based standards. 
 
 •	Track requests across multiple application services and components.
@@ -38,9 +38,9 @@ OCI Application Performance Monitoring (APM) helps to monitor, troubleshoot, and
 •	Automatically generates a visual map of services and their dependencies.
 
 <img width="452" alt="image" src="https://github.com/user-attachments/assets/f5aa36ad-b58e-42ad-b1b1-82e61cd2deb0" />
+<br>
 
-
-OCI O&M Database Management 
+<b><h3>OCI O&M Database Management </b></h3>
 OCI Database Management (DBM) simplifies the management of databases through a unified interface. Its offers comprehensive views of the database activity and performance, including:
 
 •	SQL and user session performance
@@ -52,8 +52,8 @@ DBM provides insights into database performance, enabling customers to proactive
 
  <img width="452" alt="image" src="https://github.com/user-attachments/assets/9ba96298-0f1a-443e-afa7-d61b6a934878" />
 
-
-OCI O&M Logging Analytics
+<br>
+<b><h3>OCI O&M Logging Analytics</b></h3>
 OCI Logging Analytics can be integrated with Oracle Fusion Applications (like ERP, HCM, SCM) to provide advanced log analysis, anomaly detection, and operational visibility. This is especially useful for diagnosing performance, integration issues, and custom extensions within Fusion environments. This feature enables and helps in 
 
 •	Faster Troubleshooting and Root Cause Analysis
@@ -66,9 +66,8 @@ OCI Logging Analytics can be integrated with Oracle Fusion Applications (like ER
 •	Proactive Monitoring and Alerting
 
  <img width="452" alt="image" src="https://github.com/user-attachments/assets/a46214a7-c3a5-486b-b25d-4310d73e2585" />
-
-
-OCI O&M Stack Monitoring
+<br>
+<b><h3>OCI O&M Stack Monitoring</b></h3>
 
 OCI Stack Monitoring helps monitor the entire application and infrastructure stack—from applications to databases and servers—across on-premises, Oracle Cloud, and third-party environments. It enables proactive monitoring and management by collecting key metrics, allowing users to:
 
@@ -81,8 +80,8 @@ OCI Stack Monitoring helps monitor the entire application and infrastructure sta
 
 <img width="452" alt="image" src="https://github.com/user-attachments/assets/c42b1c9d-78d1-4963-b02a-64822b125c1c" />
 
-
-OCI O&M Ops Insights
+<br>
+<b><h3>OCI O&M Ops Insights</b></h3>
 OCI Operations Insights (Ops Insights) is a service in Oracle Cloud Infrastructure that provides AI-driven observability and capacity planning for databases, hosts, and enterprise applications. It helps to:
 •	Analyze resource usage of databases/hosts across the enterprise
 •	Forecast future demand for resources based on historical trends
@@ -90,8 +89,8 @@ OCI Operations Insights (Ops Insights) is a service in Oracle Cloud Infrastructu
 •	Identify SQL performance trends across enterprise-wide databases
 •	Analyze AWR statistics for database performance, diagnostics, and tuning across a fleet of databases
 •	Create and receive weekly News Reports giving you breakdowns of new utilization highs, big utilization changes and inventory changes across your fleet of databases, hosts, and Exadata systems.
-
-Benefits of OFSS Observability Solution
+<br>
+<b><h3>Benefits of OFSS Observability Solution</b></h3>
 
 Observability Solution provides financial institutions with deep insights into their IT and application ecosystems, specifically tailored for Oracle Financial Services applications such as FCUBS, FLEXCUBE, OBDX, OFSAA, etc.
 
