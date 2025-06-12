@@ -1,1 +1,2215 @@
-{"dashboards" :[{"dashboardId":"ocid1.managementdashboard.oc1..aaaaaaaaktht2gosjwp4ja7qvb7hfyfqkx3ok7d6jjgqodvwxz6bnjn46dwq","providerId":"APM","providerName":"APM","providerVersion":"3.0.0","tiles":[{"displayName":"Alarms Detail","savedSearchId":"OOBSS-management-dashboard-alarms-detail-1","row":0,"column":0,"height":4,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId2)"},"description":null},{"displayName":"Database Widgets","savedSearchId":"OOBSS-management-dashboard-container","row":4,"column":0,"height":15,"width":12,"nls":{},"uiConfig":{"internalKey":"OOBSS-management-dashboard-container","vizType":"tileContainer","containerInfo":{"subTiles":[{"displayName":"Average Active Sessions","savedSearchId":"OOBSS-dbm-dbtime","row":3,"column":0,"height":3,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)"},"description":null},{"displayName":"CPU and wait - database (AAS)","savedSearchId":"OOBSS-dbm-cpuWait","row":9,"column":0,"height":3,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)","resourceName":"$(dashboard.params.dbm_resourceName)"},"description":null},{"displayName":"ASM Disk Group utilization - node (%)","savedSearchId":"OOBSS-dbm-asmDiskgroupUtilization","row":0,"column":8,"height":3,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)","resourceName":"$(dashboard.params.dbm_resourceName1)","deploymentType":"$(dashboard.params.deploymentType)"},"description":null},{"displayName":"CPU utilization - fleet (%)","savedSearchId":"OOBSS-dbm-cpuUtilFleet","row":6,"column":4,"height":3,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)"},"description":null},{"displayName":"CPU utilization - node (%)","savedSearchId":"OOBSS-dbm-cpuUtilization_node","row":0,"column":4,"height":3,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)","resourceName":"$(dashboard.params.dbm_resourceName1)","deploymentType":"$(dashboard.params.deploymentType)"},"description":null},{"displayName":"File System utilization - File System name (%)","savedSearchId":"OOBSS-dbm-filesystemUtilization_drilldown","row":3,"column":4,"height":3,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)","resourceName_dbnode":"$(dashboard.params.dbm_resourceName_dbnode)"},"description":null},{"displayName":"Current logons","savedSearchId":"OOBSS-dbm-currentlogon","row":6,"column":0,"height":3,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)"},"description":null},{"displayName":"User calls","savedSearchId":"OOBSS-dbm-usercall","row":9,"column":4,"height":3,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)"},"description":null},{"displayName":"Transactions","savedSearchId":"OOBSS-dbm-transactions","row":3,"column":8,"height":3,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)"},"description":null},{"displayName":"Storage usage - fleet (GB)","savedSearchId":"OOBSS-dbm-storageUsageFleet","row":12,"column":4,"height":3,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)"},"description":null},{"displayName":"Process utilization - fleet (%)","savedSearchId":"OOBSS-dbm-processUtilFleet","row":9,"column":8,"height":3,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)"},"description":null},{"displayName":"Load average - node","savedSearchId":"OOBSS-dbm-loadAverage","row":6,"column":8,"height":3,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)","resourceName":"$(dashboard.params.dbm_resourceName1)","deploymentType":"$(dashboard.params.deploymentType)"},"description":null},{"displayName":"Flash recovery area utilization - fleet (%)","savedSearchId":"OOBSS-dbm-flashRecoverFleet","row":12,"column":8,"height":3,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)"},"description":null},{"displayName":"Memory usage - fleet (GB)","savedSearchId":"OOBSS-dbm-memUtilFleet","row":12,"column":0,"height":3,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)"},"description":null},{"displayName":"Node status - node","savedSearchId":"OOBSS-dbm-nodeStatus","row":0,"column":0,"height":3,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)","resourceName":"$(dashboard.params.dbm_resourceName1)","deploymentType":"$(dashboard.params.deploymentType)"},"description":null}]}},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{},"description":null},{"displayName":"Prod App Healthcheck","savedSearchId":"ocid1.managementsavedsearch.oc1..aaaaaaaav3uhbp4hsw4otdqjvfanme3ssc7re2r4nxy5auaux53g3fqi3rgq","row":0,"column":4,"height":4,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"compartmentId":"$(dashboard.params.compartmentId2)","time":"$(dashboard.params.time)","regionName":"$(context.regionName)"},"description":null},{"displayName":"Availability Monitoring","savedSearchId":"ocid1.managementsavedsearch.oc1..aaaaaaaaduwp3zyixe4ag5o6ocoxm7yhrodu3ezsr2hmo74nan4cilb5el4a","row":0,"column":8,"height":4,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"compartmentId":"$(dashboard.params.compartmentId2)","time":"$(dashboard.params.time)","regionName":"$(context.regionName)"},"description":null},{"displayName":"App Infrastructure (Compute Instances)","savedSearchId":"OOBSS-management-dashboard-container","row":19,"column":0,"height":8,"width":12,"nls":{},"uiConfig":{"internalKey":"OOBSS-management-dashboard-container","vizType":"tileContainer","containerInfo":{"subTiles":[{"displayName":"Filesystem Utilization","savedSearchId":"ocid1.managementsavedsearch.oc1..aaaaaaaahz7gsye7lqp2b3lhkwqrf63h3yavd77ahfaygjkqhylc4yaghvrq","row":0,"column":5,"height":4,"width":5,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"compartmentId":"$(dashboard.params.compartmentId)","time":"$(dashboard.params.time)","regionName":"$(context.regionName)"},"description":null},{"displayName":"Load Average","savedSearchId":"ocid1.managementsavedsearch.oc1..aaaaaaaat476tt3xn23strmfdxdaorbthdqlpz4y3tqapnkfawdsrelf5v3a","row":4,"column":0,"height":4,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"compartmentId":"$(dashboard.params.compartmentId)","time":"$(dashboard.params.time)"},"description":null},{"displayName":"Memory Utilization","savedSearchId":"ocid1.managementsavedsearch.oc1..aaaaaaaalggxmxnd7kono7xxi5dxcrucfnlb774rglt6rkzrabbnj6hiwvra","row":4,"column":8,"height":4,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"compartmentId":"$(dashboard.params.compartmentId)","time":"$(dashboard.params.time)"},"description":null},{"displayName":"CPU Utilization","savedSearchId":"ocid1.managementsavedsearch.oc1..aaaaaaaapabtoevvn5iwf7vtowrcg3p7jholrq6twuqvengexlf4ot5ya2bq","row":0,"column":0,"height":4,"width":5,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"compartmentId":"$(dashboard.params.compartmentId)","time":"$(dashboard.params.time)"},"description":null},{"displayName":"Host Network Activity","savedSearchId":"OOBSS-appmgmt-host-network-activity-1","row":4,"column":4,"height":4,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"time":"$(dashboard.params.time)","compartmentId":"$(dashboard.params.compartmentId)"},"description":null}]}},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{},"description":null},{"displayName":"Weblogic Infrastructure","savedSearchId":"OOBSS-management-dashboard-container","row":27,"column":0,"height":8,"width":12,"nls":{},"uiConfig":{"internalKey":"OOBSS-management-dashboard-container","vizType":"tileContainer","containerInfo":{"subTiles":[{"displayName":"JVM Utilization (Non-PLATO Managed Servers)","savedSearchId":"ocid1.managementsavedsearch.oc1..aaaaaaaauq6uh7oct6qiilnh7h6h7kzfoz2jpgeyq5fd3q2u3perm5ezih2q","row":0,"column":0,"height":4,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"compartmentId":"$(dashboard.params.compartmentId)","time":"$(dashboard.params.time)"},"description":null},{"displayName":"JVM Utilization (PLATO)","savedSearchId":"ocid1.managementsavedsearch.oc1..aaaaaaaa46uog46krw3pg6iy64femgfgtkohrhaozgi636gm3hafhvobrs7a","row":0,"column":8,"height":4,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"compartmentId":"$(dashboard.params.compartmentId)","time":"$(dashboard.params.time)"},"description":null},{"displayName":"All Resources Status","savedSearchId":"OOBSS-appmgmt-pie-status-1","row":0,"column":4,"height":4,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"compartmentId":"$(dashboard.params.compartmentId)"},"description":null},{"displayName":"Stuck Threads","savedSearchId":"ocid1.managementsavedsearch.oc1..aaaaaaaavnx43tidccwwsplt3biyqfsbqvmfgkvqb2bmckyzvetndxwz6mea","row":4,"column":0,"height":4,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"compartmentId":"$(dashboard.params.compartmentId)","time":"$(dashboard.params.time)"},"description":null}]}},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{},"description":null},{"displayName":"Network Infrastructure","savedSearchId":"OOBSS-management-dashboard-container","row":35,"column":0,"height":4,"width":12,"nls":{},"uiConfig":{"internalKey":"OOBSS-management-dashboard-container","vizType":"tileContainer","containerInfo":{"subTiles":[{"displayName":"LB - Peak Bandwidth","savedSearchId":"ocid1.managementsavedsearch.oc1..aaaaaaaapna4dhsvqyfyzb4v2426jei5vm2lancnfi2v64w3araqd7x5l5ya","row":0,"column":0,"height":4,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"compartmentId":"$(dashboard.params.compartmentId3)","time":"$(dashboard.params.time)","regionName":"$(context.regionName)"},"description":null},{"displayName":"LB - # Unhealthy Backendsets","savedSearchId":"ocid1.managementsavedsearch.oc1..aaaaaaaa342cwuqob4jg2ernbg6e77qiaqbx4h7vta6fwovjzxsm4dablryq","row":0,"column":8,"height":4,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"compartmentId":"$(dashboard.params.compartmentId3)","time":"$(dashboard.params.time)","regionName":"$(context.regionName)"},"description":null},{"displayName":"LB - # 5xx HTTP Responses","savedSearchId":"ocid1.managementsavedsearch.oc1..aaaaaaaacgusuwjlimvwvullwnl3cz25vaogrcice2irkxmjdipneyezkfrq","row":0,"column":4,"height":4,"width":4,"nls":{},"uiConfig":{},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{"compartmentId":"$(dashboard.params.compartmentId3)","time":"$(dashboard.params.time)","regionName":"$(context.regionName)"},"description":null}]}},"dataConfig":[],"state":"DEFAULT","drilldownConfig":[],"parametersMap":{},"description":null}],"displayName":"HSBC Infrastructure Health","description":"Infrastructure components such as Compute, Loadbalancer, Network, Weblogic and Database related health","compartmentId":"ocid1.compartment.oc1..aaaaaaaa422co3qlhv6b3zjy65mplwu6vddqs37hskpuliwrap6as3tvpkua","isOobDashboard":false,"isShowInHome":false,"metadataVersion":"2.0","isShowDescription":true,"screenImage":"todo: provide value[mandatory]","nls":{},"uiConfig":{"isFilteringEnabled":false,"isTimeRangeEnabled":true,"isRefreshEnabled":true},"dataConfig":[],"type":"normal","isFavorite":false,"savedSearches":[{"id":"ocid1.managementsavedsearch.oc1..aaaaaaaapna4dhsvqyfyzb4v2426jei5vm2lancnfi2v64w3araqd7x5l5ya","displayName":"Peak Bandwidth","providerId":"APM","providerVersion":"3.0.0","providerName":"APM","compartmentId":"ocid1.compartment.oc1..aaaaaaaa422co3qlhv6b3zjy65mplwu6vddqs37hskpuliwrap6as3tvpkua","isOobSavedSearch":false,"description":"Peak bandwidth usage","nls":{},"type":"WIDGET_SHOW_IN_DASHBOARD","uiConfig":{"vizType":"chart","chartInfo":{"jetConfig":{"type":"line","timeAxisType":"enabled","xAxis":{"viewportMin":"$(params.time.start)","viewportMax":"$(params.time.end)"},"dataCursor":"on","legend":{"rendered":true,"position":"end"},"yAxis":{"title":"Mbps"}},"value":"aggregatedDatapoints.value","group":"aggregatedDatapoints.timestamp","colorBy":"dimensions.lbName","series":"_allDimensionConglomerate","enableCorrelation":true},"defaultDataSource":"oci_lbaas/PeakBandwidth"},"dataConfig":[{"name":"oci_lbaas/PeakBandwidth","type":"monitoringDataSource","parameters":{"compartmentId":"$(params.compartmentId)","startTime":"$(params.time.start)","endTime":"$(params.time.end)","regionName":"$(params.regionName)","namespace":"oci_lbaas","mql":"PeakBandwidth[1m].mean()","maxDataPoints":"useIntervalExact"}}],"screenImage":"...","metadataVersion":"2.0","widgetTemplate":"visualizations/chartWidgetTemplate.html","widgetVM":"visualizations/chartWidget","freeformTags":{},"definedTags":{},"parametersConfig":[{"name":"time","displayName":"$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)","required":true,"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-time-selector-filter","parametersMap":{"maxDurationDays":89}}}},{"name":"compartmentId","displayName":"$(bundle.globalSavedSearch.COMPARTMENT)","required":true,"defaultFilterIds":["OOBSS-management-dashboard-compartment-filter"],"editUi":{"inputType":"compartmentSelect"}},{"name":"regionName","displayName":"$(bundle.globalSavedSearch.REGION)","required":false,"defaultFilterIds":["OOBSS-management-dashboard-region-filter"],"valueFormat":{"type":"string"},"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-region-filter","parametersMap":{"selectionMode":"single"}}}}],"featuresConfig":{"crossService":{"shared":true},"dependencies":[],"serviceTypes":["management-dashboard"]},"drilldownConfig":[]},{"id":"ocid1.managementsavedsearch.oc1..aaaaaaaat476tt3xn23strmfdxdaorbthdqlpz4y3tqapnkfawdsrelf5v3a","displayName":"Load Average","providerId":"APM","providerVersion":"3.0.0","providerName":"APM","compartmentId":"ocid1.compartment.oc1..aaaaaaaa3butlc2ltlbu2iqkvcgltzucsfthaki4zpgq4shcofvbhs66gxkq","isOobSavedSearch":false,"description":"Load Average of compute instances in selected compartment","nls":{},"type":"WIDGET_SHOW_IN_DASHBOARD","uiConfig":{"vizType":"chart","chartInfo":{"jetConfig":{"type":"line","timeAxisType":"enabled","xAxis":{"viewportMin":"$(params.time.start)","viewportMax":"$(params.time.end)"},"yAxis":{"title":"avg"},"legend":{"rendered":true,"position":"end"},"dataCursor":"on"},"value":"aggregatedDatapoints.value","group":"aggregatedDatapoints.timestamp","colorBy":"dimensions.resourceDisplayName","series":"_allDimensionConglomerate","enableCorrelation":true},"defaultDataSource":"oci_computeagent/LoadAverage"},"dataConfig":[{"name":"oci_computeagent/LoadAverage","type":"monitoringDataSource","parameters":{"compartmentId":"$(params.compartmentId)","startTime":"$(params.time.start)","endTime":"$(params.time.end)","regionName":"$(params.regionName)","namespace":"oci_computeagent","mql":"LoadAverage[1m].mean()","maxDataPoints":"useIntervalExact"}}],"screenImage":"...","metadataVersion":"2.0","widgetTemplate":"visualizations/chartWidgetTemplate.html","widgetVM":"visualizations/chartWidget","freeformTags":{},"definedTags":{},"parametersConfig":[{"name":"time","displayName":"$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)","required":true,"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-time-selector-filter","parametersMap":{"maxDurationDays":89}}}},{"name":"compartmentId","displayName":"$(bundle.globalSavedSearch.COMPARTMENT)","required":true,"defaultFilterIds":["OOBSS-management-dashboard-compartment-filter"],"editUi":{"inputType":"compartmentSelect"}},{"name":"regionName","displayName":"$(bundle.globalSavedSearch.REGION)","required":false,"defaultFilterIds":["OOBSS-management-dashboard-region-filter"],"valueFormat":{"type":"string"},"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-region-filter","parametersMap":{"selectionMode":"single"}}}}],"featuresConfig":{"crossService":{"shared":true},"dependencies":[],"serviceTypes":["management-dashboard"]},"drilldownConfig":[]},{"id":"ocid1.managementsavedsearch.oc1..aaaaaaaauq6uh7oct6qiilnh7h6h7kzfoz2jpgeyq5fd3q2u3perm5ezih2q","displayName":"JVM Utilization (Non-PLATO Managed Servers)","providerId":"APM","providerVersion":"3.0.0","providerName":"APM","compartmentId":"ocid1.compartment.oc1..aaaaaaaa3butlc2ltlbu2iqkvcgltzucsfthaki4zpgq4shcofvbhs66gxkq","isOobSavedSearch":false,"description":"JVM Utilization for every managed servers other than PLATO","nls":{},"type":"WIDGET_SHOW_IN_DASHBOARD","uiConfig":{"vizType":"chart","chartInfo":{"jetConfig":{"type":"line","timeAxisType":"enabled","xAxis":{"viewportMin":"$(params.time.start)","viewportMax":"$(params.time.end)"},"yAxis":{"title":"% Utilization"},"dataCursor":"on","legend":{"rendered":true,"position":"end"}},"value":"aggregatedDatapoints.value","group":"aggregatedDatapoints.timestamp","colorBy":"dimensions.resourceName","series":"_allDimensionConglomerate","enableCorrelation":true},"defaultDataSource":"oracle_appmgmt/JVMMemoryUtilization"},"dataConfig":[{"name":"oracle_appmgmt/JVMMemoryUtilization","type":"monitoringDataSource","parameters":{"compartmentId":"$(params.compartmentId)","startTime":"$(params.time.start)","endTime":"$(params.time.end)","regionName":"$(params.regionName)","namespace":"oracle_appmgmt","mql":"JVMMemoryUtilization[1m]{resourceName !~ \"*plato*\"}.mean()","resourceGroup":"weblogic_j2eeserver","maxDataPoints":"useIntervalExact"}}],"screenImage":"...","metadataVersion":"2.0","widgetTemplate":"visualizations/chartWidgetTemplate.html","widgetVM":"visualizations/chartWidget","freeformTags":{},"definedTags":{},"parametersConfig":[{"name":"time","displayName":"$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)","required":true,"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-time-selector-filter","parametersMap":{"maxDurationDays":89}}}},{"name":"compartmentId","displayName":"$(bundle.globalSavedSearch.COMPARTMENT)","required":true,"defaultFilterIds":["OOBSS-management-dashboard-compartment-filter"],"editUi":{"inputType":"compartmentSelect"}},{"name":"regionName","displayName":"$(bundle.globalSavedSearch.REGION)","required":false,"defaultFilterIds":["OOBSS-management-dashboard-region-filter"],"valueFormat":{"type":"string"},"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-region-filter","parametersMap":{"selectionMode":"single"}}}}],"featuresConfig":{"crossService":{"shared":true},"dependencies":[],"serviceTypes":["appmgmt"]},"drilldownConfig":[]},{"id":"ocid1.managementsavedsearch.oc1..aaaaaaaalggxmxnd7kono7xxi5dxcrucfnlb774rglt6rkzrabbnj6hiwvra","displayName":"Memory Utilization","providerId":"APM","providerVersion":"3.0.0","providerName":"APM","compartmentId":"ocid1.compartment.oc1..aaaaaaaa3butlc2ltlbu2iqkvcgltzucsfthaki4zpgq4shcofvbhs66gxkq","isOobSavedSearch":false,"description":"Memory Utilization","nls":{},"type":"WIDGET_SHOW_IN_DASHBOARD","uiConfig":{"vizType":"chart","chartInfo":{"jetConfig":{"type":"line","timeAxisType":"enabled","xAxis":{"viewportMin":"$(params.time.start)","viewportMax":"$(params.time.end)"},"dataCursor":"on","yAxis":{"title":"% Utilization"},"legend":{"rendered":true,"position":"end"}},"value":"aggregatedDatapoints.value","group":"aggregatedDatapoints.timestamp","colorBy":"dimensions.resourceDisplayName","series":"_allDimensionConglomerate","enableCorrelation":true},"defaultDataSource":"oci_computeagent/MemoryUtilization"},"dataConfig":[{"name":"oci_computeagent/MemoryUtilization","type":"monitoringDataSource","parameters":{"compartmentId":"$(params.compartmentId)","startTime":"$(params.time.start)","endTime":"$(params.time.end)","regionName":"$(params.regionName)","namespace":"oci_computeagent","mql":"MemoryUtilization[1m].mean()","maxDataPoints":"useIntervalExact"}}],"screenImage":"...","metadataVersion":"2.0","widgetTemplate":"visualizations/chartWidgetTemplate.html","widgetVM":"visualizations/chartWidget","freeformTags":{},"definedTags":{},"parametersConfig":[{"name":"time","displayName":"$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)","required":true,"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-time-selector-filter","parametersMap":{"maxDurationDays":89}}}},{"name":"compartmentId","displayName":"$(bundle.globalSavedSearch.COMPARTMENT)","required":true,"defaultFilterIds":["OOBSS-management-dashboard-compartment-filter"],"editUi":{"inputType":"compartmentSelect"}},{"name":"regionName","displayName":"$(bundle.globalSavedSearch.REGION)","required":false,"defaultFilterIds":["OOBSS-management-dashboard-region-filter"],"valueFormat":{"type":"string"},"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-region-filter","parametersMap":{"selectionMode":"single"}}}}],"featuresConfig":{"crossService":{"shared":true},"dependencies":[],"serviceTypes":["management-dashboard"]},"drilldownConfig":[]},{"id":"ocid1.managementsavedsearch.oc1..aaaaaaaa342cwuqob4jg2ernbg6e77qiaqbx4h7vta6fwovjzxsm4dablryq","displayName":"# Unhealthy Backendset","providerId":"APM","providerVersion":"3.0.0","providerName":"APM","compartmentId":"ocid1.compartment.oc1..aaaaaaaa422co3qlhv6b3zjy65mplwu6vddqs37hskpuliwrap6as3tvpkua","isOobSavedSearch":false,"description":"Unhealthy Backendset","nls":{},"type":"WIDGET_SHOW_IN_DASHBOARD","uiConfig":{"vizType":"chart","chartInfo":{"jetConfig":{"type":"line","timeAxisType":"enabled","xAxis":{"viewportMin":"$(params.time.start)","viewportMax":"$(params.time.end)"},"dataCursor":"on","legend":{"rendered":true,"position":"end"},"yAxis":{"title":"Count"}},"value":"aggregatedDatapoints.value","group":"aggregatedDatapoints.timestamp","colorBy":"dimensions.backendSetName","series":"","enableCorrelation":true},"defaultDataSource":"oci_lbaas/UnHealthyBackendServers"},"dataConfig":[{"name":"oci_lbaas/UnHealthyBackendServers","type":"monitoringDataSource","parameters":{"compartmentId":"$(params.compartmentId)","startTime":"$(params.time.start)","endTime":"$(params.time.end)","regionName":"$(params.regionName)","namespace":"oci_lbaas","mql":"UnHealthyBackendServers[1m].mean()","maxDataPoints":"useIntervalExact"}}],"screenImage":"...","metadataVersion":"2.0","widgetTemplate":"visualizations/chartWidgetTemplate.html","widgetVM":"visualizations/chartWidget","freeformTags":{},"definedTags":{},"parametersConfig":[{"name":"time","displayName":"$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)","required":true,"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-time-selector-filter","parametersMap":{"maxDurationDays":89}}}},{"name":"compartmentId","displayName":"$(bundle.globalSavedSearch.COMPARTMENT)","required":true,"defaultFilterIds":["OOBSS-management-dashboard-compartment-filter"],"editUi":{"inputType":"compartmentSelect"}},{"name":"regionName","displayName":"$(bundle.globalSavedSearch.REGION)","required":false,"defaultFilterIds":["OOBSS-management-dashboard-region-filter"],"valueFormat":{"type":"string"},"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-region-filter","parametersMap":{"selectionMode":"single"}}}}],"featuresConfig":{"crossService":{"shared":true},"dependencies":[],"serviceTypes":["management-dashboard"]},"drilldownConfig":[]},{"id":"ocid1.managementsavedsearch.oc1..aaaaaaaahz7gsye7lqp2b3lhkwqrf63h3yavd77ahfaygjkqhylc4yaghvrq","displayName":"Filesystem Utilization","providerId":"APM","providerVersion":"3.0.0","providerName":"APM","compartmentId":"ocid1.compartment.oc1..aaaaaaaa3butlc2ltlbu2iqkvcgltzucsfthaki4zpgq4shcofvbhs66gxkq","isOobSavedSearch":false,"description":"OS Filesystem Utilization for APP Instances","nls":{},"type":"WIDGET_SHOW_IN_DASHBOARD","uiConfig":{"vizType":"chart","chartInfo":{"jetConfig":{"type":"line","timeAxisType":"enabled","xAxis":{"viewportMin":"$(params.time.start)","viewportMax":"$(params.time.end)"},"yAxis":{"title":"% Utilization"},"dataCursor":"on","legend":{"rendered":true,"position":"end"}},"value":"aggregatedDatapoints.value","group":"aggregatedDatapoints.timestamp","colorBy":"dimensions.resourceName","series":"_allDimensionConglomerate"},"defaultDataSource":"oracle_appmgmt/FilesystemUtilization"},"dataConfig":[{"name":"oracle_appmgmt/FilesystemUtilization","type":"monitoringDataSource","parameters":{"compartmentId":"$(params.compartmentId)","startTime":"$(params.time.start)","endTime":"$(params.time.end)","regionName":"$(params.regionName)","namespace":"oracle_appmgmt","mql":"FilesystemUtilization[1m].mean()","resourceGroup":"host","maxDataPoints":"useIntervalExact"}}],"screenImage":"...","metadataVersion":"2.0","widgetTemplate":"visualizations/chartWidgetTemplate.html","widgetVM":"visualizations/chartWidget","freeformTags":{},"definedTags":{},"parametersConfig":[{"name":"time","displayName":"$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)","required":true,"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-time-selector-filter","parametersMap":{"maxDurationDays":89}}}},{"name":"compartmentId","displayName":"$(bundle.globalSavedSearch.COMPARTMENT)","required":true,"defaultFilterIds":["OOBSS-management-dashboard-compartment-filter"],"editUi":{"inputType":"compartmentSelect"}},{"name":"regionName","displayName":"$(bundle.globalSavedSearch.REGION)","required":false,"defaultFilterIds":["OOBSS-management-dashboard-region-filter"],"valueFormat":{"type":"string"},"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-region-filter","parametersMap":{"selectionMode":"single"}}}}],"featuresConfig":{"crossService":{"shared":true},"dependencies":[],"serviceTypes":["appmgmt"]},"drilldownConfig":[]},{"id":"ocid1.managementsavedsearch.oc1..aaaaaaaapabtoevvn5iwf7vtowrcg3p7jholrq6twuqvengexlf4ot5ya2bq","displayName":"CPU Utilization","providerId":"APM","providerVersion":"3.0.0","providerName":"APM","compartmentId":"ocid1.compartment.oc1..aaaaaaaa3butlc2ltlbu2iqkvcgltzucsfthaki4zpgq4shcofvbhs66gxkq","isOobSavedSearch":false,"description":"CPU Utilization","nls":{},"type":"WIDGET_SHOW_IN_DASHBOARD","uiConfig":{"vizType":"chart","chartInfo":{"jetConfig":{"type":"line","timeAxisType":"enabled","xAxis":{"viewportMin":"$(params.time.start)","viewportMax":"$(params.time.end)"},"yAxis":{"title":"% Utilization"},"legend":{"rendered":true,"position":"end"},"dataCursor":"on"},"value":"aggregatedDatapoints.value","group":"aggregatedDatapoints.timestamp","colorBy":"dimensions.resourceDisplayName","series":"_allDimensionConglomerate","enableCorrelation":true},"defaultDataSource":"oci_computeagent/Cpuutilization"},"dataConfig":[{"name":"oci_computeagent/Cpuutilization","type":"monitoringDataSource","parameters":{"compartmentId":"$(params.compartmentId)","startTime":"$(params.time.start)","endTime":"$(params.time.end)","regionName":"$(params.regionName)","namespace":"oci_computeagent","mql":"Cpuutilization[1m].mean()","maxDataPoints":"useIntervalExact"}}],"screenImage":"...","metadataVersion":"2.0","widgetTemplate":"visualizations/chartWidgetTemplate.html","widgetVM":"visualizations/chartWidget","freeformTags":{},"definedTags":{},"parametersConfig":[{"name":"time","displayName":"$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)","required":true,"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-time-selector-filter","parametersMap":{"maxDurationDays":89}}}},{"name":"compartmentId","displayName":"$(bundle.globalSavedSearch.COMPARTMENT)","required":true,"defaultFilterIds":["OOBSS-management-dashboard-compartment-filter"],"editUi":{"inputType":"compartmentSelect"}},{"name":"regionName","displayName":"$(bundle.globalSavedSearch.REGION)","required":false,"defaultFilterIds":["OOBSS-management-dashboard-region-filter"],"valueFormat":{"type":"string"},"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-region-filter","parametersMap":{"selectionMode":"single"}}}}],"featuresConfig":{"crossService":{"shared":true},"dependencies":[],"serviceTypes":["management-dashboard"]},"drilldownConfig":[]},{"id":"ocid1.managementsavedsearch.oc1..aaaaaaaav3uhbp4hsw4otdqjvfanme3ssc7re2r4nxy5auaux53g3fqi3rgq","displayName":"Prod Appshell Healthcheck","providerId":"APM","providerVersion":"3.0.0","providerName":"APM","compartmentId":"ocid1.compartment.oc1..aaaaaaaa3butlc2ltlbu2iqkvcgltzucsfthaki4zpgq4shcofvbhs66gxkq","isOobSavedSearch":false,"description":"Healthcheck on PROD LB App-shell and ELCM URLs for status code 200","nls":{},"type":"WIDGET_SHOW_IN_DASHBOARD","uiConfig":{"vizType":"chart","chartInfo":{"jetConfig":{"type":"line","timeAxisType":"enabled","xAxis":{"viewportMin":"$(params.time.start)","viewportMax":"$(params.time.end)"},"legend":{"rendered":true,"position":"end"},"yAxis":{"title":"1 => Healthy"},"dataCursor":"on"},"value":"aggregatedDatapoints.value","group":"aggregatedDatapoints.timestamp","colorBy":"dimensions.resourceDisplayName","series":"_allDimensionConglomerate","enableCorrelation":true},"defaultDataSource":"oci_healthchecks/HTTP.isHealthy"},"dataConfig":[{"name":"oci_healthchecks/HTTP.isHealthy","type":"monitoringDataSource","parameters":{"compartmentId":"$(params.compartmentId)","startTime":"$(params.time.start)","endTime":"$(params.time.end)","regionName":"$(params.regionName)","namespace":"oci_healthchecks","mql":"HTTP.isHealthy[1m].mean()","maxDataPoints":"useIntervalExact"}}],"screenImage":"...","metadataVersion":"2.0","widgetTemplate":"visualizations/chartWidgetTemplate.html","widgetVM":"visualizations/chartWidget","freeformTags":{},"definedTags":{},"parametersConfig":[{"name":"time","displayName":"$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)","required":true,"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-time-selector-filter","parametersMap":{"maxDurationDays":89}}}},{"name":"compartmentId","displayName":"$(bundle.globalSavedSearch.COMPARTMENT)","required":true,"defaultFilterIds":["OOBSS-management-dashboard-compartment-filter"],"editUi":{"inputType":"compartmentSelect"}},{"name":"regionName","displayName":"$(bundle.globalSavedSearch.REGION)","required":false,"defaultFilterIds":["OOBSS-management-dashboard-region-filter"],"valueFormat":{"type":"string"},"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-region-filter","parametersMap":{"selectionMode":"single"}}}}],"featuresConfig":{"crossService":{"shared":true},"dependencies":[],"serviceTypes":["management-dashboard"]},"drilldownConfig":[]},{"id":"ocid1.managementsavedsearch.oc1..aaaaaaaa46uog46krw3pg6iy64femgfgtkohrhaozgi636gm3hafhvobrs7a","displayName":"JVM Utilization","providerId":"APM","providerVersion":"3.0.0","providerName":"APM","compartmentId":"ocid1.compartment.oc1..aaaaaaaa3butlc2ltlbu2iqkvcgltzucsfthaki4zpgq4shcofvbhs66gxkq","isOobSavedSearch":false,"description":"JVM Utilization for PLATO related managed servers","nls":{},"type":"WIDGET_SHOW_IN_DASHBOARD","uiConfig":{"vizType":"chart","chartInfo":{"jetConfig":{"type":"line","timeAxisType":"enabled","xAxis":{"viewportMin":"$(params.time.start)","viewportMax":"$(params.time.end)"},"yAxis":{"title":"% Utilization"},"dataCursor":"on","legend":{"rendered":true,"position":"end"}},"value":"aggregatedDatapoints.value","group":"aggregatedDatapoints.timestamp","colorBy":"dimensions.resourceName","series":"_allDimensionConglomerate","enableCorrelation":true},"defaultDataSource":"oracle_appmgmt/JVMMemoryUtilization"},"dataConfig":[{"name":"oracle_appmgmt/JVMMemoryUtilization","type":"monitoringDataSource","parameters":{"compartmentId":"$(params.compartmentId)","startTime":"$(params.time.start)","endTime":"$(params.time.end)","regionName":"$(params.regionName)","namespace":"oracle_appmgmt","mql":"JVMMemoryUtilization[1m]{resourceName =~ \"*plato*\"}.mean()","resourceGroup":"weblogic_j2eeserver","maxDataPoints":"useIntervalExact"}}],"screenImage":"...","metadataVersion":"2.0","widgetTemplate":"visualizations/chartWidgetTemplate.html","widgetVM":"visualizations/chartWidget","freeformTags":{},"definedTags":{},"parametersConfig":[{"name":"time","displayName":"$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)","required":true,"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-time-selector-filter","parametersMap":{"maxDurationDays":89}}}},{"name":"compartmentId","displayName":"$(bundle.globalSavedSearch.COMPARTMENT)","required":true,"defaultFilterIds":["OOBSS-management-dashboard-compartment-filter"],"editUi":{"inputType":"compartmentSelect"}},{"name":"regionName","displayName":"$(bundle.globalSavedSearch.REGION)","required":false,"defaultFilterIds":["OOBSS-management-dashboard-region-filter"],"valueFormat":{"type":"string"},"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-region-filter","parametersMap":{"selectionMode":"single"}}}}],"featuresConfig":{"crossService":{"shared":true},"dependencies":[],"serviceTypes":["appmgmt"]},"drilldownConfig":[]},{"id":"ocid1.managementsavedsearch.oc1..aaaaaaaavnx43tidccwwsplt3biyqfsbqvmfgkvqb2bmckyzvetndxwz6mea","displayName":"Stuck Threads","providerId":"APM","providerVersion":"3.0.0","providerName":"APM","compartmentId":"ocid1.compartment.oc1..aaaaaaaa422co3qlhv6b3zjy65mplwu6vddqs37hskpuliwrap6as3tvpkua","isOobSavedSearch":false,"description":"Work Managed Stuck threads","nls":{},"type":"WIDGET_SHOW_IN_DASHBOARD","uiConfig":{"vizType":"chart","chartInfo":{"jetConfig":{"type":"line","timeAxisType":"enabled","xAxis":{"viewportMin":"$(params.time.start)","viewportMax":"$(params.time.end)"},"yAxis":{"title":"count"},"dataCursor":"on","legend":{"rendered":true,"position":"end"}},"value":"aggregatedDatapoints.value","group":"aggregatedDatapoints.timestamp","colorBy":"dimensions.resourceName","series":"_allDimensionConglomerate","enableCorrelation":true},"defaultDataSource":"oracle_appmgmt/WorkManagerStuckThreads"},"dataConfig":[{"name":"oracle_appmgmt/WorkManagerStuckThreads","type":"monitoringDataSource","parameters":{"compartmentId":"$(params.compartmentId)","startTime":"$(params.time.start)","endTime":"$(params.time.end)","regionName":"$(params.regionName)","namespace":"oracle_appmgmt","mql":"WorkManagerStuckThreads[1m].mean()","resourceGroup":"weblogic_j2eeserver","maxDataPoints":"useIntervalExact"}}],"screenImage":"...","metadataVersion":"2.0","widgetTemplate":"visualizations/chartWidgetTemplate.html","widgetVM":"visualizations/chartWidget","freeformTags":{},"definedTags":{},"parametersConfig":[{"name":"time","displayName":"$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)","required":true,"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-time-selector-filter","parametersMap":{"maxDurationDays":89}}}},{"name":"compartmentId","displayName":"$(bundle.globalSavedSearch.COMPARTMENT)","required":true,"defaultFilterIds":["OOBSS-management-dashboard-compartment-filter"],"editUi":{"inputType":"compartmentSelect"}},{"name":"regionName","displayName":"$(bundle.globalSavedSearch.REGION)","required":false,"defaultFilterIds":["OOBSS-management-dashboard-region-filter"],"valueFormat":{"type":"string"},"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-region-filter","parametersMap":{"selectionMode":"single"}}}}],"featuresConfig":{"crossService":{"shared":true},"dependencies":[],"serviceTypes":["appmgmt"]},"drilldownConfig":[]},{"id":"ocid1.managementsavedsearch.oc1..aaaaaaaacgusuwjlimvwvullwnl3cz25vaogrcice2irkxmjdipneyezkfrq","displayName":"# 5xx HTTP Responses","providerId":"APM","providerVersion":"3.0.0","providerName":"APM","compartmentId":"ocid1.compartment.oc1..aaaaaaaa422co3qlhv6b3zjy65mplwu6vddqs37hskpuliwrap6as3tvpkua","isOobSavedSearch":false,"description":"Number of 5xx responses","nls":{},"type":"WIDGET_SHOW_IN_DASHBOARD","uiConfig":{"vizType":"chart","chartInfo":{"jetConfig":{"type":"line","timeAxisType":"enabled","xAxis":{"viewportMin":"$(params.time.start)","viewportMax":"$(params.time.end)"},"dataCursor":"on","yAxis":{"title":"Count"},"legend":{"rendered":true,"position":"end"}},"value":"aggregatedDatapoints.value","group":"aggregatedDatapoints.timestamp","colorBy":"dimensions.lbName","enableCorrelation":true,"series":"_allDimensionConglomerate"},"defaultDataSource":"oci_lbaas/HttpResponses5xx"},"dataConfig":[{"name":"oci_lbaas/HttpResponses5xx","type":"monitoringDataSource","parameters":{"compartmentId":"$(params.compartmentId)","startTime":"$(params.time.start)","endTime":"$(params.time.end)","regionName":"$(params.regionName)","namespace":"oci_lbaas","mql":"HttpResponses5xx[1m].mean()","maxDataPoints":"useIntervalExact"}}],"screenImage":"...","metadataVersion":"2.0","widgetTemplate":"visualizations/chartWidgetTemplate.html","widgetVM":"visualizations/chartWidget","freeformTags":{},"definedTags":{},"parametersConfig":[{"name":"time","displayName":"$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)","required":true,"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-time-selector-filter","parametersMap":{"maxDurationDays":89}}}},{"name":"compartmentId","displayName":"$(bundle.globalSavedSearch.COMPARTMENT)","required":true,"defaultFilterIds":["OOBSS-management-dashboard-compartment-filter"],"editUi":{"inputType":"compartmentSelect"}},{"name":"regionName","displayName":"$(bundle.globalSavedSearch.REGION)","required":false,"defaultFilterIds":["OOBSS-management-dashboard-region-filter"],"valueFormat":{"type":"string"},"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-region-filter","parametersMap":{"selectionMode":"single"}}}}],"featuresConfig":{"crossService":{"shared":true},"dependencies":[],"serviceTypes":["management-dashboard"]},"drilldownConfig":[]},{"id":"ocid1.managementsavedsearch.oc1..aaaaaaaaduwp3zyixe4ag5o6ocoxm7yhrodu3ezsr2hmo74nan4cilb5el4a","displayName":"Availability Monitoring","providerId":"APM","providerVersion":"3.0.0","providerName":"APM","compartmentId":"ocid1.compartment.oc1..aaaaaaaa3butlc2ltlbu2iqkvcgltzucsfthaki4zpgq4shcofvbhs66gxkq","isOobSavedSearch":false,"description":"Synthetic Monitoring from OCI Mumbai and OCI UK South","nls":{},"type":"WIDGET_SHOW_IN_DASHBOARD","uiConfig":{"vizType":"chart","chartInfo":{"jetConfig":{"type":"line","timeAxisType":"enabled","xAxis":{"viewportMin":"$(params.time.start)","viewportMax":"$(params.time.end)"},"dataCursor":"on","yAxis":{"title":"Availability"},"legend":{"rendered":true,"position":"end"}},"value":"aggregatedDatapoints.value","group":"aggregatedDatapoints.timestamp","colorBy":"metadata.description","series":"metadata.description","enableCorrelation":true},"defaultDataSource":"oracle_apm_synthetics/Availability"},"dataConfig":[{"name":"oracle_apm_synthetics/Availability","type":"monitoringDataSource","parameters":{"compartmentId":"$(params.compartmentId)","startTime":"$(params.time.start)","endTime":"$(params.time.end)","regionName":"$(params.regionName)","namespace":"oracle_apm_synthetics","mql":"Availability[1m].mean()","maxDataPoints":"useIntervalExact"}}],"screenImage":"...","metadataVersion":"2.0","widgetTemplate":"visualizations/chartWidgetTemplate.html","widgetVM":"visualizations/chartWidget","freeformTags":{},"definedTags":{},"parametersConfig":[{"name":"time","displayName":"$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)","required":true,"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-time-selector-filter","parametersMap":{"maxDurationDays":89}}}},{"name":"compartmentId","displayName":"$(bundle.globalSavedSearch.COMPARTMENT)","required":true,"defaultFilterIds":["OOBSS-management-dashboard-compartment-filter"],"editUi":{"inputType":"compartmentSelect"}},{"name":"regionName","displayName":"$(bundle.globalSavedSearch.REGION)","required":false,"defaultFilterIds":["OOBSS-management-dashboard-region-filter"],"valueFormat":{"type":"string"},"editUi":{"inputType":"savedSearch","filterTile":{"filterId":"OOBSS-management-dashboard-region-filter","parametersMap":{"selectionMode":"single"}}}}],"featuresConfig":{"crossService":{"shared":true},"dependencies":[],"serviceTypes":["APM"]},"drilldownConfig":[]}],"parametersConfig":[{"savedSearchId":"OOBSS-management-dashboard-compartment-filter","displayName":"Compartment - Compute","width":2,"state":"DEFAULT","parametersMap":{"isStoreInLocalStorage":false,"isActiveCompartment":"true"},"name":"compartmentId","localStorageKey":"compartmentId"},{"savedSearchId":"OOBSS-management-dashboard-compartment-filter","displayName":"Compartment - Monitoring","width":2,"state":"DEFAULT","parametersMap":{"isStoreInLocalStorage":false},"name":"compartmentId2","localStorageKey":"compartmentId"},{"savedSearchId":"OOBSS-dbm-single-db-system-node-filter","width":2,"state":"DEFAULT","parametersMap":{"isStoreInLocalStorage":true,"regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)","deploymentType":"$(dashboard.params.deploymentType)","dbm_resourceName":"$(dashboard.params.dbm_resourceName1)"},"name":"dbm_resourceName_dbnode","localStorageKey":"dbm_resourceName_dbnode"},{"savedSearchId":"OOBSS-dbm-single-resource-name-filter","width":2,"state":"DEFAULT","parametersMap":{"isStoreInLocalStorage":true,"regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)"},"name":"dbm_resourceName","localStorageKey":"dbm_resourceName"},{"savedSearchId":"OOBSS-dbm-single-db-system-filter","width":2,"state":"DEFAULT","parametersMap":{"isStoreInLocalStorage":true,"regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)","deploymentType":"$(dashboard.params.deploymentType)"},"name":"dbm_resourceName1","localStorageKey":"dbm_resourceName"},{"savedSearchId":"OOBSS-dbm-single-deptType-filter","width":2,"state":"DEFAULT","parametersMap":{"isStoreInLocalStorage":true,"regionName":"$(context.regionName)","compartmentId":"$(dashboard.params.compartmentId1)"},"name":"deploymentType","localStorageKey":"deploymentType"},{"savedSearchId":"OOBSS-management-dashboard-compartment-filter","displayName":"Compartment - Network","description":"Compartment for Network devices","width":2,"state":"DEFAULT","parametersMap":{"isStoreInLocalStorage":false},"name":"compartmentId3","localStorageKey":"compartmentId"},{"savedSearchId":"OOBSS-management-dashboard-compartment-filter","displayName":"Compartment  - DB","width":2,"state":"DEFAULT","parametersMap":{"isStoreInLocalStorage":false},"name":"compartmentId1","localStorageKey":"compartmentId"},{"name":"time","displayName":"$(bundle.globalSavedSearch.TIME)","src":"$(context.time)"}],"featuresConfig":{"crossService":{"shared":true},"serviceTypes":["APM","dbm","management-dashboard","appmgmt"]},"drilldownConfig":[],"freeformTags":{},"definedTags":{}}]}
+{
+  "dashboards": [
+    {
+      "dashboardId": "ocid1.managementdashboard.oc1..aaaaaaaaktht2gosjwp4ja7qvb7hfyfqkx3ok7d6jjgqodvwxz6bnjn46dwq",
+      "providerId": "APM",
+      "providerName": "APM",
+      "providerVersion": "3.0.0",
+      "tiles": [
+        {
+          "displayName": "Alarms Detail",
+          "savedSearchId": "OOBSS-management-dashboard-alarms-detail-1",
+          "row": 0,
+          "column": 0,
+          "height": 4,
+          "width": 4,
+          "nls": {},
+          "uiConfig": {},
+          "dataConfig": [],
+          "state": "DEFAULT",
+          "drilldownConfig": [],
+          "parametersMap": {
+            "time": "$(dashboard.params.time)",
+            "regionName": "$(context.regionName)",
+            "compartmentId": "$(dashboard.params.compartmentId2)"
+          },
+          "description": null
+        },
+        {
+          "displayName": "Database Widgets",
+          "savedSearchId": "OOBSS-management-dashboard-container",
+          "row": 4,
+          "column": 0,
+          "height": 15,
+          "width": 12,
+          "nls": {},
+          "uiConfig": {
+            "internalKey": "OOBSS-management-dashboard-container",
+            "vizType": "tileContainer",
+            "containerInfo": {
+              "subTiles": [
+                {
+                  "displayName": "Average Active Sessions",
+                  "savedSearchId": "OOBSS-dbm-dbtime",
+                  "row": 3,
+                  "column": 0,
+                  "height": 3,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)",
+                    "compartmentId": "$(dashboard.params.compartmentId1)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "CPU and wait - database (AAS)",
+                  "savedSearchId": "OOBSS-dbm-cpuWait",
+                  "row": 9,
+                  "column": 0,
+                  "height": 3,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)",
+                    "compartmentId": "$(dashboard.params.compartmentId1)",
+                    "resourceName": "$(dashboard.params.dbm_resourceName)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "ASM Disk Group utilization - node (%)",
+                  "savedSearchId": "OOBSS-dbm-asmDiskgroupUtilization",
+                  "row": 0,
+                  "column": 8,
+                  "height": 3,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)",
+                    "compartmentId": "$(dashboard.params.compartmentId1)",
+                    "resourceName": "$(dashboard.params.dbm_resourceName1)",
+                    "deploymentType": "$(dashboard.params.deploymentType)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "CPU utilization - fleet (%)",
+                  "savedSearchId": "OOBSS-dbm-cpuUtilFleet",
+                  "row": 6,
+                  "column": 4,
+                  "height": 3,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)",
+                    "compartmentId": "$(dashboard.params.compartmentId1)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "CPU utilization - node (%)",
+                  "savedSearchId": "OOBSS-dbm-cpuUtilization_node",
+                  "row": 0,
+                  "column": 4,
+                  "height": 3,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)",
+                    "compartmentId": "$(dashboard.params.compartmentId1)",
+                    "resourceName": "$(dashboard.params.dbm_resourceName1)",
+                    "deploymentType": "$(dashboard.params.deploymentType)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "File System utilization - File System name (%)",
+                  "savedSearchId": "OOBSS-dbm-filesystemUtilization_drilldown",
+                  "row": 3,
+                  "column": 4,
+                  "height": 3,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)",
+                    "compartmentId": "$(dashboard.params.compartmentId1)",
+                    "resourceName_dbnode": "$(dashboard.params.dbm_resourceName_dbnode)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "Current logons",
+                  "savedSearchId": "OOBSS-dbm-currentlogon",
+                  "row": 6,
+                  "column": 0,
+                  "height": 3,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)",
+                    "compartmentId": "$(dashboard.params.compartmentId1)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "User calls",
+                  "savedSearchId": "OOBSS-dbm-usercall",
+                  "row": 9,
+                  "column": 4,
+                  "height": 3,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)",
+                    "compartmentId": "$(dashboard.params.compartmentId1)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "Transactions",
+                  "savedSearchId": "OOBSS-dbm-transactions",
+                  "row": 3,
+                  "column": 8,
+                  "height": 3,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)",
+                    "compartmentId": "$(dashboard.params.compartmentId1)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "Storage usage - fleet (GB)",
+                  "savedSearchId": "OOBSS-dbm-storageUsageFleet",
+                  "row": 12,
+                  "column": 4,
+                  "height": 3,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)",
+                    "compartmentId": "$(dashboard.params.compartmentId1)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "Process utilization - fleet (%)",
+                  "savedSearchId": "OOBSS-dbm-processUtilFleet",
+                  "row": 9,
+                  "column": 8,
+                  "height": 3,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)",
+                    "compartmentId": "$(dashboard.params.compartmentId1)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "Load average - node",
+                  "savedSearchId": "OOBSS-dbm-loadAverage",
+                  "row": 6,
+                  "column": 8,
+                  "height": 3,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)",
+                    "compartmentId": "$(dashboard.params.compartmentId1)",
+                    "resourceName": "$(dashboard.params.dbm_resourceName1)",
+                    "deploymentType": "$(dashboard.params.deploymentType)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "Flash recovery area utilization - fleet (%)",
+                  "savedSearchId": "OOBSS-dbm-flashRecoverFleet",
+                  "row": 12,
+                  "column": 8,
+                  "height": 3,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)",
+                    "compartmentId": "$(dashboard.params.compartmentId1)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "Memory usage - fleet (GB)",
+                  "savedSearchId": "OOBSS-dbm-memUtilFleet",
+                  "row": 12,
+                  "column": 0,
+                  "height": 3,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)",
+                    "compartmentId": "$(dashboard.params.compartmentId1)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "Node status - node",
+                  "savedSearchId": "OOBSS-dbm-nodeStatus",
+                  "row": 0,
+                  "column": 0,
+                  "height": 3,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)",
+                    "compartmentId": "$(dashboard.params.compartmentId1)",
+                    "resourceName": "$(dashboard.params.dbm_resourceName1)",
+                    "deploymentType": "$(dashboard.params.deploymentType)"
+                  },
+                  "description": null
+                }
+              ]
+            }
+          },
+          "dataConfig": [],
+          "state": "DEFAULT",
+          "drilldownConfig": [],
+          "parametersMap": {},
+          "description": null
+        },
+        {
+          "displayName": "Prod App Healthcheck",
+          "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaav3uhbp4hsw4otdqjvfanme3ssc7re2r4nxy5auaux53g3fqi3rgq",
+          "row": 0,
+          "column": 4,
+          "height": 4,
+          "width": 4,
+          "nls": {},
+          "uiConfig": {},
+          "dataConfig": [],
+          "state": "DEFAULT",
+          "drilldownConfig": [],
+          "parametersMap": {
+            "compartmentId": "$(dashboard.params.compartmentId2)",
+            "time": "$(dashboard.params.time)",
+            "regionName": "$(context.regionName)"
+          },
+          "description": null
+        },
+        {
+          "displayName": "Availability Monitoring",
+          "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaaduwp3zyixe4ag5o6ocoxm7yhrodu3ezsr2hmo74nan4cilb5el4a",
+          "row": 0,
+          "column": 8,
+          "height": 4,
+          "width": 4,
+          "nls": {},
+          "uiConfig": {},
+          "dataConfig": [],
+          "state": "DEFAULT",
+          "drilldownConfig": [],
+          "parametersMap": {
+            "compartmentId": "$(dashboard.params.compartmentId2)",
+            "time": "$(dashboard.params.time)",
+            "regionName": "$(context.regionName)"
+          },
+          "description": null
+        },
+        {
+          "displayName": "App Infrastructure (Compute Instances)",
+          "savedSearchId": "OOBSS-management-dashboard-container",
+          "row": 19,
+          "column": 0,
+          "height": 8,
+          "width": 12,
+          "nls": {},
+          "uiConfig": {
+            "internalKey": "OOBSS-management-dashboard-container",
+            "vizType": "tileContainer",
+            "containerInfo": {
+              "subTiles": [
+                {
+                  "displayName": "Filesystem Utilization",
+                  "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaahz7gsye7lqp2b3lhkwqrf63h3yavd77ahfaygjkqhylc4yaghvrq",
+                  "row": 0,
+                  "column": 5,
+                  "height": 4,
+                  "width": 5,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "compartmentId": "$(dashboard.params.compartmentId)",
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "Load Average",
+                  "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaat476tt3xn23strmfdxdaorbthdqlpz4y3tqapnkfawdsrelf5v3a",
+                  "row": 4,
+                  "column": 0,
+                  "height": 4,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "compartmentId": "$(dashboard.params.compartmentId)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "Memory Utilization",
+                  "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaalggxmxnd7kono7xxi5dxcrucfnlb774rglt6rkzrabbnj6hiwvra",
+                  "row": 4,
+                  "column": 8,
+                  "height": 4,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "compartmentId": "$(dashboard.params.compartmentId)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "CPU Utilization",
+                  "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaapabtoevvn5iwf7vtowrcg3p7jholrq6twuqvengexlf4ot5ya2bq",
+                  "row": 0,
+                  "column": 0,
+                  "height": 4,
+                  "width": 5,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "compartmentId": "$(dashboard.params.compartmentId)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "Host Network Activity",
+                  "savedSearchId": "OOBSS-appmgmt-host-network-activity-1",
+                  "row": 4,
+                  "column": 4,
+                  "height": 4,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "time": "$(dashboard.params.time)",
+                    "compartmentId": "$(dashboard.params.compartmentId)"
+                  },
+                  "description": null
+                }
+              ]
+            }
+          },
+          "dataConfig": [],
+          "state": "DEFAULT",
+          "drilldownConfig": [],
+          "parametersMap": {},
+          "description": null
+        },
+        {
+          "displayName": "Weblogic Infrastructure",
+          "savedSearchId": "OOBSS-management-dashboard-container",
+          "row": 27,
+          "column": 0,
+          "height": 8,
+          "width": 12,
+          "nls": {},
+          "uiConfig": {
+            "internalKey": "OOBSS-management-dashboard-container",
+            "vizType": "tileContainer",
+            "containerInfo": {
+              "subTiles": [
+                {
+                  "displayName": "JVM Utilization (Non-PLATO Managed Servers)",
+                  "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaauq6uh7oct6qiilnh7h6h7kzfoz2jpgeyq5fd3q2u3perm5ezih2q",
+                  "row": 0,
+                  "column": 0,
+                  "height": 4,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "compartmentId": "$(dashboard.params.compartmentId)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "JVM Utilization (PLATO)",
+                  "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaa46uog46krw3pg6iy64femgfgtkohrhaozgi636gm3hafhvobrs7a",
+                  "row": 0,
+                  "column": 8,
+                  "height": 4,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "compartmentId": "$(dashboard.params.compartmentId)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "All Resources Status",
+                  "savedSearchId": "OOBSS-appmgmt-pie-status-1",
+                  "row": 0,
+                  "column": 4,
+                  "height": 4,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "compartmentId": "$(dashboard.params.compartmentId)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "Stuck Threads",
+                  "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaavnx43tidccwwsplt3biyqfsbqvmfgkvqb2bmckyzvetndxwz6mea",
+                  "row": 4,
+                  "column": 0,
+                  "height": 4,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "compartmentId": "$(dashboard.params.compartmentId)",
+                    "time": "$(dashboard.params.time)"
+                  },
+                  "description": null
+                }
+              ]
+            }
+          },
+          "dataConfig": [],
+          "state": "DEFAULT",
+          "drilldownConfig": [],
+          "parametersMap": {},
+          "description": null
+        },
+        {
+          "displayName": "Network Infrastructure",
+          "savedSearchId": "OOBSS-management-dashboard-container",
+          "row": 35,
+          "column": 0,
+          "height": 4,
+          "width": 12,
+          "nls": {},
+          "uiConfig": {
+            "internalKey": "OOBSS-management-dashboard-container",
+            "vizType": "tileContainer",
+            "containerInfo": {
+              "subTiles": [
+                {
+                  "displayName": "LB - Peak Bandwidth",
+                  "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaapna4dhsvqyfyzb4v2426jei5vm2lancnfi2v64w3araqd7x5l5ya",
+                  "row": 0,
+                  "column": 0,
+                  "height": 4,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "compartmentId": "$(dashboard.params.compartmentId3)",
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "LB - # Unhealthy Backendsets",
+                  "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaa342cwuqob4jg2ernbg6e77qiaqbx4h7vta6fwovjzxsm4dablryq",
+                  "row": 0,
+                  "column": 8,
+                  "height": 4,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "compartmentId": "$(dashboard.params.compartmentId3)",
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)"
+                  },
+                  "description": null
+                },
+                {
+                  "displayName": "LB - # 5xx HTTP Responses",
+                  "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaacgusuwjlimvwvullwnl3cz25vaogrcice2irkxmjdipneyezkfrq",
+                  "row": 0,
+                  "column": 4,
+                  "height": 4,
+                  "width": 4,
+                  "nls": {},
+                  "uiConfig": {},
+                  "dataConfig": [],
+                  "state": "DEFAULT",
+                  "drilldownConfig": [],
+                  "parametersMap": {
+                    "compartmentId": "$(dashboard.params.compartmentId3)",
+                    "time": "$(dashboard.params.time)",
+                    "regionName": "$(context.regionName)"
+                  },
+                  "description": null
+                }
+              ]
+            }
+          },
+          "dataConfig": [],
+          "state": "DEFAULT",
+          "drilldownConfig": [],
+          "parametersMap": {},
+          "description": null
+        }
+      ],
+      "displayName": "HSBC Infrastructure Health",
+      "description": "Infrastructure components such as Compute, Loadbalancer, Network, Weblogic and Database related health",
+      "compartmentId": "ocid1.compartment.oc1..aaaaaaaa422co3qlhv6b3zjy65mplwu6vddqs37hskpuliwrap6as3tvpkua",
+      "isOobDashboard": false,
+      "isShowInHome": false,
+      "metadataVersion": "2.0",
+      "isShowDescription": true,
+      "screenImage": "todo: provide value[mandatory]",
+      "nls": {},
+      "uiConfig": {
+        "isFilteringEnabled": false,
+        "isTimeRangeEnabled": true,
+        "isRefreshEnabled": true
+      },
+      "dataConfig": [],
+      "type": "normal",
+      "isFavorite": false,
+      "savedSearches": [
+        {
+          "id": "ocid1.managementsavedsearch.oc1..aaaaaaaapna4dhsvqyfyzb4v2426jei5vm2lancnfi2v64w3araqd7x5l5ya",
+          "displayName": "Peak Bandwidth",
+          "providerId": "APM",
+          "providerVersion": "3.0.0",
+          "providerName": "APM",
+          "compartmentId": "ocid1.compartment.oc1..aaaaaaaa422co3qlhv6b3zjy65mplwu6vddqs37hskpuliwrap6as3tvpkua",
+          "isOobSavedSearch": false,
+          "description": "Peak bandwidth usage",
+          "nls": {},
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "vizType": "chart",
+            "chartInfo": {
+              "jetConfig": {
+                "type": "line",
+                "timeAxisType": "enabled",
+                "xAxis": {
+                  "viewportMin": "$(params.time.start)",
+                  "viewportMax": "$(params.time.end)"
+                },
+                "dataCursor": "on",
+                "legend": {
+                  "rendered": true,
+                  "position": "end"
+                },
+                "yAxis": {
+                  "title": "Mbps"
+                }
+              },
+              "value": "aggregatedDatapoints.value",
+              "group": "aggregatedDatapoints.timestamp",
+              "colorBy": "dimensions.lbName",
+              "series": "_allDimensionConglomerate",
+              "enableCorrelation": true
+            },
+            "defaultDataSource": "oci_lbaas/PeakBandwidth"
+          },
+          "dataConfig": [
+            {
+              "name": "oci_lbaas/PeakBandwidth",
+              "type": "monitoringDataSource",
+              "parameters": {
+                "compartmentId": "$(params.compartmentId)",
+                "startTime": "$(params.time.start)",
+                "endTime": "$(params.time.end)",
+                "regionName": "$(params.regionName)",
+                "namespace": "oci_lbaas",
+                "mql": "PeakBandwidth[1m].mean()",
+                "maxDataPoints": "useIntervalExact"
+              }
+            }
+          ],
+          "screenImage": "...",
+          "metadataVersion": "2.0",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "visualizations/chartWidget",
+          "freeformTags": {},
+          "definedTags": {},
+          "parametersConfig": [
+            {
+              "name": "time",
+              "displayName": "$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)",
+              "required": true,
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-time-selector-filter",
+                  "parametersMap": {
+                    "maxDurationDays": 89
+                  }
+                }
+              }
+            },
+            {
+              "name": "compartmentId",
+              "displayName": "$(bundle.globalSavedSearch.COMPARTMENT)",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-compartment-filter"
+              ],
+              "editUi": {
+                "inputType": "compartmentSelect"
+              }
+            },
+            {
+              "name": "regionName",
+              "displayName": "$(bundle.globalSavedSearch.REGION)",
+              "required": false,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "valueFormat": {
+                "type": "string"
+              },
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter",
+                  "parametersMap": {
+                    "selectionMode": "single"
+                  }
+                }
+              }
+            }
+          ],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            },
+            "dependencies": [],
+            "serviceTypes": [
+              "management-dashboard"
+            ]
+          },
+          "drilldownConfig": []
+        },
+        {
+          "id": "ocid1.managementsavedsearch.oc1..aaaaaaaat476tt3xn23strmfdxdaorbthdqlpz4y3tqapnkfawdsrelf5v3a",
+          "displayName": "Load Average",
+          "providerId": "APM",
+          "providerVersion": "3.0.0",
+          "providerName": "APM",
+          "compartmentId": "ocid1.compartment.oc1..aaaaaaaa3butlc2ltlbu2iqkvcgltzucsfthaki4zpgq4shcofvbhs66gxkq",
+          "isOobSavedSearch": false,
+          "description": "Load Average of compute instances in selected compartment",
+          "nls": {},
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "vizType": "chart",
+            "chartInfo": {
+              "jetConfig": {
+                "type": "line",
+                "timeAxisType": "enabled",
+                "xAxis": {
+                  "viewportMin": "$(params.time.start)",
+                  "viewportMax": "$(params.time.end)"
+                },
+                "yAxis": {
+                  "title": "avg"
+                },
+                "legend": {
+                  "rendered": true,
+                  "position": "end"
+                },
+                "dataCursor": "on"
+              },
+              "value": "aggregatedDatapoints.value",
+              "group": "aggregatedDatapoints.timestamp",
+              "colorBy": "dimensions.resourceDisplayName",
+              "series": "_allDimensionConglomerate",
+              "enableCorrelation": true
+            },
+            "defaultDataSource": "oci_computeagent/LoadAverage"
+          },
+          "dataConfig": [
+            {
+              "name": "oci_computeagent/LoadAverage",
+              "type": "monitoringDataSource",
+              "parameters": {
+                "compartmentId": "$(params.compartmentId)",
+                "startTime": "$(params.time.start)",
+                "endTime": "$(params.time.end)",
+                "regionName": "$(params.regionName)",
+                "namespace": "oci_computeagent",
+                "mql": "LoadAverage[1m].mean()",
+                "maxDataPoints": "useIntervalExact"
+              }
+            }
+          ],
+          "screenImage": "...",
+          "metadataVersion": "2.0",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "visualizations/chartWidget",
+          "freeformTags": {},
+          "definedTags": {},
+          "parametersConfig": [
+            {
+              "name": "time",
+              "displayName": "$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)",
+              "required": true,
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-time-selector-filter",
+                  "parametersMap": {
+                    "maxDurationDays": 89
+                  }
+                }
+              }
+            },
+            {
+              "name": "compartmentId",
+              "displayName": "$(bundle.globalSavedSearch.COMPARTMENT)",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-compartment-filter"
+              ],
+              "editUi": {
+                "inputType": "compartmentSelect"
+              }
+            },
+            {
+              "name": "regionName",
+              "displayName": "$(bundle.globalSavedSearch.REGION)",
+              "required": false,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "valueFormat": {
+                "type": "string"
+              },
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter",
+                  "parametersMap": {
+                    "selectionMode": "single"
+                  }
+                }
+              }
+            }
+          ],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            },
+            "dependencies": [],
+            "serviceTypes": [
+              "management-dashboard"
+            ]
+          },
+          "drilldownConfig": []
+        },
+        {
+          "id": "ocid1.managementsavedsearch.oc1..aaaaaaaauq6uh7oct6qiilnh7h6h7kzfoz2jpgeyq5fd3q2u3perm5ezih2q",
+          "displayName": "JVM Utilization (Non-PLATO Managed Servers)",
+          "providerId": "APM",
+          "providerVersion": "3.0.0",
+          "providerName": "APM",
+          "compartmentId": "ocid1.compartment.oc1..aaaaaaaa3butlc2ltlbu2iqkvcgltzucsfthaki4zpgq4shcofvbhs66gxkq",
+          "isOobSavedSearch": false,
+          "description": "JVM Utilization for every managed servers other than PLATO",
+          "nls": {},
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "vizType": "chart",
+            "chartInfo": {
+              "jetConfig": {
+                "type": "line",
+                "timeAxisType": "enabled",
+                "xAxis": {
+                  "viewportMin": "$(params.time.start)",
+                  "viewportMax": "$(params.time.end)"
+                },
+                "yAxis": {
+                  "title": "% Utilization"
+                },
+                "dataCursor": "on",
+                "legend": {
+                  "rendered": true,
+                  "position": "end"
+                }
+              },
+              "value": "aggregatedDatapoints.value",
+              "group": "aggregatedDatapoints.timestamp",
+              "colorBy": "dimensions.resourceName",
+              "series": "_allDimensionConglomerate",
+              "enableCorrelation": true
+            },
+            "defaultDataSource": "oracle_appmgmt/JVMMemoryUtilization"
+          },
+          "dataConfig": [
+            {
+              "name": "oracle_appmgmt/JVMMemoryUtilization",
+              "type": "monitoringDataSource",
+              "parameters": {
+                "compartmentId": "$(params.compartmentId)",
+                "startTime": "$(params.time.start)",
+                "endTime": "$(params.time.end)",
+                "regionName": "$(params.regionName)",
+                "namespace": "oracle_appmgmt",
+                "mql": "JVMMemoryUtilization[1m]{resourceName !~ \"*plato*\"}.mean()",
+                "resourceGroup": "weblogic_j2eeserver",
+                "maxDataPoints": "useIntervalExact"
+              }
+            }
+          ],
+          "screenImage": "...",
+          "metadataVersion": "2.0",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "visualizations/chartWidget",
+          "freeformTags": {},
+          "definedTags": {},
+          "parametersConfig": [
+            {
+              "name": "time",
+              "displayName": "$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)",
+              "required": true,
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-time-selector-filter",
+                  "parametersMap": {
+                    "maxDurationDays": 89
+                  }
+                }
+              }
+            },
+            {
+              "name": "compartmentId",
+              "displayName": "$(bundle.globalSavedSearch.COMPARTMENT)",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-compartment-filter"
+              ],
+              "editUi": {
+                "inputType": "compartmentSelect"
+              }
+            },
+            {
+              "name": "regionName",
+              "displayName": "$(bundle.globalSavedSearch.REGION)",
+              "required": false,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "valueFormat": {
+                "type": "string"
+              },
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter",
+                  "parametersMap": {
+                    "selectionMode": "single"
+                  }
+                }
+              }
+            }
+          ],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            },
+            "dependencies": [],
+            "serviceTypes": [
+              "appmgmt"
+            ]
+          },
+          "drilldownConfig": []
+        },
+        {
+          "id": "ocid1.managementsavedsearch.oc1..aaaaaaaalggxmxnd7kono7xxi5dxcrucfnlb774rglt6rkzrabbnj6hiwvra",
+          "displayName": "Memory Utilization",
+          "providerId": "APM",
+          "providerVersion": "3.0.0",
+          "providerName": "APM",
+          "compartmentId": "ocid1.compartment.oc1..aaaaaaaa3butlc2ltlbu2iqkvcgltzucsfthaki4zpgq4shcofvbhs66gxkq",
+          "isOobSavedSearch": false,
+          "description": "Memory Utilization",
+          "nls": {},
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "vizType": "chart",
+            "chartInfo": {
+              "jetConfig": {
+                "type": "line",
+                "timeAxisType": "enabled",
+                "xAxis": {
+                  "viewportMin": "$(params.time.start)",
+                  "viewportMax": "$(params.time.end)"
+                },
+                "dataCursor": "on",
+                "yAxis": {
+                  "title": "% Utilization"
+                },
+                "legend": {
+                  "rendered": true,
+                  "position": "end"
+                }
+              },
+              "value": "aggregatedDatapoints.value",
+              "group": "aggregatedDatapoints.timestamp",
+              "colorBy": "dimensions.resourceDisplayName",
+              "series": "_allDimensionConglomerate",
+              "enableCorrelation": true
+            },
+            "defaultDataSource": "oci_computeagent/MemoryUtilization"
+          },
+          "dataConfig": [
+            {
+              "name": "oci_computeagent/MemoryUtilization",
+              "type": "monitoringDataSource",
+              "parameters": {
+                "compartmentId": "$(params.compartmentId)",
+                "startTime": "$(params.time.start)",
+                "endTime": "$(params.time.end)",
+                "regionName": "$(params.regionName)",
+                "namespace": "oci_computeagent",
+                "mql": "MemoryUtilization[1m].mean()",
+                "maxDataPoints": "useIntervalExact"
+              }
+            }
+          ],
+          "screenImage": "...",
+          "metadataVersion": "2.0",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "visualizations/chartWidget",
+          "freeformTags": {},
+          "definedTags": {},
+          "parametersConfig": [
+            {
+              "name": "time",
+              "displayName": "$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)",
+              "required": true,
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-time-selector-filter",
+                  "parametersMap": {
+                    "maxDurationDays": 89
+                  }
+                }
+              }
+            },
+            {
+              "name": "compartmentId",
+              "displayName": "$(bundle.globalSavedSearch.COMPARTMENT)",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-compartment-filter"
+              ],
+              "editUi": {
+                "inputType": "compartmentSelect"
+              }
+            },
+            {
+              "name": "regionName",
+              "displayName": "$(bundle.globalSavedSearch.REGION)",
+              "required": false,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "valueFormat": {
+                "type": "string"
+              },
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter",
+                  "parametersMap": {
+                    "selectionMode": "single"
+                  }
+                }
+              }
+            }
+          ],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            },
+            "dependencies": [],
+            "serviceTypes": [
+              "management-dashboard"
+            ]
+          },
+          "drilldownConfig": []
+        },
+        {
+          "id": "ocid1.managementsavedsearch.oc1..aaaaaaaa342cwuqob4jg2ernbg6e77qiaqbx4h7vta6fwovjzxsm4dablryq",
+          "displayName": "# Unhealthy Backendset",
+          "providerId": "APM",
+          "providerVersion": "3.0.0",
+          "providerName": "APM",
+          "compartmentId": "ocid1.compartment.oc1..aaaaaaaa422co3qlhv6b3zjy65mplwu6vddqs37hskpuliwrap6as3tvpkua",
+          "isOobSavedSearch": false,
+          "description": "Unhealthy Backendset",
+          "nls": {},
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "vizType": "chart",
+            "chartInfo": {
+              "jetConfig": {
+                "type": "line",
+                "timeAxisType": "enabled",
+                "xAxis": {
+                  "viewportMin": "$(params.time.start)",
+                  "viewportMax": "$(params.time.end)"
+                },
+                "dataCursor": "on",
+                "legend": {
+                  "rendered": true,
+                  "position": "end"
+                },
+                "yAxis": {
+                  "title": "Count"
+                }
+              },
+              "value": "aggregatedDatapoints.value",
+              "group": "aggregatedDatapoints.timestamp",
+              "colorBy": "dimensions.backendSetName",
+              "series": "",
+              "enableCorrelation": true
+            },
+            "defaultDataSource": "oci_lbaas/UnHealthyBackendServers"
+          },
+          "dataConfig": [
+            {
+              "name": "oci_lbaas/UnHealthyBackendServers",
+              "type": "monitoringDataSource",
+              "parameters": {
+                "compartmentId": "$(params.compartmentId)",
+                "startTime": "$(params.time.start)",
+                "endTime": "$(params.time.end)",
+                "regionName": "$(params.regionName)",
+                "namespace": "oci_lbaas",
+                "mql": "UnHealthyBackendServers[1m].mean()",
+                "maxDataPoints": "useIntervalExact"
+              }
+            }
+          ],
+          "screenImage": "...",
+          "metadataVersion": "2.0",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "visualizations/chartWidget",
+          "freeformTags": {},
+          "definedTags": {},
+          "parametersConfig": [
+            {
+              "name": "time",
+              "displayName": "$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)",
+              "required": true,
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-time-selector-filter",
+                  "parametersMap": {
+                    "maxDurationDays": 89
+                  }
+                }
+              }
+            },
+            {
+              "name": "compartmentId",
+              "displayName": "$(bundle.globalSavedSearch.COMPARTMENT)",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-compartment-filter"
+              ],
+              "editUi": {
+                "inputType": "compartmentSelect"
+              }
+            },
+            {
+              "name": "regionName",
+              "displayName": "$(bundle.globalSavedSearch.REGION)",
+              "required": false,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "valueFormat": {
+                "type": "string"
+              },
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter",
+                  "parametersMap": {
+                    "selectionMode": "single"
+                  }
+                }
+              }
+            }
+          ],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            },
+            "dependencies": [],
+            "serviceTypes": [
+              "management-dashboard"
+            ]
+          },
+          "drilldownConfig": []
+        },
+        {
+          "id": "ocid1.managementsavedsearch.oc1..aaaaaaaahz7gsye7lqp2b3lhkwqrf63h3yavd77ahfaygjkqhylc4yaghvrq",
+          "displayName": "Filesystem Utilization",
+          "providerId": "APM",
+          "providerVersion": "3.0.0",
+          "providerName": "APM",
+          "compartmentId": "ocid1.compartment.oc1..aaaaaaaa3butlc2ltlbu2iqkvcgltzucsfthaki4zpgq4shcofvbhs66gxkq",
+          "isOobSavedSearch": false,
+          "description": "OS Filesystem Utilization for APP Instances",
+          "nls": {},
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "vizType": "chart",
+            "chartInfo": {
+              "jetConfig": {
+                "type": "line",
+                "timeAxisType": "enabled",
+                "xAxis": {
+                  "viewportMin": "$(params.time.start)",
+                  "viewportMax": "$(params.time.end)"
+                },
+                "yAxis": {
+                  "title": "% Utilization"
+                },
+                "dataCursor": "on",
+                "legend": {
+                  "rendered": true,
+                  "position": "end"
+                }
+              },
+              "value": "aggregatedDatapoints.value",
+              "group": "aggregatedDatapoints.timestamp",
+              "colorBy": "dimensions.resourceName",
+              "series": "_allDimensionConglomerate"
+            },
+            "defaultDataSource": "oracle_appmgmt/FilesystemUtilization"
+          },
+          "dataConfig": [
+            {
+              "name": "oracle_appmgmt/FilesystemUtilization",
+              "type": "monitoringDataSource",
+              "parameters": {
+                "compartmentId": "$(params.compartmentId)",
+                "startTime": "$(params.time.start)",
+                "endTime": "$(params.time.end)",
+                "regionName": "$(params.regionName)",
+                "namespace": "oracle_appmgmt",
+                "mql": "FilesystemUtilization[1m].mean()",
+                "resourceGroup": "host",
+                "maxDataPoints": "useIntervalExact"
+              }
+            }
+          ],
+          "screenImage": "...",
+          "metadataVersion": "2.0",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "visualizations/chartWidget",
+          "freeformTags": {},
+          "definedTags": {},
+          "parametersConfig": [
+            {
+              "name": "time",
+              "displayName": "$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)",
+              "required": true,
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-time-selector-filter",
+                  "parametersMap": {
+                    "maxDurationDays": 89
+                  }
+                }
+              }
+            },
+            {
+              "name": "compartmentId",
+              "displayName": "$(bundle.globalSavedSearch.COMPARTMENT)",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-compartment-filter"
+              ],
+              "editUi": {
+                "inputType": "compartmentSelect"
+              }
+            },
+            {
+              "name": "regionName",
+              "displayName": "$(bundle.globalSavedSearch.REGION)",
+              "required": false,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "valueFormat": {
+                "type": "string"
+              },
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter",
+                  "parametersMap": {
+                    "selectionMode": "single"
+                  }
+                }
+              }
+            }
+          ],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            },
+            "dependencies": [],
+            "serviceTypes": [
+              "appmgmt"
+            ]
+          },
+          "drilldownConfig": []
+        },
+        {
+          "id": "ocid1.managementsavedsearch.oc1..aaaaaaaapabtoevvn5iwf7vtowrcg3p7jholrq6twuqvengexlf4ot5ya2bq",
+          "displayName": "CPU Utilization",
+          "providerId": "APM",
+          "providerVersion": "3.0.0",
+          "providerName": "APM",
+          "compartmentId": "ocid1.compartment.oc1..aaaaaaaa3butlc2ltlbu2iqkvcgltzucsfthaki4zpgq4shcofvbhs66gxkq",
+          "isOobSavedSearch": false,
+          "description": "CPU Utilization",
+          "nls": {},
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "vizType": "chart",
+            "chartInfo": {
+              "jetConfig": {
+                "type": "line",
+                "timeAxisType": "enabled",
+                "xAxis": {
+                  "viewportMin": "$(params.time.start)",
+                  "viewportMax": "$(params.time.end)"
+                },
+                "yAxis": {
+                  "title": "% Utilization"
+                },
+                "legend": {
+                  "rendered": true,
+                  "position": "end"
+                },
+                "dataCursor": "on"
+              },
+              "value": "aggregatedDatapoints.value",
+              "group": "aggregatedDatapoints.timestamp",
+              "colorBy": "dimensions.resourceDisplayName",
+              "series": "_allDimensionConglomerate",
+              "enableCorrelation": true
+            },
+            "defaultDataSource": "oci_computeagent/Cpuutilization"
+          },
+          "dataConfig": [
+            {
+              "name": "oci_computeagent/Cpuutilization",
+              "type": "monitoringDataSource",
+              "parameters": {
+                "compartmentId": "$(params.compartmentId)",
+                "startTime": "$(params.time.start)",
+                "endTime": "$(params.time.end)",
+                "regionName": "$(params.regionName)",
+                "namespace": "oci_computeagent",
+                "mql": "Cpuutilization[1m].mean()",
+                "maxDataPoints": "useIntervalExact"
+              }
+            }
+          ],
+          "screenImage": "...",
+          "metadataVersion": "2.0",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "visualizations/chartWidget",
+          "freeformTags": {},
+          "definedTags": {},
+          "parametersConfig": [
+            {
+              "name": "time",
+              "displayName": "$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)",
+              "required": true,
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-time-selector-filter",
+                  "parametersMap": {
+                    "maxDurationDays": 89
+                  }
+                }
+              }
+            },
+            {
+              "name": "compartmentId",
+              "displayName": "$(bundle.globalSavedSearch.COMPARTMENT)",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-compartment-filter"
+              ],
+              "editUi": {
+                "inputType": "compartmentSelect"
+              }
+            },
+            {
+              "name": "regionName",
+              "displayName": "$(bundle.globalSavedSearch.REGION)",
+              "required": false,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "valueFormat": {
+                "type": "string"
+              },
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter",
+                  "parametersMap": {
+                    "selectionMode": "single"
+                  }
+                }
+              }
+            }
+          ],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            },
+            "dependencies": [],
+            "serviceTypes": [
+              "management-dashboard"
+            ]
+          },
+          "drilldownConfig": []
+        },
+        {
+          "id": "ocid1.managementsavedsearch.oc1..aaaaaaaav3uhbp4hsw4otdqjvfanme3ssc7re2r4nxy5auaux53g3fqi3rgq",
+          "displayName": "Prod Appshell Healthcheck",
+          "providerId": "APM",
+          "providerVersion": "3.0.0",
+          "providerName": "APM",
+          "compartmentId": "ocid1.compartment.oc1..aaaaaaaa3butlc2ltlbu2iqkvcgltzucsfthaki4zpgq4shcofvbhs66gxkq",
+          "isOobSavedSearch": false,
+          "description": "Healthcheck on PROD LB App-shell and ELCM URLs for status code 200",
+          "nls": {},
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "vizType": "chart",
+            "chartInfo": {
+              "jetConfig": {
+                "type": "line",
+                "timeAxisType": "enabled",
+                "xAxis": {
+                  "viewportMin": "$(params.time.start)",
+                  "viewportMax": "$(params.time.end)"
+                },
+                "legend": {
+                  "rendered": true,
+                  "position": "end"
+                },
+                "yAxis": {
+                  "title": "1 => Healthy"
+                },
+                "dataCursor": "on"
+              },
+              "value": "aggregatedDatapoints.value",
+              "group": "aggregatedDatapoints.timestamp",
+              "colorBy": "dimensions.resourceDisplayName",
+              "series": "_allDimensionConglomerate",
+              "enableCorrelation": true
+            },
+            "defaultDataSource": "oci_healthchecks/HTTP.isHealthy"
+          },
+          "dataConfig": [
+            {
+              "name": "oci_healthchecks/HTTP.isHealthy",
+              "type": "monitoringDataSource",
+              "parameters": {
+                "compartmentId": "$(params.compartmentId)",
+                "startTime": "$(params.time.start)",
+                "endTime": "$(params.time.end)",
+                "regionName": "$(params.regionName)",
+                "namespace": "oci_healthchecks",
+                "mql": "HTTP.isHealthy[1m].mean()",
+                "maxDataPoints": "useIntervalExact"
+              }
+            }
+          ],
+          "screenImage": "...",
+          "metadataVersion": "2.0",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "visualizations/chartWidget",
+          "freeformTags": {},
+          "definedTags": {},
+          "parametersConfig": [
+            {
+              "name": "time",
+              "displayName": "$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)",
+              "required": true,
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-time-selector-filter",
+                  "parametersMap": {
+                    "maxDurationDays": 89
+                  }
+                }
+              }
+            },
+            {
+              "name": "compartmentId",
+              "displayName": "$(bundle.globalSavedSearch.COMPARTMENT)",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-compartment-filter"
+              ],
+              "editUi": {
+                "inputType": "compartmentSelect"
+              }
+            },
+            {
+              "name": "regionName",
+              "displayName": "$(bundle.globalSavedSearch.REGION)",
+              "required": false,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "valueFormat": {
+                "type": "string"
+              },
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter",
+                  "parametersMap": {
+                    "selectionMode": "single"
+                  }
+                }
+              }
+            }
+          ],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            },
+            "dependencies": [],
+            "serviceTypes": [
+              "management-dashboard"
+            ]
+          },
+          "drilldownConfig": []
+        },
+        {
+          "id": "ocid1.managementsavedsearch.oc1..aaaaaaaa46uog46krw3pg6iy64femgfgtkohrhaozgi636gm3hafhvobrs7a",
+          "displayName": "JVM Utilization",
+          "providerId": "APM",
+          "providerVersion": "3.0.0",
+          "providerName": "APM",
+          "compartmentId": "ocid1.compartment.oc1..aaaaaaaa3butlc2ltlbu2iqkvcgltzucsfthaki4zpgq4shcofvbhs66gxkq",
+          "isOobSavedSearch": false,
+          "description": "JVM Utilization for PLATO related managed servers",
+          "nls": {},
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "vizType": "chart",
+            "chartInfo": {
+              "jetConfig": {
+                "type": "line",
+                "timeAxisType": "enabled",
+                "xAxis": {
+                  "viewportMin": "$(params.time.start)",
+                  "viewportMax": "$(params.time.end)"
+                },
+                "yAxis": {
+                  "title": "% Utilization"
+                },
+                "dataCursor": "on",
+                "legend": {
+                  "rendered": true,
+                  "position": "end"
+                }
+              },
+              "value": "aggregatedDatapoints.value",
+              "group": "aggregatedDatapoints.timestamp",
+              "colorBy": "dimensions.resourceName",
+              "series": "_allDimensionConglomerate",
+              "enableCorrelation": true
+            },
+            "defaultDataSource": "oracle_appmgmt/JVMMemoryUtilization"
+          },
+          "dataConfig": [
+            {
+              "name": "oracle_appmgmt/JVMMemoryUtilization",
+              "type": "monitoringDataSource",
+              "parameters": {
+                "compartmentId": "$(params.compartmentId)",
+                "startTime": "$(params.time.start)",
+                "endTime": "$(params.time.end)",
+                "regionName": "$(params.regionName)",
+                "namespace": "oracle_appmgmt",
+                "mql": "JVMMemoryUtilization[1m]{resourceName =~ \"*plato*\"}.mean()",
+                "resourceGroup": "weblogic_j2eeserver",
+                "maxDataPoints": "useIntervalExact"
+              }
+            }
+          ],
+          "screenImage": "...",
+          "metadataVersion": "2.0",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "visualizations/chartWidget",
+          "freeformTags": {},
+          "definedTags": {},
+          "parametersConfig": [
+            {
+              "name": "time",
+              "displayName": "$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)",
+              "required": true,
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-time-selector-filter",
+                  "parametersMap": {
+                    "maxDurationDays": 89
+                  }
+                }
+              }
+            },
+            {
+              "name": "compartmentId",
+              "displayName": "$(bundle.globalSavedSearch.COMPARTMENT)",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-compartment-filter"
+              ],
+              "editUi": {
+                "inputType": "compartmentSelect"
+              }
+            },
+            {
+              "name": "regionName",
+              "displayName": "$(bundle.globalSavedSearch.REGION)",
+              "required": false,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "valueFormat": {
+                "type": "string"
+              },
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter",
+                  "parametersMap": {
+                    "selectionMode": "single"
+                  }
+                }
+              }
+            }
+          ],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            },
+            "dependencies": [],
+            "serviceTypes": [
+              "appmgmt"
+            ]
+          },
+          "drilldownConfig": []
+        },
+        {
+          "id": "ocid1.managementsavedsearch.oc1..aaaaaaaavnx43tidccwwsplt3biyqfsbqvmfgkvqb2bmckyzvetndxwz6mea",
+          "displayName": "Stuck Threads",
+          "providerId": "APM",
+          "providerVersion": "3.0.0",
+          "providerName": "APM",
+          "compartmentId": "ocid1.compartment.oc1..aaaaaaaa422co3qlhv6b3zjy65mplwu6vddqs37hskpuliwrap6as3tvpkua",
+          "isOobSavedSearch": false,
+          "description": "Work Managed Stuck threads",
+          "nls": {},
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "vizType": "chart",
+            "chartInfo": {
+              "jetConfig": {
+                "type": "line",
+                "timeAxisType": "enabled",
+                "xAxis": {
+                  "viewportMin": "$(params.time.start)",
+                  "viewportMax": "$(params.time.end)"
+                },
+                "yAxis": {
+                  "title": "count"
+                },
+                "dataCursor": "on",
+                "legend": {
+                  "rendered": true,
+                  "position": "end"
+                }
+              },
+              "value": "aggregatedDatapoints.value",
+              "group": "aggregatedDatapoints.timestamp",
+              "colorBy": "dimensions.resourceName",
+              "series": "_allDimensionConglomerate",
+              "enableCorrelation": true
+            },
+            "defaultDataSource": "oracle_appmgmt/WorkManagerStuckThreads"
+          },
+          "dataConfig": [
+            {
+              "name": "oracle_appmgmt/WorkManagerStuckThreads",
+              "type": "monitoringDataSource",
+              "parameters": {
+                "compartmentId": "$(params.compartmentId)",
+                "startTime": "$(params.time.start)",
+                "endTime": "$(params.time.end)",
+                "regionName": "$(params.regionName)",
+                "namespace": "oracle_appmgmt",
+                "mql": "WorkManagerStuckThreads[1m].mean()",
+                "resourceGroup": "weblogic_j2eeserver",
+                "maxDataPoints": "useIntervalExact"
+              }
+            }
+          ],
+          "screenImage": "...",
+          "metadataVersion": "2.0",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "visualizations/chartWidget",
+          "freeformTags": {},
+          "definedTags": {},
+          "parametersConfig": [
+            {
+              "name": "time",
+              "displayName": "$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)",
+              "required": true,
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-time-selector-filter",
+                  "parametersMap": {
+                    "maxDurationDays": 89
+                  }
+                }
+              }
+            },
+            {
+              "name": "compartmentId",
+              "displayName": "$(bundle.globalSavedSearch.COMPARTMENT)",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-compartment-filter"
+              ],
+              "editUi": {
+                "inputType": "compartmentSelect"
+              }
+            },
+            {
+              "name": "regionName",
+              "displayName": "$(bundle.globalSavedSearch.REGION)",
+              "required": false,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "valueFormat": {
+                "type": "string"
+              },
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter",
+                  "parametersMap": {
+                    "selectionMode": "single"
+                  }
+                }
+              }
+            }
+          ],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            },
+            "dependencies": [],
+            "serviceTypes": [
+              "appmgmt"
+            ]
+          },
+          "drilldownConfig": []
+        },
+        {
+          "id": "ocid1.managementsavedsearch.oc1..aaaaaaaacgusuwjlimvwvullwnl3cz25vaogrcice2irkxmjdipneyezkfrq",
+          "displayName": "# 5xx HTTP Responses",
+          "providerId": "APM",
+          "providerVersion": "3.0.0",
+          "providerName": "APM",
+          "compartmentId": "ocid1.compartment.oc1..aaaaaaaa422co3qlhv6b3zjy65mplwu6vddqs37hskpuliwrap6as3tvpkua",
+          "isOobSavedSearch": false,
+          "description": "Number of 5xx responses",
+          "nls": {},
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "vizType": "chart",
+            "chartInfo": {
+              "jetConfig": {
+                "type": "line",
+                "timeAxisType": "enabled",
+                "xAxis": {
+                  "viewportMin": "$(params.time.start)",
+                  "viewportMax": "$(params.time.end)"
+                },
+                "dataCursor": "on",
+                "yAxis": {
+                  "title": "Count"
+                },
+                "legend": {
+                  "rendered": true,
+                  "position": "end"
+                }
+              },
+              "value": "aggregatedDatapoints.value",
+              "group": "aggregatedDatapoints.timestamp",
+              "colorBy": "dimensions.lbName",
+              "enableCorrelation": true,
+              "series": "_allDimensionConglomerate"
+            },
+            "defaultDataSource": "oci_lbaas/HttpResponses5xx"
+          },
+          "dataConfig": [
+            {
+              "name": "oci_lbaas/HttpResponses5xx",
+              "type": "monitoringDataSource",
+              "parameters": {
+                "compartmentId": "$(params.compartmentId)",
+                "startTime": "$(params.time.start)",
+                "endTime": "$(params.time.end)",
+                "regionName": "$(params.regionName)",
+                "namespace": "oci_lbaas",
+                "mql": "HttpResponses5xx[1m].mean()",
+                "maxDataPoints": "useIntervalExact"
+              }
+            }
+          ],
+          "screenImage": "...",
+          "metadataVersion": "2.0",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "visualizations/chartWidget",
+          "freeformTags": {},
+          "definedTags": {},
+          "parametersConfig": [
+            {
+              "name": "time",
+              "displayName": "$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)",
+              "required": true,
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-time-selector-filter",
+                  "parametersMap": {
+                    "maxDurationDays": 89
+                  }
+                }
+              }
+            },
+            {
+              "name": "compartmentId",
+              "displayName": "$(bundle.globalSavedSearch.COMPARTMENT)",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-compartment-filter"
+              ],
+              "editUi": {
+                "inputType": "compartmentSelect"
+              }
+            },
+            {
+              "name": "regionName",
+              "displayName": "$(bundle.globalSavedSearch.REGION)",
+              "required": false,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "valueFormat": {
+                "type": "string"
+              },
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter",
+                  "parametersMap": {
+                    "selectionMode": "single"
+                  }
+                }
+              }
+            }
+          ],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            },
+            "dependencies": [],
+            "serviceTypes": [
+              "management-dashboard"
+            ]
+          },
+          "drilldownConfig": []
+        },
+        {
+          "id": "ocid1.managementsavedsearch.oc1..aaaaaaaaduwp3zyixe4ag5o6ocoxm7yhrodu3ezsr2hmo74nan4cilb5el4a",
+          "displayName": "Availability Monitoring",
+          "providerId": "APM",
+          "providerVersion": "3.0.0",
+          "providerName": "APM",
+          "compartmentId": "ocid1.compartment.oc1..aaaaaaaa3butlc2ltlbu2iqkvcgltzucsfthaki4zpgq4shcofvbhs66gxkq",
+          "isOobSavedSearch": false,
+          "description": "Synthetic Monitoring from OCI Mumbai and OCI UK South",
+          "nls": {},
+          "type": "WIDGET_SHOW_IN_DASHBOARD",
+          "uiConfig": {
+            "vizType": "chart",
+            "chartInfo": {
+              "jetConfig": {
+                "type": "line",
+                "timeAxisType": "enabled",
+                "xAxis": {
+                  "viewportMin": "$(params.time.start)",
+                  "viewportMax": "$(params.time.end)"
+                },
+                "dataCursor": "on",
+                "yAxis": {
+                  "title": "Availability"
+                },
+                "legend": {
+                  "rendered": true,
+                  "position": "end"
+                }
+              },
+              "value": "aggregatedDatapoints.value",
+              "group": "aggregatedDatapoints.timestamp",
+              "colorBy": "metadata.description",
+              "series": "metadata.description",
+              "enableCorrelation": true
+            },
+            "defaultDataSource": "oracle_apm_synthetics/Availability"
+          },
+          "dataConfig": [
+            {
+              "name": "oracle_apm_synthetics/Availability",
+              "type": "monitoringDataSource",
+              "parameters": {
+                "compartmentId": "$(params.compartmentId)",
+                "startTime": "$(params.time.start)",
+                "endTime": "$(params.time.end)",
+                "regionName": "$(params.regionName)",
+                "namespace": "oracle_apm_synthetics",
+                "mql": "Availability[1m].mean()",
+                "maxDataPoints": "useIntervalExact"
+              }
+            }
+          ],
+          "screenImage": "...",
+          "metadataVersion": "2.0",
+          "widgetTemplate": "visualizations/chartWidgetTemplate.html",
+          "widgetVM": "visualizations/chartWidget",
+          "freeformTags": {},
+          "definedTags": {},
+          "parametersConfig": [
+            {
+              "name": "time",
+              "displayName": "$(bundle.globalSavedSearch.TIME_PARAMETER_NAME)",
+              "required": true,
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-time-selector-filter",
+                  "parametersMap": {
+                    "maxDurationDays": 89
+                  }
+                }
+              }
+            },
+            {
+              "name": "compartmentId",
+              "displayName": "$(bundle.globalSavedSearch.COMPARTMENT)",
+              "required": true,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-compartment-filter"
+              ],
+              "editUi": {
+                "inputType": "compartmentSelect"
+              }
+            },
+            {
+              "name": "regionName",
+              "displayName": "$(bundle.globalSavedSearch.REGION)",
+              "required": false,
+              "defaultFilterIds": [
+                "OOBSS-management-dashboard-region-filter"
+              ],
+              "valueFormat": {
+                "type": "string"
+              },
+              "editUi": {
+                "inputType": "savedSearch",
+                "filterTile": {
+                  "filterId": "OOBSS-management-dashboard-region-filter",
+                  "parametersMap": {
+                    "selectionMode": "single"
+                  }
+                }
+              }
+            }
+          ],
+          "featuresConfig": {
+            "crossService": {
+              "shared": true
+            },
+            "dependencies": [],
+            "serviceTypes": [
+              "APM"
+            ]
+          },
+          "drilldownConfig": []
+        }
+      ],
+      "parametersConfig": [
+        {
+          "savedSearchId": "OOBSS-management-dashboard-compartment-filter",
+          "displayName": "Compartment - Compute",
+          "width": 2,
+          "state": "DEFAULT",
+          "parametersMap": {
+            "isStoreInLocalStorage": false,
+            "isActiveCompartment": "true"
+          },
+          "name": "compartmentId",
+          "localStorageKey": "compartmentId"
+        },
+        {
+          "savedSearchId": "OOBSS-management-dashboard-compartment-filter",
+          "displayName": "Compartment - Monitoring",
+          "width": 2,
+          "state": "DEFAULT",
+          "parametersMap": {
+            "isStoreInLocalStorage": false
+          },
+          "name": "compartmentId2",
+          "localStorageKey": "compartmentId"
+        },
+        {
+          "savedSearchId": "OOBSS-dbm-single-db-system-node-filter",
+          "width": 2,
+          "state": "DEFAULT",
+          "parametersMap": {
+            "isStoreInLocalStorage": true,
+            "regionName": "$(context.regionName)",
+            "compartmentId": "$(dashboard.params.compartmentId1)",
+            "deploymentType": "$(dashboard.params.deploymentType)",
+            "dbm_resourceName": "$(dashboard.params.dbm_resourceName1)"
+          },
+          "name": "dbm_resourceName_dbnode",
+          "localStorageKey": "dbm_resourceName_dbnode"
+        },
+        {
+          "savedSearchId": "OOBSS-dbm-single-resource-name-filter",
+          "width": 2,
+          "state": "DEFAULT",
+          "parametersMap": {
+            "isStoreInLocalStorage": true,
+            "regionName": "$(context.regionName)",
+            "compartmentId": "$(dashboard.params.compartmentId1)"
+          },
+          "name": "dbm_resourceName",
+          "localStorageKey": "dbm_resourceName"
+        },
+        {
+          "savedSearchId": "OOBSS-dbm-single-db-system-filter",
+          "width": 2,
+          "state": "DEFAULT",
+          "parametersMap": {
+            "isStoreInLocalStorage": true,
+            "regionName": "$(context.regionName)",
+            "compartmentId": "$(dashboard.params.compartmentId1)",
+            "deploymentType": "$(dashboard.params.deploymentType)"
+          },
+          "name": "dbm_resourceName1",
+          "localStorageKey": "dbm_resourceName"
+        },
+        {
+          "savedSearchId": "OOBSS-dbm-single-deptType-filter",
+          "width": 2,
+          "state": "DEFAULT",
+          "parametersMap": {
+            "isStoreInLocalStorage": true,
+            "regionName": "$(context.regionName)",
+            "compartmentId": "$(dashboard.params.compartmentId1)"
+          },
+          "name": "deploymentType",
+          "localStorageKey": "deploymentType"
+        },
+        {
+          "savedSearchId": "OOBSS-management-dashboard-compartment-filter",
+          "displayName": "Compartment - Network",
+          "description": "Compartment for Network devices",
+          "width": 2,
+          "state": "DEFAULT",
+          "parametersMap": {
+            "isStoreInLocalStorage": false
+          },
+          "name": "compartmentId3",
+          "localStorageKey": "compartmentId"
+        },
+        {
+          "savedSearchId": "OOBSS-management-dashboard-compartment-filter",
+          "displayName": "Compartment  - DB",
+          "width": 2,
+          "state": "DEFAULT",
+          "parametersMap": {
+            "isStoreInLocalStorage": false
+          },
+          "name": "compartmentId1",
+          "localStorageKey": "compartmentId"
+        },
+        {
+          "name": "time",
+          "displayName": "$(bundle.globalSavedSearch.TIME)",
+          "src": "$(context.time)"
+        }
+      ],
+      "featuresConfig": {
+        "crossService": {
+          "shared": true
+        },
+        "serviceTypes": [
+          "APM",
+          "dbm",
+          "management-dashboard",
+          "appmgmt"
+        ]
+      },
+      "drilldownConfig": [],
+      "freeformTags": {},
+      "definedTags": {}
+    }
+  ]
+}
