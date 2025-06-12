@@ -666,7 +666,7 @@
           "description": null
         }
       ],
-      "displayName": "HSBC Infrastructure Health",
+      "displayName": "OFSS Infrastructure Health",
       "description": "Infrastructure components such as Compute, Loadbalancer, Network, Weblogic and Database related health",
       "compartmentId": "ocid1.compartment.oc1..aaaaaaaa422co3qlhv6b3zjy65mplwu6vddqs37hskpuliwrap6as3tvpkua",
       "isOobDashboard": false,
