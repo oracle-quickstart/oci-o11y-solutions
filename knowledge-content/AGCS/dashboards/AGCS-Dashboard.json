@@ -1,14 +1,14 @@
 {
   "dashboards": [
     {
-      "dashboardId": "ocid1.managementdashboard.oc1..aaaaaaaa3ky6mg57pffd4tvh76ptndhss3svf4ptwef4445m3mrn2yy6s3fa",
+      "dashboardId": "6095819e1452351f2b75047fe7a9faaf",
       "providerId": "log-analytics",
       "providerName": "Logging Analytics",
       "providerVersion": "3.0.0",
       "tiles": [
         {
           "displayName": "Log by Type",
-          "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaanrcsw5tz6reuc5y2ozk5pg5dyzqjnzp5n76xuaajubscxpapiwoq",
+          "savedSearchId": "16a15a936bbf1e9cd5994ad7344129cb",
           "row": 0,
           "column": 0,
           "height": 3,
@@ -27,7 +27,7 @@
         },
         {
           "displayName": "Log by AGCS Modules",
-          "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaaggdmugr64zxafzyqih54mdydp5jdi6biozmg3fvqo5yxaoijgjva",
+          "savedSearchId": "2b0381c87935c1fca2ec1295857f9401",
           "row": 0,
           "column": 4,
           "height": 3,
@@ -46,7 +46,7 @@
         },
         {
           "displayName": "Clustered Log ",
-          "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaahvmqsk5rd7djfe6yf2ioc3xm7ic5nahv7qha5bdu6mbh5g4szzpa",
+          "savedSearchId": "804394ffed60eb54aa45a70ca59ffd92",
           "row": 0,
           "column": 8,
           "height": 3,
@@ -65,7 +65,7 @@
         },
         {
           "displayName": "Heat Map",
-          "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaaueya4ikhig6co75qpbsav3s5xnsp6ei7zertg3rmjugcdvoejv6q",
+          "savedSearchId": "1421901054ef52db1635e2ecbf664916",
           "row": 3,
           "column": 0,
           "height": 3,
@@ -84,7 +84,7 @@
         },
         {
           "displayName": "Issues Visualizations",
-          "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaazr7fvrzorbsvq52rishbwa65yzrdcjnxzlbynqczmtx32ypxqvhq",
+          "savedSearchId": "abf69d5fd54ffba0c0d22136ac6b2c2d",
           "row": 6,
           "column": 0,
           "height": 3,
@@ -103,7 +103,7 @@
         },
         {
           "displayName": "Line Graph",
-          "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaakknwpegsay5uvsor2n27vgbzcorimtn5a3u6hxnftduajszhftxa",
+          "savedSearchId": "077aed8fbb10ceec5e82b93268f09d92",
           "row": 3,
           "column": 6,
           "height": 3,
@@ -123,7 +123,7 @@
       ],
       "displayName": "AGCS Dashboard",
       "description": "Agcs logs",
-      "compartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja",
+      "compartmentId": "${compartment_ocid}",
       "isOobDashboard": false,
       "isShowInHome": false,
       "metadataVersion": "2.0",
@@ -140,12 +140,12 @@
       "isFavorite": false,
       "savedSearches": [
         {
-          "id": "ocid1.managementsavedsearch.oc1..aaaaaaaaggdmugr64zxafzyqih54mdydp5jdi6biozmg3fvqo5yxaoijgjva",
+          "id": "2b0381c87935c1fca2ec1295857f9401",
           "displayName": "Log by AGCS Modules",
           "providerId": "log-analytics",
           "providerVersion": "3.0.0",
           "providerName": "Logging Analytics",
-          "compartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja",
+          "compartmentId": "63fceb44b63b68ff2acf0d7e7a934571",
           "isOobSavedSearch": false,
           "description": "",
           "nls": {},
@@ -183,7 +183,7 @@
                   },
                   "values": [
                     {
-                      "value": "ocid1.tenancy.oc1..aaaaaaaazp2vvzjsn6newkqrpkwndxpdoixtqfgyhnf4y24h7d5ny27h6f3q",
+                      "value": "b8964695ca9489a70565403d738107ff",
                       "label": "accessgovtest (root)"
                     }
                   ]
@@ -197,7 +197,7 @@
                   "type": "Entity",
                   "flags": {
                     "IncludeDependents": true,
-                    "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja"
+                    "ScopeCompartmentId": "63fceb44b63b68ff2acf0d7e7a934571"
                   },
                   "values": []
                 },
@@ -213,7 +213,7 @@
                   },
                   "values": [
                     {
-                      "value": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja",
+                      "value": "63fceb44b63b68ff2acf0d7e7a934571",
                       "label": "agcs-test"
                     }
                   ]
@@ -237,7 +237,7 @@
                 },
                 "values": [
                   {
-                    "value": "ocid1.tenancy.oc1..aaaaaaaazp2vvzjsn6newkqrpkwndxpdoixtqfgyhnf4y24h7d5ny27h6f3q",
+                    "value": "b8964695ca9489a70565403d738107ff",
                     "label": "accessgovtest (root)"
                   }
                 ]
@@ -251,7 +251,7 @@
                 "type": "Entity",
                 "flags": {
                   "IncludeDependents": true,
-                  "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja"
+                  "ScopeCompartmentId": "63fceb44b63b68ff2acf0d7e7a934571"
                 },
                 "values": []
               },
@@ -267,7 +267,7 @@
                 },
                 "values": [
                   {
-                    "value": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja",
+                    "value": "63fceb44b63b68ff2acf0d7e7a934571",
                     "label": "agcs-test"
                   }
                 ]
@@ -283,7 +283,7 @@
                 ]
               }
             },
-            "internalKey": "ocid1.managementsavedsearch.oc1..aaaaaaaaggdmugr64zxafzyqih54mdydp5jdi6biozmg3fvqo5yxaoijgjva",
+            "internalKey": "2b0381c87935c1fca2ec1295857f9401",
             "vizType": "lxSavedSearchWidgetType",
             "enableWidgetInApp": true
           },
@@ -382,12 +382,12 @@
           "drilldownConfig": []
         },
         {
-          "id": "ocid1.managementsavedsearch.oc1..aaaaaaaanrcsw5tz6reuc5y2ozk5pg5dyzqjnzp5n76xuaajubscxpapiwoq",
+          "id": "16a15a936bbf1e9cd5994ad7344129cb",
           "displayName": "Log by Type",
           "providerId": "log-analytics",
           "providerVersion": "3.0.0",
           "providerName": "Logging Analytics",
-          "compartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja",
+          "compartmentId": "63fceb44b63b68ff2acf0d7e7a934571",
           "isOobSavedSearch": false,
           "description": "",
           "nls": {},
@@ -409,7 +409,7 @@
                   },
                   "values": [
                     {
-                      "value": "ocid1.tenancy.oc1..aaaaaaaazp2vvzjsn6newkqrpkwndxpdoixtqfgyhnf4y24h7d5ny27h6f3q",
+                      "value": "b8964695ca9489a70565403d738107ff",
                       "label": "accessgovtest (root)"
                     }
                   ]
@@ -418,7 +418,7 @@
                   "type": "Entity",
                   "flags": {
                     "IncludeDependents": true,
-                    "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja"
+                    "ScopeCompartmentId": "63fceb44b63b68ff2acf0d7e7a934571"
                   },
                   "values": []
                 },
@@ -446,7 +446,7 @@
                 },
                 "values": [
                   {
-                    "value": "ocid1.tenancy.oc1..aaaaaaaazp2vvzjsn6newkqrpkwndxpdoixtqfgyhnf4y24h7d5ny27h6f3q",
+                    "value": "b8964695ca9489a70565403d738107ff",
                     "label": "accessgovtest (root)"
                   }
                 ]
@@ -455,7 +455,7 @@
                 "type": "Entity",
                 "flags": {
                   "IncludeDependents": true,
-                  "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja"
+                  "ScopeCompartmentId": "63fceb44b63b68ff2acf0d7e7a934571"
                 },
                 "values": []
               },
@@ -475,7 +475,7 @@
                 ]
               }
             },
-            "internalKey": "ocid1.managementsavedsearch.oc1..aaaaaaaanrcsw5tz6reuc5y2ozk5pg5dyzqjnzp5n76xuaajubscxpapiwoq",
+            "internalKey": "16a15a936bbf1e9cd5994ad7344129cb",
             "vizType": "lxSavedSearchWidgetType",
             "enableWidgetInApp": true
           },
@@ -574,12 +574,12 @@
           "drilldownConfig": []
         },
         {
-          "id": "ocid1.managementsavedsearch.oc1..aaaaaaaakknwpegsay5uvsor2n27vgbzcorimtn5a3u6hxnftduajszhftxa",
+          "id": "077aed8fbb10ceec5e82b93268f09d92",
           "displayName": "Line Graph",
           "providerId": "log-analytics",
           "providerVersion": "3.0.0",
           "providerName": "Logging Analytics",
-          "compartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja",
+          "compartmentId": "63fceb44b63b68ff2acf0d7e7a934571",
           "isOobSavedSearch": false,
           "description": "",
           "nls": {},
@@ -601,7 +601,7 @@
                   },
                   "values": [
                     {
-                      "value": "ocid1.tenancy.oc1..aaaaaaaazp2vvzjsn6newkqrpkwndxpdoixtqfgyhnf4y24h7d5ny27h6f3q",
+                      "value": "b8964695ca9489a70565403d738107ff",
                       "label": "accessgovtest (root)"
                     }
                   ]
@@ -615,7 +615,7 @@
                   "type": "Entity",
                   "flags": {
                     "IncludeDependents": true,
-                    "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja"
+                    "ScopeCompartmentId": "63fceb44b63b68ff2acf0d7e7a934571"
                   },
                   "values": []
                 },
@@ -631,7 +631,7 @@
                   },
                   "values": [
                     {
-                      "value": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja",
+                      "value": "63fceb44b63b68ff2acf0d7e7a934571",
                       "label": "agcs-test"
                     }
                   ]
@@ -655,7 +655,7 @@
                 },
                 "values": [
                   {
-                    "value": "ocid1.tenancy.oc1..aaaaaaaazp2vvzjsn6newkqrpkwndxpdoixtqfgyhnf4y24h7d5ny27h6f3q",
+                    "value": "b8964695ca9489a70565403d738107ff",
                     "label": "accessgovtest (root)"
                   }
                 ]
@@ -669,7 +669,7 @@
                 "type": "Entity",
                 "flags": {
                   "IncludeDependents": true,
-                  "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja"
+                  "ScopeCompartmentId": "63fceb44b63b68ff2acf0d7e7a934571"
                 },
                 "values": []
               },
@@ -685,7 +685,7 @@
                 },
                 "values": [
                   {
-                    "value": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja",
+                    "value": "63fceb44b63b68ff2acf0d7e7a934571",
                     "label": "agcs-test"
                   }
                 ]
@@ -799,12 +799,12 @@
           "drilldownConfig": []
         },
         {
-          "id": "ocid1.managementsavedsearch.oc1..aaaaaaaaueya4ikhig6co75qpbsav3s5xnsp6ei7zertg3rmjugcdvoejv6q",
+          "id": "1421901054ef52db1635e2ecbf664916",
           "displayName": "Heat Map",
           "providerId": "log-analytics",
           "providerVersion": "3.0.0",
           "providerName": "Logging Analytics",
-          "compartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja",
+          "compartmentId": "63fceb44b63b68ff2acf0d7e7a934571",
           "isOobSavedSearch": false,
           "description": "",
           "nls": {},
@@ -838,7 +838,7 @@
                   },
                   "values": [
                     {
-                      "value": "ocid1.tenancy.oc1..aaaaaaaazp2vvzjsn6newkqrpkwndxpdoixtqfgyhnf4y24h7d5ny27h6f3q",
+                      "value": "b8964695ca9489a70565403d738107ff",
                       "label": "accessgovtest (root)"
                     }
                   ]
@@ -852,7 +852,7 @@
                   "type": "Entity",
                   "flags": {
                     "IncludeDependents": true,
-                    "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja"
+                    "ScopeCompartmentId": "63fceb44b63b68ff2acf0d7e7a934571"
                   },
                   "values": []
                 },
@@ -868,7 +868,7 @@
                   },
                   "values": [
                     {
-                      "value": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja",
+                      "value": "63fceb44b63b68ff2acf0d7e7a934571",
                       "label": "agcs-test"
                     }
                   ]
@@ -892,7 +892,7 @@
                 },
                 "values": [
                   {
-                    "value": "ocid1.tenancy.oc1..aaaaaaaazp2vvzjsn6newkqrpkwndxpdoixtqfgyhnf4y24h7d5ny27h6f3q",
+                    "value": "b8964695ca9489a70565403d738107ff",
                     "label": "accessgovtest (root)"
                   }
                 ]
@@ -906,7 +906,7 @@
                 "type": "Entity",
                 "flags": {
                   "IncludeDependents": true,
-                  "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja"
+                  "ScopeCompartmentId": "63fceb44b63b68ff2acf0d7e7a934571"
                 },
                 "values": []
               },
@@ -922,7 +922,7 @@
                 },
                 "values": [
                   {
-                    "value": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja",
+                    "value": "63fceb44b63b68ff2acf0d7e7a934571",
                     "label": "agcs-test"
                   }
                 ]
@@ -1036,12 +1036,12 @@
           "drilldownConfig": []
         },
         {
-          "id": "ocid1.managementsavedsearch.oc1..aaaaaaaahvmqsk5rd7djfe6yf2ioc3xm7ic5nahv7qha5bdu6mbh5g4szzpa",
+          "id": "804394ffed60eb54aa45a70ca59ffd92",
           "displayName": "Clustered Log ",
           "providerId": "log-analytics",
           "providerVersion": "3.0.0",
           "providerName": "Logging Analytics",
-          "compartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja",
+          "compartmentId": "63fceb44b63b68ff2acf0d7e7a934571",
           "isOobSavedSearch": false,
           "description": "",
           "nls": {},
@@ -1080,7 +1080,7 @@
                   },
                   "values": [
                     {
-                      "value": "ocid1.tenancy.oc1..aaaaaaaazp2vvzjsn6newkqrpkwndxpdoixtqfgyhnf4y24h7d5ny27h6f3q",
+                      "value": "b8964695ca9489a70565403d738107ff",
                       "label": "accessgovtest (root)"
                     }
                   ]
@@ -1094,7 +1094,7 @@
                   "type": "Entity",
                   "flags": {
                     "IncludeDependents": true,
-                    "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja"
+                    "ScopeCompartmentId": "63fceb44b63b68ff2acf0d7e7a934571"
                   },
                   "values": []
                 },
@@ -1110,7 +1110,7 @@
                   },
                   "values": [
                     {
-                      "value": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja",
+                      "value": "63fceb44b63b68ff2acf0d7e7a934571",
                       "label": "agcs-test"
                     }
                   ]
@@ -1134,7 +1134,7 @@
                 },
                 "values": [
                   {
-                    "value": "ocid1.tenancy.oc1..aaaaaaaazp2vvzjsn6newkqrpkwndxpdoixtqfgyhnf4y24h7d5ny27h6f3q",
+                    "value": "b8964695ca9489a70565403d738107ff",
                     "label": "accessgovtest (root)"
                   }
                 ]
@@ -1148,7 +1148,7 @@
                 "type": "Entity",
                 "flags": {
                   "IncludeDependents": true,
-                  "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja"
+                  "ScopeCompartmentId": "63fceb44b63b68ff2acf0d7e7a934571"
                 },
                 "values": []
               },
@@ -1164,7 +1164,7 @@
                 },
                 "values": [
                   {
-                    "value": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja",
+                    "value": "63fceb44b63b68ff2acf0d7e7a934571",
                     "label": "agcs-test"
                   }
                 ]
@@ -1278,12 +1278,12 @@
           "drilldownConfig": []
         },
         {
-          "id": "ocid1.managementsavedsearch.oc1..aaaaaaaazr7fvrzorbsvq52rishbwa65yzrdcjnxzlbynqczmtx32ypxqvhq",
+          "id": "abf69d5fd54ffba0c0d22136ac6b2c2d",
           "displayName": "Issues Visualizations",
           "providerId": "log-analytics",
           "providerVersion": "3.0.0",
           "providerName": "Logging Analytics",
-          "compartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja",
+          "compartmentId": "63fceb44b63b68ff2acf0d7e7a934571",
           "isOobSavedSearch": false,
           "description": "",
           "nls": {},
@@ -1305,7 +1305,7 @@
                   },
                   "values": [
                     {
-                      "value": "ocid1.tenancy.oc1..aaaaaaaazp2vvzjsn6newkqrpkwndxpdoixtqfgyhnf4y24h7d5ny27h6f3q",
+                      "value": "b8964695ca9489a70565403d738107ff",
                       "label": "accessgovtest (root)"
                     }
                   ]
@@ -1319,7 +1319,7 @@
                   "type": "Entity",
                   "flags": {
                     "IncludeDependents": true,
-                    "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja"
+                    "ScopeCompartmentId": "63fceb44b63b68ff2acf0d7e7a934571"
                   },
                   "values": []
                 },
@@ -1335,7 +1335,7 @@
                   },
                   "values": [
                     {
-                      "value": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja",
+                      "value": "63fceb44b63b68ff2acf0d7e7a934571",
                       "label": "agcs-test"
                     }
                   ]
@@ -1359,7 +1359,7 @@
                 },
                 "values": [
                   {
-                    "value": "ocid1.tenancy.oc1..aaaaaaaazp2vvzjsn6newkqrpkwndxpdoixtqfgyhnf4y24h7d5ny27h6f3q",
+                    "value": "b8964695ca9489a70565403d738107ff",
                     "label": "accessgovtest (root)"
                   }
                 ]
@@ -1373,7 +1373,7 @@
                 "type": "Entity",
                 "flags": {
                   "IncludeDependents": true,
-                  "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja"
+                  "ScopeCompartmentId": "63fceb44b63b68ff2acf0d7e7a934571"
                 },
                 "values": []
               },
@@ -1389,7 +1389,7 @@
                 },
                 "values": [
                   {
-                    "value": "ocid1.compartment.oc1..aaaaaaaaiwgtvuzhqlueevhcjm7las5g4t7mrtflvbvgrdvxmvrwprovrmja",
+                    "value": "63fceb44b63b68ff2acf0d7e7a934571",
                     "label": "agcs-test"
                   }
                 ]
