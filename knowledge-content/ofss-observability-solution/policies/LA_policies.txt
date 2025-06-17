@@ -1,0 +1,5 @@
+Logging-Analytics Policy:
+
+ALLOW DYNAMIC-GROUP CUSTOMER_ID_DOMAIN/StackMonitoringManagementAgents-DG TO {LOG_ANALYTICS_LOG_GROUP_UPLOAD_LOGS} IN TENANCY
+allow group CUSTOMER_ID_DOMAIN/StackMonitoringManagementAgents-DG to manage loganalytics-ingesttime-rule in tenancy
+allow service loganalytics to use metrics in tenancy

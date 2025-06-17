@@ -1,0 +1,28 @@
+Stack-Monitoring Policies:
+
+ALLOW DYNAMIC-GROUP CUSTOMER_ID_DOMAIN/StackMonitoringManagementAgents-DG TO USE METRICS IN COMPARTMENT root_cmp:application:app-dev where target.metrics.namespace = 'oracle_appmgmt'
+ALLOW DYNAMIC-GROUP CUSTOMER_ID_DOMAIN/StackMonitoringManagementAgents-DG TO {STACK_MONITORING_DISCOVERY_JOB_RESULT_SUBMIT} IN COMPARTMENT root_cmp:application:app-dev
+ALLOW DYNAMIC-GROUP CUSTOMER_ID_DOMAIN/StackMonitoringManagementAgents-DG  TO USE METRICS IN COMPARTMENT root_cmp:database:DB-NonProd where target.metrics.namespace = 'oracle_appmgmt'
+ALLOW DYNAMIC-GROUP CUSTOMER_ID_DOMAIN/StackMonitoringManagementAgents-DG  TO {STACK_MONITORING_DISCOVERY_JOB_RESULT_SUBMIT} IN COMPARTMENT root_cmp:database:DB-NonProd
+ALLOW DYNAMIC-GROUP CUSTOMER_ID_DOMAIN/StackMonitoringManagementAgents-DG TO USE METRICS IN COMPARTMENT root_cmp:database:db-nonprod where target.metrics.namespace = 'oci_oracle_database_cluster'
+ALLOW DYNAMIC-GROUP CUSTOMER_ID_DOMAIN/All-Instances-DG TO {MGMT_AGENT_DEPLOY_PLUGIN_CREATE, MGMT_AGENT_INSPECT, MGMT_AGENT_READ, APPMGMT_WORK_REQUEST_READ, INSTANCE_AGENT_PLUGIN_INSPECT} IN COMPARTMENT root_cmp:application:app-dev
+ALLOW DYNAMIC-GROUP CUSTOMER_ID_DOMAIN/All-Instances-DG TO {APPMGMT_MONITORED_INSTANCE_READ, APPMGMT_MONITORED_INSTANCE_ACTIVATE} IN COMPARTMENT root_cmp:application:app-dev where request.instance.id = target.monitored-instance.id
+ALLOW DYNAMIC-GROUP CUSTOMER_ID_DOMAIN/All-Instances-DG TO {INSTANCE_UPDATE} IN COMPARTMENT root_cmp:application:app-dev where request.instance.id = target.instance.id
+
+AUTO-CREATED POLICY STATEMENTS:
+allow service loganalytics to {EVENTRULE_READ} in tenancy
+allow service loganalytics to {LOAD_BALANCER_READ} in tenancy
+allow service loganalytics to {BUCKET_READ} in tenancy
+allow service loganalytics to read functions-family in tenancy
+allow service loganalytics to read api-gateway-family in tenancy
+allow service loganalytics to {VNIC_READ} in tenancy
+allow any-user to {LOG_ANALYTICS_LOG_GROUP_UPLOAD_LOGS} in compartment id ocid1.tenancy.oc1..aaaaaaaag7aifvixtaw6laa where all {request.principal.type='serviceconnector', target.loganalytics-log-group.id='ocid1.loganalyticsloggroup.oc1.uk-london-1.amaaaaaajfzbz3ksrrq', request.principal.compartment.id='ocid1.tenancy.oc1..aaaaaaaag7aifvixtaw6laa'}
+define tenancy sampledata as ocid1.tenancy.oc1..aaaaaaaabmtv54v5bg45j7zd2eeat4df2bwfqkmxe2yy6ecdfrc36wloe4ia
+endorse group Administrators to read loganalytics-features-family in tenancy sampledata
+endorse group Administrators to read loganalytics-resources-family in tenancy sampledata
+endorse group Administrators to read compartments in tenancy sampledata
+allow service loganalytics to READ loganalytics-features-family in tenancy
+allow service loganalytics to READ compartments in tenancy
+
+Allow dynamic-group CUSTOMER_ID_DOMAIN/StackMonitoringManagementAgents-DG to read buckets in compartment root_cmp:database where request.principal.type = 'managementagent'
+Allow dynamic-group CUSTOMER_ID_DOMAIN/StackMonitoringManagementAgents-DG to manage objects in compartment root_cmp:database where all {request.principal.type = 'managementagent', any {request.permission='OBJECT_CREATE', request.permission='OBJECT_INSPECT'}}

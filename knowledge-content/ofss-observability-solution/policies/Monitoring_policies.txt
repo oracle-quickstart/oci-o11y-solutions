@@ -1,0 +1,3 @@
+allow group customer_id_domain/tdms_monitoring to use metrics in tenancy
+Allow group customer_id_domain/tdms_monitoring to manage repos in tenancy where ANY {request.permission = 'REPOSITORY_READ', request.permission = 'REPOSITORY_UPDATE'}
+allow dynamic-group customer_id_domain/monitoring to use ons-topics in tenancy

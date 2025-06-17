@@ -1,0 +1,4 @@
+Allow service dpd to read secret-family in compartment tenancyname:observability:monitoring
+Allow service dpd to manage objects in compartment tenancyname:observability:monitoring
+Allow service dpd to manage objects in compartment tenancyname:database
+Allow service dpd to use dbmgmt-family in compartment tenancyname:database
