@@ -56,6 +56,14 @@ Knowledge content files in [knowldge-content](./knowlege-content/) folder are or
 
 * Instruction for contributing to this repository.
 
+## Contributing
+
+This project welcomes contributions from the community. Before submitting a pull request, please [review our contribution guide](./CONTRIBUTING.md)
+
+## Security
+
+Please consult the [security guide](./SECURITY.md) for our responsible security vulnerability disclosure process
+
 ## License
 
 Copyright (c) 2025, Oracle and/or its affiliates.

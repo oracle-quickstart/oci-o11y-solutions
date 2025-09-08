@@ -1,0 +1,317 @@
+{
+    "configurationItems": [
+        {
+            "configType": "APDEX",
+            "id": "ocid1.apmconfig....ssn7qwpq",
+            "freeformTags": {},
+            "definedTags": {},
+            "rules": [
+                {
+                    "filterText": "Component='BROWSER' AND ApmrumType='Page'",
+                    "priority": 0,
+                    "isEnabled": true,
+                    "satisfiedResponseTime": 2000,
+                    "toleratingResponseTime": 6000,
+                    "isApplyToErrorSpans": false,
+                    "displayName": "Page Loads"
+                },
+                {
+                    "filterText": "Component='BROWSER' AND ApmrumPageUpdateType='Full Update'",
+                    "priority": 1,
+                    "isEnabled": true,
+                    "satisfiedResponseTime": 1500,
+                    "toleratingResponseTime": 4500,
+                    "isApplyToErrorSpans": false,
+                    "displayName": "Full Page Updates"
+                },
+                {
+                    "filterText": "Component='BROWSER' AND ApmrumPageUpdateType='Partial Update'",
+                    "priority": 2,
+                    "isEnabled": true,
+                    "satisfiedResponseTime": 1000,
+                    "toleratingResponseTime": 3000,
+                    "isApplyToErrorSpans": false,
+                    "displayName": "Partial Page Updates"
+                },
+                {
+                    "filterText": "Component='BROWSER' AND ApmrumType='Ajax'",
+                    "priority": 3,
+                    "isEnabled": true,
+                    "satisfiedResponseTime": 500,
+                    "toleratingResponseTime": 1500,
+                    "isApplyToErrorSpans": false,
+                    "displayName": "Ajax Calls"
+                },
+                {
+                    "filterText": "kind='SERVER'",
+                    "priority": 4,
+                    "isEnabled": true,
+                    "satisfiedResponseTime": 500,
+                    "toleratingResponseTime": 2000,
+                    "isApplyToErrorSpans": false,
+                    "displayName": "Server Requests"
+                }
+            ],
+            "displayName": "Apdex Rules"
+        },
+        {
+            "configType": "SPAN_FILTER",
+            "id": "ocid1.apmconfig....spyjvl5q",
+            "freeformTags": {},
+            "definedTags": {},
+            "displayName": "portalName is not null",
+            "filterText": "portalName is not omitted",
+            "description": null
+        },
+        {
+            "configType": "SPAN_FILTER",
+            "id": "ocid1.apmconfig....kqp3y56a",
+            "freeformTags": {},
+            "definedTags": {},
+            "displayName": "browser spans",
+            "filterText": "component='BROWSER'",
+            "description": null
+        },
+        {
+            "configType": "OPTIONS",
+            "id": "ocid1.apmconfig....lfox42vq",
+            "freeformTags": {},
+            "definedTags": {},
+            "displayName": "Adhoc filter based PSFT Content",
+            "options": {
+                "type": "data-manipulation.group",
+                "filterText": "portalName is not omitted",
+                "disabled": false,
+                "rules": [
+                    {
+                        "displayName": "contentCode",
+                        "disabled": false,
+                        "actions": [
+                            {
+                                "name": "string.Extract",
+                                "config": {
+                                    "input": "HttpUrlPath",
+                                    "pattern": ".*\\/([^\\/]+)\\/.*",
+                                    "output": "psftContentCode"
+                                },
+                                "disabled": false
+                            },
+                            {
+                                "name": "basic.Map",
+                                "config": {
+                                    "input": "psftContentCode",
+                                    "output": [
+                                        "psftContentType"
+                                    ],
+                                    "valueMap": {
+                                        "c": [
+                                            "Component"
+                                        ],
+                                        "e": [
+                                            "External"
+                                        ],
+                                        "f": [
+                                            "File"
+                                        ],
+                                        "n": [
+                                            "Navigation"
+                                        ],
+                                        "q": [
+                                            "Query"
+                                        ],
+                                        "s": [
+                                            "Script"
+                                        ],
+                                        "w": [
+                                            "Worklist"
+                                        ]
+                                    }
+                                },
+                                "disabled": false
+                            },
+                            {
+                                "name": "string.Extract",
+                                "config": {
+                                    "input": "HttpUrlPath",
+                                    "pattern": ".*\\/[^\\/]+\\/([^?]+).*",
+                                    "output": "psftContentId"
+                                },
+                                "disabled": false
+                            },
+                            {
+                                "name": "string.Extract",
+                                "config": {
+                                    "input": "HttpUrlPath",
+                                    "pattern": ".*\\/([^\\/]+)(?:\\/[^\\/]+){4}\\/[^?]+.*",
+                                    "output": "psftServletName"
+                                },
+                                "disabled": false
+                            },
+                            {
+                                "name": "string.Extract",
+                                "config": {
+                                    "input": "HttpUrlPath",
+                                    "pattern": ".*\\/([^\\/]+)(?:\\/[^\\/]+){3}\\/[^\\?]+.*",
+                                    "output": "psftSiteName"
+                                },
+                                "disabled": false
+                            },
+                            {
+                                "name": "string.Extract",
+                                "config": {
+                                    "input": "HttpUrlPath",
+                                    "pattern": ".*\\/([^\\/]+)(?:\\/[^\\/]+){2}\\/[^?]+.*",
+                                    "output": "psftPortalName"
+                                },
+                                "disabled": false
+                            },
+                            {
+                                "name": "string.Extract",
+                                "config": {
+                                    "input": "HttpUrlPath",
+                                    "pattern": ".*\\/([^\\/]+)\\/[^\\/]+\\/[^?]+.*",
+                                    "output": "psftNodeName"
+                                },
+                                "disabled": false
+                            }
+                        ]
+                    }
+                ]
+            },
+            "group": "data-manipulation.spans",
+            "description": null
+        },
+        {
+            "configType": "OPTIONS",
+<<<<<<< HEAD
+            "id": "ocid1.apmconfig....su6zanva",
+            "freeformTags": {},
+            "definedTags": {},
+            "displayName": "Set pagename",
+            "options": {
+                "type": "data-manipulation.group",
+                "filterText": "pageviews > 0 and pageName is omitted",
+                "disabled": false,
+                "rules": [
+                    {
+                        "displayName": "Set pagename = ApmrumPageTitle",
+                        "filterText": "ApmrumPageTitle is not omitted",
+                        "disabled": false,
+                        "actions": [
+                            {
+                                "name": "string.Extract",
+                                "config": {
+                                    "input": "ApmrumPageTitle",
+                                    "pattern": "(.*)",
+                                    "output": "PageName"
+                                },
+                                "disabled": false
+                            }
+                        ]
+                    },
+                    {
+                        "displayName": "Set pagename = psftContentId",
+                        "filterText": "PageName is omitted and psftContentId is not omitted",
+                        "disabled": false,
+                        "actions": [
+                            {
+                                "name": "string.Extract",
+                                "config": {
+                                    "input": "psftContentId",
+                                    "pattern": "(.*)",
+                                    "output": "PageName"
+                                },
+                                "disabled": false
+                            }
+                        ]
+                    }
+                ]
+            },
+            "group": "data-manipulation.spans",
+            "description": null
+        },
+        {
+            "configType": "OPTIONS",
+=======
+>>>>>>> 8d379c0a929836ad83dcc8a848f5f8dceabdf202
+            "id": "ocid1.apmconfig....kqx5fqpq",
+            "freeformTags": {},
+            "definedTags": {},
+            "displayName": "keep client ip address",
+            "options": {
+                "type": "data-manipulation.group",
+                "filterId": "ocid1.apmconfig....kqp3y56a",
+                "disabled": false,
+                "rules": [
+                    {
+                        "displayName": "Adds the client IP address to a span",
+                        "disabled": false,
+                        "systemRuleId": 200
+                    }
+                ]
+            },
+            "group": "data-manipulation.spans",
+            "description": null
+        },
+        {
+            "configType": "OPTIONS",
+            "id": "ocid1.apmconfig....qx32ycjq",
+            "freeformTags": {},
+            "definedTags": {},
+            "displayName": "PSFTDB Perhub",
+            "options": {
+                "enabled": true,
+                "drilldownName": "PSFTDB Perhub",
+                "drilldownURL": "dbmgmt-ui/perfhub?ocid=<OCID OF YOUR DB>&perfhubContext={\"autoAdjust\":true,\"dateTime\":{\"startDate\":<APMStartTimeMS>,\"endDate\":<APMEndTimeMS>}, \"viewPort\":{\"startDate\":<APMStartTimeMS>,\"endDate\":<APMEndTimeMS>}}",
+                "dimensions": [
+                    "APMStartTimeMS",
+                    "APMEndTimeMS",
+                    "APMStartTimeMS",
+                    "APMEndTimeMS"
+                ],
+                "drilldownCondition": ""
+            },
+            "group": "APM_DRILLDOWN",
+            "description": "Drilldown to specific PDB passing APM timespan."
+        },
+        {
+            "configType": "OPTIONS",
+            "id": "ocid1.apmconfig....45itx2jq",
+            "freeformTags": {},
+            "definedTags": {},
+            "displayName": "Search traceId in PeopleSoft Logs",
+            "options": {
+                "enabled": true,
+                "drilldownName": "Search traceId in PeopleSoft Logs",
+                "drilldownURL": "loganalytics/explorer?viz=records_histogram&query=%27Log%20Group%27%20in%20(%27PSFT%27)%20and%20<TraceID>%20%7C%20timestats%20count%20as%20logrecords%20by%20Severity&vizOptions=%7B%22customVizOpt%22%3A%7B%22primaryFieldIname%22%3A%22mbody%22%2C%22primaryFieldDname%22%3A%22Original%20Log%20Content%22%7D%7D&scopeFilters=lg%3Aroot%2Ctrue%3Brs%3A<YOUR COMPARTMENT OCID>%2Ctrue%3Brg%3A<YOUR  REGION>&startTime=<APMStartTimeMS>&endTime=<APMEndTimeMS>&tenant=<YOUR  TENANT>&region=<YOUR  REGION>",
+                "dimensions": [
+                    "TraceID",
+                    "APMStartTimeMS",
+                    "APMEndTimeMS"
+                ],
+                "drilldownCondition": "traceId is not omitted "
+            },
+            "group": "APM_DRILLDOWN",
+            "description": "Search traceId in Logging Analytics in timespan of trace explorer"
+        },
+        {
+            "configType": "OPTIONS",
+            "id": "ocid1.apmconfig....ko7dejxq",
+            "freeformTags": {},
+            "definedTags": {},
+            "displayName": "PSFT Logs",
+            "options": {
+                "enabled": true,
+                "drilldownName": "PSFT Logs",
+                "drilldownURL": "loganalytics/explorer?viz=records_histogram&query=%27Log%20Group%27%20in%20(%27PSFT%27)%20%7C%20timestats%20count%20as%20logrecords%20by%20Severity&vizOptions=%7B%22customVizOpt%22%3A%7B%22primaryFieldIname%22%3A%22mbody%22%2C%22primaryFieldDname%22%3A%22Original%20Log%20Content%22%7D%7D&scopeFilters=lg%3Aroot%2Ctrue%3Brs%3A<YOUR COMPARTMENT OCID>%2Ctrue%3Brg%3A<YOUR  REGION>&startTime=<APMStartTimeMS>&endTime=<APMEndTimeMS>&tenant=<YOUR  TENANT>&region=<YOUR  REGION>",
+                "dimensions": [
+                    "APMStartTimeMS",
+                    "APMEndTimeMS"
+                ],
+                "drilldownCondition": "traceId is not omitted "
+            },
+            "group": "APM_DRILLDOWN",
+            "description": "Search logs in Logging Analytics by log group passing APM Start and End times"
+        }
+    ]
+}
