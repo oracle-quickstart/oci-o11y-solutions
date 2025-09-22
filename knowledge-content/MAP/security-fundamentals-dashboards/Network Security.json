@@ -877,7 +877,7 @@
           "description": null
         }
       ],
-      "displayName": "Network Security MultiTab_v2",
+      "displayName": "Network Security",
       "description": "Network Security",
       "compartmentId": "${compartment_ocid}",
       "isOobDashboard": false,
