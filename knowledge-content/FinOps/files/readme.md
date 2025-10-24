@@ -43,7 +43,7 @@ strategies, improve budget forecasting, and ultimately lead to
 meaningful cost savings across the organization.
 
 <img src="./images/image1.png"
-style="width:5.5in;height:1.93889in" />
+style="width:10.5in;height:4.93889in" />
 
 Fig.1 – Compartment spending dashboard
 
