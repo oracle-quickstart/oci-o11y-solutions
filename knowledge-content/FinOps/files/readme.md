@@ -43,7 +43,7 @@ strategies, improve budget forecasting, and ultimately lead to
 meaningful cost savings across the organization.
 
 <img src="./images/image1.png"
-style="width:10.5in;height:1.93889in" />
+style="width:5.5in;height:1.93889in" />
 
 Fig.1 – Compartment spending dashboard
 
@@ -72,7 +72,7 @@ Ready to set it up in your own environment? Keep reading to learn how!
 
 ## Architecture
 
-<img src="./files/images/image3.png"
+<img src="./images/image3.png"
 style="width:6.5in;height:1.85347in" />
 
 Fig. 3 - The architecture
@@ -97,7 +97,7 @@ function to perform a custom remediation action.
 In the OCI Console, under "Storage", click on "Object Storage" → then
 "Buckets". Choose the compartment where you want to create the bucket.
 
-> <img src="./files/images/image4.png"
+> <img src="./images/image4.png"
 > style="width:6.13127in;height:3.19521in" />
 
 Fig 4 - Bucket creation
@@ -179,7 +179,7 @@ allow DYNAMIC-GROUP LogAnalyticsObjectCollectionRule to
 Create an application in OCI Console. Go to Developer Services &gt;
 Applications &gt; Create Application &gt; FinOpsX86
 
-<img src="./files/images/image5.png"
+<img src="./images/image5.png"
 style="width:5.27588in;height:3.3402in" />
 
 Fig.5 – Application
@@ -284,7 +284,7 @@ Define a scheduler. Create an application in OCI Console. Go to
 Developer Services &gt; Applications &gt; Create Application &gt;
 FinOpsX86&gt; copyusagereport &gt; Schedules &gt; Add Schedule
 
-<img src="./files/images/image6.png"
+<img src="./images/image6.png"
 style="width:3.94444in;height:4.23611in" />
 
 Fig.6 – Funcion Schedule 
@@ -295,7 +295,7 @@ Fig.6 – Funcion Schedule
 > **Administration** → **Log Groups**. Select the **compartment** where
 > you want to create the log group from the left-side menu.
 >
-> <img src="./files/images/image7.png"
+> <img src="./images/image7.png"
 > style="width:4.69444in;height:2.10278in" />
 >
 Fig.7 – Log Group
@@ -310,13 +310,13 @@ Bottom of Form
 
 *Import the FOCUS parser and Source*
 
-> Download the Source configuration from [here](./files/src/FOCUS_OCI_1760704183250.zip).
+> Download the Source configuration from [here](./src/FOCUS_OCI_1760704183250.zip).
 >
 > Go to **Observability & Management** → **Log Analytics** →
 > **Administration** → **Import Configuration Content** and select the
 > file you have just downloaded.
 >
-> <img src="./files/images/image8.png"
+> <img src="./images/image8.png"
 > style="width:3.47989in;height:3.03434in" />
 
 Create the Streaming
@@ -330,7 +330,7 @@ Create the Streaming
 Go to **Analytics & AI** → **Streaming** → **Stream Pools**→ **Create
 Stream Pool**.
 
-> <img src="./files/images/image9.png"
+> <img src="./images/image9.png"
 > style="width:3.08333in;height:5.22222in" />
 
 *Create the Object Rule on Log Analytics*
@@ -364,12 +364,12 @@ file://createFocusObjectRule.json --namespace-name frxfz3gch4zb
 ```
 *Import the FOCUS Dashboard*
 
-> Download the dashboard configuration from [here](./files/src/FinOps_final.json).
+> Download the dashboard configuration from [here](./src/FinOps_final.json).
 >
 > Go to **Observability & Management** → **Management Dashboards** **→
 > Import dashboards** and select the file you have just downloaded.
 >
-> <img src="./files/images/image10.png"
+> <img src="./images/image10.png"
 > style="width:6.5in;height:1.88958in" />
 
 *Create the alert*
@@ -391,10 +391,10 @@ file://createFocusObjectRule.json --namespace-name frxfz3gch4zb
 > I used FO\_Total\_Overage but you can use all other FinOps Dashboard
 > widget or create new ones.
 >
-> <img src="./files/images/image11.png"
+> <img src="./images/image11.png"
 > style="width:6.5in;height:2.69861in" />
 >
-> <img src="./files/images/image12.png"
+> <img src="./images/image12.png"
 > style="width:6.5in;height:2.51597in" />
 >
 > Wait 24 hours for the data to be imported and for the
@@ -404,7 +404,7 @@ file://createFocusObjectRule.json --namespace-name frxfz3gch4zb
 > Go to **Observability & Management → Monitoring → Alarm Definitions →
 > Create Alarm**
 >
-> <img src="./files/images/image13.png"
+> <img src="./images/image13.png"
 > style="width:6.5in;height:3.11875in" />
 >
 > By integrating the OCI FOCUS cost and usage report into Log Analytics,
