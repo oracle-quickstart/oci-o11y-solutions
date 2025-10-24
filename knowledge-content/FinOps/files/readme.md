@@ -42,7 +42,7 @@ easier to make informed decisions that support cost optimization
 strategies, improve budget forecasting, and ultimately lead to
 meaningful cost savings across the organization.
 
-<img src="./files/images/image1.png"
+<img src="./images/image1.png"
 style="width:10.5in;height:1.93889in" />
 
 Fig.1 – Compartment spending dashboard
@@ -57,7 +57,7 @@ You can set up specific alerts for example, for usage overages. These
 alerts can trigger actions such as sending an email, reducing resource
 limits, or even shutting down services.
 
-<img src="./files/images/image2.png"
+<img src="./images/image2.png"
 style="width:6.5in;height:0.82569in" />
 
 Fig. 2 – Alert on overage
