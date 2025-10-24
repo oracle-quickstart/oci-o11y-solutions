@@ -58,7 +58,7 @@ alerts can trigger actions such as sending an email, reducing resource
 limits, or even shutting down services.
 
 <img src="./images/image2.png"
-style="width:7.5in;height:3.82569in" />
+style="width:6.5in;height:3.82569in" />
 
 Fig. 2 – Alert on overage
 
