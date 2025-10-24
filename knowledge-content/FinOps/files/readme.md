@@ -58,7 +58,7 @@ alerts can trigger actions such as sending an email, reducing resource
 limits, or even shutting down services.
 
 <img src="./images/image2.png"
-style="width:6.5in;height:0.82569in" />
+style="width:4.5in;height:0.82569in" />
 
 Fig. 2 – Alert on overage
 
@@ -73,7 +73,7 @@ Ready to set it up in your own environment? Keep reading to learn how!
 ## Architecture
 
 <img src="./images/image3.png"
-style="width:6.5in;height:1.85347in" />
+style="width:4.5in;height:1.85347in" />
 
 Fig. 3 - The architecture
 
@@ -98,7 +98,7 @@ In the OCI Console, under "Storage", click on "Object Storage" → then
 "Buckets". Choose the compartment where you want to create the bucket.
 
 > <img src="./images/image4.png"
-> style="width:6.13127in;height:3.19521in" />
+> style="width:4.13127in;height:3.19521in" />
 
 Fig 4 - Bucket creation
 
@@ -180,7 +180,7 @@ Create an application in OCI Console. Go to Developer Services &gt;
 Applications &gt; Create Application &gt; FinOpsX86
 
 <img src="./images/image5.png"
-style="width:5.27588in;height:3.3402in" />
+style="width:3.27588in;height:3.3402in" />
 
 Fig.5 – Application
 
