@@ -73,7 +73,7 @@ Ready to set it up in your own environment? Keep reading to learn how!
 ## Architecture
 
 <img src="./images/image3.png"
-style="width:4.5in;height:1.85347in" />
+style="width:8.5in;height:3.85347in" />
 
 Fig. 3 - The architecture
 
