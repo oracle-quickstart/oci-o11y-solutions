@@ -1491,7 +1491,7 @@
             "showTitle": true,
             "visualizationType": "heatmap",
             "visualizationOptions": {},
-            "queryString": "'Log Source' = 'Oracle Fusion Apps: Enterprise Scheduler Service (ESS)' | timestats count('Request ID') as logrecords by Product | sort -logrecords",
+            "queryString": "'Log Source' = 'Oracle Fusion Apps: Enterprise Scheduler Service (ESS)' | timestats count('Request ID') as logrecords by 'Product Name' | sort -logrecords",
             "scopeFilters": {
               "filters": [
                 {
@@ -2415,7 +2415,7 @@
                 }
               }
             },
-            "queryString": "'Log Source' = 'Oracle Fusion Apps: Enterprise Scheduler Service (ESS)' | link 'Request ID' | stats unique(Application) as Application, avg(ElapsedTime) as E, unique('Instance Parent Id') as 'Parent ID', unique('Job Display Name') as Job, unique('Parent Request ID') as 'Parent Req ID', unique(Product) as Product, latest('State Description') as Status, unique(Submitter) as Submitter | eval 'Time Taken' = unit(E, ms) | eval U = url('https://oracle.com', View) | eventstats distinctcount('Request ID') as Requests, avg(E) as AE, latest(U) as Details by Product, Job, Status | eval 'Average Time Taken' = unit(AE, ms) | createtable name = 'Job Summary' select Product, Job, Status, Requests, 'Average Time Taken', Details | classify 'Start Time', Job, 'Time Taken', Product, Status as 'ESS Jobs Analysis' | where Job = literal('provide online transaction engine functionality') and Product = literal(xla) and Status = literal(succeeded) | fields -E, -AE",
+            "queryString": "'Log Source' = 'Oracle Fusion Apps: Enterprise Scheduler Service (ESS)' | link 'Request ID' | stats unique(Application) as Application, avg(ElapsedTime) as E, unique('Instance Parent Id') as 'Parent ID', unique('Job Display Name') as Job, unique('Parent Request ID') as 'Parent Req ID', unique('Product Name') as Product, latest('State Description') as Status, unique(Submitter) as Submitter | eval 'Time Taken' = unit(E, ms) | eval U = url('https://oracle.com', View) | eventstats distinctcount('Request ID') as Requests, avg(E) as AE, latest(U) as Details by Product, Job, Status | eval 'Average Time Taken' = unit(AE, ms) | createtable name = 'Job Summary' select Product, Job, Status, Requests, 'Average Time Taken', Details | classify 'Start Time', Job, 'Time Taken', Product, Status as 'ESS Jobs Analysis' | fields -E, -AE",
             "scopeFilters": {
               "filters": [
                 {
