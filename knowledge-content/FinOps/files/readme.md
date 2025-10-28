@@ -221,7 +221,7 @@ print(f"prefix is {prefix\_file}")
 
 destination\_path = '/tmp'
 
-dest\_namespace='frxfz3gch4zb'
+dest\_namespace='<Dest Namespace>'
 
 upload\_bucket\_name = 'Cost\_Usage\_Reports'
 
