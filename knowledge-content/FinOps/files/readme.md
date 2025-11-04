@@ -81,7 +81,7 @@ Consumption information is reported in the FOCUS report, which resides
 on the internal Oracle tenant.
 
 Each day, a function retrieves this report and creates a copy in the
-Cost\_Usage\_Report. As soon as the report is created, an event is
+Cost_Usage_Report. As soon as the report is created, an event is
 triggered, and the data is imported into Logging Analytics using a
 specific FOCUS Log Source.
 
@@ -132,7 +132,7 @@ endorse group finOps to read objects in tenancy usage-report
 allow group finOps to manage analytics-instances in compartment
 &lt;finOps compartment&gt;
 
-allow service metering\_overlay to manage objects in compartment
+allow service metering_overlay to manage objects in compartment
 &lt;finOps compartment&gt;
 
 Allow group finOps to manage functions-family in compartment &lt;finOps
@@ -190,92 +190,8 @@ fn init --runtime python copyusagereport
 
 cd copyusagereport
 ```
-Go to OCI Shell and edit the func.py
-```
-import io
+Download the [func.py](./src/func.py), modify the teanct OCID, bucket namespace and replace it in the folder copyusagereport. 
 
-import json
-
-import logging
-
-import oci
-
-from datetime import datetime, timedelta
-
-from fdk import response
-
-def handler(ctx, data: io.BytesIO = None):
-
-try:
-
-reporting\_namespace = 'bling'
-
-reporting\_bucket = '<Tenancy OCID>'
-
-yesterday = datetime.now() - timedelta(days=3)
-
-prefix\_file = f"FOCUS
-Reports/{yesterday.year}/{yesterday.strftime('%m')}/{yesterday.strftime('%d')}"
-
-print(f"prefix is {prefix\_file}")
-
-destination\_path = '/tmp'
-
-dest\_namespace='frxfz3gch4zb'
-
-upload\_bucket\_name = 'Cost\_Usage\_Reports'
-
-Signer = oci.auth.signers.get\_resource\_principals\_signer()
-
-object\_storage = oci.object\_storage.ObjectStorageClient(config={},
-signer=Signer)
-
-report\_bucket\_objects =
-oci.pagination.list\_call\_get\_all\_results(object\_storage.list\_objects,
-reporting\_namespace, reporting\_bucket, prefix=prefix\_file)
-
-for o in report\_bucket\_objects.data.objects:
-
-object\_details = object\_storage.get\_object(reporting\_namespace,
-reporting\_bucket, o.name)
-
-filename = o.name.rsplit('/', 1)\[-1\]
-
-local\_file\_path = destination\_path+'/'+filename
-
-with open(local\_file\_path, 'wb') as f:
-
-for chunk in object\_details.data.raw.stream(1024 \* 1024,
-decode\_content=False):
-
-f.write(chunk)
-
-with open(local\_file\_path, 'rb') as file\_content:
-
-object\_storage.put\_object(
-
-namespace\_name=dest\_namespace,
-
-bucket\_name=upload\_bucket\_name,
-
-object\_name=filename,
-
-put\_object\_body=file\_content
-
-)
-
-except (Exception, ValueError) as ex:
-
-logging.getLogger().info('error parsing payload: ' + str(ex))
-
-return response.Response(
-
-ctx, response\_data=json.dumps(
-
-{"message": "Processed Files sucessfully"})
-
-)
-```
 Deploy the function
 ```
 fn -v deploy --app FinOpsX86
@@ -346,12 +262,12 @@ From OCI Shell console create the json file
 
 "osNamespace": "frxfz3gch4zb",
 
-"osBucketName": "Cost\_Usage\_Reports",
+"osBucketName": "Cost_Usage_Reports",
 
 "logGroupId":
 "<LogGroup OCID>",
 
-"logSourceName": "FOCUS\_OCI",
+"logSourceName": "FOCUS_OCI",
 
 "streamId":"<Stream OCID>"
 
