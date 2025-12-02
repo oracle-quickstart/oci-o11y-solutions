@@ -1,7 +1,7 @@
 {
 	"dashboards": [
 		{
-			"dashboardId": "ocid1.managementdashboard.oc1..aaaaaaaashmnic7k3oqvwum6zlsji2j76332elmbccvbkuxzochnh4irp4na",
+			"dashboardId": "ocid1.managementdashboard.oc1..aaaaaexampleaaaaa",
 			"providerId": "log-analytics",
 			"providerName": "Logging Analytics",
 			"providerVersion": "3.0.0",
@@ -37,7 +37,7 @@
 											"subTiles": [
 												{
 													"displayName": "Audit Log",
-													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaanaa7kmxkfbi2s3xeymrdprlekdk7j35chs5hsybaolimv4v3tjwq",
+													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
 													"row": 0,
 													"column": 0,
 													"height": 20,
@@ -79,7 +79,7 @@
 											"subTiles": [
 												{
 													"displayName": "Successful Logins",
-													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaavppmuczqhjds4grdjkr6oouwhvu75kzytp2cgufgo662hienu2ya",
+													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
 													"row": 0,
 													"column": 0,
 													"height": 20,
@@ -121,7 +121,7 @@
 											"subTiles": [
 												{
 													"displayName": "Unsuccessful Logins",
-													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaa2b6uowbs57aveb5jaienyrnamkw4sl4dbja3meclfrg3adczhn6q",
+													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
 													"row": 0,
 													"column": 0,
 													"height": 20,
@@ -163,7 +163,7 @@
 											"subTiles": [
 												{
 													"displayName": "Application Access",
-													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaavokfycbue5nzpuajhim2i577ub75irun26vco3jjs2tv67jvk4na",
+													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
 													"row": 0,
 													"column": 0,
 													"height": 20,
@@ -205,7 +205,7 @@
 											"subTiles": [
 												{
 													"displayName": "Application Role Assignment",
-													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaaaa5uhcsv7naj7plaeda3fc2ykc2ufojzbjs6llaoe7euffnzk7ymgq",
+													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
 													"row": 0,
 													"column": 0,
 													"height": 20,
@@ -244,7 +244,7 @@
 			],
 			"displayName": "IAM Domain Audit",
 			"description": "IAM Domain Audit Dashboard",
-			"compartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+			"compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
 			"isOobDashboard": false,
 			"isShowInHome": false,
 			"metadataVersion": "2.0",
@@ -261,12 +261,12 @@
 			"isFavorite": false,
 			"savedSearches": [
 				{
-					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaavppmuczqhjds4grdjkr6oouwhvu75kzytp2cgufgo662hienu2ya",
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
 					"displayName": "Successful Logins",
 					"providerId": "log-analytics",
 					"providerVersion": "3.0.0",
 					"providerName": "Logging Analytics",
-					"compartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+					"compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
 					"isOobSavedSearch": false,
 					"description": "Successful Logins",
 					"nls": {},
@@ -288,8 +288,8 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
-											"label": "orasenatdpltsecitom02 (root)"
+											"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+											"label": "9514950613d5bc43 (root)"
 										}
 									]
 								},
@@ -302,7 +302,7 @@
 									"type": "Entity",
 									"flags": {
 										"IncludeDependents": true,
-										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
 									},
 									"values": []
 								},
@@ -318,7 +318,7 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+											"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
 											"label": "obs_mgmt_comp"
 										}
 									]
@@ -342,8 +342,8 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
-										"label": "orasenatdpltsecitom02 (root)"
+										"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+										"label": "9514950613d5bc43 (root)"
 									}
 								]
 							},
@@ -356,7 +356,7 @@
 								"type": "Entity",
 								"flags": {
 									"IncludeDependents": true,
-									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
 								},
 								"values": []
 							},
@@ -372,7 +372,7 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+										"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
 										"label": "obs_mgmt_comp"
 									}
 								]
@@ -486,12 +486,12 @@
 					"drilldownConfig": []
 				},
 				{
-					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaa2b6uowbs57aveb5jaienyrnamkw4sl4dbja3meclfrg3adczhn6q",
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
 					"displayName": "Unsuccessful Logins",
 					"providerId": "log-analytics",
 					"providerVersion": "3.0.0",
 					"providerName": "Logging Analytics",
-					"compartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+					"compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
 					"isOobSavedSearch": false,
 					"description": "Unsuccessful Logins",
 					"nls": {},
@@ -513,8 +513,8 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
-											"label": "orasenatdpltsecitom02 (root)"
+											"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+											"label": "9514950613d5bc43 (root)"
 										}
 									]
 								},
@@ -527,7 +527,7 @@
 									"type": "Entity",
 									"flags": {
 										"IncludeDependents": true,
-										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
 									},
 									"values": []
 								},
@@ -543,7 +543,7 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+											"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
 											"label": "obs_mgmt_comp"
 										}
 									]
@@ -567,8 +567,8 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
-										"label": "orasenatdpltsecitom02 (root)"
+										"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+										"label": "9514950613d5bc43 (root)"
 									}
 								]
 							},
@@ -581,7 +581,7 @@
 								"type": "Entity",
 								"flags": {
 									"IncludeDependents": true,
-									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
 								},
 								"values": []
 							},
@@ -597,7 +597,7 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+										"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
 										"label": "obs_mgmt_comp"
 									}
 								]
@@ -711,12 +711,12 @@
 					"drilldownConfig": []
 				},
 				{
-					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaa5uhcsv7naj7plaeda3fc2ykc2ufojzbjs6llaoe7euffnzk7ymgq",
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
 					"displayName": "Application Role Assignment",
 					"providerId": "log-analytics",
 					"providerVersion": "3.0.0",
 					"providerName": "Logging Analytics",
-					"compartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+					"compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
 					"isOobSavedSearch": false,
 					"description": "Application Role Assignment",
 					"nls": {},
@@ -740,8 +740,8 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
-											"label": "orasenatdpltsecitom02 (root)"
+											"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+											"label": "9514950613d5bc43 (root)"
 										}
 									]
 								},
@@ -754,7 +754,7 @@
 									"type": "Entity",
 									"flags": {
 										"IncludeDependents": true,
-										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
 									},
 									"values": []
 								},
@@ -770,7 +770,7 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+											"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
 											"label": "obs_mgmt_comp"
 										}
 									]
@@ -794,8 +794,8 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
-										"label": "orasenatdpltsecitom02 (root)"
+										"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+										"label": "9514950613d5bc43 (root)"
 									}
 								]
 							},
@@ -808,7 +808,7 @@
 								"type": "Entity",
 								"flags": {
 									"IncludeDependents": true,
-									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
 								},
 								"values": []
 							},
@@ -824,7 +824,7 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+										"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
 										"label": "obs_mgmt_comp"
 									}
 								]
@@ -938,12 +938,12 @@
 					"drilldownConfig": []
 				},
 				{
-					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaavokfycbue5nzpuajhim2i577ub75irun26vco3jjs2tv67jvk4na",
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
 					"displayName": "Application Access",
 					"providerId": "log-analytics",
 					"providerVersion": "3.0.0",
 					"providerName": "Logging Analytics",
-					"compartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+					"compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
 					"isOobSavedSearch": false,
 					"description": "Application Access",
 					"nls": {},
@@ -965,8 +965,8 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
-											"label": "orasenatdpltsecitom02 (root)"
+											"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+											"label": "9514950613d5bc43 (root)"
 										}
 									]
 								},
@@ -979,7 +979,7 @@
 									"type": "Entity",
 									"flags": {
 										"IncludeDependents": true,
-										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
 									},
 									"values": []
 								},
@@ -995,7 +995,7 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+											"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
 											"label": "obs_mgmt_comp"
 										}
 									]
@@ -1019,8 +1019,8 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
-										"label": "orasenatdpltsecitom02 (root)"
+										"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+										"label": "9514950613d5bc43 (root)"
 									}
 								]
 							},
@@ -1033,7 +1033,7 @@
 								"type": "Entity",
 								"flags": {
 									"IncludeDependents": true,
-									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
 								},
 								"values": []
 							},
@@ -1049,7 +1049,7 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+										"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
 										"label": "obs_mgmt_comp"
 									}
 								]
@@ -1163,12 +1163,12 @@
 					"drilldownConfig": []
 				},
 				{
-					"id": "ocid1.managementsavedsearch.oc1..aaaaaaaanaa7kmxkfbi2s3xeymrdprlekdk7j35chs5hsybaolimv4v3tjwq",
+					"id": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
 					"displayName": "Audit Log",
 					"providerId": "log-analytics",
 					"providerVersion": "3.0.0",
 					"providerName": "Logging Analytics",
-					"compartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+					"compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
 					"isOobSavedSearch": false,
 					"description": "Audit Log",
 					"nls": {},
@@ -1190,8 +1190,8 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
-											"label": "orasenatdpltsecitom02 (root)"
+											"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+											"label": "9514950613d5bc43 (root)"
 										}
 									]
 								},
@@ -1204,7 +1204,7 @@
 									"type": "Entity",
 									"flags": {
 										"IncludeDependents": true,
-										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
 									},
 									"values": []
 								},
@@ -1220,7 +1220,7 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+											"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
 											"label": "obs_mgmt_comp"
 										}
 									]
@@ -1244,8 +1244,8 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.tenancy.oc1..aaaaaaaa53uu2d7z77v44jhvjsinojzsxjroeutt3ty5wqhp46izfg4o7pda",
-										"label": "orasenatdpltsecitom02 (root)"
+										"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+										"label": "9514950613d5bc43 (root)"
 									}
 								]
 							},
@@ -1258,7 +1258,7 @@
 								"type": "Entity",
 								"flags": {
 									"IncludeDependents": true,
-									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea"
+									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
 								},
 								"values": []
 							},
@@ -1274,7 +1274,7 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.compartment.oc1..aaaaaaaallhcqvvf6go3nougmrhmggmukucyjq3q6ikzkfc7hyjjc5h5ctea",
+										"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
 										"label": "obs_mgmt_comp"
 									}
 								]
