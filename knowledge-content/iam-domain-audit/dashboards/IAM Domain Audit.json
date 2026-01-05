@@ -1,7 +1,7 @@
 {
 	"dashboards": [
 		{
-			"dashboardId": "ocid1.managementdashboard.oc1..aaaaaexampleaaaaa",
+			"dashboardId": "ocid1.managementdashboard.oc1..ff8432355d25b347",
 			"providerId": "log-analytics",
 			"providerName": "Logging Analytics",
 			"providerVersion": "3.0.0",
@@ -37,7 +37,7 @@
 											"subTiles": [
 												{
 													"displayName": "Audit Log",
-													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+													"savedSearchId": "ocid1.managementsavedsearch.oc1..c6e9f24c976ed088",
 													"row": 0,
 													"column": 0,
 													"height": 20,
@@ -79,7 +79,7 @@
 											"subTiles": [
 												{
 													"displayName": "Successful Logins",
-													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+													"savedSearchId": "ocid1.managementsavedsearch.oc1..3f240c0d870f826b",
 													"row": 0,
 													"column": 0,
 													"height": 20,
@@ -121,7 +121,7 @@
 											"subTiles": [
 												{
 													"displayName": "Unsuccessful Logins",
-													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+													"savedSearchId": "ocid1.managementsavedsearch.oc1..2764ae1f9fc4a9c4",
 													"row": 0,
 													"column": 0,
 													"height": 20,
@@ -163,7 +163,7 @@
 											"subTiles": [
 												{
 													"displayName": "Application Access",
-													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+													"savedSearchId": "ocid1.managementsavedsearch.oc1..4454ba281c2a8908",
 													"row": 0,
 													"column": 0,
 													"height": 20,
@@ -205,7 +205,7 @@
 											"subTiles": [
 												{
 													"displayName": "Application Role Assignment",
-													"savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+													"savedSearchId": "ocid1.managementsavedsearch.oc1..073421c5045b4241",
 													"row": 0,
 													"column": 0,
 													"height": 20,
@@ -244,7 +244,7 @@
 			],
 			"displayName": "IAM Domain Audit",
 			"description": "IAM Domain Audit Dashboard",
-			"compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+			"compartmentId": "ocid1.compartment.oc1..492c4a9fdb9ffe5f",
 			"isOobDashboard": false,
 			"isShowInHome": false,
 			"metadataVersion": "2.0",
@@ -261,12 +261,12 @@
 			"isFavorite": false,
 			"savedSearches": [
 				{
-					"id": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+					"id": "ocid1.managementsavedsearch.oc1..3f240c0d870f826b",
 					"displayName": "Successful Logins",
 					"providerId": "log-analytics",
 					"providerVersion": "3.0.0",
 					"providerName": "Logging Analytics",
-					"compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+					"compartmentId": "ocid1.compartment.oc1..492c4a9fdb9ffe5f",
 					"isOobSavedSearch": false,
 					"description": "Successful Logins",
 					"nls": {},
@@ -288,7 +288,7 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+											"value": "ocid1.tenancy.oc1..d1e3522729930502",
 											"label": "9514950613d5bc43 (root)"
 										}
 									]
@@ -302,7 +302,7 @@
 									"type": "Entity",
 									"flags": {
 										"IncludeDependents": true,
-										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+										"ScopeCompartmentId": "ocid1.compartment.oc1..492c4a9fdb9ffe5f"
 									},
 									"values": []
 								},
@@ -318,7 +318,7 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+											"value": "ocid1.compartment.oc1..492c4a9fdb9ffe5f",
 											"label": "obs_mgmt_comp"
 										}
 									]
@@ -342,7 +342,7 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+										"value": "ocid1.tenancy.oc1..d1e3522729930502",
 										"label": "9514950613d5bc43 (root)"
 									}
 								]
@@ -356,7 +356,7 @@
 								"type": "Entity",
 								"flags": {
 									"IncludeDependents": true,
-									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+									"ScopeCompartmentId": "ocid1.compartment.oc1..492c4a9fdb9ffe5f"
 								},
 								"values": []
 							},
@@ -372,7 +372,7 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+										"value": "ocid1.compartment.oc1..492c4a9fdb9ffe5f",
 										"label": "obs_mgmt_comp"
 									}
 								]
@@ -486,12 +486,12 @@
 					"drilldownConfig": []
 				},
 				{
-					"id": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+					"id": "ocid1.managementsavedsearch.oc1..2764ae1f9fc4a9c4",
 					"displayName": "Unsuccessful Logins",
 					"providerId": "log-analytics",
 					"providerVersion": "3.0.0",
 					"providerName": "Logging Analytics",
-					"compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+					"compartmentId": "ocid1.compartment.oc1..492c4a9fdb9ffe5f",
 					"isOobSavedSearch": false,
 					"description": "Unsuccessful Logins",
 					"nls": {},
@@ -513,7 +513,7 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+											"value": "ocid1.tenancy.oc1..d1e3522729930502",
 											"label": "9514950613d5bc43 (root)"
 										}
 									]
@@ -527,7 +527,7 @@
 									"type": "Entity",
 									"flags": {
 										"IncludeDependents": true,
-										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+										"ScopeCompartmentId": "ocid1.compartment.oc1..492c4a9fdb9ffe5f"
 									},
 									"values": []
 								},
@@ -543,7 +543,7 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+											"value": "ocid1.compartment.oc1..492c4a9fdb9ffe5f",
 											"label": "obs_mgmt_comp"
 										}
 									]
@@ -567,7 +567,7 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+										"value": "ocid1.tenancy.oc1..d1e3522729930502",
 										"label": "9514950613d5bc43 (root)"
 									}
 								]
@@ -581,7 +581,7 @@
 								"type": "Entity",
 								"flags": {
 									"IncludeDependents": true,
-									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+									"ScopeCompartmentId": "ocid1.compartment.oc1..492c4a9fdb9ffe5f"
 								},
 								"values": []
 							},
@@ -597,7 +597,7 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+										"value": "ocid1.compartment.oc1..492c4a9fdb9ffe5f",
 										"label": "obs_mgmt_comp"
 									}
 								]
@@ -711,12 +711,12 @@
 					"drilldownConfig": []
 				},
 				{
-					"id": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+					"id": "ocid1.managementsavedsearch.oc1..073421c5045b4241",
 					"displayName": "Application Role Assignment",
 					"providerId": "log-analytics",
 					"providerVersion": "3.0.0",
 					"providerName": "Logging Analytics",
-					"compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+					"compartmentId": "ocid1.compartment.oc1..492c4a9fdb9ffe5f",
 					"isOobSavedSearch": false,
 					"description": "Application Role Assignment",
 					"nls": {},
@@ -740,7 +740,7 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+											"value": "ocid1.tenancy.oc1..d1e3522729930502",
 											"label": "9514950613d5bc43 (root)"
 										}
 									]
@@ -754,7 +754,7 @@
 									"type": "Entity",
 									"flags": {
 										"IncludeDependents": true,
-										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+										"ScopeCompartmentId": "ocid1.compartment.oc1..492c4a9fdb9ffe5f"
 									},
 									"values": []
 								},
@@ -770,7 +770,7 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+											"value": "ocid1.compartment.oc1..492c4a9fdb9ffe5f",
 											"label": "obs_mgmt_comp"
 										}
 									]
@@ -794,7 +794,7 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+										"value": "ocid1.tenancy.oc1..d1e3522729930502",
 										"label": "9514950613d5bc43 (root)"
 									}
 								]
@@ -808,7 +808,7 @@
 								"type": "Entity",
 								"flags": {
 									"IncludeDependents": true,
-									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+									"ScopeCompartmentId": "ocid1.compartment.oc1..492c4a9fdb9ffe5f"
 								},
 								"values": []
 							},
@@ -824,7 +824,7 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+										"value": "ocid1.compartment.oc1..492c4a9fdb9ffe5f",
 										"label": "obs_mgmt_comp"
 									}
 								]
@@ -938,12 +938,12 @@
 					"drilldownConfig": []
 				},
 				{
-					"id": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+					"id": "ocid1.managementsavedsearch.oc1..4454ba281c2a8908",
 					"displayName": "Application Access",
 					"providerId": "log-analytics",
 					"providerVersion": "3.0.0",
 					"providerName": "Logging Analytics",
-					"compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+					"compartmentId": "ocid1.compartment.oc1..492c4a9fdb9ffe5f",
 					"isOobSavedSearch": false,
 					"description": "Application Access",
 					"nls": {},
@@ -965,7 +965,7 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+											"value": "ocid1.tenancy.oc1..d1e3522729930502",
 											"label": "9514950613d5bc43 (root)"
 										}
 									]
@@ -979,7 +979,7 @@
 									"type": "Entity",
 									"flags": {
 										"IncludeDependents": true,
-										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+										"ScopeCompartmentId": "ocid1.compartment.oc1..492c4a9fdb9ffe5f"
 									},
 									"values": []
 								},
@@ -995,7 +995,7 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+											"value": "ocid1.compartment.oc1..492c4a9fdb9ffe5f",
 											"label": "obs_mgmt_comp"
 										}
 									]
@@ -1019,7 +1019,7 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+										"value": "ocid1.tenancy.oc1..d1e3522729930502",
 										"label": "9514950613d5bc43 (root)"
 									}
 								]
@@ -1033,7 +1033,7 @@
 								"type": "Entity",
 								"flags": {
 									"IncludeDependents": true,
-									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+									"ScopeCompartmentId": "ocid1.compartment.oc1..492c4a9fdb9ffe5f"
 								},
 								"values": []
 							},
@@ -1049,7 +1049,7 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+										"value": "ocid1.compartment.oc1..492c4a9fdb9ffe5f",
 										"label": "obs_mgmt_comp"
 									}
 								]
@@ -1163,12 +1163,12 @@
 					"drilldownConfig": []
 				},
 				{
-					"id": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+					"id": "ocid1.managementsavedsearch.oc1..c6e9f24c976ed088",
 					"displayName": "Audit Log",
 					"providerId": "log-analytics",
 					"providerVersion": "3.0.0",
 					"providerName": "Logging Analytics",
-					"compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+					"compartmentId": "ocid1.compartment.oc1..492c4a9fdb9ffe5f",
 					"isOobSavedSearch": false,
 					"description": "Audit Log",
 					"nls": {},
@@ -1190,7 +1190,7 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+											"value": "ocid1.tenancy.oc1..d1e3522729930502",
 											"label": "9514950613d5bc43 (root)"
 										}
 									]
@@ -1204,7 +1204,7 @@
 									"type": "Entity",
 									"flags": {
 										"IncludeDependents": true,
-										"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+										"ScopeCompartmentId": "ocid1.compartment.oc1..492c4a9fdb9ffe5f"
 									},
 									"values": []
 								},
@@ -1220,7 +1220,7 @@
 									},
 									"values": [
 										{
-											"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+											"value": "ocid1.compartment.oc1..492c4a9fdb9ffe5f",
 											"label": "obs_mgmt_comp"
 										}
 									]
@@ -1244,7 +1244,7 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+										"value": "ocid1.tenancy.oc1..d1e3522729930502",
 										"label": "9514950613d5bc43 (root)"
 									}
 								]
@@ -1258,7 +1258,7 @@
 								"type": "Entity",
 								"flags": {
 									"IncludeDependents": true,
-									"ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+									"ScopeCompartmentId": "ocid1.compartment.oc1..492c4a9fdb9ffe5f"
 								},
 								"values": []
 							},
@@ -1274,7 +1274,7 @@
 								},
 								"values": [
 									{
-										"value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+										"value": "ocid1.compartment.oc1..492c4a9fdb9ffe5f",
 										"label": "obs_mgmt_comp"
 									}
 								]
