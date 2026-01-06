@@ -1,14 +1,14 @@
 {
     "dashboards": [
         {
-            "dashboardId": "ocid1.managementdashboard.oc1..aaaaaexampleaaaaa",
+            "dashboardId": "ocid1.managementdashboard.oc1..0d3a2fbee6768c37",
             "providerId": "log-analytics",
             "providerName": "Logging Analytics",
             "providerVersion": "3.0.0",
             "tiles": [
                 {
                     "displayName": "ESS Requests",
-                    "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+                    "savedSearchId": "ocid1.managementsavedsearch.oc1..714ad6d4a5e8dc20",
                     "row": 0,
                     "column": 0,
                     "height": 2,
@@ -28,7 +28,7 @@
                 },
                 {
                     "displayName": "Job Status",
-                    "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+                    "savedSearchId": "ocid1.managementsavedsearch.oc1..42bc5898812faf3e",
                     "row": 0,
                     "column": 2,
                     "height": 2,
@@ -48,7 +48,7 @@
                 },
                 {
                     "displayName": "Jobs and Applications",
-                    "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+                    "savedSearchId": "ocid1.managementsavedsearch.oc1..c5c93222ee27c1be",
                     "row": 0,
                     "column": 4,
                     "height": 5,
@@ -68,7 +68,7 @@
                 },
                 {
                     "displayName": "Applications",
-                    "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+                    "savedSearchId": "ocid1.managementsavedsearch.oc1..80b88e39cee63cb1",
                     "row": 2,
                     "column": 0,
                     "height": 3,
@@ -88,7 +88,7 @@
                 },
                 {
                     "displayName": "ESS Job Schedule Heatmap",
-                    "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+                    "savedSearchId": "ocid1.managementsavedsearch.oc1..02fd9cd5a0529055",
                     "row": 5,
                     "column": 0,
                     "height": 4,
@@ -108,7 +108,7 @@
                 },
                 {
                     "displayName": "__INHERIT__",
-                    "savedSearchId": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+                    "savedSearchId": "ocid1.managementsavedsearch.oc1..af2b974dc79a773b",
                     "row": 9,
                     "column": 0,
                     "height": 11,
@@ -128,7 +128,7 @@
             ],
             "displayName": "Oracle Fusion Apps Enterprise Scheduler Service (ESS) Analysis",
             "description": "ESS job system performance analysis",
-            "compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+            "compartmentId": "ocid1.compartment.oc1..f1a0d028d4eadf09",
             "isOobDashboard": false,
             "isShowInHome": false,
             "metadataVersion": "2.0",
@@ -145,12 +145,12 @@
             "isFavorite": false,
             "savedSearches": [
                 {
-                    "id": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+                    "id": "ocid1.managementsavedsearch.oc1..714ad6d4a5e8dc20",
                     "displayName": "SD: Fusion ESS Requests",
                     "providerId": "log-analytics",
                     "providerVersion": "3.0.0",
                     "providerName": "Logging Analytics",
-                    "compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+                    "compartmentId": "ocid1.compartment.oc1..cdcba3fd2beb8705",
                     "isOobSavedSearch": false,
                     "description": "",
                     "nls": {},
@@ -436,7 +436,7 @@
                                     },
                                     "values": [
                                         {
-                                            "value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+                                            "value": "ocid1.tenancy.oc1..168e75ff1f31d803",
                                             "label": "3ef8f8695ad188ad (root)"
                                         }
                                     ]
@@ -445,7 +445,7 @@
                                     "type": "Entity",
                                     "flags": {
                                         "IncludeDependents": true,
-                                        "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+                                        "ScopeCompartmentId": "ocid1.compartment.oc1..cdcba3fd2beb8705"
                                     },
                                     "values": []
                                 },
@@ -473,7 +473,7 @@
                                 },
                                 "values": [
                                     {
-                                        "value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+                                        "value": "ocid1.tenancy.oc1..168e75ff1f31d803",
                                         "label": "3ef8f8695ad188ad (root)"
                                     }
                                 ]
@@ -482,7 +482,7 @@
                                 "type": "Entity",
                                 "flags": {
                                     "IncludeDependents": true,
-                                    "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+                                    "ScopeCompartmentId": "ocid1.compartment.oc1..cdcba3fd2beb8705"
                                 },
                                 "values": []
                             },
@@ -502,7 +502,7 @@
                                 ]
                             }
                         },
-                        "internalKey": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+                        "internalKey": "ocid1.managementsavedsearch.oc1..714ad6d4a5e8dc20",
                         "vizType": "lxSavedSearchWidgetType",
                         "enableWidgetInApp": true
                     },
@@ -589,12 +589,12 @@
                     "drilldownConfig": []
                 },
                 {
-                    "id": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+                    "id": "ocid1.managementsavedsearch.oc1..80b88e39cee63cb1",
                     "displayName": "SD: Fusion ESS Applications",
                     "providerId": "log-analytics",
                     "providerVersion": "3.0.0",
                     "providerName": "Logging Analytics",
-                    "compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+                    "compartmentId": "ocid1.compartment.oc1..cdcba3fd2beb8705",
                     "isOobSavedSearch": false,
                     "description": "",
                     "nls": {},
@@ -878,7 +878,7 @@
                                     },
                                     "values": [
                                         {
-                                            "value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+                                            "value": "ocid1.tenancy.oc1..168e75ff1f31d803",
                                             "label": "3ef8f8695ad188ad (root)"
                                         }
                                     ]
@@ -887,7 +887,7 @@
                                     "type": "Entity",
                                     "flags": {
                                         "IncludeDependents": true,
-                                        "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+                                        "ScopeCompartmentId": "ocid1.compartment.oc1..cdcba3fd2beb8705"
                                     },
                                     "values": []
                                 },
@@ -915,7 +915,7 @@
                                 },
                                 "values": [
                                     {
-                                        "value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+                                        "value": "ocid1.tenancy.oc1..168e75ff1f31d803",
                                         "label": "3ef8f8695ad188ad (root)"
                                     }
                                 ]
@@ -924,7 +924,7 @@
                                 "type": "Entity",
                                 "flags": {
                                     "IncludeDependents": true,
-                                    "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+                                    "ScopeCompartmentId": "ocid1.compartment.oc1..cdcba3fd2beb8705"
                                 },
                                 "values": []
                             },
@@ -944,7 +944,7 @@
                                 ]
                             }
                         },
-                        "internalKey": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+                        "internalKey": "ocid1.managementsavedsearch.oc1..80b88e39cee63cb1",
                         "vizType": "lxSavedSearchWidgetType",
                         "enableWidgetInApp": true
                     },
@@ -1031,12 +1031,12 @@
                     "drilldownConfig": []
                 },
                 {
-                    "id": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+                    "id": "ocid1.managementsavedsearch.oc1..c5c93222ee27c1be",
                     "displayName": "SD: Fusion ESS Jobs and Applications",
                     "providerId": "log-analytics",
                     "providerVersion": "3.0.0",
                     "providerName": "Logging Analytics",
-                    "compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+                    "compartmentId": "ocid1.compartment.oc1..cdcba3fd2beb8705",
                     "isOobSavedSearch": false,
                     "description": "",
                     "nls": {},
@@ -1320,7 +1320,7 @@
                                     },
                                     "values": [
                                         {
-                                            "value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+                                            "value": "ocid1.tenancy.oc1..168e75ff1f31d803",
                                             "label": "3ef8f8695ad188ad (root)"
                                         }
                                     ]
@@ -1329,7 +1329,7 @@
                                     "type": "Entity",
                                     "flags": {
                                         "IncludeDependents": true,
-                                        "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+                                        "ScopeCompartmentId": "ocid1.compartment.oc1..cdcba3fd2beb8705"
                                     },
                                     "values": []
                                 },
@@ -1357,7 +1357,7 @@
                                 },
                                 "values": [
                                     {
-                                        "value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+                                        "value": "ocid1.tenancy.oc1..168e75ff1f31d803",
                                         "label": "3ef8f8695ad188ad (root)"
                                     }
                                 ]
@@ -1366,7 +1366,7 @@
                                 "type": "Entity",
                                 "flags": {
                                     "IncludeDependents": true,
-                                    "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+                                    "ScopeCompartmentId": "ocid1.compartment.oc1..cdcba3fd2beb8705"
                                 },
                                 "values": []
                             },
@@ -1386,7 +1386,7 @@
                                 ]
                             }
                         },
-                        "internalKey": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+                        "internalKey": "ocid1.managementsavedsearch.oc1..c5c93222ee27c1be",
                         "vizType": "lxSavedSearchWidgetType",
                         "enableWidgetInApp": true
                     },
@@ -1473,12 +1473,12 @@
                     "drilldownConfig": []
                 },
                 {
-                    "id": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+                    "id": "ocid1.managementsavedsearch.oc1..af2b974dc79a773b",
                     "displayName": "Jobs by Product",
                     "providerId": "log-analytics",
                     "providerVersion": "3.0.0",
                     "providerName": "Logging Analytics",
-                    "compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+                    "compartmentId": "ocid1.compartment.oc1..25103aacd518b8e3",
                     "isOobSavedSearch": false,
                     "description": "",
                     "nls": {},
@@ -1793,7 +1793,7 @@
                                 }
                             }
                         },
-                        "queryString": "'Log Source' = 'Oracle Fusion Apps: Enterprise Scheduler Service' | link 'Request ID' | stats unique(Application) as Application, avg(ElapsedTime) as E, unique('Instance Parent Id') as 'Parent ID', unique('Job Display Name') as Job, unique('Parent Request ID') as 'Parent Req ID', unique('Product Name') as Product, unique('Product Family') as 'Product Family', latest('State Description') as Status, unique(Submitter) as Submitter | eval 'Time Taken' = unit(E, ms) | eval U = url('https://oracle.com', View) | eventstats distinctcount('Request ID') as Requests, avg(E) as AE, latest(U) as Details by Product, Job, Status | eval 'Average Time Taken' = unit(AE, ms) | createtable name = 'Job Summary' select Product, 'Product Family', Job, Status, Requests, 'Average Time Taken', Details | classify 'Start Time', Job, 'Time Taken', Product, 'Product Family', Status as 'ESS Jobs Analysis' | fields -E, -AE",
+                        "queryString": "'Log Source' = 'Oracle Fusion Apps: Enterprise Scheduler Service' | link 'Request ID' | stats unique(Application) as Application, avg(ElapsedTime) as E, unique('Instance Parent Id') as 'Parent ID', unique('Job Display Name') as Job, unique('Parent Request ID') as 'Parent Req ID', unique('Product Name') as Product, unique('Product Family Name') as 'Product Family', latest('State Description') as Status, unique(Submitter) as Submitter | eval 'Time Taken' = unit(E, ms) | eval U = url('https://oracle.com', View) | eventstats distinctcount('Request ID') as Requests, avg(E) as AE, latest(U) as Details by Product, Job, Status | eval 'Average Time Taken' = unit(AE, ms) | createtable name = 'Job Summary' select Product, 'Product Family', Job, Status, Requests, 'Average Time Taken', Details | classify 'Start Time', Job, 'Time Taken', Product, 'Product Family', Status as 'ESS Jobs Analysis' | fields -E, -AE",
                         "scopeFilters": {
                             "filters": [
                                 {
@@ -1803,7 +1803,7 @@
                                     },
                                     "values": [
                                         {
-                                            "value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+                                            "value": "ocid1.tenancy.oc1..168e75ff1f31d803",
                                             "label": "3ef8f8695ad188ad (root)"
                                         }
                                     ]
@@ -1812,7 +1812,7 @@
                                     "type": "Entity",
                                     "flags": {
                                         "IncludeDependents": true,
-                                        "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+                                        "ScopeCompartmentId": "ocid1.compartment.oc1..cdcba3fd2beb8705"
                                     },
                                     "values": []
                                 },
@@ -1840,7 +1840,7 @@
                                 },
                                 "values": [
                                     {
-                                        "value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+                                        "value": "ocid1.tenancy.oc1..168e75ff1f31d803",
                                         "label": "3ef8f8695ad188ad (root)"
                                     }
                                 ]
@@ -1849,7 +1849,7 @@
                                 "type": "Entity",
                                 "flags": {
                                     "IncludeDependents": true,
-                                    "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+                                    "ScopeCompartmentId": "ocid1.compartment.oc1..cdcba3fd2beb8705"
                                 },
                                 "values": []
                             },
@@ -1869,7 +1869,7 @@
                                 ]
                             }
                         },
-                        "internalKey": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+                        "internalKey": "ocid1.managementsavedsearch.oc1..af2b974dc79a773b",
                         "vizType": "lxSavedSearchWidgetType",
                         "enableWidgetInApp": true
                     },
@@ -1968,12 +1968,12 @@
                     "drilldownConfig": []
                 },
                 {
-                    "id": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+                    "id": "ocid1.managementsavedsearch.oc1..42bc5898812faf3e",
                     "displayName": "SD: Fusion ESS States",
                     "providerId": "log-analytics",
                     "providerVersion": "3.0.0",
                     "providerName": "Logging Analytics",
-                    "compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+                    "compartmentId": "ocid1.compartment.oc1..cdcba3fd2beb8705",
                     "isOobSavedSearch": false,
                     "description": "",
                     "nls": {},
@@ -2258,7 +2258,7 @@
                                     },
                                     "values": [
                                         {
-                                            "value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+                                            "value": "ocid1.tenancy.oc1..168e75ff1f31d803",
                                             "label": "3ef8f8695ad188ad (root)"
                                         }
                                     ]
@@ -2267,7 +2267,7 @@
                                     "type": "Entity",
                                     "flags": {
                                         "IncludeDependents": true,
-                                        "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+                                        "ScopeCompartmentId": "ocid1.compartment.oc1..cdcba3fd2beb8705"
                                     },
                                     "values": []
                                 },
@@ -2295,7 +2295,7 @@
                                 },
                                 "values": [
                                     {
-                                        "value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+                                        "value": "ocid1.tenancy.oc1..168e75ff1f31d803",
                                         "label": "3ef8f8695ad188ad (root)"
                                     }
                                 ]
@@ -2304,7 +2304,7 @@
                                 "type": "Entity",
                                 "flags": {
                                     "IncludeDependents": true,
-                                    "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+                                    "ScopeCompartmentId": "ocid1.compartment.oc1..cdcba3fd2beb8705"
                                 },
                                 "values": []
                             },
@@ -2324,7 +2324,7 @@
                                 ]
                             }
                         },
-                        "internalKey": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+                        "internalKey": "ocid1.managementsavedsearch.oc1..42bc5898812faf3e",
                         "vizType": "lxSavedSearchWidgetType",
                         "enableWidgetInApp": true
                     },
@@ -2411,12 +2411,12 @@
                     "drilldownConfig": []
                 },
                 {
-                    "id": "ocid1.managementsavedsearch.oc1..aaaaaexampleaaaaa",
+                    "id": "ocid1.managementsavedsearch.oc1..02fd9cd5a0529055",
                     "displayName": "ESS_jobs_by_product_heatmap_schedule_GREEN",
                     "providerId": "log-analytics",
                     "providerVersion": "3.0.0",
                     "providerName": "Log Analytics",
-                    "compartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+                    "compartmentId": "ocid1.compartment.oc1..cdcba3fd2beb8705",
                     "isOobSavedSearch": false,
                     "description": "",
                     "nls": {},
@@ -2618,7 +2618,7 @@
                                     },
                                     "values": [
                                         {
-                                            "value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+                                            "value": "ocid1.tenancy.oc1..168e75ff1f31d803",
                                             "label": "3ef8f8695ad188ad (root)"
                                         }
                                     ]
@@ -2632,7 +2632,7 @@
                                     "type": "Entity",
                                     "flags": {
                                         "IncludeDependents": true,
-                                        "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+                                        "ScopeCompartmentId": "ocid1.compartment.oc1..cdcba3fd2beb8705"
                                     },
                                     "values": []
                                 },
@@ -2648,7 +2648,7 @@
                                     },
                                     "values": [
                                         {
-                                            "value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+                                            "value": "ocid1.compartment.oc1..f1a0d028d4eadf09",
                                             "label": "CW25_Logging_Analytics"
                                         }
                                     ]
@@ -2672,7 +2672,7 @@
                                 },
                                 "values": [
                                     {
-                                        "value": "ocid1.tenancy.oc1..aaaaaexampleaaaaa",
+                                        "value": "ocid1.tenancy.oc1..168e75ff1f31d803",
                                         "label": "3ef8f8695ad188ad (root)"
                                     }
                                 ]
@@ -2686,7 +2686,7 @@
                                 "type": "Entity",
                                 "flags": {
                                     "IncludeDependents": true,
-                                    "ScopeCompartmentId": "ocid1.compartment.oc1..aaaaaexampleaaaaa"
+                                    "ScopeCompartmentId": "ocid1.compartment.oc1..cdcba3fd2beb8705"
                                 },
                                 "values": []
                             },
@@ -2702,7 +2702,7 @@
                                 },
                                 "values": [
                                     {
-                                        "value": "ocid1.compartment.oc1..aaaaaexampleaaaaa",
+                                        "value": "ocid1.compartment.oc1..f1a0d028d4eadf09",
                                         "label": "CW25_Logging_Analytics"
                                     }
                                 ]
