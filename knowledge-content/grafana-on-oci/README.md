@@ -128,6 +128,37 @@ Ensure to choose oci-metrics-datasource as the Default data source.
 
 At this point you have now imported an example Dashboard, follow the instructions in the Dashboard to view your metrics.
 
+### OCI AI Data Platform (AIDP) Monitoring Dashboard
+
+`Dashboards/AIDP-Monitoring-Dashboard.json` is a single, portable dashboard for monitoring
+the **Oracle AI Data Platform**. It unifies three areas into one dashboard, grouped under
+section rows:
+
+- **Data Platform** — cluster health (CPU, memory, filesystem, GC, JVM heap, disk/network
+  throughput) and Spark tasks/shuffle. Overlays both the `oracle_aidataplatform` and
+  `oracle_datalake` Monitoring namespaces so older instances and newer IDL instances appear
+  together.
+- **User Application** — job and workspace run durations, run counts, and status breakdowns.
+- **AI Platform** — GenAI/LLM request and token metrics, agent tool (RAG/SQL/Prompt) success
+  vs failure, sessions, request counts, and endpoint latency.
+
+It is fully parameterized — **no hardcoded datasource, compartment, region, or resource IDs**.
+On import, Grafana prompts for the `oci-metrics-datasource` to use; everything else is driven
+by template dropdowns that auto-populate from your tenancy:
+
+| Dropdown | Filters by |
+|---|---|
+| Data Source | the OCI Metrics datasource (selected at import) |
+| Tenancy / Compartment / Region | query scope |
+| AIDP Instance | `datalakeId` (lists instances from both namespaces) |
+| Cluster Name | `resourceName` (compute cluster) |
+| Job Name | `jobName` (User Application jobs) |
+| AI Compute Name | `computeClusterName` (AI Platform) |
+| Agent Flow | `agentFlowKey` (AI Platform GenAI/session panels) |
+
+Import it the same way as the other dashboards (New > Import > paste JSON model), choosing your
+`oci-metrics-datasource` when prompted, then select your compartment and region.
+
 ## Troubleshooting
 
 1. **Cannot access Grafana**: Verify that port 3000 is open in your VCN's security list and the instance's firewall.

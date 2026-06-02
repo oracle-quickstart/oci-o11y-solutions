@@ -1,0 +1,3535 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_OCI-METRICS-DATASOURCE",
+      "label": "oci-metrics-datasource",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "oci-metrics-datasource",
+      "pluginName": "Oracle Cloud Infrastructure Metrics"
+    }
+  ],
+  "__elements": {},
+  "__requires": [
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "10.4.1"
+    },
+    {
+      "type": "datasource",
+      "id": "oci-metrics-datasource",
+      "name": "Oracle Cloud Infrastructure Metrics",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "timeseries",
+      "name": "Time series",
+      "version": ""
+    }
+  ],
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "id": 1,
+      "title": "Data Platform \u2014 Cluster Health & Spark",
+      "type": "row",
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": 2,
+      "title": "Cluster Health  (union AIDP + Datalake \u00b7 filter: AIDP Instance + Cluster Name)",
+      "type": "row",
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 1
+      }
+    },
+    {
+      "id": 3,
+      "title": "CPU Utilization %",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 2
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percent",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "CpuUtilization",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "AIDP {{unique_id}}"
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_datalake",
+          "metric": "CpuUtilization",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "DL {{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Memory Utilization %",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 2
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percent",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "MemoryUtilization",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "AIDP {{unique_id}}"
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_datalake",
+          "metric": "MemoryUtilization",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "DL {{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "File System Utilization %",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 10
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percent",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "FileSystemUtilization",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "AIDP {{unique_id}}"
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_datalake",
+          "metric": "FileSystemUtilization",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "DL {{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "GC CPU Utilization %",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 10
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percent",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "GcCpuUtilization",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "AIDP {{unique_id}}"
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_datalake",
+          "metric": "GcCpuUtilization",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "DL {{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "JVM Heap Used",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 18
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "bytes",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "JvmHeapUsed",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "AIDP {{unique_id}}"
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_datalake",
+          "metric": "JvmHeapUsed",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "DL {{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Disk Throughput (Read/Write)",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 18
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "Bps",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "DiskReadBytes",
+          "interval": "[5m]",
+          "statistic": "rate()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "AIDP Read {{unique_id}}"
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_datalake",
+          "metric": "DiskReadBytes",
+          "interval": "[5m]",
+          "statistic": "rate()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "DL Read {{unique_id}}"
+        },
+        {
+          "refId": "C",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "DiskWriteBytes",
+          "interval": "[5m]",
+          "statistic": "rate()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "AIDP Write {{unique_id}}"
+        },
+        {
+          "refId": "D",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_datalake",
+          "metric": "DiskWriteBytes",
+          "interval": "[5m]",
+          "statistic": "rate()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "DL Write {{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Network Throughput (Rx/Tx)",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 26
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "Bps",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "NetworkReceiveBytes",
+          "interval": "[5m]",
+          "statistic": "rate()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "AIDP Rx {{unique_id}}"
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_datalake",
+          "metric": "NetworkReceiveBytes",
+          "interval": "[5m]",
+          "statistic": "rate()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "DL Rx {{unique_id}}"
+        },
+        {
+          "refId": "C",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "NetworkTransmitBytes",
+          "interval": "[5m]",
+          "statistic": "rate()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "AIDP Tx {{unique_id}}"
+        },
+        {
+          "refId": "D",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_datalake",
+          "metric": "NetworkTransmitBytes",
+          "interval": "[5m]",
+          "statistic": "rate()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "DL Tx {{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Spark Tasks & Shuffle",
+      "type": "row",
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 26
+      }
+    },
+    {
+      "id": 11,
+      "title": "Active Tasks",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 27
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "ActiveTasks",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "AIDP {{unique_id}}"
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_datalake",
+          "metric": "ActiveTasks",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "DL {{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Tasks Completed vs Failed",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 35
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "TotalCompletedTasks",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "AIDP Completed {{unique_id}}"
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_datalake",
+          "metric": "TotalCompletedTasks",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "DL Completed {{unique_id}}"
+        },
+        {
+          "refId": "C",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "TotalFailedTasks",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "AIDP Failed {{unique_id}}"
+        },
+        {
+          "refId": "D",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_datalake",
+          "metric": "TotalFailedTasks",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "DL Failed {{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Total Tasks",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 35
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "TotalTasks",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "AIDP {{unique_id}}"
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_datalake",
+          "metric": "TotalTasks",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "DL {{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Shuffle Bytes (Read/Write)",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 43
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "bytes",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "shuffleTotalBytesRead",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "AIDP Read {{unique_id}}"
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_datalake",
+          "metric": "shuffleTotalBytesRead",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "DL Read {{unique_id}}"
+        },
+        {
+          "refId": "C",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "TotalShuffleWriteBytes",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "AIDP Write {{unique_id}}"
+        },
+        {
+          "refId": "D",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_datalake",
+          "metric": "TotalShuffleWriteBytes",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "datalakeId =~ \"${instance:pipe}\"",
+            "resourceName =~ \"${cluster:pipe}\""
+          ],
+          "groupBy": "resourceName",
+          "legendFormat": "DL Write {{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "User Application \u2014 Jobs & Workspace Runs",
+      "type": "row",
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 51
+      }
+    },
+    {
+      "id": 16,
+      "title": "Job & Workspace Runs  (filter: AIDP Instance + Job Name)",
+      "type": "row",
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 52
+      }
+    },
+    {
+      "id": 17,
+      "title": "Job Run Duration",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 53
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ms",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "JobRunDuration",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "resourceId =~ \"${instance:pipe}\"",
+            "jobName =~ \"${job:pipe}\""
+          ],
+          "groupBy": "jobName",
+          "legendFormat": "{{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Workspace Run Duration",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 53
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ms",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "WorkspaceRunDuration",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "resourceId =~ \"${instance:pipe}\"",
+            "jobName =~ \"${job:pipe}\""
+          ],
+          "groupBy": "jobName",
+          "legendFormat": "{{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Breakdown by Status",
+      "type": "row",
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 61
+      }
+    },
+    {
+      "id": 20,
+      "title": "Job Run Duration by Status",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 62
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ms",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "JobRunDuration",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "resourceId =~ \"${instance:pipe}\"",
+            "jobName =~ \"${job:pipe}\""
+          ],
+          "groupBy": "status",
+          "legendFormat": "{{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "Workspace Run Duration by Status",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 62
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ms",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "WorkspaceRunDuration",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "resourceId =~ \"${instance:pipe}\"",
+            "jobName =~ \"${job:pipe}\""
+          ],
+          "groupBy": "status",
+          "legendFormat": "{{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Job Runs (count) by Status",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 70
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "JobRunDuration",
+          "interval": "[5m]",
+          "statistic": "count()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "resourceId =~ \"${instance:pipe}\"",
+            "jobName =~ \"${job:pipe}\""
+          ],
+          "groupBy": "status",
+          "legendFormat": "{{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Workspace Runs (count) by Status",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 70
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "WorkspaceRunDuration",
+          "interval": "[5m]",
+          "statistic": "count()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "resourceId =~ \"${instance:pipe}\"",
+            "jobName =~ \"${job:pipe}\""
+          ],
+          "groupBy": "status",
+          "legendFormat": "{{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "AI Platform \u2014 GenAI, Tools & Sessions",
+      "type": "row",
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 78
+      }
+    },
+    {
+      "id": 25,
+      "title": "GenAI / LLM  (filter: AI Compute Name + Agent Flow)",
+      "type": "row",
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 79
+      }
+    },
+    {
+      "id": 26,
+      "title": "LLM Requests",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 80
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "llm.requests",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\"",
+            "agentFlowKey =~ \"${agentflow:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "{{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "title": "Total Tokens",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 80
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "total_tokens",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\"",
+            "agentFlowKey =~ \"${agentflow:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "{{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "title": "Tokens In/Out \u2014 LLM",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 88
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "total_tokens_input_to_llm",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\"",
+            "agentFlowKey =~ \"${agentflow:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "Input {{unique_id}}"
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "total_tokens_output_from_llm",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\"",
+            "agentFlowKey =~ \"${agentflow:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "Output {{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "title": "Tokens In/Out \u2014 Agent",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 88
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "total_tokens_input_to_agent",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\"",
+            "agentFlowKey =~ \"${agentflow:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "Input {{unique_id}}"
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "total_tokens_output_from_agent",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\"",
+            "agentFlowKey =~ \"${agentflow:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "Output {{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "title": "Tokens Cached / Reasoning",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 96
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "llm.tokens.cached",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\"",
+            "agentFlowKey =~ \"${agentflow:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "Cached {{unique_id}}"
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "llm.tokens.reasoning",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\"",
+            "agentFlowKey =~ \"${agentflow:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "Reasoning {{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "title": "GenAI Client Operation Duration",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 96
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ms",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "gen_ai.client.operation.duration",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "{{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "title": "GenAI API Success vs Failure",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 104
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "gen_ai_api_success_counter",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\"",
+            "agentFlowKey =~ \"${agentflow:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "Success {{unique_id}}"
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "gen_ai_api_failure_counter",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\"",
+            "agentFlowKey =~ \"${agentflow:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "Failure {{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "title": "Agent Tools  (per-tool metrics \u2014 no agentFlowKey; filtered by AI Compute Name only)",
+      "type": "row",
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 104
+      }
+    },
+    {
+      "id": 34,
+      "title": "RAG Tool Success vs Failure",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 105
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "rag_tool_success_counter",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "Success {{unique_id}}"
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "rag_tool_failure_counter",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "Failure {{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "title": "SQL Tool Success vs Failure",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 113
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "sql_tool_success_counter",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "Success {{unique_id}}"
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "sql_tool_failure_counter",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "Failure {{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "title": "SQL Conn Pool Success vs Failure",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 113
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "sql_tool_connection_pool_success_counter",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "Success {{unique_id}}"
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "sql_tool_connection_pool_failure_counter",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "Failure {{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "title": "Prompt Tool Success",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 121
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "prompt_tool_success_counter",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "{{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "title": "Sessions & Endpoints  (filter: AI Compute Name + Agent Flow)",
+      "type": "row",
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 121
+      }
+    },
+    {
+      "id": 39,
+      "title": "Total Sessions",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 122
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "total_sessions",
+          "interval": "[5m]",
+          "statistic": "max()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\"",
+            "agentFlowKey =~ \"${agentflow:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "{{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "title": "Session Duration",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 130
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ms",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "sessions_duration",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\"",
+            "agentFlowKey =~ \"${agentflow:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "{{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "title": "Request Count",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 130
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "request_count",
+          "interval": "[5m]",
+          "statistic": "sum()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\"",
+            "agentFlowKey =~ \"${agentflow:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "{{unique_id}}"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "title": "Endpoint Latency",
+      "type": "timeseries",
+      "datasource": {
+        "type": "oci-metrics-datasource",
+        "uid": "${DS_OCI-METRICS-DATASOURCE}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 138
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ms",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "showPoints": "never",
+            "spanNulls": true
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "oci-metrics-datasource",
+            "uid": "${DS_OCI-METRICS-DATASOURCE}"
+          },
+          "tenancyName": "$tenancy",
+          "tenancy": "$tenancy",
+          "tenancymode": "single",
+          "compartmentName": "$compartment",
+          "compartment": "$compartment",
+          "region": "$region",
+          "namespace": "oracle_aidataplatform",
+          "metric": "endpoint_latency",
+          "interval": "[5m]",
+          "statistic": "avg()",
+          "rawQuery": false,
+          "queryText": "",
+          "queryTextRaw": "",
+          "dimensionValues": [
+            "computeClusterName =~ \"${aicompute:pipe}\"",
+            "agentFlowKey =~ \"${agentflow:pipe}\""
+          ],
+          "groupBy": "computeClusterName",
+          "legendFormat": "{{unique_id}}"
+        }
+      ]
+    }
+  ],
+  "refresh": "5m",
+  "schemaVersion": 39,
+  "tags": [
+    "oci",
+    "aidp",
+    "oracle_aidataplatform",
+    "oracle_datalake"
+  ],
+  "templating": {
+    "list": [
+      {
+        "type": "custom",
+        "name": "tenancy",
+        "label": "Tenancy",
+        "query": "DEFAULT : DEFAULT/",
+        "multi": false,
+        "includeAll": false,
+        "current": {
+          "text": "DEFAULT",
+          "value": "DEFAULT/",
+          "selected": true
+        },
+        "options": [
+          {
+            "text": "DEFAULT",
+            "value": "DEFAULT/",
+            "selected": true
+          }
+        ]
+      },
+      {
+        "type": "query",
+        "name": "compartment",
+        "label": "Compartment",
+        "datasource": {
+          "type": "oci-metrics-datasource",
+          "uid": "${DS_OCI-METRICS-DATASOURCE}"
+        },
+        "query": "compartments()",
+        "definition": "compartments()",
+        "refresh": 1,
+        "sort": 1,
+        "multi": false,
+        "includeAll": false,
+        "regex": "",
+        "options": [],
+        "current": {}
+      },
+      {
+        "type": "query",
+        "name": "region",
+        "label": "Region",
+        "datasource": {
+          "type": "oci-metrics-datasource",
+          "uid": "${DS_OCI-METRICS-DATASOURCE}"
+        },
+        "query": "regions($tenancy)",
+        "definition": "regions($tenancy)",
+        "refresh": 1,
+        "sort": 1,
+        "multi": false,
+        "includeAll": false,
+        "regex": "",
+        "options": [],
+        "current": {}
+      },
+      {
+        "type": "constant",
+        "name": "rgv",
+        "query": "_",
+        "hide": 2,
+        "current": {
+          "text": "_",
+          "value": "_",
+          "selected": true
+        },
+        "options": [
+          {
+            "text": "_",
+            "value": "_",
+            "selected": true
+          }
+        ]
+      },
+      {
+        "type": "constant",
+        "name": "nsv_instance",
+        "query": "oracle_aidataplatform|oracle_datalake",
+        "hide": 2,
+        "current": {
+          "text": "oracle_aidataplatform|oracle_datalake",
+          "value": "oracle_aidataplatform|oracle_datalake",
+          "selected": true
+        },
+        "options": [
+          {
+            "text": "oracle_aidataplatform|oracle_datalake",
+            "value": "oracle_aidataplatform|oracle_datalake",
+            "selected": true
+          }
+        ]
+      },
+      {
+        "type": "constant",
+        "name": "dmet_instance",
+        "query": "CpuUtilization",
+        "hide": 2,
+        "current": {
+          "text": "CpuUtilization",
+          "value": "CpuUtilization",
+          "selected": true
+        },
+        "options": [
+          {
+            "text": "CpuUtilization",
+            "value": "CpuUtilization",
+            "selected": true
+          }
+        ]
+      },
+      {
+        "type": "query",
+        "name": "instance",
+        "label": "AIDP Instance",
+        "datasource": {
+          "type": "oci-metrics-datasource",
+          "uid": "${DS_OCI-METRICS-DATASOURCE}"
+        },
+        "query": "dimensions($region,$compartment,$nsv_instance,$dmet_instance,$rgv)",
+        "definition": "dimensions($region,$compartment,$nsv_instance,$dmet_instance,$rgv)",
+        "refresh": 1,
+        "sort": 1,
+        "multi": true,
+        "includeAll": true,
+        "regex": "/datalakeId(?: - |=\")(?<value>[^\"]+)/",
+        "options": [],
+        "current": {
+          "text": "All",
+          "value": "$__all",
+          "selected": true
+        },
+        "allValue": "ocid1.*"
+      },
+      {
+        "type": "constant",
+        "name": "nsv_cluster",
+        "query": "oracle_aidataplatform|oracle_datalake",
+        "hide": 2,
+        "current": {
+          "text": "oracle_aidataplatform|oracle_datalake",
+          "value": "oracle_aidataplatform|oracle_datalake",
+          "selected": true
+        },
+        "options": [
+          {
+            "text": "oracle_aidataplatform|oracle_datalake",
+            "value": "oracle_aidataplatform|oracle_datalake",
+            "selected": true
+          }
+        ]
+      },
+      {
+        "type": "constant",
+        "name": "dmet_cluster",
+        "query": "CpuUtilization",
+        "hide": 2,
+        "current": {
+          "text": "CpuUtilization",
+          "value": "CpuUtilization",
+          "selected": true
+        },
+        "options": [
+          {
+            "text": "CpuUtilization",
+            "value": "CpuUtilization",
+            "selected": true
+          }
+        ]
+      },
+      {
+        "type": "query",
+        "name": "cluster",
+        "label": "Cluster Name",
+        "datasource": {
+          "type": "oci-metrics-datasource",
+          "uid": "${DS_OCI-METRICS-DATASOURCE}"
+        },
+        "query": "dimensions($region,$compartment,$nsv_cluster,$dmet_cluster,$rgv)",
+        "definition": "dimensions($region,$compartment,$nsv_cluster,$dmet_cluster,$rgv)",
+        "refresh": 1,
+        "sort": 1,
+        "multi": true,
+        "includeAll": true,
+        "regex": "/resourceName(?: - |=\")(?<value>[^\"]+)/",
+        "options": [],
+        "current": {
+          "text": "All",
+          "value": "$__all",
+          "selected": true
+        }
+      },
+      {
+        "type": "constant",
+        "name": "nsv_job",
+        "query": "oracle_aidataplatform",
+        "hide": 2,
+        "current": {
+          "text": "oracle_aidataplatform",
+          "value": "oracle_aidataplatform",
+          "selected": true
+        },
+        "options": [
+          {
+            "text": "oracle_aidataplatform",
+            "value": "oracle_aidataplatform",
+            "selected": true
+          }
+        ]
+      },
+      {
+        "type": "constant",
+        "name": "dmet_job",
+        "query": "JobRunDuration",
+        "hide": 2,
+        "current": {
+          "text": "JobRunDuration",
+          "value": "JobRunDuration",
+          "selected": true
+        },
+        "options": [
+          {
+            "text": "JobRunDuration",
+            "value": "JobRunDuration",
+            "selected": true
+          }
+        ]
+      },
+      {
+        "type": "query",
+        "name": "job",
+        "label": "Job Name",
+        "datasource": {
+          "type": "oci-metrics-datasource",
+          "uid": "${DS_OCI-METRICS-DATASOURCE}"
+        },
+        "query": "dimensions($region,$compartment,$nsv_job,$dmet_job,$rgv)",
+        "definition": "dimensions($region,$compartment,$nsv_job,$dmet_job,$rgv)",
+        "refresh": 1,
+        "sort": 1,
+        "multi": true,
+        "includeAll": true,
+        "regex": "/jobName(?: - |=\")(?<value>[^\"]+)/",
+        "options": [],
+        "current": {
+          "text": "All",
+          "value": "$__all",
+          "selected": true
+        }
+      },
+      {
+        "type": "constant",
+        "name": "nsv_aicompute",
+        "query": "oracle_aidataplatform",
+        "hide": 2,
+        "current": {
+          "text": "oracle_aidataplatform",
+          "value": "oracle_aidataplatform",
+          "selected": true
+        },
+        "options": [
+          {
+            "text": "oracle_aidataplatform",
+            "value": "oracle_aidataplatform",
+            "selected": true
+          }
+        ]
+      },
+      {
+        "type": "constant",
+        "name": "dmet_aicompute",
+        "query": "llm.requests",
+        "hide": 2,
+        "current": {
+          "text": "llm.requests",
+          "value": "llm.requests",
+          "selected": true
+        },
+        "options": [
+          {
+            "text": "llm.requests",
+            "value": "llm.requests",
+            "selected": true
+          }
+        ]
+      },
+      {
+        "type": "query",
+        "name": "aicompute",
+        "label": "AI Compute Name",
+        "datasource": {
+          "type": "oci-metrics-datasource",
+          "uid": "${DS_OCI-METRICS-DATASOURCE}"
+        },
+        "query": "dimensions($region,$compartment,$nsv_aicompute,$dmet_aicompute,$rgv)",
+        "definition": "dimensions($region,$compartment,$nsv_aicompute,$dmet_aicompute,$rgv)",
+        "refresh": 1,
+        "sort": 1,
+        "multi": true,
+        "includeAll": true,
+        "regex": "/computeClusterName(?: - |=\")(?<value>[^\"]+)/",
+        "options": [],
+        "current": {
+          "text": "All",
+          "value": "$__all",
+          "selected": true
+        }
+      },
+      {
+        "type": "constant",
+        "name": "nsv_agentflow",
+        "query": "oracle_aidataplatform",
+        "hide": 2,
+        "current": {
+          "text": "oracle_aidataplatform",
+          "value": "oracle_aidataplatform",
+          "selected": true
+        },
+        "options": [
+          {
+            "text": "oracle_aidataplatform",
+            "value": "oracle_aidataplatform",
+            "selected": true
+          }
+        ]
+      },
+      {
+        "type": "constant",
+        "name": "dmet_agentflow",
+        "query": "llm.requests",
+        "hide": 2,
+        "current": {
+          "text": "llm.requests",
+          "value": "llm.requests",
+          "selected": true
+        },
+        "options": [
+          {
+            "text": "llm.requests",
+            "value": "llm.requests",
+            "selected": true
+          }
+        ]
+      },
+      {
+        "type": "query",
+        "name": "agentflow",
+        "label": "Agent Flow (agentFlowKey)",
+        "datasource": {
+          "type": "oci-metrics-datasource",
+          "uid": "${DS_OCI-METRICS-DATASOURCE}"
+        },
+        "query": "dimensions($region,$compartment,$nsv_agentflow,$dmet_agentflow,$rgv)",
+        "definition": "dimensions($region,$compartment,$nsv_agentflow,$dmet_agentflow,$rgv)",
+        "refresh": 1,
+        "sort": 1,
+        "multi": true,
+        "includeAll": true,
+        "regex": "/agentFlowKey(?: - |=\")(?<value>[^\"]+)/",
+        "options": [],
+        "current": {
+          "text": "All",
+          "value": "$__all",
+          "selected": true
+        }
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "OCI AI Data Platform (AIDP) Monitoring",
+  "uid": "aidp-monitoring",
+  "version": 0,
+  "weekStart": ""
+}
